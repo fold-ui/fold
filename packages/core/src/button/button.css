@@ -6,7 +6,7 @@
     --f-button-background-color: var(--f-color-surface);
     --f-button-background-color-hover: var(--f-color-surface-strong);
     --f-button-disabled-opacity: 0.5;
-    --f-button-border-radius: var(--f-radius);
+    --f-button-border-radius: var(--f-radius-sm);
     --f-button-shadow: var(--f-shadow-sm);
     --f-button-variant-opacity-hover: 0.1;
     --f-button-active-background: var(--f-color-surface-stronger);

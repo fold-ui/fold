@@ -400,23 +400,23 @@ input.f-input[type=color].xl {
 }
 
 .f-input-number-control.xs {
-    height: var(--f-size-8);
+    height: calc(var(--f-size-7) - var(--f-input-border-width));
 }
 
 .f-input-number-control.sm {
-    height: var(--f-size-9);
+    height: calc(var(--f-size-8) - var(--f-input-border-width));
 }
 
 .f-input-number-control.md {
-    height: var(--f-size-10);
+    height: calc(var(--f-size-9) - var(--f-input-border-width));
 }
 
 .f-input-number-control.lg {
-    height: var(--f-size-13);
+    height: calc(var(--f-size-11) - var(--f-input-border-width));
 }
 
 .f-input-number-control.xl {
-    height: var(--f-size-15);
+    height: calc(var(--f-size-13) - var(--f-input-border-width));
 }
  
 .f-input-prefix .f-input-number-control,
