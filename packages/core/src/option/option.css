@@ -2,16 +2,16 @@
     --f-options-padding: var(--f-space-1);
     --f-options-spacing: var(--f-space-1);
     --f-options-border-radius: var(--f-radius);
-    --f-options-background-color: var(--f-color-surface);
-    --f-options-active-background-color: var(--f-color-surface-stronger);
+    --f-options-background-color: var(--f-color-surface-strong);
+    --f-options-active-background-color: var(--f-color-surface);
     --f-option-color: var(--f-color-text-weak);
     --f-option-disabled-color: var(--f-color-text-weakest);
     --f-option-selected-color: var(--f-color-text);
     --f-option-hover-color: var(--f-color-text);
     --f-option-active-opacity: 0.8;
-    --f-options-border-width: 1px;
-    --f-options-border-color: var(--f-color-border);
-    --f-options-shadow: var(--f-shadow-sm);
+    --f-options-border-width: 0px;
+    --f-options-border-color: transparent;
+    --f-options-shadow: none;
     --f-option-ix-spacing: 0.5rem;
 }
 
@@ -37,7 +37,7 @@
     border-radius: var(--f-options-border-radius);
     background: transparent;
     color: var(--f-option-color);
-    font-weight: var(--f-font-weight-medium);
+    font-weight: var(--f-font-weight-normal);
     z-index: 1;
     flex-shrink: 0;
     white-space: nowrap;
