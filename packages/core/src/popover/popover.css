@@ -2,7 +2,7 @@
     --f-popover-border-color: var(--f-color-border);
     --f-popover-border-radius: var(--f-radius);
     --f-popover-background: var(--f-color-surface);
-    --f-popover-box-shadow: var(--f-shadow-lg);
+    --f-popover-box-shadow: var(--f-shadow-popover);
 }
 
 .f-popover {
