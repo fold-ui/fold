@@ -31,7 +31,7 @@ export const Usage = () => {
                     row
                     gap={10}
                     p="0 0.5rem"
-                    color="var(--f-color-base-300)">
+                    color="var(--f-color-text-weakest)">
                     <IconLib icon="eye" />
                     <IconLib icon="bin" />
                 </View>
@@ -74,7 +74,7 @@ export const HeroPosterOverlay = () => {
                     row
                     gap={10}
                     p="0 0.5rem"
-                    color="var(--f-color-base-300)">
+                    color="var(--f-color-text-weakest)">
                     <IconLib icon="eye" />
                     <IconLib icon="bin" />
                 </View>

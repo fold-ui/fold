@@ -1,7 +1,7 @@
 :root {
     --f-toast-border-radius: var(--f-radius);
-    --f-toast-color: var(--f-color-base-100);
-    --f-toast-background-color: var(--f-color-base-900);
+    --f-toast-color: var(--f-color-text-on-color);
+    --f-toast-background-color: var(--f-color-surface-inverse);
     --f-toast-max-width: 100%;
     --f-toast-padding: var(--f-space-3);
 }
