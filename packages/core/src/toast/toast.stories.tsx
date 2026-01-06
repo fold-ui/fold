@@ -43,6 +43,12 @@ export const Variants = () => (
             message="Converting your document to PDF format."
             prefix={<IconLib icon="warning" />}
             delay={1000}
+            showProgress={true}
+        />
+        <Toast
+            message="Converting your document to PDF format."
+            prefix={<IconLib icon="warning" />}
+            delay={1000}
             variant="accent"
             showProgress={true}
         />

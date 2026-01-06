@@ -146,7 +146,7 @@
 .f-button.is-default.is-accent,
 .f-button.is-default.is-accent:hover,
 .f-button.is-default.is-accent:active {
-    color: var(--f-color-accent-weak);
+    color: var(--f-color-accent-text);
     border-color: var(--f-color-accent);
     outline-color: var(--f-color-accent);
     background-color: var(--f-color-accent) !important;
@@ -155,7 +155,7 @@
 .f-button.is-default.is-success,
 .f-button.is-default.is-success:hover,
 .f-button.is-default.is-success:active {
-    color: var(--f-color-success-weak);
+    color: var(--f-color-success-text);
     border-color: var(--f-color-success);
     outline-color: var(--f-color-success);
     background-color: var(--f-color-success) !important;
@@ -164,7 +164,7 @@
 .f-button.is-default.is-neutral,
 .f-button.is-default.is-neutral:hover,
 .f-button.is-default.is-neutral:active {
-    color: var(--f-color-neutral-weak);
+    color: var(--f-color-neutral-text);
     border-color: var(--f-color-neutral);
     outline-color: var(--f-color-neutral);
     background-color: var(--f-color-neutral) !important;
@@ -173,7 +173,7 @@
 .f-button.is-default.is-caution,
 .f-button.is-default.is-caution:hover,
 .f-button.is-default.is-caution:active {
-    color: var(--f-color-caution-weak);
+    color: var(--f-color-caution-text);
     border-color: var(--f-color-caution);
     outline-color: var(--f-color-caution);
     background-color: var(--f-color-caution) !important;
@@ -182,7 +182,7 @@
 .f-button.is-default.is-warning,
 .f-button.is-default.is-warning:hover,
 .f-button.is-default.is-warning:active {
-    color: var(--f-color-warning-weak);
+    color: var(--f-color-warning-text);
     border-color: var(--f-color-warning);
     outline-color: var(--f-color-warning);
     background-color: var(--f-color-warning) !important;
@@ -191,7 +191,7 @@
 .f-button.is-default.is-danger,
 .f-button.is-default.is-danger:hover,
 .f-button.is-defaultis-danger:active {
-    color: var(--f-color-danger-weak);
+    color: var(--f-color-danger-text);
     border-color: var(--f-color-danger);
     outline-color: var(--f-color-danger);
     background-color: var(--f-color-danger) !important;
@@ -200,7 +200,7 @@
 .f-button.is-default.is-highlight,
 .f-button.is-default.is-highlight:hover,
 .f-button.is-default.is-highlight:active {
-    color: var(--f-color-highlight-weak);
+    color: var(--f-color-highlight-text);
     border-color: var(--f-color-highlight);
     outline-color: var(--f-color-highlight);
     background-color: var(--f-color-highlight) !important;
@@ -281,9 +281,10 @@
 
 .f-button.is-accent.is-subtle.is-active,
 .f-button.is-accent.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-accent-weak); 
-    background: var(--f-color-accent-weak); 
-    border-color: var(--f-color-accent-weak); 
+    --f-button-background-color-hover: var(--f-color-accent); 
+    color: var(--f-color-accent-text);
+    background: var(--f-color-accent); 
+    border-color: var(--f-color-accent); 
 }
 
 .f-button.is-success.is-subtle { 
@@ -293,9 +294,10 @@
 
 .f-button.is-success.is-subtle.is-active,
 .f-button.is-success.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-success-weak); 
-    background: var(--f-color-success-weak); 
-    border-color: var(--f-color-success-weak); 
+    --f-button-background-color-hover: var(--f-color-success); 
+    color: var(--f-color-success-text);
+    background: var(--f-color-success); 
+    border-color: var(--f-color-success); 
 }
 
 .f-button.is-neutral.is-subtle { 
@@ -305,9 +307,10 @@
 
 .f-button.is-neutral.is-subtle.is-active,
 .f-button.is-neutral.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-neutral-weak); 
-    background: var(--f-color-neutral-weak); 
-    border-color: var(--f-color-neutral-weak); 
+    --f-button-background-color-hover: var(--f-color-neutral); 
+    color: var(--f-color-neutral-text);
+    background: var(--f-color-neutral); 
+    border-color: var(--f-color-neutral); 
 }
 
 .f-button.is-caution.is-subtle { 
@@ -317,9 +320,10 @@
 
 .f-button.is-caution.is-subtle.is-active,
 .f-button.is-caution.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-caution-weak); 
-    background: var(--f-color-caution-weak); 
-    border-color: var(--f-color-caution-weak); 
+    --f-button-background-color-hover: var(--f-color-caution); 
+    color: var(--f-color-caution-text);
+    background: var(--f-color-caution); 
+    border-color: var(--f-color-caution); 
 }
 
 .f-button.is-warning.is-subtle { 
@@ -329,9 +333,10 @@
 
 .f-button.is-warning.is-subtle.is-active,
 .f-button.is-warning.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-warning-weak); 
-    background: var(--f-color-warning-weak); 
-    border-color: var(--f-color-warning-weak); 
+    --f-button-background-color-hover: var(--f-color-warning); 
+    color: var(--f-color-warning-text);
+    background: var(--f-color-warning); 
+    border-color: var(--f-color-warning); 
 }
 
 .f-button.is-danger.is-subtle { 
@@ -341,9 +346,10 @@
 
 .f-button.is-danger.is-subtle.is-active,
 .f-button.is-danger.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-danger-weak); 
-    background: var(--f-color-danger-weak); 
-    border-color: var(--f-color-danger-weak); 
+    --f-button-background-color-hover: var(--f-color-danger); 
+    color: var(--f-color-danger-text);
+    background: var(--f-color-danger); 
+    border-color: var(--f-color-danger); 
 }
 
 .f-button.is-highlight.is-subtle { 
@@ -353,9 +359,10 @@
 
 .f-button.is-highlight.is-subtle.is-active,
 .f-button.is-highlight.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-highlight-weak); 
-    background: var(--f-color-highlight-weak); 
-    border-color: var(--f-color-highlight-weak); 
+    --f-button-background-color-hover: var(--f-color-highlight); 
+    color: var(--f-color-highlight-text);
+    background: var(--f-color-highlight); 
+    border-color: var(--f-color-highlight); 
 }
 
 /* ********************************************* */
@@ -401,7 +408,7 @@
 .f-button.is-accent.is-outline.is-active,
 .f-button.is-accent.is-outline:not(:disabled):hover { 
     background-color: var(--f-color-accent); 
-    color: var(--f-color-accent-weak); 
+    color: var(--f-color-accent-text); 
 }
 
 .f-button.is-success.is-outline { 
@@ -413,7 +420,7 @@
 .f-button.is-success.is-outline.is-active,
 .f-button.is-success.is-outline:not(:disabled):hover { 
     background-color: var(--f-color-success); 
-    color: var(--f-color-success-weak); 
+    color: var(--f-color-success-text); 
 }
 
 .f-button.is-neutral.is-outline { 
@@ -425,7 +432,7 @@
 .f-button.is-neutral.is-outline.is-active,
 .f-button.is-neutral.is-outline:not(:disabled):hover { 
     background-color: var(--f-color-neutral); 
-    color: var(--f-color-neutral-weak);
+    color: var(--f-color-neutral-text);
 }
 
 .f-button.is-caution.is-outline { 
@@ -437,7 +444,7 @@
 .f-button.is-caution.is-outline.is-active,
 .f-button.is-caution.is-outline:not(:disabled):hover { 
     background-color: var(--f-color-caution); 
-    color: var(--f-color-caution-weak); 
+    color: var(--f-color-caution-text); 
 }
 
 .f-button.is-warning.is-outline { 
@@ -449,7 +456,7 @@
 .f-button.is-warning.is-outline.is-active,
 .f-button.is-warning.is-outline:not(:disabled):hover { 
     background-color: var(--f-color-warning); 
-    color: var(--f-color-warning-weak); 
+    color: var(--f-color-warning-text); 
 }
 
 .f-button.is-danger.is-outline { 
@@ -461,7 +468,7 @@
 .f-button.is-danger.is-outline.is-active,
 .f-button.is-danger.is-outline:not(:disabled):hover { 
     background-color: var(--f-color-danger); 
-    color: var(--f-color-danger-weak); 
+    color: var(--f-color-danger-text); 
 }
 
 .f-button.is-highlight.is-outline { 
@@ -473,7 +480,7 @@
 .f-button.is-highlight.is-outline.is-active,
 .f-button.is-highlight.is-outline:not(:disabled):hover { 
     background-color: var(--f-color-highlight); 
-    color: var(--f-color-highlight-weak); 
+    color: var(--f-color-highlight-text); 
 }
 
 /* ********************************************* */
