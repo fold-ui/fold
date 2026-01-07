@@ -36,8 +36,21 @@ export const getPreviousNextElements = (targetIndex, targetElement, moveDirectio
     return { previous, next }
 }
 
-export const positionDOMElement = (x, y, el, callback) => {
+export const positionDOMElementExplicit = (x, y, el, callback) => {
     const rotation = windowObject[FOLD_GHOST_ELEMENT_ROTATION] || '0deg'
     el.style.transform = `translate(${x}px, ${y}px) rotate(${rotation})`
     callback()
+}
+
+let rafId = null
+
+export const positionDOMElement = (x, y, el, callback) => {
+    if (rafId) return
+    
+    rafId = requestAnimationFrame(() => {
+        const rotation = windowObject[FOLD_GHOST_ELEMENT_ROTATION] || '0deg'
+        el.style.transform = `translate(${x}px, ${y}px) rotate(${rotation})`
+        callback()
+        rafId = null
+    })
 }
