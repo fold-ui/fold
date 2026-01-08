@@ -1,5 +1,5 @@
-import React, { forwardRef, useMemo, useRef } from 'react'
-import { classNames, CoreViewProps, getButton, mergeRefs, useDrag, View } from '../'
+import React, { DetailedHTMLProps, forwardRef, useMemo, useRef } from 'react'
+import { classNames, getButton, mergeRefs, useDrag } from '../'
 
 export type DragElementProps = {
     id?: string
@@ -10,7 +10,7 @@ export type DragElementProps = {
     noFocus?: boolean
     noIndent?: boolean
     dragThreshold?: number
-} & Omit<CoreViewProps, 'indent'>
+} & Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'indent'>
 
 export const DragElement = forwardRef((props: DragElementProps, ref) => {
     const {
@@ -107,7 +107,7 @@ export const DragElement = forwardRef((props: DragElementProps, ref) => {
     }
 
     return (
-        <View
+        <div
             {...rest}
             id={id}
             data-id={id}
@@ -123,6 +123,6 @@ export const DragElement = forwardRef((props: DragElementProps, ref) => {
             ref={mergeRefs([ref, elementRef])}
             className={className}>
             {props.children}
-        </View>
+        </div>
     )
 })
