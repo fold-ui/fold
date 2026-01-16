@@ -1,7 +1,7 @@
 {
     "dark": {
         "radius": { "value": "{radius.default}" },
-        "focus": { "value": "3px solid {color.dark.600}" },
+        "focus": { "value": "1px solid {color.dark.600}" },
         "color": {
             "background": { "value": "{color.dark.950}" },
             "accent": {

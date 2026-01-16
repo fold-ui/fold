@@ -44,7 +44,6 @@
 .f-button:focus {
     transition-duration: var(--f-button-transition-delay-focus);
     outline: var(--f-focus);
-    outline-offset: 1px;
 }
 
 .f-button.is-active,
@@ -490,7 +489,7 @@
 /* sizes */
 
 .f-button.xs {  
-    height: var(--f-size-7);
+    height: var(--f-size-8);
     padding: 0 var(--f-space-1);
 }
 
@@ -499,7 +498,7 @@
 }
 
 .f-button.sm { 
-    height: var(--f-size-8);
+    height: var(--f-size-9);
     padding: 0 var(--f-space-2);
 }
 
@@ -508,7 +507,7 @@
 }
 
 .f-button.md { 
-    height: var(--f-size-9); 
+    height: var(--f-size-10); 
     padding: 0 var(--f-space-3);
 }
 
@@ -517,7 +516,7 @@
 }
 
 .f-button.lg { 
-    height: var(--f-size-11); 
+    height: var(--f-size-12); 
     padding: 0 var(--f-space-4);
 }
 
@@ -526,7 +525,7 @@
 }
 
 .f-button.xl { 
-    height: var(--f-size-13); 
+    height: var(--f-size-14); 
     padding: 0 var(--f-space-5);
 }
 

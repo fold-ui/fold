@@ -113,23 +113,23 @@
 /* sizes - options */
 
 .f-options.xs {
-    height: var(--f-size-7);
-}
-
-.f-options.sm {
     height: var(--f-size-8);
 }
 
+.f-options.sm {
+    height: var(--f-size-9);
+}
+
 .f-options.md {
-    height: var(--f-size-9); 
+    height: var(--f-size-10); 
 }
 
 .f-options.lg {
-    height: var(--f-size-11); 
+    height: var(--f-size-12); 
 }
 
 .f-options.xl {
-    height: var(--f-size-13); 
+    height: var(--f-size-14); 
 }
 
 /* sizes - option */
