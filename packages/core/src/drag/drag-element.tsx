@@ -10,7 +10,7 @@ export type DragElementProps = {
     noFocus?: boolean
     noIndent?: boolean
     dragThreshold?: number
-} & Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'indent'>
+} & any
 
 export const DragElement = forwardRef((props: DragElementProps, ref) => {
     const {

@@ -41,7 +41,7 @@
 
 .f-input-control:not(.is-disabled):focus-within {
     outline: var(--f-focus);
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 .f-input-control.is-disabled {
@@ -127,7 +127,7 @@ input.f-input::placeholder {
 
 input.f-input:focus {
     outline: var(--f-focus);
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 /* sizes */
@@ -328,7 +328,7 @@ input.f-input[type=color].xl {
 
 .f-tag-input:not(.is-disabled):focus-within {
     outline: var(--f-focus);
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 .f-tag-input input {

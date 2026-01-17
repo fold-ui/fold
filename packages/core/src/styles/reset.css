@@ -45,3 +45,7 @@ img {
 [data-theme='dark'] {
     color-scheme: dark;
 }
+
+:root {
+    --f-outline-offset: 0px;
+}

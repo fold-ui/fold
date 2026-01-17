@@ -75,7 +75,7 @@
 
 .f-textarea:focus {
     outline: var(--f-focus);
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 /*
