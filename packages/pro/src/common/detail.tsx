@@ -1,6 +1,6 @@
 import { Button, Flexer, Label, Modal, Portal, Toggle, View, useCheck, useDialog } from '@fold-dev/core'
 import React, { useRef, useState } from 'react'
-import { Priority, Repeat, TaskDetail, TodoTypes } from '../'
+import { CalendarTypes, Priority, TaskDetail, TodoTypes } from '../'
 
 export type DetailProps = {
     onCancel: () => void
@@ -16,7 +16,7 @@ export type DetailProps = {
         locked?: boolean
         start?: Date
         end?: Date
-        repeat?: Repeat
+        repeat?: CalendarTypes.Repeat
         users?: TodoTypes.TaskUser[]
         labels?: TodoTypes.TaskLabel[]
         badges?: TodoTypes.TaskBadge[]
@@ -164,7 +164,6 @@ export const Detail = (props: DetailProps) => {
                 repeat={repeat}
                 onDateDelete={() => {
                     setDates({ start: undefined, end: undefined })
-                    setRepeat({ interval: [], frequency: '', from: new Date() })
                 }}
                 onDateChange={({ dates, repeat }) => {
                     setDates(dates)
