@@ -2,7 +2,7 @@ import { Alert, Button, useAlert } from '@fold-dev/core'
 import React, { useEffect } from 'react'
 
 export default {
-    title: 'Components/Alert',
+    title: 'Core/Alert',
     component: Alert,
     excludeStories: 'docs',
 }

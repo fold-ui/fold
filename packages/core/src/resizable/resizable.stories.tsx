@@ -2,7 +2,7 @@ import { Resizable, ResizableRail, Text, View } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Resizable',
+    title: 'Core/Resizable',
     component: Resizable,
     excludeStories: 'docs',
 }

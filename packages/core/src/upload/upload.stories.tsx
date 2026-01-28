@@ -2,7 +2,7 @@ import { Button, Stack, Text, Upload, UploadArea, UploadCustom, View } from '@fo
 import React from 'react'
 
 export default {
-    title: 'Components/Upload',
+    title: 'Core/Upload',
     component: Upload,
     excludeStories: 'docs',
 }

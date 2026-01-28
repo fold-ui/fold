@@ -2,7 +2,7 @@ import { Button, Flexer, Heading, Modal, ModalClose, Portal, Text, View, useVisi
 import React from 'react'
 
 export default {
-    title: 'Components/Modal',
+    title: 'Core/Modal',
     component: Modal,
     excludeStories: 'docs',
 }

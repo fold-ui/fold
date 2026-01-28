@@ -2,7 +2,7 @@ import { Attachment, AttachmentThumb, IconLib, Text, View } from '@fold-dev/core
 import React from 'react'
 
 export default {
-    title: 'Components/Attachment',
+    title: 'Core/Attachment',
     component: Attachment,
     excludeStories: 'docs',
 }

@@ -15,7 +15,7 @@ import {
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Tabs',
+    title: 'Core/Tabs',
     component: Tabs,
     excludeStories: 'docs',
 }

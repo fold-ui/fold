@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge, View } from '@fold-dev/core'
 
 export default {
-    title: 'Components/Badge',
+    title: 'Core/Badge',
     component: Badge,
     excludeStories: 'docs',
 }

@@ -3,7 +3,7 @@ import * as Token from '@fold-dev/design/tokens'
 import React from 'react'
 
 export default {
-    title: 'Components/Checkbox',
+    title: 'Core/Checkbox',
     component: Checkbox,
     excludeStories: 'docs',
 }

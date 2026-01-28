@@ -18,7 +18,7 @@ import {
 import React from 'react'
 
 export default {
-    title: 'Components/Card',
+    title: 'Core/Card',
     component: Card,
     excludeStories: 'docs',
 }

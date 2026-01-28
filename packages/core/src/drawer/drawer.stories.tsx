@@ -2,7 +2,7 @@ import { Button, Drawer, Heading, Text, View, useVisibility } from '@fold-dev/co
 import React from 'react'
 
 export default {
-    title: 'Components/Drawer',
+    title: 'Core/Drawer',
     component: Drawer,
     excludeStories: 'docs',
 }

@@ -15,7 +15,7 @@ import React, { useState } from 'react'
 import { renderToString } from 'react-dom/server'
 
 export default {
-    title: 'Components/Drag',
+    title: 'Core/Drag',
     component: DragArea,
     excludeStories: 'docs',
 }

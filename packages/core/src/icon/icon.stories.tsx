@@ -3,7 +3,7 @@ import { FICircle, FISun, Icon, IconLib, Stack, Text, View, defaultIcons, setFol
 import React, { useLayoutEffect, useState } from 'react'
 
 export default {
-    title: 'Components/Icon',
+    title: 'Core/Icon',
     component: Icon,
     excludeStories: 'docs',
 }

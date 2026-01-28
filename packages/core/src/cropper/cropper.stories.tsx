@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Cropper, Range, View } from '@fold-dev/core'
 
 export default {
-    title: 'Components/Cropper',
+    title: 'Core/Cropper',
     component: Cropper,
     excludeStories: 'docs',
 }

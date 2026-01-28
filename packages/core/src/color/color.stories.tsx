@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import * as Token from '@fold-dev/design/tokens'
 
 export default {
-    title: 'Components/Color',
+    title: 'Core/Color',
     component: ColorPicker,
     excludeStories: 'docs',
 }

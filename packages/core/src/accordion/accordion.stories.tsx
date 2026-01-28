@@ -2,7 +2,7 @@ import React from 'react'
 import { Accordion, AccordionHeading, AccordionItem, AccordionPanel } from '@fold-dev/core'
 
 export default {
-    title: 'Components/Accordion',
+    title: 'Core/Accordion',
     component: Accordion,
     excludeStories: 'docs',
 }

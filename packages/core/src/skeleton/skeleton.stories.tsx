@@ -2,7 +2,7 @@ import { Avatar, Badge, Button, Heading, Skeleton, SkeletonBlock, SkeletonCircle
 import React from 'react'
 
 export default {
-    title: 'Components/Skeleton',
+    title: 'Core/Skeleton',
     component: Skeleton,
     excludeStories: 'docs',
 }

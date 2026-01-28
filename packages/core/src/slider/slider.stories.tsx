@@ -2,7 +2,7 @@ import { Slider, Text, useSlider } from '@fold-dev/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Slider',
+    title: 'Core/Slider',
     component: Slider,
     excludeStories: 'docs',
 }

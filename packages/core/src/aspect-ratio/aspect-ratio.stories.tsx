@@ -2,7 +2,7 @@ import React from 'react'
 import { AspectRatio } from '@fold-dev/core'
 
 export default {
-    title: 'Components/AspectRatio',
+    title: 'Core/AspectRatio',
     component: AspectRatio,
     excludeStories: 'docs',
 }

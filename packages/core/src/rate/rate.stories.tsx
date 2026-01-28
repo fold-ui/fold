@@ -2,7 +2,7 @@ import { Rate } from '@fold-dev/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Rate',
+    title: 'Core/Rate',
     component: Rate,
     excludeStories: 'docs',
 }

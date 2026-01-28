@@ -2,7 +2,7 @@ import { Pill, Heading, IconLib, Link, Stack, Tooltip, View, Text } from '@fold-
 import React from 'react'
 
 export default {
-    title: 'Components/Tooltip',
+    title: 'Core/Tooltip',
     component: Tooltip,
     excludeStories: 'docs',
 }

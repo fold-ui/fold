@@ -19,7 +19,7 @@ import {
 import React, { useRef, useState } from 'react'
 
 export default {
-    title: 'Components/Popover',
+    title: 'Core/Popover',
     component: Popover,
     excludeStories: 'docs',
 }

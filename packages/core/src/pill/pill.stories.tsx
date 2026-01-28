@@ -3,7 +3,7 @@ import { Avatar, IconLib, Pill, Stack } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Pill',
+    title: 'Core/Pill',
     component: Pill,
     excludeStories: 'docs',
 }

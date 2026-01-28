@@ -2,7 +2,7 @@ import React from 'react'
 import { Heading, Stack } from '@fold-dev/core'
 
 export default {
-    title: 'Components/Heading',
+    title: 'Core/Heading',
     component: Heading,
     excludeStories: 'docs',
 }

@@ -3,7 +3,7 @@ import { Avatar, AvatarGroup, Badge, Heading, Text, View } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Avatar',
+    title: 'Core/Avatar',
     component: Avatar,
     excludeStories: 'docs',
 }

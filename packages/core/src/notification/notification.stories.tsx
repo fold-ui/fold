@@ -2,7 +2,7 @@ import { Heading, IconLib, Notification, NotificationContent, NotificationIcon, 
 import React from 'react'
 
 export default {
-    title: 'Components/Notification',
+    title: 'Core/Notification',
     component: Notification,
     excludeStories: 'docs',
 }

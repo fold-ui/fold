@@ -2,7 +2,7 @@ import { Button, Collapsible, Heading, Text, View } from '@fold-dev/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Collapsible',
+    title: 'Core/Collapsible',
     component: Collapsible,
     excludeStories: 'docs',
 }

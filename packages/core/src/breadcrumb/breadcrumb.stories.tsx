@@ -2,7 +2,7 @@ import { Breadcrumb, BreadcrumbItem, IconLib } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Breadcrumb',
+    title: 'Core/Breadcrumb',
     component: Breadcrumb,
     excludeStories: 'docs',
 }

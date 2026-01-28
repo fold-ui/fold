@@ -2,7 +2,7 @@ import { DarkModeToggle, IconLib, Label, Stack, Toggle, View, useCheck } from '@
 import React from 'react'
 
 export default {
-    title: 'Components/Toggle',
+    title: 'Core/Toggle',
     component: Toggle,
     excludeStories: 'docs',
 }

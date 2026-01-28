@@ -2,7 +2,7 @@ import { Spinner, SpinnerOverlay, Text, View } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Spinner',
+    title: 'Core/Spinner',
     component: Spinner,
     excludeStories: 'docs',
 }

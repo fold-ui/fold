@@ -2,7 +2,7 @@ import { Button, IconLib, Stack, Text, Toast, ToastAnchor, useToast } from '@fol
 import React from 'react'
 
 export default {
-    title: 'Components/Toast',
+    title: 'Core/Toast',
     component: Toast,
     excludeStories: 'docs',
 }

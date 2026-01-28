@@ -2,7 +2,7 @@ import { Image, Progress, Text, View } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Image',
+    title: 'Core/Image',
     component: Image,
     excludeStories: 'docs',
 }

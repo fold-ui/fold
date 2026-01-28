@@ -2,7 +2,7 @@ import { HighlightText, IconLib, Label, LimitedText, Link, Stack, Text } from '@
 import React from 'react'
 
 export default {
-    title: 'Components/Text',
+    title: 'Core/Text',
     component: Text,
     excludeStories: 'docs',
 }

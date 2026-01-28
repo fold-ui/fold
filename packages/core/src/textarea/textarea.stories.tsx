@@ -2,7 +2,7 @@ import { IconLib, InputControl, InputPrefix, Textarea, View } from '@fold-dev/co
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Textarea',
+    title: 'Core/Textarea',
     component: Textarea,
     excludeStories: 'docs',
 }

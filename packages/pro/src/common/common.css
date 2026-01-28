@@ -1,0 +1,435 @@
+.f-task-detail {
+    --f-common-rich-input-font-size: 18px;
+    --f-common-rich-input-line-height: 22px;
+}
+
+.f-task-detail .f-input-control:focus-within {
+    outline: none !important;
+}
+
+/* date select */
+
+:root {}
+
+.f-date-select {
+    width: fit-content;
+}
+
+.f-date-select__date {
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--f-color-border);
+    width: 100%;
+}
+
+.f-date-select__date-picker {
+    width: 300px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--f-color-border);
+}
+
+.f-date-select__month {
+    font-weight: var(--f-font-weight-semibold);
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    color: var(--f-color-accent);
+}
+
+.f-date-select__footer {
+    padding: 1rem;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.f-date-select__time {
+    padding: 1rem;
+    height: 290px;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.f-date-select__presets {
+    gap: 0.75rem;
+    width: 150px;
+    padding: 1.5rem 1.5rem 0 0;
+    align-items: flex-end;
+    align-content: flex-start;
+}
+
+/* toolbar button (small) */
+
+:root {
+    --f-common-toolbar-button-background: var(--f-color-surface-strong);
+    --f-common-toolbar-button-background-hover: var(--f-color-surface-stronger);
+    --f-common-toolbar-button-padding: 0 6px;
+    --f-common-toolbar-button-gap: 5px;
+    --f-common-toolbar-button-height: 18px;
+    --f-common-toolbar-button-color: var(--f-color-text-weak);
+    --f-common-toolbar-button-width-base: fit-content;
+    --f-common-toolbar-button-width-full: fit-content;
+    --f-common-toolbar-button-x-background: var(--f-color-surface-strongest);
+    --f-common-toolbar-button-x-color: var(--f-color-text-weaker);
+    --f-common-toolbar-button-font-size: 12px;
+    --f-common-toolbar-button-line-height: 14px;
+}
+
+.f-toolbar-button {
+    position: relative;
+    border: none;
+    padding: var(--f-common-toolbar-button-padding);
+    height: var(--f-common-toolbar-button-height);
+    color: var(--f-common-toolbar-button-color);
+    background: var(--f-common-toolbar-button-background);
+    border-radius: var(--f-radius);
+    cursor: pointer;
+    gap: var(--f-common-toolbar-button-gap);
+    transition: width 0.2s;
+    width: var(--f-common-toolbar-button-width-base);
+
+    --f-icon-stroke-width-xs: 3.2;
+}
+
+.f-toolbar-button .f-text {
+    font-weight: var(--f-font-weight-medium);
+    font-size: var(--f-common-toolbar-button-font-size);
+    line-height: var(--f-common-toolbar-button-font-line-height);
+    color: currentColor;
+}
+
+.f-toolbar-button:disabled {
+    pointer-events: none;
+}
+
+.f-toolbar-button.is-outline {
+    border: 1px solid currentColor;
+    background: none;
+}
+
+.f-toolbar-button:hover {
+    background: var(--f-common-toolbar-button-background-hover);
+    width: var(--f-common-toolbar-button-width-full);
+}
+
+.f-toolbar-button__x {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    padding: 0;
+    opacity: 0;
+    height: calc(var(--f-common-toolbar-button-height) - 2px);
+    width: calc(var(--f-common-toolbar-button-height) - 2px);
+    z-index: 1;
+    border-radius: var(--f-radius);
+    transition: opacity 0.25s ease-out;
+    background: var(--f-common-toolbar-button-x-background);
+    color: var(--f-common-toolbar-button-x-color) !important;
+
+    --f-icon-sizing-xs: 10px;
+}
+
+.f-toolbar-button__x > .f-icon {
+}
+
+.f-toolbar-button.has-close:hover .f-toolbar-button__x {
+    opacity: 1;
+}
+
+.f-toolbar-button > * {
+    color: currentColor;
+    white-space: nowrap;
+}
+
+/* action button (big) */
+
+:root {
+    --f-common-action-button-border: 1px dashed var(--f-color-surface-strongest);
+    --f-common-action-button-size: 22px;
+    --f-common-action-button-color: var(--f-color-text-weakest);
+}
+
+.f-action-button {
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    border: none;
+    outline-offset: 2px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: var(--f-radius-full);
+    color: var(--f-common-action-button-color);
+    min-width: var(--f-common-action-button-size);
+    min-height: var(--f-common-action-button-size);
+}
+
+.f-action-button:disabled {
+    pointer-events: none;
+}
+
+.f-action-button.has-border {
+    border: var(--f-common-action-button-border);
+}
+
+.f-action-button.is-accent {
+    color: var(--f-color-text-on-color);
+    background: var(--f-color-accent);
+    border-color: var(--f-color-accent);
+}
+
+/* avatar */
+
+:root {
+    --f-common-avatar-size: 22px;
+    --f-common-avatar-font-size: 12px;
+    --f-common-avatar-line-height: 14px;
+}
+
+.f-users .f-avatar,
+.f-users .f-avatar .f-image {
+    width: var(--f-common-avatar-size) !important;
+    height: var(--f-common-avatar-size) !important;
+} 
+
+.f-users .f-avatar .f-text {
+    font-size: var(--f-common-avatar-font-size) !important;
+    line-height: var(--f-common-avatar-line-height) !important;
+}
+
+.f-users .f-avatar > * {
+   user-select: none;
+   pointer-events: none;
+}
+
+/* checkbox */
+
+:root {
+    --f-common-check-padding: 0;
+    --f-common-check-size: 20px;
+    --f-common-check-size-lg: 30px;
+}
+
+.f-check {
+    justify-content: flex-start;
+    padding: var(--f-common-check-padding);
+    width: var(--f-common-check-size);
+    height: var(--f-common-check-size);
+
+    --f-icon-stroke-width-xs: 4px;
+    --f-icon-stroke-width-lg: 3px;
+    --f-checkbox-alt-active-color: var(--f-color-accent-weak);
+    --f-checkbox-alt-active-border-color: var(--f-color-accent);
+    --f-checkbox-alt-active-background-color: var(--f-color-accent);
+}
+
+.f-check.is-high {
+    --f-checkbox-alt-active-color: var(--f-color-danger-weak);
+    --f-checkbox-alt-active-border-color: var(--f-color-danger);
+    --f-checkbox-alt-active-background-color: var(--f-color-danger);
+    --f-checkbox-alt-border-color: var(--f-color-danger);
+    --f-checkbox-alt-border-color-hover: var(--f-color-danger-strong);
+}
+
+.f-check.is-high .f-checkbox-alt:focus {
+    outline-color: var(--f-color-danger-weak);
+}
+
+.f-check.is-medium {
+    --f-checkbox-alt-active-color: var(--f-color-warning-weak);
+    --f-checkbox-alt-active-border-color: var(--f-color-warning);
+    --f-checkbox-alt-active-background-color: var(--f-color-warning);
+    --f-checkbox-alt-border-color: var(--f-color-warning);
+    --f-checkbox-alt-border-color-hover: var(--f-color-warning-strong);
+}
+
+.f-check.is-medium .f-checkbox-alt:focus {
+    outline-color: var(--f-color-warning-weak);
+}
+
+.f-check.is-low {
+    --f-checkbox-alt-active-color: var(--f-color-caution-weak);
+    --f-checkbox-alt-active-border-color: var(--f-color-caution);
+    --f-checkbox-alt-active-background-color: var(--f-color-caution);
+    --f-checkbox-alt-border-color: var(--f-color-caution);
+    --f-checkbox-alt-border-color-hover: var(--f-color-caution-strong);
+}
+
+.f-check.is-low .f-checkbox-alt:focus {
+    outline-color: var(--f-color-caution-weak);
+}
+
+.f-check .f-checkbox-alt {
+    width: var(--f-common-check-size);
+    height: var(--f-common-check-size);
+    outline-offset: 0px;
+}
+
+.f-check .f-checkbox-alt.lg {
+    width: var(--f-common-check-size-lg);
+    height: var(--f-common-check-size-lg);
+    outline-offset: 0px;
+}
+
+/* label */
+
+:root {
+    --f-common-label-height: 18px;
+    --f-common-label-padding: 0 2px;
+    --f-common-label-font-size: 12px;
+    --f-common-label-line-height: 14px;
+}
+
+.f-label {
+    height: var(--f-common-label-height) !important;
+}
+
+.f-label > .f-text {
+    font-weight: var(--f-font-weight-medium);
+    font-size: var(--f-common-label-font-size) !important;
+    line-height: var(--f-common-label-line-height) !important;
+    padding: var(--f-common-label-padding) !important;
+}
+
+/* badge */
+
+:root {
+    --f-common-badges-color: var(--f-color-text-weak);
+    --f-common-badge-font-size: 12px;
+    --f-common-badge-line-height: 14px;
+}
+
+.f-badges {
+    font-size: var(--f-common-badge-font-size) !important;
+    line-height: var(--f-common-badge-line-height) !important;
+    color: var(--f-common-badges-color);
+}
+
+.f-badges > .f-text {
+    color: currentColor;
+    font-size: var(--f-common-badge-font-size) !important;
+    line-height: var(--f-common-badge-line-height) !important;
+}
+
+.f-badges > .f-icon {
+    color: var(--f-common-badges-color);
+ }
+
+ .f-badges > .f-text,
+ .f-badges > .f-icon {
+    user-select: none;
+    pointer-events: none;
+}
+
+/* rich input */
+
+:root {
+    --f-common-rich-input-padding: 0px;
+    --f-common-rich-input-color: var(--f-color-text);
+    --f-common-rich-input-color-placeholder: var(--f-color-text-weakest);
+    --f-common-rich-input-link-color: var(--f-color-text-link);
+    --f-common-rich-input-decoration-size: default;
+    --f-common-rich-input-menu-color-background: var(--f-color-surface);
+    --f-common-rich-input-menu-border-radius: var(--f-radius);
+    --f-common-rich-input-menu-border-color: var(--f-color-border);
+    --f-common-rich-input-menu-shadow: var(--f-shadow-card);
+    --f-common-rich-input-menu-padding: 0.5rem;
+    --f-common-rich-input-menu-item-padding: 0.5px 15px;
+    --f-common-rich-input-font-size: 14px;
+    --f-common-rich-input-line-height: 20px;
+}
+
+.f-rich-input {
+    font-family: var(--f-font-body); 
+    font-weight: var(--f-font-weight-normal);
+    width: 100%;
+    height: fit-content;
+    border: none;
+    position: relative;
+    color: var(--f-common-rich-input-color);
+    text-decoration-thickness: var(--f-common-rich-input-decoration-size);
+    font-size: var(--f-common-rich-input-font-size);
+    line-height: var(--f-common-rich-input-line-height);
+}
+
+.f-rich-input__input:focus {
+    outline: none;
+    border: none;
+}
+
+.f-rich-input__input {
+    width: 100%;
+    padding: var(--f-common-rich-input-padding);
+}
+
+.f-rich-input__placeholder {
+    pointer-events: none;
+    font-family: var(--f-font-body);
+    color: var(--f-common-rich-input-color-placeholder);
+    padding: var(--f-common-rich-input-padding);
+    user-select: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.f-rich-input__input a {
+    color: var(--f-common-rich-input-link-color);
+}
+
+.f-rich-input__menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: var(--f-common-rich-input-menu-padding);
+    border-radius: var(--f-common-rich-input-menu-border-radius);
+    background: var(--f-common-rich-input-menu-color-background);
+    width: 200px;
+    box-shadow: var(--f-common-rich-input-menu-shadow);
+    border: 1px solid;
+    border-color: var(--f-common-rich-input-menu-border-color);
+    transition: top, left 0.1s;
+    z-index: var(--f-index-tooltip);
+}
+
+.f-rich-input__menu-item {
+    color: var(--f-common-rich-input-color);
+    padding: var(--f-common-rich-input-menu-item-padding);
+    font-size: var(--f-common-rich-input-font-size);
+    line-height: var(--f-common-rich-input-line-height);
+    justify-content: flex-start;    
+    width: 100%;
+    border-radius: var(--f-radius);
+    justify-content: flex-start !important; 
+}
+
+/* rich input entity*/
+
+:root {
+    --f-common-rich-input-entity-radius: var(--f-radius);
+    --f-common-rich-input-entity-padding: 0;
+    --f-common-rich-input-entity-color: var(--f-color-accent);
+    --f-common-rich-input-entity-background: var(--f-color-accent-weak);
+}
+
+.f-rich-input-entity {
+    color: var(--f-common-rich-input-entity-color);
+    border-radius: var(--f-common-rich-input-entity-radius);
+    padding: var(--f-common-rich-input-entity-padding);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.f-rich-input-entity:focus {
+    background: var(--f-common-rich-input-entity-background);
+    border: none;
+    outline: none;
+}
+
+/* misc */
+
+.f-drag-element,
+.f-drag-area__element {
+    z-index: auto !important;
+}

@@ -19,7 +19,7 @@ import * as Token from '@fold-dev/design/tokens'
 import React, { useMemo, useRef, useState } from 'react'
 
 export default {
-    title: 'Components/Select',
+    title: 'Core/Select',
     component: Select,
     excludeStories: 'docs',
 }

@@ -2,7 +2,7 @@ import { Button, Divider, Pill, View } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Divider',
+    title: 'Core/Divider',
     component: Divider,
     excludeStories: 'docs',
 }

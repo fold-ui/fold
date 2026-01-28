@@ -14,7 +14,7 @@ import {
 import React from 'react'
 
 export default {
-    title: 'Components/Menu',
+    title: 'Core/Menu',
     component: Menu,
     excludeStories: 'docs',
 }

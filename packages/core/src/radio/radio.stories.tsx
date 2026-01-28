@@ -2,7 +2,7 @@ import { FormLabel, Radio, RadioGroup, Stack, useRadio } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Radio',
+    title: 'Core/Radio',
     component: Radio,
     excludeStories: 'docs',
 }

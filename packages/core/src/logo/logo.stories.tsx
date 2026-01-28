@@ -3,7 +3,7 @@ import React from 'react'
 import { Logo, LogoSolid, View } from '@fold-dev/core'
 
 export default {
-    title: 'Components/Logo',
+    title: 'Core/Logo',
     component: Logo,
     excludeStories: 'docs',
 }

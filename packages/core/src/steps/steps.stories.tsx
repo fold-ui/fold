@@ -2,7 +2,7 @@ import { Heading, Step, Steps, Text } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Steps',
+    title: 'Core/Steps',
     component: Steps,
     excludeStories: 'docs',
 }

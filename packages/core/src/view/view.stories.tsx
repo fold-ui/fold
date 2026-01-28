@@ -2,7 +2,7 @@ import { Blur, Button, Flexer, Heading, ScrollView, SpinnerOverlay, Text, View }
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/View',
+    title: 'Core/View',
     component: View,
     excludeStories: 'docs',
 }

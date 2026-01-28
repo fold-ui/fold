@@ -2,7 +2,7 @@ import { ProgressCircle, Heading, Progress, Stack, ProgressSubtle, Text, Progres
 import React from 'react'
 
 export default {
-    title: 'Components/Progress',
+    title: 'Core/Progress',
     component: Progress,
     excludeStories: 'docs',
 }

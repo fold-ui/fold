@@ -13,7 +13,7 @@ import {
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Navigation',
+    title: 'Core/Navigation',
     component: Navigation,
     excludeStories: 'docs',
 }

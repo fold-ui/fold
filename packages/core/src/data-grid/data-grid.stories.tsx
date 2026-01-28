@@ -20,7 +20,7 @@ import React, { useState } from 'react'
 import * as data from '../../../../dummy-data'
 
 export default {
-    title: 'Components/DataGrid',
+    title: 'Core/DataGrid',
     component: <></>,
     excludeStories: 'docs',
 }

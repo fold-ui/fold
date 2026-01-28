@@ -2,7 +2,7 @@ import { IconLib, Option, Options, Stack, Text, View } from '@fold-dev/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Option',
+    title: 'Core/Option',
     component: Option,
     excludeStories: 'docs',
 }

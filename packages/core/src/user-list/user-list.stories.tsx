@@ -2,7 +2,7 @@ import { Button, UserList } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/UserList',
+    title: 'Core/UserList',
     component: UserList,
     excludeStories: 'docs',
 }

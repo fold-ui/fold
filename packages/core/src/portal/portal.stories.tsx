@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Button, Portal, Text, View, documentObject } from '@fold-dev/core'
 
 export default {
-    title: 'Components/Portal',
+    title: 'Core/Portal',
     component: Portal,
     excludeStories: 'docs',
 }

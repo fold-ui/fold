@@ -1,0 +1,654 @@
+:root {
+    --f-calendar-schedule-background: var(--f-color-surface);
+    --f-calendar-schedule-border-color: var(--f-color-border);
+    --f-calendar-schedule-caret-color: var(--f-color-accent);
+    --f-calendar-schedule-width: 100%;
+    --f-calendar-schedule-height: 800px;
+}
+
+/* schedule */
+
+.f-calendar-schedule {
+    width: var(--f-calendar-schedule-width);
+    height: var(--f-calendar-schedule-height);
+    position: relative;
+    background: var(--f-calendar-schedule-background);
+    justify-content: flex-start;
+}
+
+.f-calendar-schedule__main {
+    width: 100%;
+    flex: 1; 
+    flex-shrink: 0;
+}
+
+/* schedule day */
+
+.f-calendar-schedule-day {
+    flex: 1;
+    height: 100%;
+    background: var(--f-calendar-schedule-background);
+    position: relative;
+    border-left: 1px solid var(--f-calendar-schedule-border-color);
+    border-bottom: 1px solid var(--f-calendar-schedule-border-color);
+}
+
+.f-calendar-schedule-day__today-line {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    transform: translateY(-50%);
+    height: 3px;
+    background: var(--f-calendar-schedule-caret-color);
+    border-radius: var(--f-radius);
+    z-index: 1000;
+}
+
+.f-calendar-schedule-day:last-child {
+    border-right: 1px solid var(--f-calendar-schedule-border-color); 
+}
+
+.f-calendar-schedule-day:first-child { 
+    border: none; 
+}
+
+/* schedule day */
+/* --------------------- */
+
+:root {
+    --f-calendar-schedule-event-background: var(--f-color-surface-strong);
+    --f-calendar-schedule-event-color: var(--f-color-text);
+    --f-calendar-schedule-event-border: 1px solid var(--f-color-border);
+}
+
+.f-calendar-schedule-event {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    padding: 0 0.5%;
+    pointer-events: none;
+}
+
+.f-calendar-schedule-event__inner {
+    user-select: none;
+    cursor: pointer;
+    pointer-events: all;
+    height: 100%;
+    background: transparent;
+    background: var(--f-calendar-schedule-event-background);
+    border-radius: var(--f-radius);
+    border: var(--f-calendar-schedule-event-border);
+    color: var(--f-calendar-schedule-event-color);
+    padding: var(--f-space-1);
+    transition: box-shadow 0.3s;
+}
+
+.f-calendar-schedule-event:focus-within {
+    z-index: 10 !important;
+}
+
+.f-calendar-schedule-event__inner:focus {
+    box-shadow: var(--f-shadow-card);
+}
+
+.f-calendar-schedule.can-update .f-calendar-schedule-event__inner::after,
+.f-calendar-schedule.can-update .f-calendar-schedule-event__inner::before {
+    height: 5px;
+    cursor: row-resize;
+    content: ' ';
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    height: 25%;
+    max-height: 10px;
+}
+
+.f-calendar-schedule-event__inner::before {
+    bottom: 0;
+}
+
+.f-calendar-schedule-event__inner::after {
+    top: 0;
+}
+
+.f-calendar-schedule-event__title {
+    display: block;
+    font-family: var(--f-font-body);
+    font-size: var(--f-font-size-md);
+    font-weight: var(--f-font-weight-medium);
+    color: currentColor;
+    pointer-events: none;
+}
+
+.f-calendar-schedule-event__date {
+    pointer-events: none;
+    color: currentColor;
+    opacity: 0.6;
+    width: 100%;
+    gap: 3px;
+    justify-content: flex-start;
+}
+
+.f-calendar-schedule-event__date > span {
+    color: currentColor;
+    font-family: var(--f-font-body);
+    font-weight: var(--f-font-weight-medium);
+    font-size: var(--f-font-size-sm);
+}
+
+.f-calendar-schedule-event__users {
+    pointer-events: none;
+    color: currentColor;
+    opacity: 0.6;
+    width: 100%;
+    gap: 3px;
+    justify-content: flex-start;
+}
+
+.f-calendar-schedule-event__users > span {
+    color: currentColor;
+    font-family: var(--f-font-body);
+    font-weight: var(--f-font-weight-medium);
+    font-size: var(--f-font-size-sm);
+}
+
+/* past events */
+/* --------------------- */
+
+:root {
+    --f-calendar-past-background: var(--f-color-surface-strong);
+    --f-calendar-past-color: var(--f-color-text-weaker);
+    --f-calendar-past-opacity: 0.5;
+}
+
+.f-calendar-schedule.dim-past .f-calendar-schedule-event.is-past {
+    background: var(--f-calendar-past-background);
+}
+
+.f-calendar-schedule.dim-past .f-calendar-schedule-event.is-past > * {
+    opacity: var(--f-calendar-past-opacity) !important;
+}
+
+.f-calendar-days.dim-past .f-calendar-days-event-component.is-past {
+    background: var(--f-calendar-past-background);
+}
+
+.f-calendar-days.dim-past .f-calendar-days-event-component.is-past > * {
+    opacity: var(--f-calendar-past-opacity) !important;
+}
+
+/* shedule time slots */
+/* --------------------- */
+
+:root {
+    --f-calendar-schedule-gutter-width: 80px;
+    --f-calendar-schedule-gutter-highlight:  var(--f-color-border);
+    --f-calendar-schedule-gutter-highlight-width: 25px; 
+    --f-calendar-schedule-gutter-background: var(--f-color-surface);
+}
+
+.f-calendar-schedule-gutter {
+    width: var(--f-calendar-schedule-gutter-width);
+    background: var(--f-calendar-schedule-gutter-background);
+    height: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--f-color-border);
+}
+
+.f-calendar-schedule-gutter__line {
+    width: 100%;
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    justify-content: flex-end;
+}
+
+.f-calendar-schedule-gutter__line::after {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 1px;
+    background: var(--f-color-surface);
+}
+
+.f-calendar-schedule-gutter__line.is-highlighted::after {
+    background: var(--f-calendar-schedule-gutter-highlight); 
+    width: var(--f-calendar-schedule-gutter-highlight-width);
+}
+
+.f-calendar-schedule-gutter__time {
+    display: inline-block;
+    width: fit-content;
+    overflow: hidden;
+    height: fit-content;
+    top: -50%;
+    right: 0;
+    color: var(--f-color-text-weakest);
+    font-family: var(--f-font-body);
+    font-size: var(--f-font-size-sm);
+    line-height: var(--f-font-size-sm);
+    z-index: 10;
+    flex-shrink: 0;
+    text-align: right;
+    margin-right: 40%;
+}
+
+.f-calendar-schedule-gutter__line:first-child .f-calendar-schedule-gutter__time {
+    display: none;
+}
+
+/* line */
+/* --------------------- */
+
+:root {
+    --f-calendar-segment-background-highlighted: var(--f-color-border);
+    --f-calendar-segment-background: var(--f-color-surface-strong);
+    --f-calendar-segment-dimmed: var(--f-color-surface-strong);
+    --f-calendar-segment-hover: var(--f-color-surface-strong);
+    --f-calendar-segment-dimmer-hover: var(--f-color-surface-stronger);
+    --f-calendar-segment-dimmed-opacity: 0.5;
+}
+
+.f-calendar-schedule-segment {
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+}
+
+.f-calendar-schedule-segment.is-dimmed {}
+
+.f-calendar-schedule-segment.is-dimmed::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 1px);
+    display: block;
+    background: var(--f-calendar-segment-dimmed) !important;
+    opacity: var(--f-calendar-segment-dimmed-opacity);
+}
+
+.f-calendar-schedule.is-dragging .f-calendar-schedule-segment {
+    cursor: grabbing;
+}
+
+.f-calendar-schedule.can-add .f-calendar-schedule-segment:hover {
+    background: var(--f-calendar-segment-hover);
+}
+
+.f-calendar-schedule.can-add .f-calendar-schedule-segment.is-dimmed:hover {
+    background: var(--f-calendar-segment-dimmer-hover) !important;
+    /* opacity: var(--f-calendar-segment-dimmed-opacity); */
+}
+
+.f-calendar-schedule.is-dragging .f-calendar-schedule-segment:hover,
+.f-calendar-schedule.is-dragging.can-add .f-calendar-schedule-segment.is-dimmed:hover {
+    background: none !important;
+}
+
+.f-calendar-schedule-segment::after {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: var(--f-calendar-segment-background);
+}
+
+.f-calendar-schedule-segment.is-highlighted::after {
+    background: var(--f-calendar-segment-background-highlighted);
+    
+}
+
+/* month */
+/* --------------------- */
+
+:root {
+    --f-calendar-days-background: var(--f-color-surface-strong);
+    --f-calendar-days-grid-columns: repeat(7, calc(100%/7));
+    --f-calendar-days-width: 100%;
+    --f-calendar-days-height: 800px;
+    --f-calendar-days-border: var(--f-color-border);
+}
+
+#mockup-dark-mode-toggle {
+    z-index: 0;
+}
+
+.f-calendar-days {
+    border-top: 1px solid var(--f-calendar-days-border);
+    background: var(--f-calendar-days-background);
+    flex: 1;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+    width: var(--f-calendar-days-width);
+    height: var(--f-calendar-days-height);
+}
+
+.f-calendar-days__main {
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+    flex: 1;
+}
+
+.f-calendar-days__row {
+    width: 100%;
+    border-right: 1px solid var(--f-calendar-days-border);
+    flex: 1;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+    flex-shrink: 0;
+}
+
+/* month day */
+/* --------------------- */
+
+:root {
+    --f-calendar-event-height: 22px;
+    --f-calendar-days-day-background: var(--f-color-surface);
+    --f-calendar-days-day-background-outside: var(--f-color-surface-strong);
+    --f-calendar-days-day-background-hover: var(--f-color-surface);
+    --f-calendar-days-day-color: var(--f-color-text-weakest);
+}
+
+.f-calendar-days-day {
+    flex: 1;
+    cursor: pointer;
+    height: 100%;
+    border-left: 1px solid  var(--f-calendar-days-border);
+    border-bottom: 1px solid var(--f-calendar-days-border);
+    background-color: var(--f-calendar-days-day-background);
+    position: relative;    
+    transition: background-color 0.1s;
+}
+
+.f-calendar-days.is-dragging .f-calendar-days-day {
+    cursor: grabbing !important;
+}
+
+.f-calendar-days-day:not(.is-clamped) {
+    padding-bottom: 20px;
+}
+
+.f-calendar-days-day.is-expanded {
+    z-index: 2;
+}
+
+.f-calendar-days-day__inner {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.f-calendar-days-day.is-clamped .f-calendar-days-day__inner {
+    inset: 0px;
+    height: fit-content;
+    position: absolute;
+}
+
+.f-calendar-days-day.is-expanded .f-calendar-days-day__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    min-height: 100%;
+    height: fit-content;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: var(--f-calendar-days-day-background);
+    z-index: 100;
+    box-shadow: var(--f-shadow-card);
+    overflow: hidden;
+    border-top: 1px solid var(--f-calendar-days-border);
+    border-bottom: 1px solid var(--f-calendar-days-border);
+}
+
+.f-calendar-days-day__showmore {
+    height: var(--f-calendar-event-height);
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+    width: 100%;
+    z-index: 10;
+}
+
+.f-calendar-days-day__showmore span {
+    font-family: var(--f-font-body);
+    font-size: var(--f-font-size-sm);
+    font-weight: var(--f-font-weight-bold);
+    color: var(--f-color-accent);
+}
+
+.f-calendar-days-day.is-outside-month::after {
+    background-color: var(--f-calendar-days-day-background-outside);
+    opacity: 0.5;
+    content: ' ';
+    position: absolute;
+    inset: 0px;
+}
+
+.f-calendar-days-day:hover {
+    background: var(--f-calendar-days-day-background-hover);
+}
+
+.f-calendar-days-day__title {
+    position: relative;
+    padding: var(--f-space-2);
+    justify-content: flex-start;
+}
+
+.f-calendar-days-day__title .f-text {
+    color: var(--f-calendar-days-day-color);
+}
+
+.f-calendar-days-day > * {
+    user-select: none;
+}
+
+.f-calendar-days-day__title.is-today .f-text {
+    font-weight: var(--f-font-weight-bold);
+    color: var(--f-color-accent);
+}
+
+/* event */
+/* --------------------- */
+
+:root {
+}
+
+.f-calendar-days-event {
+    z-index: 1;
+    margin-bottom: 1px;
+    height: var(--f-calendar-event-height);
+    position: relative;
+    justify-content: flex-start;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0;
+    transition: box-shadow 0.25s;
+    /* animation: f-fadein 1s; */
+}
+
+.is-dragging .f-calendar-days-event {
+    pointer-events: none;
+}
+
+.f-calendar-days.can-update .f-calendar-days-event:hover {
+    box-shadow: var(--f-shadow-menu);
+    opacity: 0.95;
+}
+
+.f-calendar-days-event:not(.is-first) {
+    visibility: hidden;
+}
+
+.f-calendar-days-day .is-start {
+    border-top-left-radius: var(--f-radius);
+    border-bottom-left-radius: var(--f-radius);
+}
+
+.f-calendar-days-day .is-end {
+    border-top-right-radius: var(--f-radius);
+    border-bottom-right-radius: var(--f-radius);    
+}
+
+.f-calendar-days-day .is-expanded,
+.f-calendar-days-day .is-expanded > * {
+    border-radius: 0px !important;
+}
+
+.f-calendar-days.can-update .f-calendar-days-event.is-all-day.is-start::after,
+.f-calendar-days.can-update .f-calendar-days-event.is-all-day.is-end::before {
+    height: 100%;
+    cursor: col-resize;
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    width: 10px;
+    left: top;
+    z-index: 100;
+}
+
+.f-calendar-days-event.is-end::before {
+    right: 0;
+}
+
+.f-calendar-days-event.is-start::after {
+    left: 0;
+}
+
+.f-calendar-days-event__spacer {
+    user-select: none;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: var(--f-calendar-event-height);
+    pointer-events: none;
+    user-select: none;
+    margin-bottom: 1px;
+}
+
+/* month day */
+/* --------------------- */
+
+:root {
+    --f-month-event-background: var(--f-color-surface-stronger);
+    --f-month-event-background-crossday: var(--f-color-surface-strong);
+    --f-month-event-color: var(--f-color-surface-strongest);
+}
+
+.f-calendar-days-event-component {
+    user-select: none;
+    cursor: pointer;
+    background: var(--f-month-event-background);
+    overflow: hidden;
+    padding: 0 var(--f-space-2);
+    color: var(--f-color-text);
+    justify-content: flex-start;
+    transition: box-shadow 0.3s;
+    z-index: 1;
+    width: 100%;
+    height: var(--f-calendar-event-height);
+    gap: 0.3rem;
+}
+
+.f-calendar-days-event-component__color {
+    display: block;
+    border-radius: 100px;
+    background: var(--f-month-event-color);
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+}
+
+.is-cross-day .f-calendar-days-event-component.is-time {
+    background: var(--f-month-event-background-crossday) !important;
+}
+
+.f-calendar-days-event-component.is-time {
+    width: calc(100% - 1px); /* so it doesn't stretch over the border on the right */
+    height: var(--f-calendar-event-height);
+    background: var(--f-calendar-days-day-background) !important;
+}
+
+.is-outside-month .f-calendar-days-event-component.is-time {
+    background: var(--f-calendar-days-day-background-outside) !important;
+}
+
+.f-calendar-days-event-component:focus {
+    z-index: 10 !important;
+    box-shadow: var(--f-shadow-card);
+}
+
+.f-calendar-days-event-component__title {
+    font-family: var(--f-font-body);
+    font-size: var(--f-font-size-md);
+    font-weight: var(--f-font-weight-medium);
+    color: currentColor;
+    pointer-events: none;
+}
+
+.f-calendar-days-event-component__date {
+    pointer-events: none;
+    font-family: var(--f-font-body);
+    font-weight: var(--f-font-weight-medium);
+    font-size: var(--f-font-size-sm);
+    color: currentColor;
+    opacity: 0.6;
+}
+
+/* dragging */
+
+:root {
+    --f-calendar-dragging-opacity: 0.5;
+}
+
+.f-calendar-days-event-component.is-time.is-ghost {
+    background: var(--f-month-event-background-crossday) !important;
+}
+
+.f-calendar-schedule.is-dragging,
+.f-calendar-days.is-dragging {
+    cursor: grabbing !important;
+}
+
+.f-calendar-schedule .f-calendar-schedule-event,
+.f-calendar-days.f-calendar-days-event-component {
+    transition: opacity 0.5s;
+}
+
+/* month events */
+.f-calendar-days.is-dragging .f-calendar-days-event-component {
+    pointer-events: none;
+}
+
+.f-calendar-days.is-dragging .f-calendar-days-event-component:not(.is-ghost) {
+    opacity: var(--f-calendar-dragging-opacity);
+}
+
+/* dragging schedule events */
+.f-calendar-schedule.is-dragging .f-calendar-schedule-event .f-calendar-schedule-event__inner {
+    pointer-events: none;
+}
+
+.f-calendar-schedule.is-dragging .f-calendar-schedule-event:not(.is-ghost) .f-calendar-schedule-event__inner {
+    opacity: var(--f-calendar-dragging-opacity);
+}
+
+.f-calendar-schedule.is-dragging .f-calendar-schedule-segment:hover {
+    background: none !important;
+}
+
+.f-calendar-schedule.is-dragging .f-calendar-schedule-segment.is-dimmed:hover {
+    background: var(--f-calendar-segment-dimmed) !important;
+}

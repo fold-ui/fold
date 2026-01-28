@@ -27,7 +27,7 @@ import {
 import React, { useEffect, useRef, useState } from 'react'
 
 export default {
-    title: 'Components/Hooks',
+    title: 'Core/Hooks',
     component: <></>,
     excludeStories: 'docs',
 }

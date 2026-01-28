@@ -25,6 +25,3 @@ storybook-static
 .pnp.*
 
 docs-output
-
-packages/pro
-packages/external

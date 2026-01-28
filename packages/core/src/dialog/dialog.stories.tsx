@@ -2,7 +2,7 @@ import { Button, Dialog, Flexer, Heading, Input, Portal, Stack, Text, useVisibil
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Dialog',
+    title: 'Core/Dialog',
     component: Dialog,
     excludeStories: 'docs',
 }

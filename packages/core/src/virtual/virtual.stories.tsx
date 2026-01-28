@@ -2,7 +2,7 @@ import { Virtual, VirtualExperimental } from '@fold-dev/core'
 import React, { useEffect, useMemo, useState } from 'react'
 
 export default {
-    title: 'Components/Virtual',
+    title: 'Core/Virtual',
     component: Virtual,
     excludeStories: 'docs',
 }

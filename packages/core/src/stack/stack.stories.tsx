@@ -2,7 +2,7 @@ import { Avatar, Stack, View } from '@fold-dev/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Stack',
+    title: 'Core/Stack',
     component: Stack,
     excludeStories: 'docs',
 }

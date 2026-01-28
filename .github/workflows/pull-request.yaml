@@ -19,5 +19,7 @@ jobs:
         run: npm --workspace @fold-dev/design run build:prod
       - name: Build @fold-dev/core
         run: npm --workspace @fold-dev/core run build:prod
+      - name: Build @fold-dev/pro
+        run: npm --workspace @fold-dev/pro run build:prod
       - name: Run tests
         run: npm test

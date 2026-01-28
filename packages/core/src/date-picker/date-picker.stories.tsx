@@ -27,7 +27,7 @@ import {
 import React, { useMemo, useRef, useState } from 'react'
 
 export default {
-    title: 'Components/DatePicker',
+    title: 'Core/DatePicker',
     component: DatePicker,
     excludeStories: 'docs',
 }

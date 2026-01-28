@@ -3,7 +3,7 @@ import * as Token from '@fold-dev/design/tokens'
 import { Grid, GridItem } from '@fold-dev/core'
 
 export default {
-    title: 'Components/Grid',
+    title: 'Core/Grid',
     component: Grid,
     excludeStories: 'docs',
 }
