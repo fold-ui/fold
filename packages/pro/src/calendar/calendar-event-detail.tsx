@@ -22,7 +22,7 @@ import {
     useCheck,
     useDialog,
     useVisibility,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useContext, useMemo, useRef, useState } from 'react'
 import {
     CalendarTypes,

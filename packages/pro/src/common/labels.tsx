@@ -1,4 +1,4 @@
-import { IconLib, Pill } from '@fold-dev/core'
+import { IconLib, Pill } from '@fold-ui/core'
 import React from 'react'
 import { LabelSelectLabel } from './label-select'
 

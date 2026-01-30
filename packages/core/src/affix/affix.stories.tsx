@@ -1,4 +1,4 @@
-import { Affix, Text, View } from '@fold-dev/core'
+import { Affix, Text, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {

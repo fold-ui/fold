@@ -1,4 +1,4 @@
-import { Button, CoreViewProps, Footer, Size, View, usePopoverEvent } from '@fold-dev/core'
+import { Button, CoreViewProps, Footer, Size, View, usePopoverEvent } from '@fold-ui/core'
 import React, { useState } from 'react'
 import { UserSelect, UserSelectUser } from './user-select'
 

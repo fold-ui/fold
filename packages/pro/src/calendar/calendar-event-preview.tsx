@@ -1,4 +1,4 @@
-import { Heading, IconLib, Link, ModalClose, Palette, Popover, Text, View } from '@fold-dev/core'
+import { Heading, IconLib, Link, ModalClose, Palette, Popover, Text, View } from '@fold-ui/core'
 import React, { ReactNode, useMemo } from 'react'
 import { CalendarTypes } from './calendar.types'
 import { getDateFormat, getMediumDateFormat, getUserGroupName } from '../helpers'

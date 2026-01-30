@@ -1,5 +1,5 @@
-import * as Token from '@fold-dev/design/tokens'
-import { Avatar, IconLib, Pill, Stack } from '@fold-dev/core'
+import * as Token from '@fold-ui/design/tokens'
+import { Avatar, IconLib, Pill, Stack } from '@fold-ui/core'
 import React from 'react'
 
 export default {

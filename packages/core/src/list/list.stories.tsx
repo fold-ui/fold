@@ -1,4 +1,4 @@
-import { IconLib, Li, List } from '@fold-dev/core'
+import { IconLib, Li, List } from '@fold-ui/core'
 import React from 'react'
 
 export default {

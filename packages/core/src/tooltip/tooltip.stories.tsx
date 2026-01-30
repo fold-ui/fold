@@ -1,4 +1,4 @@
-import { Pill, Heading, IconLib, Link, Stack, Tooltip, View, Text } from '@fold-dev/core'
+import { Pill, Heading, IconLib, Link, Stack, Tooltip, View, Text } from '@fold-ui/core'
 import React from 'react'
 
 export default {

@@ -13,7 +13,7 @@ import {
     Textarea,
     View,
     useDialog,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useContext, useRef, useState } from 'react'
 import { ColorButton } from './color-button'
 import { CommonContext } from './common.provider'

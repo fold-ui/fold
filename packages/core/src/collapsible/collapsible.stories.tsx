@@ -1,4 +1,4 @@
-import { Button, Collapsible, Heading, Text, View } from '@fold-dev/core'
+import { Button, Collapsible, Heading, Text, View } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Virtual, VirtualExperimental } from '@fold-dev/core'
+import { Virtual, VirtualExperimental } from '@fold-ui/core'
 import React, { useEffect, useMemo, useState } from 'react'
 
 export default {

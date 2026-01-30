@@ -12,7 +12,7 @@ import {
     pad,
     useTheme,
     windowObject,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useContext, useLayoutEffect, useMemo, useRef } from 'react'
 import { CALENDAR_DRAG_DIRECTION, UserSelectUser, getUserGroupName } from '../'
 import { CalendarContext } from './calendar.provider'

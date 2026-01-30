@@ -1,5 +1,5 @@
 {
-    "name": "@fold-dev/design",
+    "name": "@fold-ui/design",
     "title": "Design Tokens",
     "version": "0.20.0",
     "description": "The UI library for product teams.",
@@ -14,7 +14,7 @@
     },
     "pre-commit": [],
     "publishConfig": {
-        "registry": "https://www.npmjs.com/org/fold-dev"
+        "registry": "https://www.npmjs.com/org/fold-ui"
     },
     "browserslist": [
         "last 2 version",
@@ -29,13 +29,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/fold-dev/fold"
+        "url": "https://github.com/fold-ui/fold"
     },
     "private": false,
     "author": "Jo du Plessis",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/fold-dev/fold/issues"
+        "url": "https://github.com/fold-ui/fold/issues"
     },
     "contributors": [
         {
@@ -48,7 +48,7 @@
         "Design System",
         "Style Dictionary"
     ],
-    "homepage": "https://fold.dev",
+    "homepage": "https://fold-ui.com",
     "dependencies": {
         "chroma-js": "^2.4.2"
     },

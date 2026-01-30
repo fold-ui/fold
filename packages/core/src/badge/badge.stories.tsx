@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, View } from '@fold-dev/core'
+import { Badge, View } from '@fold-ui/core'
 
 export default {
     title: 'Core/Badge',

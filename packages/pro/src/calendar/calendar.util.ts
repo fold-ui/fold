@@ -1,4 +1,4 @@
-import { FDate, documentObject, pad } from '@fold-dev/core'
+import { FDate, documentObject, pad } from '@fold-ui/core'
 import { useContext, useEffect, useMemo } from 'react'
 import { CalendarContext, HOUR_CHUNKS, TIME_SIZE } from './calendar.provider'
 

@@ -1,4 +1,4 @@
-import * as Token from '@fold-dev/design/tokens'
+import * as Token from '@fold-ui/design/tokens'
 
 export const days = [
     { date: new Date('2024-05-04'), workingHours: { start: '11:00', end: '17:30' } },

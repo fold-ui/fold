@@ -11,7 +11,7 @@ import {
     TabPanels,
     Tabs,
     View,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Heading, Logo, SkipNav, SkipNavMain, Stack, Text } from '@fold-dev/core'
+import { Heading, Logo, SkipNav, SkipNavMain, Stack, Text } from '@fold-ui/core'
 import React from 'react'
 
 export default {

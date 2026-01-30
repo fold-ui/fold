@@ -1,7 +1,7 @@
-import { IconLib } from '@fold-dev/core'
-import * as Token from '@fold-dev/design/tokens'
+import { IconLib } from '@fold-ui/core'
+import * as Token from '@fold-ui/design/tokens'
 import React from 'react'
-import { TodoTypes } from '../src'
+import { TodoTypes } from '@fold-ui/pro'
 import { availableLabels, availableUsers } from './common'
 
 export const sections: TodoTypes.Section[] = [

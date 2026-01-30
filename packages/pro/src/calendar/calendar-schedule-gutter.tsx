@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react'
 import { useLineSegments } from './calendar.util'
-import { pad } from '@fold-dev/core'
+import { pad } from '@fold-ui/core'
 import { CalendarContext } from './calendar.provider'
 
 export type CalendarScheduleGutterProps = {}

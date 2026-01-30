@@ -1,4 +1,4 @@
-import { CoreViewProps, View, classNames } from '@fold-dev/core'
+import { CoreViewProps, View, classNames } from '@fold-ui/core'
 import React, { useContext, useMemo } from 'react'
 import { CalendarScheduleDay } from './calendar-schedule-day'
 import { CalendarScheduleGutter } from './calendar-schedule-gutter'

@@ -1,4 +1,4 @@
-import { classNames } from '@fold-dev/core'
+import { classNames } from '@fold-ui/core'
 import React from 'react'
 import { stopEvent } from '../helpers'
 

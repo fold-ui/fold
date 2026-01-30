@@ -1,4 +1,4 @@
-import { Editable, Flexer, Heading, IconLib, Text, getForegroundColor } from '@fold-dev/core'
+import { Editable, Flexer, Heading, IconLib, Text, getForegroundColor } from '@fold-ui/core'
 import React, { ReactElement, useMemo } from 'react'
 
 export type KanbanSwimlaneHeaderProps = {

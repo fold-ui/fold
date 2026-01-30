@@ -10,7 +10,7 @@ import {
     MenuOptionGroup,
     MenuProvider,
     Text,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React from 'react'
 
 export default {

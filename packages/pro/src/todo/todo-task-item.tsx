@@ -1,4 +1,4 @@
-import { IconLib, Portal, classNames, documentObject } from '@fold-dev/core'
+import { IconLib, Portal, classNames, documentObject } from '@fold-ui/core'
 import React, { useContext, useMemo } from 'react'
 import {
     ActionButton,

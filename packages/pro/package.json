@@ -1,5 +1,5 @@
 {
-    "name": "@fold-dev/pro",
+    "name": "@fold-ui/pro",
     "title": "Fold",
     "version": "0.20.0",
     "description": "The UI library for product teams.",
@@ -7,7 +7,7 @@
     "module": "dist/index.js",
     "typings": "dist/index.d.ts",
     "publishConfig": {
-        "registry": "https://www.npmjs.com/org/fold-dev"
+        "registry": "https://www.npmjs.com/org/fold-ui"
     },
     "sideEffects": [
         "dist/*"
@@ -32,7 +32,7 @@
         "react-dom": "^18.3.0"
     },
     "devDependencies": {
-        "@fold-dev/design": "*",
+        "@fold-ui/design": "*",
         "autoprefixer": "^10.4.14",
         "cssnano": "^6.0.0",
         "esbuild": "^0.17.18",
@@ -61,7 +61,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/fold-dev/fold"
+        "url": "https://github.com/fold-ui/fold"
     },
     "keywords": [
         "React",
@@ -77,12 +77,12 @@
     "author": "Jo du Plessis",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/fold-dev/fold/issues"
+        "url": "https://github.com/fold-ui/fold/issues"
     },
     "contributors": [
         {
             "name": "joduplessis"
         }
     ],
-    "homepage": "https://fold.dev"
+    "homepage": "https://fold-ui.com"
 }

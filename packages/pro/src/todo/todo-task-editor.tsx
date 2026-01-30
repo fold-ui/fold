@@ -1,4 +1,4 @@
-import { CoreViewProps, classNames, documentObject } from '@fold-dev/core'
+import { CoreViewProps, classNames, documentObject } from '@fold-ui/core'
 import React, { useContext, useRef } from 'react'
 import { RichInput, RichInputContext } from '../common/rich-input'
 import { dispatchTodoEvent } from './todo.util'

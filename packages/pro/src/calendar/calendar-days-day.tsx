@@ -1,4 +1,4 @@
-import { FDate, classNames, getBoundingClientRect, isRightMouseButton, useResize } from '@fold-dev/core'
+import { FDate, classNames, getBoundingClientRect, isRightMouseButton, useResize } from '@fold-ui/core'
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { CalendarDaysEvent, CalendarDaysEventComponent } from './calendar-days-event'
 import { CalendarContext } from './calendar.provider'

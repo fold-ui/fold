@@ -1,4 +1,4 @@
-import { ContextMenuContext, Editable, Heading, IconLib, Pill, ProgressPie, classNames, useDrag } from '@fold-dev/core'
+import { ContextMenuContext, Editable, Heading, IconLib, Pill, ProgressPie, classNames, useDrag } from '@fold-ui/core'
 import React, { ReactElement, useContext, useMemo } from 'react'
 import { TodoContext } from './todo.provider'
 import { dispatchTodoEvent } from './todo.util'

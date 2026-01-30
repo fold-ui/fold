@@ -1,6 +1,6 @@
-import * as Token from '@fold-dev/design/tokens'
+import * as Token from '@fold-ui/design/tokens'
 import React from 'react'
-import { Logo, LogoSolid, View } from '@fold-dev/core'
+import { Logo, LogoSolid, View } from '@fold-ui/core'
 
 export default {
     title: 'Core/Logo',

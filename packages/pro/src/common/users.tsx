@@ -1,4 +1,4 @@
-import { Avatar, AvatarGroup, CoreViewProps, FIPlus, Icon } from '@fold-dev/core'
+import { Avatar, AvatarGroup, CoreViewProps, FIPlus, Icon } from '@fold-ui/core'
 import React, { useMemo } from 'react'
 import { UserSelectUser } from './user-select'
 import { ActionButton } from './action-button'

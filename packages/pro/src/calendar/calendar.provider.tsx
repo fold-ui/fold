@@ -1,4 +1,4 @@
-import { CommonProps, getKey, useEvent, useId, useVisibility, waitForRender, windowObject } from '@fold-dev/core'
+import { CommonProps, getKey, useEvent, useId, useVisibility, waitForRender, windowObject } from '@fold-ui/core'
 import React, { ReactElement, ReactNode, createContext, useState } from 'react'
 import { CALENDAR_DRAG_DIRECTION } from './'
 import { CalendarDaysEventComponentProps } from './calendar-days-event'

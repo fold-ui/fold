@@ -1,4 +1,4 @@
-import * as Token from '@fold-dev/design/tokens'
+import * as Token from '@fold-ui/design/tokens'
 
 export const labels = [
     { id: 'l1', color: Token.ColorElectric400, icon: 'star', text: 'Shopping' },

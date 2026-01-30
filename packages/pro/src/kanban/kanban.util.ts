@@ -4,7 +4,7 @@ import {
     generateUEID,
     moveElementInArray,
     removeElementFromArray,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import { useEffect } from 'react'
 import { KanbanSelection } from './kanban.types'
 

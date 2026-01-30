@@ -1,4 +1,4 @@
-import { IconLib, ProgressCircle } from '@fold-dev/core'
+import { IconLib, ProgressCircle } from '@fold-ui/core'
 import React from 'react'
 
 export type BadgesBadge = {

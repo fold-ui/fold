@@ -1,6 +1,6 @@
-import { FOCUSABLE, documentObject, plural, windowObject } from '@fold-dev/core'
-import { CalendarTypes } from 'calendar'
-import { UserSelectUser } from 'common'
+import { FOCUSABLE, documentObject, plural, windowObject } from '@fold-ui/core'
+import { CalendarTypes } from '../calendar'
+import { UserSelectUser } from '../common'
 
 export const addNumberSuffix = (number) => {
     switch (+number) {

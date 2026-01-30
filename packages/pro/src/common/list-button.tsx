@@ -1,4 +1,4 @@
-import { Menu, MenuItemOption, MenuOptionGroup, Popover, Portal, useVisibility } from '@fold-dev/core'
+import { Menu, MenuItemOption, MenuOptionGroup, Popover, Portal, useVisibility } from '@fold-ui/core'
 import React from 'react'
 import { ToolbarButton } from '../'
 

@@ -1,4 +1,4 @@
-import { Badge, DataGridContext, DataGridTypes, IconLib, Select, Text, View, getKey, useEvent, waitForRender } from '@fold-dev/core'
+import { Badge, DataGridContext, DataGridTypes, IconLib, Select, Text, View, getKey, useEvent, waitForRender } from '@fold-ui/core'
 import React, { FunctionComponent, useContext, useEffect, useRef, useState } from 'react'
 
 const countries = [

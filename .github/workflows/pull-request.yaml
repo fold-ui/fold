@@ -12,14 +12,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-            node-version: "18"
+            node-version: "20"
       - name: Install dependencies
         run: npm install
-      - name: Build @fold-dev/design
-        run: npm --workspace @fold-dev/design run build:prod
-      - name: Build @fold-dev/core
-        run: npm --workspace @fold-dev/core run build:prod
-      - name: Build @fold-dev/pro
-        run: npm --workspace @fold-dev/pro run build:prod
+      - name: Build @fold-ui/design
+        run: npm --workspace @fold-ui/design run build:prod
+      - name: Build @fold-ui/core
+        run: npm --workspace @fold-ui/core run build:prod
+      - name: Build @fold-ui/pro
+        run: npm --workspace @fold-ui/pro run build:prod
       - name: Run tests
         run: npm test

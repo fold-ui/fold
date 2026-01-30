@@ -9,7 +9,7 @@ import {
     View,
     useVisibility,
     waitForRender,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { ReactNode, useContext, useEffect, useRef } from 'react'
 import {
     Badge,

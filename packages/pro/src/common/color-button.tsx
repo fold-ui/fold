@@ -1,4 +1,4 @@
-import { Link, Palette, Popover, Portal, View, useVisibility } from '@fold-dev/core'
+import { Link, Palette, Popover, Portal, View, useVisibility } from '@fold-ui/core'
 import React, { useState } from 'react'
 import { ToolbarButton } from '../'
 

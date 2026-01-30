@@ -19,8 +19,8 @@ import {
     View,
     focusInputAtEnd,
     useCheck,
-} from '@fold-dev/core'
-import { CalendarTypes } from 'calendar'
+} from '@fold-ui/core'
+import { CalendarTypes } from '../calendar'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { addNumberSuffix, getMediumDateFormat } from '../helpers'
 

@@ -1,4 +1,4 @@
-import { Heading, Step, Steps, Text } from '@fold-dev/core'
+import { Heading, Step, Steps, Text } from '@fold-ui/core'
 import React from 'react'
 
 export default {

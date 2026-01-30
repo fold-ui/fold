@@ -1,4 +1,4 @@
-import { Button, UserList } from '@fold-dev/core'
+import { Button, UserList } from '@fold-ui/core'
 import React from 'react'
 
 export default {
@@ -19,19 +19,19 @@ export const Usage = () => (
         users={[
             {
                 name: 'Brent Fortuin',
-                description: 'brent@fold.dev',
+                description: 'brent@fold-ui.com',
                 image: '/men/01.jpg',
                 tools: <Button size="sm">Message</Button>,
             },
             {
                 name: 'Margaret Morris',
-                description: 'margaret@fold.dev',
+                description: 'margaret@fold-ui.com',
                 image: '/women/01.jpg',
                 tools: <Button size="sm">Message</Button>,
             },
             {
                 name: 'Kevin Manuel',
-                description: 'kevin@fold.dev',
+                description: 'kevin@fold-ui.com',
                 image: '/men/02.jpg',
                 tools: <Button size="sm">Message</Button>,
             },

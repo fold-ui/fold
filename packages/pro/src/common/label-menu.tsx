@@ -1,4 +1,4 @@
-import { Button, CoreViewProps, Footer, Size } from '@fold-dev/core'
+import { Button, CoreViewProps, Footer, Size } from '@fold-ui/core'
 import React, { useState } from 'react'
 import { LabelSelect, LabelSelectLabel } from './label-select'
 

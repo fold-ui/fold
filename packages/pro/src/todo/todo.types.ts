@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 import { BadgesBadge, LabelSelectLabel, Priority, Repeat, UserSelectUser } from '../common'
-import { CalendarTypes } from 'calendar'
+import { CalendarTypes } from '../calendar'
 
 export namespace TodoTypes {
     export type TaskUser = {} & UserSelectUser

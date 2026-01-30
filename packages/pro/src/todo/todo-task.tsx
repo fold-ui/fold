@@ -7,7 +7,7 @@ import {
     useDrag,
     useEvent,
     windowObject,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useContext, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import {
     FOLD_TODO_SHIFT_FLAG,

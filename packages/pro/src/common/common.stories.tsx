@@ -1,10 +1,11 @@
-import { Menu, MenuItem, Text, View, useCheck } from '@fold-dev/core'
+import { Menu, MenuItem, Text, View, useCheck } from '@fold-ui/core'
 import React, { useState } from 'react'
 import {
     CalendarTypes,
     ColorButton,
     CommonProvider,
     DateButton,
+    DateSelect,
     Detail,
     LabelButton,
     LabelSelect,
@@ -20,10 +21,8 @@ import {
     UserSelect,
     defaultWeekdays,
     getRepeatFrequencyText,
-} from '@fold-dev/pro'
+} from '@fold-ui/pro'
 import * as data from '../../../../dummy-data'
-import { DateSelect } from './date-select'
-import '../common/common.css'
 
 export default {
     title: 'Pro/Common',
@@ -32,7 +31,7 @@ export default {
 }
 
 export const docs = {
-    title: 'Data Grid',
+    title: 'Common',
     subtitle: 'A robust & flexible Data Grid component engineered to handle diverse datasets with ease.',
     description:
         'The Data Grid component enables you to customize & extend virtually every part of it, enabling you to accommodate a wide variety of data types.',

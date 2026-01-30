@@ -1,4 +1,4 @@
-import { addElementToArray, documentObject, generateUEID, moveElementInArray } from '@fold-dev/core'
+import { addElementToArray, documentObject, generateUEID, moveElementInArray } from '@fold-ui/core'
 import { useEffect } from 'react'
 
 export type TodoEventName = 'edit-task' | 'add-task-below' | 'select'

@@ -1,4 +1,4 @@
-import { Button, Footer, Popover, Portal, useVisibility } from '@fold-dev/core'
+import { Button, Footer, Popover, Portal, useVisibility } from '@fold-ui/core'
 import React from 'react'
 import { UserSelect, UserSelectUser } from './user-select'
 import { Users } from './users'

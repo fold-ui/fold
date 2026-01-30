@@ -1,4 +1,4 @@
-import { CoreViewProps, View, classNames, getKey, useDragEvent, useEvent, windowObject } from '@fold-dev/core'
+import { CoreViewProps, View, classNames, getKey, useDragEvent, useEvent, windowObject } from '@fold-ui/core'
 import React, { ReactNode, useContext, useRef } from 'react'
 import { TodoSections } from './todo-sections'
 import { TodoContext } from './todo.provider'

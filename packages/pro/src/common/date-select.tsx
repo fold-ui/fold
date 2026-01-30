@@ -17,8 +17,8 @@ import {
     View,
     useCheck,
     useVisibility,
-} from '@fold-dev/core'
-import { CalendarTypes } from 'calendar'
+} from '@fold-ui/core'
+import { CalendarTypes } from '../calendar'
 import React, { useMemo, useRef, useState } from 'react'
 import { getDateSelectTimeFormat, getRepeatFrequencyText } from '../helpers'
 import { Repeat, defaultWeekdays } from './repeat'

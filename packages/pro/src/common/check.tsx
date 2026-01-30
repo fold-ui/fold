@@ -1,4 +1,4 @@
-import { CheckboxAlt, CheckboxProps, classNames } from '@fold-dev/core'
+import { CheckboxAlt, CheckboxProps, classNames } from '@fold-ui/core'
 import React, { useMemo } from 'react'
 import { Priority } from './priority-button'
 

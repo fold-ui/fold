@@ -1,4 +1,4 @@
-import { IconLib, Pill, Select, SelectOption, SelectProps, Text, getKey } from '@fold-dev/core'
+import { IconLib, Pill, Select, SelectOption, SelectProps, Text, getKey } from '@fold-ui/core'
 import React, { ReactElement, ReactNode, useContext, useMemo, useState } from 'react'
 import { CommonContext } from './common.provider'
 

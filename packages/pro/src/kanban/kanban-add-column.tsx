@@ -10,7 +10,7 @@ import {
     getKey,
     useVisibility,
     waitForRender,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useRef, useState } from 'react'
 
 export type KanbanAddColumnProps = {

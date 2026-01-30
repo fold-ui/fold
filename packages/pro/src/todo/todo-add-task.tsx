@@ -1,4 +1,4 @@
-import { IconLib, Text, classNames } from '@fold-dev/core'
+import { IconLib, Text, classNames } from '@fold-ui/core'
 import React, { useState } from 'react'
 import { TodoTaskEditor } from './todo-task-editor'
 

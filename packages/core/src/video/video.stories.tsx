@@ -1,4 +1,4 @@
-import { Text, Video } from '@fold-dev/core'
+import { Text, Video } from '@fold-ui/core'
 import React from 'react'
 
 export default {

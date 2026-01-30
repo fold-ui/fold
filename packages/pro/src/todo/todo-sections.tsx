@@ -1,4 +1,4 @@
-import { DragElementArea } from '@fold-dev/core'
+import { DragElementArea } from '@fold-ui/core'
 import React from 'react'
 import { TodoSection, TodoTypes } from '../'
 

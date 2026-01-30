@@ -10,7 +10,7 @@ import {
     useId,
     waitForRender,
     windowObject,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, {
     createContext,
     forwardRef,

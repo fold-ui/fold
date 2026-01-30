@@ -1,4 +1,4 @@
-import { IconLib, classNames, cleanObject, mergeRefs } from '@fold-dev/core'
+import { IconLib, classNames, cleanObject, mergeRefs } from '@fold-ui/core'
 import React, { ReactNode, forwardRef, useMemo, useRef, useState } from 'react'
 import { stopEvent } from '../helpers'
 

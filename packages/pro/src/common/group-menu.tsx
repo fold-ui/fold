@@ -9,7 +9,7 @@ import {
     Palette,
     View,
     useDialog,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export const GroupMenu = (props: any) => {

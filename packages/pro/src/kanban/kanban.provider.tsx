@@ -1,4 +1,4 @@
-import { getKey, useEvent, useId, useWindowEvent, windowObject } from '@fold-dev/core'
+import { getKey, useEvent, useId, useWindowEvent, windowObject } from '@fold-ui/core'
 import React, { ReactElement, createContext, useState } from 'react'
 import { FOLD_KANBAN_SHIFT_FLAG } from './kanban'
 import { KanbanCard, KanbanCardProps } from './kanban-card'

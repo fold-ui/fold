@@ -14,7 +14,7 @@ import {
     Sidebar,
     Text,
     View,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React from 'react'
 
 export default {

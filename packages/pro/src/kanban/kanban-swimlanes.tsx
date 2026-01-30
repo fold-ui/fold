@@ -1,4 +1,4 @@
-import { DragArea } from '@fold-dev/core'
+import { DragArea } from '@fold-ui/core'
 import React from 'react'
 import { KanbanSwimlane } from './kanban-swimlane'
 import { KanbanTypes } from './kanban.types'

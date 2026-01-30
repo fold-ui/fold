@@ -1,4 +1,4 @@
-import { ContextMenuContext, Editable, Heading, IconLib, Pill, ProgressPie } from '@fold-dev/core'
+import { ContextMenuContext, Editable, Heading, IconLib, Pill, ProgressPie } from '@fold-ui/core'
 import React, { ReactElement, useContext, useMemo } from 'react'
 import { KanbanContext } from './kanban.provider'
 

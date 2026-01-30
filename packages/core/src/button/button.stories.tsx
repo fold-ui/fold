@@ -12,7 +12,7 @@ import {
     Text,
     View,
     useVisibility,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React from 'react'
 
 export default {

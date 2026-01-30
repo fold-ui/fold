@@ -1,4 +1,4 @@
-import { Button, FIBin, Icon, MenuProvider, Portal, Text, View, useCheck, useDialog } from '@fold-dev/core'
+import { Button, FIBin, Icon, MenuProvider, Portal, Text, View, useCheck, useDialog } from '@fold-ui/core'
 import React, { useMemo, useRef, useState } from 'react'
 import {
     Detail,
@@ -14,10 +14,8 @@ import {
     FloatingToolbar,
     processHTML,
     CommonProvider,
-} from '@fold-dev/pro'
+} from '@fold-ui/pro'
 import * as data from '../../../../dummy-data'
-import '../common/common.css'
-import './todo.css'
 
 export default {
     title: 'Pro/Todo',
@@ -26,7 +24,7 @@ export default {
 }
 
 export const docs = {
-    title: 'Data Grid',
+    title: 'Todo',
     subtitle: 'A robust & flexible Data Grid component engineered to handle diverse datasets with ease.',
     description:
         'The Data Grid component enables you to customize & extend virtually every part of it, enabling you to accommodate a wide variety of data types.',

@@ -23,7 +23,7 @@ import {
     useVisibility,
     View,
     InputPopover,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useRef, useState } from 'react'
 
 export default {

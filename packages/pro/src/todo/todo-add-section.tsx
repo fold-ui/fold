@@ -1,4 +1,4 @@
-import { IconLib, Pill, getKey } from '@fold-dev/core'
+import { IconLib, Pill, getKey } from '@fold-ui/core'
 import React, { useRef, useState } from 'react'
 
 export type TodoAddSectionProps = {

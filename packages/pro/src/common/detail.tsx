@@ -1,4 +1,4 @@
-import { Button, Flexer, Label, Modal, Portal, Toggle, View, useCheck, useDialog } from '@fold-dev/core'
+import { Button, Flexer, Label, Modal, Portal, Toggle, View, useCheck, useDialog } from '@fold-ui/core'
 import React, { useRef, useState } from 'react'
 import { CalendarTypes, Priority, TaskDetail, TodoTypes } from '../'
 

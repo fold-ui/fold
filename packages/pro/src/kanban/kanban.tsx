@@ -1,4 +1,4 @@
-import { CoreViewProps, View, classNames, useDragEvent, useEvent, waitForRender, windowObject } from '@fold-dev/core'
+import { CoreViewProps, View, classNames, useDragEvent, useEvent, waitForRender, windowObject } from '@fold-ui/core'
 import React, { ReactNode, useContext, useRef } from 'react'
 import { KanbanAddColumn } from './kanban-add-column'
 import { KanbanSwimlanes } from './kanban-swimlanes'

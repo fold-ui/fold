@@ -1,4 +1,4 @@
-import { Button, IconLib, Menu, MenuItem, View, useDialog } from '@fold-dev/core'
+import { Button, IconLib, Menu, MenuItem, View, useDialog } from '@fold-ui/core'
 import React from 'react'
 
 export const KanbanColumnMenu = (props: any) => {

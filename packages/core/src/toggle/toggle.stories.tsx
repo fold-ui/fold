@@ -1,4 +1,4 @@
-import { DarkModeToggle, IconLib, Label, Stack, Toggle, View, useCheck } from '@fold-dev/core'
+import { DarkModeToggle, IconLib, Label, Stack, Toggle, View, useCheck } from '@fold-ui/core'
 import React from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { classNames, windowObject } from '@fold-dev/core'
+import { classNames, windowObject } from '@fold-ui/core'
 import React, { useContext, useMemo } from 'react'
 import { CALENDAR_DRAG_DIRECTION } from '../'
 import { CalendarContext } from './calendar.provider'

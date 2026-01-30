@@ -23,18 +23,18 @@ Powerful, fully customizable React components for scaling your product to the ne
 
 ``` bash
 # Using npm
-npm install @fold-dev/core
+npm install @fold-ui/core
 
 # Using yarn
-yarn add @fold-dev/core
+yarn add @fold-ui/core
 ```
 
 ### Usage
 
 ```jsx
 import React from 'react';
-import { FoldProvider, Heading, Button, Card, Input } from '@fold-dev/core';
-import '@fold-dev/core/dist/styles.css';
+import { FoldProvider, Heading, Button, Card, Input } from '@fold-ui/core';
+import '@fold-ui/core/dist/styles.css';
 
 const App = () => {
     return (
@@ -61,7 +61,7 @@ Ensure you have the following prerequisites installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/fold-dev/fold.git
+   git clone https://github.com/fold-ui/fold.git
    ```
 
 2. Navigate to the project directory:
@@ -84,11 +84,11 @@ Ensure you have the following prerequisites installed:
 
 ## Documentation
 
-For detailed information on each component and their props, please refer to our [Documentation](https://www.fold.dev/docs).
+For detailed information on each component and their props, please refer to our [Documentation](https://www.fold-ui.com/docs).
 
 ## Theming
 
-The library provides easy-to-use theming options. Learn more about them in the [Theming Guide](https://www.fold.dev/docs/theming).
+The library provides easy-to-use theming options. Learn more about them in the [Theming Guide](https://www.fold-ui.com/docs/theming).
 
 ## Contributing
 
@@ -96,7 +96,7 @@ The library provides easy-to-use theming options. Learn more about them in the [
 If you've come across a bug or an issue, please don't hesitate to open a new issue. To make the process as smooth as possible, we've created some issue templates to get you started.
 
 ### Sharing Feedback 📢
-We'd love to get your feedback, be it suggestions, feature requests, or general thoughts on your experience. If you believe that creating a new issue isn't the best choice, don't hesitate to initiate a [discussion](https://github.com/fold-dev/fold/discussions) instead.
+We'd love to get your feedback, be it suggestions, feature requests, or general thoughts on your experience. If you believe that creating a new issue isn't the best choice, don't hesitate to initiate a [discussion](https://github.com/fold-ui/fold/discussions) instead.
 
 ## Code of Conduct ☀️
 Please note that we have a [Code of Conduct](CODE_OF_CONDUCT.md) that we expect everyone to follow when participating in this repository. We want to maintain a welcoming and inclusive environment for everyone.
@@ -107,6 +107,6 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## Support
 
-If you encounter any issues or have questions, feel free to [open an issue](https://github.com/fold-dev/fold/issues) or start a [discussion](https://github.com/fold-dev/fold/discussions).
+If you encounter any issues or have questions, feel free to [open an issue](https://github.com/fold-ui/fold/issues) or start a [discussion](https://github.com/fold-ui/fold/discussions).
 
 Thank you for being part of our community, and for helping us.

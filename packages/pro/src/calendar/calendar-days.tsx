@@ -1,4 +1,4 @@
-import { CoreViewProps, FDate, View, classNames, roundToDay, windowObject } from '@fold-dev/core'
+import { CoreViewProps, FDate, View, classNames, roundToDay, windowObject } from '@fold-ui/core'
 import React, { useContext, useMemo } from 'react'
 import { CALENDAR_DRAG_DIRECTION } from '../'
 import { CalendarDaysDay } from './calendar-days-day'

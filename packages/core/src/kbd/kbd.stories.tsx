@@ -1,5 +1,5 @@
 import React from 'react'
-import { Kbd, Text, View } from '@fold-dev/core'
+import { Kbd, Text, View } from '@fold-ui/core'
 
 export default {
     title: 'Core/Kbd',

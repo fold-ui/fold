@@ -1,4 +1,4 @@
-import { Button, Footer, Popover, Portal, useVisibility } from '@fold-dev/core'
+import { Button, Footer, Popover, Portal, useVisibility } from '@fold-ui/core'
 import React, { ReactElement, useRef } from 'react'
 import { LabelSelect, LabelSelectLabel } from './label-select'
 import { ToolbarButton } from './toolbar-button'

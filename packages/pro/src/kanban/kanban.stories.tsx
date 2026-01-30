@@ -1,4 +1,4 @@
-import { Button, FIBin, Footer, Icon, MenuProvider, Portal, Text, View, useDialog } from '@fold-dev/core'
+import { Button, FIBin, Footer, Icon, MenuProvider, Portal, Text, View, useDialog } from '@fold-ui/core'
 import React, { useState } from 'react'
 import {
     CommonProvider,
@@ -18,10 +18,8 @@ import {
     UserSelect,
     dispatchKanbanEvent,
     kanbanState,
-} from '@fold-dev/pro'
+} from '@fold-ui/pro'
 import * as data from '../../../../dummy-data'
-import '../common/common.css'
-import './kanban.css'
 
 export default {
     title: 'Pro/Kanban',
@@ -30,7 +28,7 @@ export default {
 }
 
 export const docs = {
-    title: 'Data Grid',
+    title: 'Kanban',
     subtitle: 'A robust & flexible Data Grid component engineered to handle diverse datasets with ease.',
     description:
         'The Data Grid component enables you to customize & extend virtually every part of it, enabling you to accommodate a wide variety of data types.',

@@ -28,7 +28,7 @@ Ensure you have the following prerequisites installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/fold-dev/fold.git
+   git clone https://github.com/fold-ui/fold.git
    ```
 
 2. Navigate to the project directory:
@@ -60,7 +60,7 @@ npm run watch
 Yarn is also acceptable, but be sure to replace `npm` with `Yarn` in the `package.json` `watch` script.
 
 For more information on how to integrate the generated design tokens, 
-please see our [theming](http://fold.dev/docs/theming) guide.
+please see our [theming](http://fold-ui.com/docs/theming) guide.
 
 ## Contributing
 

@@ -23,7 +23,7 @@ import {
     useTimer,
     useVisibility,
     useWindowResize,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useEffect, useRef, useState } from 'react'
 
 export default {

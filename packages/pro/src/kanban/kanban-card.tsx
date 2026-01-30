@@ -1,4 +1,4 @@
-import { ContextMenuContext, IconLib, Image, classNames } from '@fold-dev/core'
+import { ContextMenuContext, IconLib, Image, classNames } from '@fold-ui/core'
 import React, { memo, useContext, useLayoutEffect, useMemo, useRef } from 'react'
 import { Badge, Check, Labels, Users, useDateButton } from '../'
 import { KanbanTypes } from './kanban.types'

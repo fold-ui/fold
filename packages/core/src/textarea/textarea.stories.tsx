@@ -1,4 +1,4 @@
-import { IconLib, InputControl, InputPrefix, Textarea, View } from '@fold-dev/core'
+import { IconLib, InputControl, InputPrefix, Textarea, View } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {

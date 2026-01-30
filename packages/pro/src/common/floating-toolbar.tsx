@@ -1,4 +1,4 @@
-import { Button, FIBin, Icon, Portal, Text, View, useDialog } from '@fold-dev/core'
+import { Button, FIBin, Icon, Portal, Text, View, useDialog } from '@fold-ui/core'
 import React from 'react'
 import { dispatchTodoEvent } from '../'
 

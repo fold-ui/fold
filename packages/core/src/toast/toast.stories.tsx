@@ -1,4 +1,4 @@
-import { Button, IconLib, Stack, Text, Toast, ToastAnchor, useToast } from '@fold-dev/core'
+import { Button, IconLib, Stack, Text, Toast, ToastAnchor, useToast } from '@fold-ui/core'
 import React from 'react'
 
 export default {

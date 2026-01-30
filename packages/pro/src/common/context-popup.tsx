@@ -1,4 +1,4 @@
-import { IconLib, Menu, MenuItem } from '@fold-dev/core'
+import { IconLib, Menu, MenuItem } from '@fold-ui/core'
 import React from 'react'
 
 export const ContextPopup = (props) => {

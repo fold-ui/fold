@@ -1,4 +1,4 @@
-import { getBoundingClientRect } from '@fold-dev/core'
+import { getBoundingClientRect } from '@fold-ui/core'
 import React, { useContext, useMemo, useRef } from 'react'
 import { CalendarScheduleEvent, CalendarScheduleEventComponent } from './calendar-schedule-event'
 import { CalendarScheduleSegments } from './calendar-schedule-segments'

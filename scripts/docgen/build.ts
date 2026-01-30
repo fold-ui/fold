@@ -153,7 +153,7 @@ const generateMdx = (path) => {
             // import & install
             const imports = `import { ${componentDoc
                 .map(({ displayName }) => displayName)
-                .join(', ')} } from '@fold-dev/core'`
+                .join(', ')} } from '@fold-ui/core'`
             const installText = prettier.format(imports, { parser: 'typescript' })
 
             // CSS variables (might not always exist)
@@ -222,7 +222,7 @@ useTimeout,
 useTimer,
 useVisibility,
 useWindowResize
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 `,
                 'export const css = []',
                 storyTypeDocs
@@ -233,7 +233,7 @@ useWindowResize
     })
 }
 
-console.log('Make sure Core is build first (npm run build:prod)')
+console.log('Make sure Core & Pro components are built (npm run build:prod)')
 
 generateMdx(process.argv[2].split('=')[1])
 

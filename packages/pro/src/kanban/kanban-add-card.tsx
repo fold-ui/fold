@@ -1,4 +1,4 @@
-import { IconLib, InputControl, InputPrefix, Textarea, getKey } from '@fold-dev/core'
+import { IconLib, InputControl, InputPrefix, Textarea, getKey } from '@fold-ui/core'
 import React, { useRef, useState } from 'react'
 
 export type KanbanAddCardProps = {

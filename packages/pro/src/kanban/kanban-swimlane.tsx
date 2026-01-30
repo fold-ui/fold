@@ -1,4 +1,4 @@
-import { ContextMenuContext, classNames, useDrag } from '@fold-dev/core'
+import { ContextMenuContext, classNames, useDrag } from '@fold-ui/core'
 import React, { useContext } from 'react'
 import { KanbanColumns } from './kanban-columns'
 import { KanbanContext } from './kanban.provider'

@@ -1,4 +1,4 @@
-import { windowObject } from '@fold-dev/core'
+import { windowObject } from '@fold-ui/core'
 
 export * from './calendar-days-day'
 export * from './calendar-days-event'

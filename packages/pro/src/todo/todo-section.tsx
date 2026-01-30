@@ -8,7 +8,7 @@ import {
     useEvent,
     waitForRender,
     windowObject,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useContext, useMemo, useRef, useState } from 'react'
 import { FOLD_TODO_SECTION_AREAID_CACHE, TodoAddTask, TodoTasks } from './'
 import { TodoAddSection } from './todo-add-section'

@@ -12,7 +12,7 @@ import {
     useEvent,
     waitForRender,
     windowObject,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { FOLD_KANBAN_COLUMN_AREAID_CACHE, FOLD_KANBAN_SHIFT_FLAG } from './kanban'
 import { KanbanAddCard } from './kanban-add-card'
