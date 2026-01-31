@@ -1,7 +1,7 @@
 :root {
     --f-toast-border-radius: var(--f-radius);
-    --f-toast-color: var(--f-color-base-100);
-    --f-toast-background-color: var(--f-color-base-900);
+    --f-toast-color: var(--f-color-text-on-color);
+    --f-toast-background-color: var(--f-color-surface-inverse);
     --f-toast-max-width: 100%;
     --f-toast-padding: var(--f-space-3);
 }
@@ -82,37 +82,37 @@
 /* ********************************************* */
 
 .f-toast.is-accent { 
-    color: var(--f-color-accent-weak); 
+    color: var(--f-color-accent-text); 
     background-color: var(--f-color-accent); 
 }
 
 .f-toast.is-success { 
-    color: var(--f-color-success-weak); 
+    color: var(--f-color-success-text); 
     background-color: var(--f-color-success); 
 }
 
 .f-toast.is-neutral { 
-    color: var(--f-color-neutral-weak); 
+    color: var(--f-color-neutral-text); 
     background-color: var(--f-color-neutral); 
 }
 
 .f-toast.is-caution { 
-    color: var(--f-color-caution-weak); 
+    color: var(--f-color-caution-text); 
     background-color: var(--f-color-caution); 
 }
 
 .f-toast.is-warning { 
-    color: var(--f-color-warning-weak); 
+    color: var(--f-color-warning-text); 
     background-color: var(--f-color-warning); 
 }
 
 .f-toast.is-danger { 
-    color: var(--f-color-danger-weak); 
+    color: var(--f-color-danger-text); 
     background-color: var(--f-color-danger); 
 }
 
 .f-toast.is-highlight { 
-    color: var(--f-color-highlight-weak); 
+    color: var(--f-color-highlight-text); 
     background-color: var(--f-color-highlight); 
 }
 

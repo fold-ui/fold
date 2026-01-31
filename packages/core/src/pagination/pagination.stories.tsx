@@ -1,8 +1,8 @@
-import { Pagination, View } from '@fold-dev/core'
+import { Pagination, View } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Pagination',
+    title: 'Core/Pagination',
     component: Pagination,
     excludeStories: 'docs',
 }

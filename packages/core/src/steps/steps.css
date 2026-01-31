@@ -1,7 +1,7 @@
 :root {
     --f-step-color: var(--f-color-surface-strongest);
     --f-step-color-active: var(--f-color-accent);
-    --f-step-color-active-weak: var(--f-color-accent-weak);
+    --f-step-color-active-weak: var(--f-color-accent-text);
     --f-step-seperator-size: var(--f-size-1);
     --f-step-seperator-radius: var(--f-radius);
     --f-step-seperator-color: var(--f-color-surface-stronger);

@@ -20,6 +20,7 @@ import { globalCursor, windowObject } from '../helpers'
 export const FOLD_DRAG_CACHE = 'FOLD_DRAG_CACHE'
 export const FOLD_DRAG_STATE = 'FOLD_DRAG_STATE'
 export const FOLD_DRAG_LOCK = 'FOLD_DRAG_LOCK'
+export const FOLD_RESTRICT_DUAL_MOVEMENT = 'FOLD_RESTRICT_DUAL_MOVEMENT'
 
 windowObject[FOLD_DRAG_CACHE] = {
     locked: false,
@@ -92,8 +93,17 @@ export const DragManager = (props: DragManagerProps) => {
                 // calculate normal mouse movement
                 if (mouseX < cache.mouse.x - moveThreshold) moveDirection = 'left'
                 if (mouseX > cache.mouse.x + moveThreshold) moveDirection = 'right'
-                if (mouseY < cache.mouse.y - moveThreshold) moveDirection = 'up'
-                if (mouseY > cache.mouse.y + moveThreshold) moveDirection = 'down'
+
+                // if there is dual movement - restrict the direction
+                if (window[FOLD_RESTRICT_DUAL_MOVEMENT]) {
+                    if (moveDirection != 'left' && moveDirection != 'right') {
+                        if (mouseY < cache.mouse.y - moveThreshold) moveDirection = 'up'
+                        if (mouseY > cache.mouse.y + moveThreshold) moveDirection = 'down'
+                    }
+                } else {
+                    if (mouseY < cache.mouse.y - moveThreshold) moveDirection = 'up'
+                    if (mouseY > cache.mouse.y + moveThreshold) moveDirection = 'down'
+                }
 
                 // calculate indent mouse movement (jerking)
                 // TODO: extend to accommodate vertical directions

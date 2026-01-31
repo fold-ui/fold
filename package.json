@@ -1,12 +1,13 @@
 {
-    "name": "fold-dev",
+    "name": "fold-ui",
     "title": "Fold",
-    "version": "0.19.0",
+    "version": "0.21.0",
     "description": "The UI component library for product teams.",
     "workspaces": {
         "packages": [
             "packages/design",
-            "packages/core"
+            "packages/core",
+            "packages/pro"
         ]
     },
     "dependencies": {},
@@ -39,9 +40,9 @@
         "prettier": "^2.7.1",
         "pretty-quick": "^3.1.3",
         "prop-types": "^15.8.1",
-        "react": "^18.2.0",
+        "react": "^18.3.0",
         "react-docgen-typescript": "^2.2.2",
-        "react-dom": "^18.2.0",
+        "react-dom": "^18.3.0",
         "storybook": "^7.4.6",
         "ts-jest": "^29.1.1",
         "ts-node": "^10.9.1",
@@ -50,10 +51,12 @@
     },
     "scripts": {
         "prepare": "husky install",
-        "dev": "npm --workspace @fold-dev/core run watch:styles | npm --workspace @fold-dev/core run watch | npm run storybook | npm --workspace @fold-dev/design run watch",
+        "dev": "npm --workspace @fold-ui/core run watch:styles | npm --workspace @fold-ui/core run watch | npm --workspace @fold-ui/pro run watch:styles | npm --workspace @fold-ui/pro run watch | npm run storybook | npm --workspace @fold-ui/design run watch",
         "storybook": "storybook dev -p 6006",
-        "storybook:build": "npm --workspace @fold-dev/design run build:prod && npm --workspace @fold-dev/core run build:prod && storybook build -c .storybook -o storybook-static",
-        "build:docs": "ts-node ./scripts/docgen/build.ts --path=./packages/core/src",
+        "storybook:build": "npm --workspace @fold-ui/design run build:prod && npm --workspace @fold-ui/core run build:prod && npm --workspace @fold-ui/pro run build:prod && storybook build -c .storybook -o storybook-static",
+        "build:docs:core": "ts-node ./scripts/docgen/build.ts --path=./packages/core/src",
+        "build:docs:pro": "ts-node ./scripts/docgen/build.ts --path=./packages/pro/src",
+        "build:docs": "npm run build:docs:core && npm run build:docs:pro",
         "build:typedoc": "typedoc --options ./typedoc.json",
         "build:typedoc:md": "typedoc --plugin typedoc-plugin-markdown",
         "build-storybook": "storybook build",
@@ -67,18 +70,19 @@
         "publish:patch": "./scripts/publish.sh patch",
         "publish:minor": "./scripts/publish.sh minor",
         "publish:major": "./scripts/publish.sh major",
-        "publish": "npm --workspace @fold-dev/design run build:prod && npm --workspace @fold-dev/core run build:prod && npm --workspace @fold-dev/core publish && npm --workspace @fold-dev/design publish",
-        "publish:dry-run": "npm --workspace @fold-dev/design run build:prod && npm --workspace @fold-dev/core run build:prod && npm --workspace @fold-dev/core publish --dry-run && npm --workspace @fold-dev/design publish --dry-run"
+        "publish": "npm --workspace @fold-ui/design run build:prod && npm --workspace @fold-ui/core run build:prod && npm --workspace @fold-ui/pro run build:prod && npm --workspace @fold-ui/core publish --access public && npm --workspace @fold-ui/pro publish --access public && npm --workspace @fold-ui/design publish --access public",
+        "unpublish": "npm --workspace @fold-ui/core unpublish --access public && npm --workspace @fold-ui/pro unpublish --access public && npm --workspace @fold-ui/design unpublish --access public",
+        "publish:dry-run": "npm --workspace @fold-ui/design run build:prod && npm --workspace @fold-ui/core run build:prod && npm --workspace @fold-ui/core publish --dry-run && npm --workspace @fold-ui/pro run build:prod && npm --workspace @fold-ui/pro publish --dry-run && npm --workspace @fold-ui/design publish --dry-run"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/fold-dev/fold"
+        "url": "https://github.com/fold-ui/fold"
     },
     "private": true,
     "author": "Jo du Plessis",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/fold-dev/fold/issues"
+        "url": "https://github.com/fold-ui/fold/issues"
     },
     "contributors": [
         {
@@ -86,9 +90,9 @@
         }
     ],
     "engines": {
-        "node": ">=18.0"
+        "node": ">=20.0"
     },
-    "homepage": "https://fold.dev",
+    "homepage": "https://fold-ui.com",
     "husky": {
         "hooks": {
             "pre-commit": "pretty-quick --staged"

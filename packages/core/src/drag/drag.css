@@ -51,6 +51,7 @@
 
 .f-drag-element {
     flex-direction: column;
+    /* will-change: transform;  interferes with position: fixed elements */
 }
 
 .f-drag-element,

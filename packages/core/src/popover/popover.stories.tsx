@@ -15,11 +15,11 @@ import {
     Text,
     useVisibility,
     View,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useRef, useState } from 'react'
 
 export default {
-    title: 'Components/Popover',
+    title: 'Core/Popover',
     component: Popover,
     excludeStories: 'docs',
 }

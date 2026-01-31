@@ -1,8 +1,8 @@
-import { Audio, AudioWaveform, Card } from '@fold-dev/core'
+import { Audio, AudioWaveform, Card } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Audio',
+    title: 'Core/Audio',
     component: Audio,
     excludeStories: 'docs',
 }

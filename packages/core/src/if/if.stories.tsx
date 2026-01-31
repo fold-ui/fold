@@ -1,8 +1,8 @@
 import React from 'react'
-import { If, View } from '@fold-dev/core'
+import { If, View } from '@fold-ui/core'
 
 export default {
-    title: 'Components/If',
+    title: 'Core/If',
     component: If,
     excludeStories: 'docs',
 }

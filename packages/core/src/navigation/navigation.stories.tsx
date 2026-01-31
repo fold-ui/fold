@@ -1,4 +1,4 @@
-import * as Token from '@fold-dev/design/tokens'
+import * as Token from '@fold-ui/design/tokens'
 import {
     Badge,
     IconLib,
@@ -9,11 +9,11 @@ import {
     Pill,
     useTheme,
     View,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Navigation',
+    title: 'Core/Navigation',
     component: Navigation,
     excludeStories: 'docs',
 }

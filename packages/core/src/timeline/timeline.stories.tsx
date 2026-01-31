@@ -1,8 +1,8 @@
-import { Avatar, IconLib, Text, Timeline, TimelineItem } from '@fold-dev/core'
+import { Avatar, IconLib, Text, Timeline, TimelineItem } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Timeline',
+    title: 'Core/Timeline',
     component: Timeline,
     excludeStories: 'docs',
 }

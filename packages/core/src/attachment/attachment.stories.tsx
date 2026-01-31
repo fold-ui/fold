@@ -1,8 +1,8 @@
-import { Attachment, AttachmentThumb, IconLib, Text, View } from '@fold-dev/core'
+import { Attachment, AttachmentThumb, IconLib, Text, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Attachment',
+    title: 'Core/Attachment',
     component: Attachment,
     excludeStories: 'docs',
 }
@@ -25,13 +25,13 @@ export const Usage = () => {
             filesize={24325}
             label="filename.png"
             poster=""
-            href="https://fold.dev"
+            href="https://fold-ui.com"
             tools={
                 <View
                     row
                     gap={10}
                     p="0 0.5rem"
-                    color="var(--f-color-base-300)">
+                    color="var(--f-color-text-weakest)">
                     <IconLib icon="eye" />
                     <IconLib icon="bin" />
                 </View>
@@ -68,13 +68,13 @@ export const HeroPosterOverlay = () => {
             filesize={24325}
             label="filename.png"
             poster=""
-            href="https://fold.dev"
+            href="https://fold-ui.com"
             tools={
                 <View
                     row
                     gap={10}
                     p="0 0.5rem"
-                    color="var(--f-color-base-300)">
+                    color="var(--f-color-text-weakest)">
                     <IconLib icon="eye" />
                     <IconLib icon="bin" />
                 </View>
@@ -99,7 +99,7 @@ export const States = () => (
             mime="video/mpeg"
             filesize={24325}
             label="filename.mpg"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <Attachment
             width="100%"
@@ -109,7 +109,7 @@ export const States = () => (
             label="filename.png"
             loading
             loadingProgress={56}
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <Attachment
             error
@@ -117,7 +117,7 @@ export const States = () => (
             width="100%"
             filesize={24325}
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <Attachment
             width="100%"
@@ -125,7 +125,7 @@ export const States = () => (
             mime="image/png"
             filesize={24325}
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
     </View>
 )
@@ -144,20 +144,20 @@ export const Size = () => (
             mime="image/png"
             filesize={24325}
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <Attachment
             mime="image/png"
             filesize={24325}
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <Attachment
             size="lg"
             mime="image/png"
             filesize={24325}
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
     </View>
 )
@@ -178,7 +178,7 @@ export const Thumbnail = () => (
             mime="image/png"
             label="filename.png"
             loading
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <AttachmentThumb
             poster="/photos/10.jpg"
@@ -186,7 +186,7 @@ export const Thumbnail = () => (
             label="filename.png"
             loading
             loadingProgress={56}
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <AttachmentThumb
             error
@@ -194,12 +194,12 @@ export const Thumbnail = () => (
             loadingProgress={45}
             mime="image/png"
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
         />
         <AttachmentThumb
             mime="image/png"
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
             tools={
                 <View
                     row
@@ -216,7 +216,7 @@ export const Thumbnail = () => (
             poster="/photos/01.jpg"
             mime="image/png"
             label="filename.png"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
             tools={
                 <View
                     row
@@ -242,7 +242,7 @@ export const ThumbnailRedX = () => (
         poster="/photos/01.jpg"
         mime="image/png"
         label="filename.png"
-        href="https://fold.dev"
+        href="https://fold-ui.com"
         style={{ '--f-attachment-thumb-overlay': 'transparent' }}
         tools={
             <View

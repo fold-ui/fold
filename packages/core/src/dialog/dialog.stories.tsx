@@ -1,8 +1,8 @@
-import { Button, Dialog, Flexer, Heading, Input, Portal, Stack, Text, useVisibility, View } from '@fold-dev/core'
+import { Button, Dialog, Flexer, Heading, Input, Portal, Stack, Text, useVisibility, View } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Dialog',
+    title: 'Core/Dialog',
     component: Dialog,
     excludeStories: 'docs',
 }

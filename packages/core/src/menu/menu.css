@@ -8,7 +8,7 @@
     --f-menu-item-font-weight: var(--f-font-weight-normal);
     --f-menu-offset: 10px;
     --f-menu-item-ix-spacing: 0.75rem;
-    --f-menubar-padding: var(--f-space-3);
+    --f-menubar-padding: 0.25rem;
 }
 
 .f-menu {
@@ -67,7 +67,7 @@
     --f-menu-item-color-active: var(--f-color-accent);
     --f-menu-item-color-system-active: var(--f-color-surface-stronger);
     --f-menu-item-color-disabled: var(--f-color-text-weakest);
-    --f-menu-item-padding: 0.3rem 0.75rem;
+    --f-menu-item-padding: 0.4rem 0.75rem;
     --f-menu-item-margin: 0 0.2rem;
     --f-menu-item-height: fit-content;
 }
@@ -262,7 +262,6 @@
     min-width: fit-content;
     flex-shrink: 0;
     justify-content: flex-start;
-    padding: var(--f-menubar-padding);
     flex-wrap: wrap;
 }
 

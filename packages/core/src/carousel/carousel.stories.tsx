@@ -1,8 +1,8 @@
-import { Carousel, CarouselItem, CarouselPills, Image, Stack, useCarousel, View } from '@fold-dev/core'
+import { Carousel, CarouselItem, CarouselPills, Image, Stack, useCarousel, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Carousel',
+    title: 'Core/Carousel',
     component: Carousel,
     excludeStories: 'docs',
 }

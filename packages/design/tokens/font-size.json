@@ -1,5 +1,6 @@
 {
     "font-size": {
+        "2xs": { "value": "0.45rem" },
         "xs": { "value": "0.6rem" },
         "sm": { "value": "0.8rem" },
         "md": { "value": "1rem" },

@@ -1,8 +1,8 @@
-import { Text, Video } from '@fold-dev/core'
+import { Text, Video } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Video',
+    title: 'Core/Video',
     component: Video,
     excludeStories: 'docs',
 }

@@ -1,8 +1,8 @@
-import { Button, Drawer, Heading, Text, View, useVisibility } from '@fold-dev/core'
+import { Button, Drawer, Heading, Text, View, useVisibility } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Drawer',
+    title: 'Core/Drawer',
     component: Drawer,
     excludeStories: 'docs',
 }

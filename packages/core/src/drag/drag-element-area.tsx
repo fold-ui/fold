@@ -1,4 +1,4 @@
-import React, { Children, forwardRef, useLayoutEffect, useMemo, useRef } from 'react'
+import React, { Children, forwardRef, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import {
     CoreViewProps,
     DragVariant,
@@ -159,6 +159,58 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
     useLayoutEffect(() => {
         if (disabled) return
 
+        bufferRef.current.style.display = 'none'
+        let bufferHasBeenMadeVisible = false
+        const isTargetArea = id == target.areaId
+        const originVariant: DragVariant = origin.targetVariant[group]
+        const isAnimated = originVariant == 'animated'
+
+        containerRef.current.childNodes.forEach((node, index) => {
+            if (node.dataset.dragelement) {
+                const isDragged = origin.index == index && origin.areaId == id
+
+                // Set data attributes first (no reflow)
+                node.dataset.index = index
+                node.dataset.areaid = id
+
+                if (target.focus && isTargetArea && index == target.index && !node.dataset.noFocus) {
+                    node.dataset.focus = 'yes'
+                } else {
+                    delete node.dataset.focus
+                }
+
+                // Batch style changes
+                node.style.display = isAnimated && isDragged ? 'none' : node.dataset.fallbackdisplay || 'flex'
+                // node.style.translate = isAnimated && isTargetArea && index >= target.index
+                //     ? direction == 'vertical'
+                //         ? `0 ${origin.height}px`
+                //         : `${origin.width}px 0`
+                //     : null
+                node.style.transform = isAnimated && isTargetArea && index >= target.index
+                    ? direction == 'vertical'
+                        ? `translateY(${origin.height}px)`
+                        : `translateX(${origin.width}px)`
+                    : null
+
+                if (isAnimated && isTargetArea) {
+                    bufferRef.current.style.display = 'block'
+                    bufferRef.current.style.width = isVertical ? '100%' : origin.width + 'px'
+                    bufferRef.current.style.height = isVertical ? origin.height + 'px' : '100%'
+                    bufferHasBeenMadeVisible = true
+                }
+            }
+        })
+
+        if (!bufferHasBeenMadeVisible) bufferRef.current.style.display = 'none'
+    }, [props.children, origin, target, id, disabled])
+
+    /*
+
+    Previous function that iterates twice (bad)
+    
+    useLayoutEffect(() => {
+        if (disabled) return
+
         // always set this to off when the component mounts
         // or if children change
         bufferRef.current.style.display = 'none'
@@ -227,6 +279,8 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
         })
     }, [props.children, id, origin, target, disabled])
 
+    */
+
     /* 
 
     for now we have moved this to the top
@@ -254,7 +308,7 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
     */
 
     return (
-        <View
+        <div
             {...rest}
             id={id}
             ref={mergeRefs([ref, containerRef])}
@@ -289,6 +343,6 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
             )}
 
             {footer}
-        </View>
+        </div>
     )
 })

@@ -1,8 +1,8 @@
-import { Button, Pill, Splitter, SplitterContent, Text } from '@fold-dev/core'
+import { Button, Pill, Splitter, SplitterContent, Text } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Splitter',
+    title: 'Core/Splitter',
     component: Splitter,
     excludeStories: 'docs',
 }

@@ -1,9 +1,9 @@
-import { ColorPicker, Palette, Text, View } from '@fold-dev/core'
+import { ColorPicker, Palette, Text, View } from '@fold-ui/core'
 import React, { useState } from 'react'
-import * as Token from '@fold-dev/design/tokens'
+import * as Token from '@fold-ui/design/tokens'
 
 export default {
-    title: 'Components/Color',
+    title: 'Core/Color',
     component: ColorPicker,
     excludeStories: 'docs',
 }

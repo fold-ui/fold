@@ -23,12 +23,11 @@
 }
 
 .f-buttonize-outline {
-    transition: outline, opacity 0.25s;
+    transition: opacity 0.25s;
 }
 
 .f-buttonize-outline:hover {
     cursor: pointer;
-    transition: outline 0.1s;
     outline: var(--f-buttonize-outline-size) solid var(--f-buttonize-outline-color);
 }
 

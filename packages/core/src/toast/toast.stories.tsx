@@ -1,8 +1,8 @@
-import { Button, IconLib, Stack, Text, Toast, ToastAnchor, useToast } from '@fold-dev/core'
+import { Button, IconLib, Stack, Text, Toast, ToastAnchor, useToast } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Toast',
+    title: 'Core/Toast',
     component: Toast,
     excludeStories: 'docs',
 }
@@ -39,6 +39,12 @@ export const Variants = () => (
     <Stack
         direction="vertical"
         spacing={10}>
+        <Toast
+            message="Converting your document to PDF format."
+            prefix={<IconLib icon="warning" />}
+            delay={1000}
+            showProgress={true}
+        />
         <Toast
             message="Converting your document to PDF format."
             prefix={<IconLib icon="warning" />}

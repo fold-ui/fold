@@ -1,8 +1,8 @@
-import { HighlightText, IconLib, Label, LimitedText, Link, Stack, Text } from '@fold-dev/core'
+import { HighlightText, IconLib, Label, LimitedText, Link, Stack, Text } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Text',
+    title: 'Core/Text',
     component: Text,
     excludeStories: 'docs',
 }
@@ -58,13 +58,13 @@ export const Variants = () => (
         <Label>label</Label>
         <Link
             title="Fold"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
             target="_blank">
             Link
         </Link>
         <Link
             title="Fold"
-            href="https://fold.dev"
+            href="https://fold-ui.com"
             target="_blank">
             <IconLib
                 icon="paperclip"

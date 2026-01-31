@@ -1,8 +1,8 @@
-import { Breadcrumb, BreadcrumbItem, IconLib } from '@fold-dev/core'
+import { Breadcrumb, BreadcrumbItem, IconLib } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Breadcrumb',
+    title: 'Core/Breadcrumb',
     component: Breadcrumb,
     excludeStories: 'docs',
 }
@@ -34,7 +34,7 @@ export const WithCustomIconAndActiveLink = () => {
             <BreadcrumbItem>Blog</BreadcrumbItem>
             <BreadcrumbItem
                 active
-                to="https://fold.dev"
+                to="https://fold-ui.com"
                 target="_blank">
                 What is a breadcrumb?
             </BreadcrumbItem>

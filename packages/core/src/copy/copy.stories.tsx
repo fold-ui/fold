@@ -1,8 +1,8 @@
-import { Button, Copy, IconLib, Pill, useCopy } from '@fold-dev/core'
+import { Button, Copy, IconLib, Pill, useCopy } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Copy',
+    title: 'Core/Copy',
     component: Copy,
     excludeStories: 'docs',
 }

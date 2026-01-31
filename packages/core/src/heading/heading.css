@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6, .f-heading {
     color: var(--f-heading-color);
     background-color: var(--f-heading-background-color);
     font-family: var(--f-font-heading);
-    width: fit-content;
+    /* width: fit-content; */
     /* line-height: normal; */
 }
 

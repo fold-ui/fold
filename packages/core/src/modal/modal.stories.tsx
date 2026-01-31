@@ -1,8 +1,8 @@
-import { Button, Flexer, Heading, Modal, ModalClose, Portal, Text, View, useVisibility } from '@fold-dev/core'
+import { Button, Flexer, Heading, Modal, ModalClose, Portal, Text, View, useVisibility } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Modal',
+    title: 'Core/Modal',
     component: Modal,
     excludeStories: 'docs',
 }

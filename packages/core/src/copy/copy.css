@@ -6,7 +6,7 @@
     --f-copy-color: var(--f-color-accent);
     --f-copy-border-radius: var(--f-radius);
     --f-copy-padding: var(--f-space-3);
-    --f-copy-shadow: var(--f-shadow-sm);
+    --f-copy-shadow: none;
 }
 
 .f-copy {
@@ -71,26 +71,26 @@
 /* size */
 
 .f-copy.xs {
-    font-size: var(--f-font-size-xs) !important;
-    min-height: var(--f-size-7);
-}
-
-.f-copy.sm {
-    font-size: var(--f-font-size-sm) !important;
+    font-size: var(--f-font-size-2xs) !important;
     min-height: var(--f-size-8);
 }
 
+.f-copy.sm {
+    font-size: var(--f-font-size-xs) !important;
+    min-height: var(--f-size-9);
+}
+
 .f-copy.md {
-    font-size: var(--f-font-size-md) !important;
-    min-height: var(--f-size-9); 
+    font-size: var(--f-font-size-sm) !important;
+    min-height: var(--f-size-10); 
 }
 
 .f-copy.lg {
-    font-size: var(--f-font-size-lg) !important;
-    min-height: var(--f-size-11); 
+    font-size: var(--f-font-size-md) !important;
+    min-height: var(--f-size-12); 
 }
 
 .f-copy.xl {
-    font-size: var(--f-font-size-xl) !important;
-    min-height: var(--f-size-13); 
+    font-size: var(--f-font-size-lg) !important;
+    min-height: var(--f-size-14); 
 }

@@ -125,8 +125,8 @@
     animation-timing-function: ease-in;
 }
  
-.f-date-cell.is-start::after,
-.f-date-cell.is-end::after {
+.f-date-cell:not(.is-unavailable).is-start::after,
+.f-date-cell:not(.is-unavailable).is-end::after {
     border-radius: var(--f-radius);
     content: ' ';
     display: block;

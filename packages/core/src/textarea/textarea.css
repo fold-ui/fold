@@ -8,7 +8,7 @@
     --f-textarea-color-disabled: var(--f-color-text-weakest);
     --f-textarea-border-radius: var(--f-radius);
     --f-textarea-padding: var(--f-space-3);
-    --f-textarea-shadow: var(--f-shadow-sm);
+    --f-textarea-shadow: none;
 }
 
 .f-textarea {
@@ -75,8 +75,7 @@
 
 .f-textarea:focus {
     outline: var(--f-focus);
-    outline-offset: 1px;
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 /*

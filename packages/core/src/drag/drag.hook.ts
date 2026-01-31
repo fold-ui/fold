@@ -5,6 +5,7 @@ import {
     FOLD_DRAG_CACHE,
     FOLD_DRAG_LOCK,
     FOLD_DRAG_STATE,
+    FOLD_RESTRICT_DUAL_MOVEMENT,
     getBoundingClientRect,
     getPreviousNextElements,
     globalCursor,
@@ -21,6 +22,10 @@ export const FOLD_GHOST_ELEMENT_ROTATION = 'FOLD_GHOST_ELEMENT_ROTATION'
 export const useDrag = (args: any = { indentDelay: 100 }) => {
     const ghostRef = useRef(null)
     const { indentDelay } = args
+
+    const restrictDualMovement = (val = true) => window[FOLD_RESTRICT_DUAL_MOVEMENT] = val
+
+    const forceLockDragMovement = (val = true) => window[FOLD_DRAG_LOCK] = val
 
     const getStaticState = (): any => windowObject[FOLD_DRAG_STATE]
 
@@ -420,6 +425,8 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
 
     return {
         getStaticState,
+        forceLockDragMovement,
+        restrictDualMovement,
         getCache,
         getGhostElement,
         setGhostElement,

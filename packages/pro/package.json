@@ -1,0 +1,88 @@
+{
+    "name": "@fold-ui/pro",
+    "title": "Fold",
+    "version": "0.21.0",
+    "description": "The UI library for product teams.",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "publishConfig": {
+        "registry": "https://www.npmjs.com/org/fold-ui"
+    },
+    "sideEffects": [
+        "dist/*"
+    ],
+    "pre-commit": [],
+    "files": [
+        "dist"
+    ],
+    "browserslist": [
+        "last 2 version",
+        "Firefox ESR",
+        "> 1%",
+        "ie >= 9"
+    ],
+    "private": false,
+    "peerDependencies": {
+        "react": ">=18.3.0",
+        "react-dom": ">=18.3.0"
+    },
+    "dependencies": {
+        "react": "^18.3.0",
+        "react-dom": "^18.3.0"
+    },
+    "devDependencies": {
+        "@fold-ui/design": "*",
+        "autoprefixer": "^10.4.14",
+        "cssnano": "^6.0.0",
+        "esbuild": "^0.17.18",
+        "postcss": "^8.4.21",
+        "postcss-cli": "^10.1.0",
+        "postcss-import": "^15.1.0",
+        "postcss-preset-env": "^8.3.2",
+        "typescript": "^4.8.4"
+    },
+    "engines": {
+        "node": ">=20.0"
+    },
+    "scripts": {
+        "deploy": "npm run build:prod && npm publish",
+        "build": "tsc",
+        "clean": "rm -rf ./dist",
+        "build:prod": "npm run clean && npm run build && npm run build:styles:prod",
+        "build:prod:es": "npm run clean && npm run build && npm run esbuild && npm run build:styles:prod",
+        "build:styles": "postcss ./src/styles/styles.css --dir ./dist",
+        "build:styles:prod": "NODE_ENV=production postcss ./src/styles/styles.css --dir ./dist",
+        "watch": "tsc -w",
+        "watch:styles": "postcss ./src/styles/styles.css --dir ./dist -w",
+        "esbuild": "node ../../esbuild.mjs",
+        "esbuild:styles": "esbuild ./src/styles/styles.css --outfile=dist/out.css --bundle --minify",
+        "esbuild:csv-mapper": "node ./src/csv-mapper/esbuild.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fold-ui/fold"
+    },
+    "keywords": [
+        "React",
+        "ReactDOM",
+        "ui kit",
+        "component library",
+        "PostCSS",
+        "ESBuild",
+        "CSSNano",
+        "Storybook",
+        "TypeScript"
+    ],
+    "author": "Jo du Plessis",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/fold-ui/fold/issues"
+    },
+    "contributors": [
+        {
+            "name": "joduplessis"
+        }
+    ],
+    "homepage": "https://fold-ui.com"
+}

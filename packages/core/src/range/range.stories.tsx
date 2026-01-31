@@ -1,8 +1,8 @@
-import { Range } from '@fold-dev/core'
+import { Range } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Range',
+    title: 'Core/Range',
     component: Range,
     excludeStories: 'docs',
 }

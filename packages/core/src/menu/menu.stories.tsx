@@ -10,11 +10,11 @@ import {
     MenuOptionGroup,
     MenuProvider,
     Text,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Menu',
+    title: 'Core/Menu',
     component: Menu,
     excludeStories: 'docs',
 }

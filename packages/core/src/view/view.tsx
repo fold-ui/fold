@@ -21,6 +21,7 @@ export type ScrollViewProps = {
     onScrollToBottom?: any
     onScrollToTop?: any
     instanceId?: string
+    scrollSensitivityDelay?: number
 } & CoreViewProps
 
 export const ScrollView = forwardRef((props: ScrollViewProps, ref) => {
@@ -34,6 +35,7 @@ export const ScrollView = forwardRef((props: ScrollViewProps, ref) => {
         onScrollToTop,
         style = {},
         instanceId,
+        scrollSensitivityDelay = 50,
         ...rest
     } = props
     const scrollRef = useRef(null)
@@ -79,17 +81,23 @@ export const ScrollView = forwardRef((props: ScrollViewProps, ref) => {
     const handleWheelEvent = (e) => {
         if (freeze) return
 
-        const offsetHeight = scrollRef.current.scrollHeight - scrollRef.current.scrollTop - 1
-        const isBottom = scrollRef.current.offsetHeight >= offsetHeight
-        const isTop = scrollRef.current.scrollTop == 0
+        // give the browser time to repaint the scroll
+        setTimeout(() => {
+            // maybe unmounted now
+            if (!scrollRef.current) return
 
-        if (isTop && stickToTop) {
-            userIsScrolling.current = false
-        } else if (isBottom && stickToBottom) {
-            userIsScrolling.current = false
-        } else {
-            userIsScrolling.current = true
-        }
+            const offsetHeight = scrollRef.current.scrollHeight - scrollRef.current.scrollTop
+            const isBottom = scrollRef.current.offsetHeight >= offsetHeight
+            const isTop = scrollRef.current.scrollTop == 0
+
+            if (isTop && stickToTop) {
+                userIsScrolling.current = false
+            } else if (isBottom && stickToBottom) {
+                userIsScrolling.current = false
+            } else {
+                userIsScrolling.current = true
+            }
+        }, scrollSensitivityDelay)
     }
 
     const handleCustomEvent = ({ detail }) => {

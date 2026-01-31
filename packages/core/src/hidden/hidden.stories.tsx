@@ -1,8 +1,8 @@
 import React from 'react'
-import { Hidden, Text, View } from '@fold-dev/core'
+import { Hidden, Text, View } from '@fold-ui/core'
 
 export default {
-    title: 'Components/Hidden',
+    title: 'Core/Hidden',
     component: Hidden,
     excludeStories: 'docs',
 }

@@ -1,8 +1,8 @@
-import { Sparkline, View } from '@fold-dev/core'
+import { Sparkline, View } from '@fold-ui/core'
 import React, { useMemo } from 'react'
 
 export default {
-    title: 'Components/Sparkline',
+    title: 'Core/Sparkline',
     component: Sparkline,
     excludeStories: 'docs',
 }

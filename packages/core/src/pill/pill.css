@@ -43,8 +43,7 @@
 
 .f-pill:focus {
     outline: var(--f-focus);
-    outline-offset: 1px;
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 .f-pill__label {

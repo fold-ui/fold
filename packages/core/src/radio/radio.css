@@ -47,8 +47,7 @@ input.f-radio[type="radio"]:hover {
 
 input.f-radio[type="radio"]:focus {
     outline: var(--f-focus);
-    outline-offset: 1px;
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 input.f-radio[type="radio"]:checked {

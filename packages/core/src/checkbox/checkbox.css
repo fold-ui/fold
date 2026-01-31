@@ -60,8 +60,7 @@
 
 .f-checkbox[type="checkbox"]:focus {
     outline: var(--f-focus);
-    outline-offset: 1px;
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 .f-checkbox[type="checkbox"]:hover {
@@ -179,8 +178,7 @@
 
 .f-checkbox-alt:focus {
     outline: var(--f-focus);
-    outline-offset: 1px;
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 .f-checkbox-alt:hover {

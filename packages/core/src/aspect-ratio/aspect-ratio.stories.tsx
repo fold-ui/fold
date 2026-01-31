@@ -1,8 +1,8 @@
 import React from 'react'
-import { AspectRatio } from '@fold-dev/core'
+import { AspectRatio } from '@fold-ui/core'
 
 export default {
-    title: 'Components/AspectRatio',
+    title: 'Core/AspectRatio',
     component: AspectRatio,
     excludeStories: 'docs',
 }

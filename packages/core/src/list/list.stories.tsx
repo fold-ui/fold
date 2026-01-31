@@ -1,8 +1,8 @@
-import { IconLib, Li, List } from '@fold-dev/core'
+import { IconLib, Li, List } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/List',
+    title: 'Core/List',
     component: List,
     excludeStories: 'docs',
 }

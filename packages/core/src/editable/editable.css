@@ -1,13 +1,17 @@
+:root {
+    --f-editable-radius: var(--f-radius-xs);
+    --f-editable-padding: 5px;
+}
+
 .f-editable {
     width: fit-content;
     height: fit-content;
 }
 
 .f-editable:focus-within {
-    border-radius: var(--f-radius);
+    border-radius: var(--f-editable-radius);
     outline: var(--f-focus);
-    outline-offset: 5px;
-    transition: outline 100ms;
+    outline-offset: var(--f-editable-padding);
 }
 
 .f-editable > *:focus {

@@ -1,8 +1,8 @@
-import { Table, TBody, Td, Th, THead, Tr } from '@fold-dev/core'
+import { Table, TBody, Td, Th, THead, Tr } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Table',
+    title: 'Core/Table',
     component: Table,
     excludeStories: 'docs',
 }

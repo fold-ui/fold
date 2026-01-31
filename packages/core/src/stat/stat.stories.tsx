@@ -1,8 +1,8 @@
-import { IconLib, Stat, View } from '@fold-dev/core'
+import { IconLib, Stat, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Stat',
+    title: 'Core/Stat',
     component: Stat,
     excludeStories: 'docs',
 }

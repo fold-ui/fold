@@ -1,4 +1,4 @@
-import * as Token from '@fold-dev/design/tokens'
+import * as Token from '@fold-ui/design/tokens'
 import {
     Avatar,
     Badge,
@@ -14,11 +14,11 @@ import {
     Stack,
     Text,
     View,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Card',
+    title: 'Core/Card',
     component: Card,
     excludeStories: 'docs',
 }

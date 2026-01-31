@@ -1,5 +1,5 @@
 import React, { ReactPortal, useContext } from 'react'
-import { Button, Heading, IconLib, Modal, ModalClose, Text, useId } from '../'
+import { Button, Heading, IconLib, Modal, ModalClose, Portal, Text, useId } from '../'
 import { FoldContext } from '../contexts'
 
 export type AlertOptions = {
@@ -27,7 +27,7 @@ export const Alert = (props: AlertProps) => {
     const { onDismiss, alert } = props
     const titleId = useId()
     const descriptionId = useId()
-    const { portal, icon, color, title, description, button = 'Okay', closeButton } = alert
+    const { portal = Portal, icon, color, title, description, button = 'Okay', closeButton } = alert
 
     return (
         <Modal

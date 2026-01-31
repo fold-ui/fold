@@ -1,8 +1,8 @@
-import { Button, Editable, Text, View } from '@fold-dev/core'
+import { Button, Editable, Text, View } from '@fold-ui/core'
 import React, { useRef } from 'react'
 
 export default {
-    title: 'Components/Editable',
+    title: 'Core/Editable',
     component: Editable,
     excludeStories: 'docs',
 }

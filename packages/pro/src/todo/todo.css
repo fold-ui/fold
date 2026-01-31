@@ -1,0 +1,830 @@
+:root {
+    --f-todo-padding: 1rem;
+    --f-todo-background: var(--f-color-surface);
+}
+
+.f-todo {
+    width: 100%;
+    padding: var(--f-todo-padding);
+    background: var(--f-todo-background);
+
+    --f-drag-indent: 30px;
+}
+
+/* placeholder */
+
+.f-todo .f-drag-area__placeholder {
+    background: var(--f-todo-background);
+}
+
+.f-todo .f-drag-area__placeholder::after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    width: calc(100% - 30px);
+    height: 96%;
+    right: 0px;
+    top: 2%;
+    box-shadow: inset 0px 0px 0px 2px var(--f-color-accent);
+    border-radius: var(--f-radius);
+    background: var(--f-color-surface-strong);
+}
+
+/* lined placeholder */
+
+.f-todo .f-drag-area__placeholder-lined {
+    width: calc(100% - 60px) !important;
+    left: 30px;
+}
+
+.f-todo .f-drag-element[data-focus="yes"]:before {
+    content: ' ';
+    background: none;
+    border: none;
+}
+
+.f-todo .f-drag-element[data-focus="yes"] .f-todo-task-item__inner {
+    background: rgb(from var(--f-color-accent) r g b / 5%);
+    outline: 2px solid var(--f-color-accent);
+}
+
+:root {
+    --f-todo-drag-opacity: 0.9;
+}
+
+.f-drag-ghost .f-todo-task-item {
+    border-bottom: none; 
+    background: var(--f-color-surface);
+    box-shadow: var(--f-shadow-menu);
+    opacity: var(--f-todo-drag-opacity);
+}
+
+.f-drag-ghost .f-todo-task__collapse-icon {
+    display: none;
+}
+
+/* sections */
+/* ----------------------------------- */
+
+.f-todo-sections {
+    width: 100%;
+    height: fit-content;
+}
+
+/* sections */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-section-header-color: var(--f-color-text-weak);
+    --f-todo-section-header-gap: 14px;
+    --f-todo-section-header-height: 60px;
+    --f-todo-section-description-color: var(--f-color-text-weaker);
+    --f-todo-section-header-font-size: 16px;
+    --f-todo-section-header-line-height: 20px;
+    --f-todo-section-header-description-font-size: 12px;
+    --f-todo-section-header-description-line-height: 14px;
+    --f-todo-section-header-pill-height: 22px;
+    --f-todo-section-header-pill-font-size: 12px;
+    --f-todo-section-header-pill-line-height: 14px;
+    --f-todo-section-header-collapse-width: 30px;
+    --f-todo-section-header-collapse-height: 20px;
+    --f-todo-section-header-padding: 0 10px;
+    --f-todo-section-header-margin: 0 0 0 -10px;
+}
+
+.f-todo-section {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+}
+
+/* heeader */
+/* ----------------------------------- */
+
+.f-todo-section-header {
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.f-todo-section-header__inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: var(--f-todo-section-header-color);
+    height: var(--f-todo-section-header-height);
+    gap: var(--f-todo-section-header-gap);  
+    /* fixes the focus outline being clipping by the left edge */
+    padding: var(--f-todo-section-header-padding);
+    margin: var(--f-todo-section-header-margin);
+}
+
+.f-todo-section-header__inner .f-editable {
+    overflow: hidden;
+}
+
+.f-todo-section-header__inner .f-editable .f-heading {
+    white-space: nowrap;
+    font-size: var(--f-todo-section-header-font-size);
+    line-height: var(--f-todo-section-header-line-height);
+}
+
+.f-todo-section-header__inner .f-pill {
+    height: var(--f-todo-section-header-pill-height);
+}
+
+.f-todo-section-header__inner .f-pill .f-text {
+    font-size: var(--f-todo-section-header-pill-font-size);
+    line-height: var(--f-todo-section-header-pill-line-height);
+}
+
+.f-todo-section-header__description {
+    flex: 1;
+    color: var(--f-todo-section-description-color);
+    font-size: var(--f-todo-section-header-description-font-size);
+    line-height: var(--f-todo-section-header-description-line-height);
+}
+
+.f-todo-section-header__collapse {
+    width: var(--f-todo-section-header-collapse-width);
+    height: var(--f-todo-section-header-collapse-height);
+}
+
+/* tasks */
+/* ----------------------------------- */
+
+.f-todo-section__tasks {
+    width: 100%;
+    position: relative;
+    height: fit-content;
+}
+
+.f-todo-section__tasks .f-drag-area {
+    min-height: 20px;
+}
+
+.f-todo-section__tasks-inner {
+    height: fit-content;
+    width: 100%;
+}
+
+/* footer */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-section-placeholder-background: var(--f-color-surface-stronger);
+    --f-todo-section-placeholder-radius: var(--f-radius);
+    --f-todo-section-placeholder-border: none;
+    --f-todo-section-placeholder-outline: none;
+    --f-todo-section-placeholder-margin: 0;
+}
+
+.f-todo-section__placeholder {
+    height: 50px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    animation: f-drag-fadein var(--f-transition-duration-fast);
+    margin: var(--f-todo-section-placeholder-margin);
+    border: var(--f-todo-section-placeholder-border);
+    outline: var(--f-todo-section-placeholder-outline);
+    outline: var(--f-todo-task-item-select-width) solid var(--f-todo-task-item-select-color);
+    border-radius: var(--f-todo-section-placeholder-radius);
+    background: var(--f-todo-section-placeholder-background);
+}
+
+/* collapse icon */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-collapse-color: var(--f-color-text-weakest);
+    --f-todo-collapse-left: 0px;
+    --f-todo-collapse-top: 20px;
+    --f-todo-collapse-icon-width: 4px;
+    --f-todo-collapse-icon-margin: 0 0 0 20px
+
+}
+
+.f-todo-section-header {
+    color: var(--f-todo-collapse-color);
+}
+
+.f-todo-section-header .f-todo-collapse-icon {
+    transform: rotate(-90deg);
+    transition: transform 0.1s;
+    margin-right: var(--f-todo-collapse-icon-margin);
+    stroke-width: var(--f-todo-collapse-icon-width) !important; /* override f-icon */    
+}
+
+.f-todo-section-header.is-visible .f-todo-collapse-icon {
+    transform: rotate(0deg);
+}
+
+/* indentation rules */
+/* ----------------------------------- */
+
+[data-indent="0"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 0);
+}
+
+[data-indent="0"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 0);
+}
+
+[data-indent="1"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 1);
+    width: calc(100% + (var(--f-drag-indent) * 1));
+}
+
+[data-indent="1"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 1);
+}
+
+[data-indent="2"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 2);
+    width: calc(100% + (var(--f-drag-indent) * 2));
+}
+
+[data-indent="2"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 2);
+}
+
+[data-indent="3"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 3);
+    width: calc(100% + (var(--f-drag-indent) * 3));
+}
+
+[data-indent="3"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 3);
+}
+
+[data-indent="4"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 4);
+    width: calc(100% + (var(--f-drag-indent) * 4));
+}
+
+[data-indent="4"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 4);
+}
+
+[data-indent="5"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 5);
+    width: calc(100% + (var(--f-drag-indent) * 5));
+}
+
+[data-indent="5"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 5);
+}
+
+[data-indent="6"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 6);
+    width: calc(100% + (var(--f-drag-indent) * 6));
+}
+
+[data-indent="6"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 6);
+}
+
+[data-indent="7"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 7);
+    width: calc(100% + (var(--f-drag-indent) * 7));
+}
+
+[data-indent="7"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 7);
+}
+
+[data-indent="8"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 8);
+    width: calc(100% + (var(--f-drag-indent) * 8));
+}
+
+[data-indent="8"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 8);
+}
+
+[data-indent="9"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 9);
+    width: calc(100% + (var(--f-drag-indent) * 9));
+}
+
+[data-indent="9"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 9);
+}
+
+[data-indent="10"] .is-indent {
+    padding-left: calc(var(--f-drag-indent) * 10);
+    width: calc(100% + (var(--f-drag-indent) * 10));
+}
+
+[data-indent="10"] .f-todo-task__collapse-icon {
+    margin-left: calc(var(--f-drag-indent) * 10);
+}
+
+/* to do task */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-task-item-height: 40px;
+    --f-todo-task-item-padding: 8px 10px 8px 0;
+    --f-todo-task-item-height-footer: fit-content;
+    --f-todo-task-item-select-color: var(--f-color-accent);
+    --f-todo-task-item-parent-select-color: var(--f-color-accent-weak);
+    --f-todo-task-item-select-width: 2px;
+    --f-todo-task-item-collapse-padding: 0px;
+    --f-todo-task-checkbox-width: 20px;
+    --f-todo-task-collapse-width: 30px;
+    --f-todo-task-collapse-height: 20px;
+    --f-todo-task-color-width: 5px;
+    --f-todo-task-color-left: -5px;
+    --f-todo-task-border-width: 1px;
+    --f-todo-task-border-bottom: var(--f-todo-task-border-width) solid var(--f-color-surface-stronger);
+}
+
+.f-todo-section__tasks-inner .f-drag-element:first-child .f-todo-task-item {
+    border-top: 0px solid var(--f-color-border);
+}
+
+.f-todo-task-item {
+    justify-content: flex-start;
+    min-height: var(--f-todo-task-item-height);
+    position: relative;
+    width: 100%;
+    border-bottom: var(--f-todo-task-border-bottom);
+    cursor: pointer;
+    transition: box-shadow 0.25s, border 0.25s, height 0.25s;
+}
+
+.f-todo-task-item.has-footer {
+    min-height: var(--f-todo-task-item-height-footer);
+}
+
+.f-todo-task-item:focus {
+    outline: none;
+}
+
+.f-todo-task-item.is-edit {
+    z-index: 10;
+}
+
+.f-todo-task-item__color {
+    position: absolute;
+    left: var(--f-todo-task-color-left);
+    top: 0;
+    height: calc(100% + var(--f-todo-task-border-width));
+    width: var(--f-todo-task-color-width);
+    z-index: 1;
+}
+
+.f-todo-task-item__collapse {
+    height: var(--f-todo-task-collapse-height);
+    width: var(--f-todo-task-collapse-width);
+    padding: var(--f-todo-task-item-collapse-padding);
+}
+
+.f-todo-task-item__collapse-icon {
+    left: var(--f-todo-collapse-left); 
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+    color: var(--f-todo-collapse-color);
+    stroke-width: var(--f-todo-collapse-icon-width) !important; /* override f-icon */
+}
+
+.f-todo-task-item__collapse-icon.is-collapsed {
+    transform: rotate(-90deg);
+}
+
+.f-todo-task-item__checkbox {
+    position: relative;
+    width: var(--f-todo-task-checkbox-width);
+}
+
+.f-todo-task-item__inner {
+    position: relative;
+    flex: 1;
+    border-radius: var(--f-radius);
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding: var(--f-todo-task-item-padding);
+}
+
+.f-todo-task-item__main {
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    flex: 1;
+    position: relative;  
+    padding: 0 0 0 14px;
+}
+
+.f-todo-task-item.is-edit .f-todo-task-item__main {
+    overflow: initial;
+}
+
+:root {
+    --f-todo-task-footer-margin-top: 4px;
+    --f-todo-task-footer-min-height: 28px;
+    --f-todo-task-footer-gap: 4px;
+    --f-todo-text-weight: 400;
+    --f-todo-text-letter-spacing: 0px;
+    --f-todo-text-size: 14px;
+    --f-todo-text-line-height: 20px;
+    --f-todo-text-color: var(--f-color-text);
+    --f-todo-users-height: 22px;
+}
+
+.f-todo-task-item__text {
+    position: relative;
+    flex-shrink: 1;
+    width: 100%;
+    overflow: hidden;
+    color: var(--f-todo-text-color);
+    font-weight: var(--f-todo-text-weight);
+    font-size: var(--f-todo-text-size);
+    line-height: var(--f-todo-text-line-height);
+    letter-spacing: var(--f-todo-text-letter-spacing);
+    white-space: pre-wrap;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    display: inline-block;
+    transition: opacity 0.1s;
+    user-select: none;
+}
+
+.f-todo-task-item__text * {
+    user-select: none;
+}
+
+.f-todo-task-item__text a {
+    -webkit-user-drag: none;
+    /* special case */
+    word-break: break-all;
+    white-space: pre-line;
+}
+
+.f-todo-task-item .f-todo-task-item__edit {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.f-todo-task-item:hover .f-todo-task-item__edit {
+    opacity: 1;
+}
+
+.f-todo-task-item__actions {
+    height: var(--f-todo-users-height);
+    justify-content: flex-end;
+    padding-left: 4px;
+    gap: 5px;
+}
+
+.f-todo-task-item__footer {
+    flex-wrap: wrap;
+    width: fit-content;
+    justify-content: flex-start;
+    gap: var(--f-todo-task-footer-gap);
+    min-height: var(--f-todo-task-footer-min-height);
+    margin-top: var(--f-todo-task-footer-margin-top);
+
+    /* display: none; */
+}
+
+.f-todo-task-item__labels {
+    gap: 0.2rem;
+    width: fit-content;
+}
+
+.f-todo-task-item__badges {
+    gap: 1rem;
+    width: fit-content;
+}
+
+.f-todo-task-item .f-editable:focus-within {
+    outline: none !important;
+}
+
+.f-todo-task-item:hover {
+    box-shadow: var(--f-shadow-menu);
+}
+
+@keyframes f-todo-fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* editor */
+/* ----------------------------------- */
+
+.f-todo-task-item__editor {
+    justify-content: flex-start;
+    flex: 1;
+    width: 100%;
+    font-size: var(--f-todo-text-size);
+    line-height: var(--f-todo-text-line-height);
+    animation: f-todo-task-editor-fadein 0.2s;
+    height: var(--f-todo-users-height);
+}
+
+@keyframes f-todo-task-editor-fadein {
+    from { opacity: 0.75; }
+    to { opacity: 1; }
+}
+
+/* locking & completed */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-text-color-inactive: var(--f-color-text-weakest);
+}
+
+.f-todo-task-item.is-locked {
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.is-complete .f-todo-task-item__text,
+.is-complete .f-todo-task-item__text > * {
+    color: var(--f-todo-text-color-inactive) !important;
+}
+
+.is-locked .f-checkbox-alt {
+    border-color: var(--f-todo-text-color-inactive) !important;
+}
+
+/* ------------------------------------------------------ */
+/* selections */
+/* ------------------------------------------------------ */
+
+/* selected multiple */
+/* this is added useDrag in drag.tsx */
+/* ----------------------------------- */
+
+.f-drag-area__placeholder {
+    background: var(--f-color-surface-strong);
+}
+
+body[data-dragging="yes"] .f-todo .f-todo-task-item.is-selected,
+body[data-dragging="yes"] .f-todo .f-todo-task-item.is-parent-selected {
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.1s;
+    animation: f-todo-fadein 0.2s;
+}
+
+@keyframes f-todo-fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.f-todo-task-item.is-parent-selected .f-todo-task-item__inner,
+.f-todo-task-item.is-selected .f-todo-task-item__inner {
+    outline-offset: calc(-1 * var(--f-todo-task-item-select-width));
+    z-index: 10;
+}
+
+.f-todo-task-item.is-parent-selected .f-todo-task-item__inner {
+    outline: var(--f-todo-task-item-select-width) solid var(--f-todo-task-item-parent-select-color);
+}
+
+.f-todo-task-item.is-selected .f-todo-task-item__inner {
+    outline: var(--f-todo-task-item-select-width) solid var(--f-todo-task-item-select-color);
+}
+
+body[data-dragging="yes"] .f-todo .f-todo-task-item.is-selected .f-todo-task-item__inner,
+body[data-dragging="yes"] .f-todo .f-todo-task-item.is-parent-selected .f-todo-task-item__inner {
+    outline: none !important;
+}
+
+/* add section */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-add-section-margin: 15px 0 0 0;
+    --f-todo-add-section-padding: 0px 30px;
+    --f-todo-add-section-spacing: 12px;
+    --f-todo-add-section-height: 40px;
+    --f-todo-add-section-background: transparent;
+}
+
+.f-todo-add-section {
+    margin: var(--f-todo-add-section-margin);
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    background: var(--f-todo-add-section-background);
+    height: var(--f-todo-add-section-height);
+}
+
+.f-todo-add-section__inner {
+    position: relative;
+    overflow: visible;    
+    justify-content: flex-start;
+    padding: var(--f-todo-add-section-padding);
+    height: var(--f-todo-add-section-height);
+    width: 100%;
+    gap: var(--f-todo-add-section-spacing);
+    color: var(--f-color-text);
+    animation: f-add-section-fadein 0.2s;
+}
+
+@keyframes f-add-section-fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.f-todo-add-section__inner .f-icon {
+    color: var(--f-color-text-weakest);
+}
+
+.f-todo-add-section__inner input {
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--f-task-text-title-color);
+    font-size: var(--f-task-text-title-size);
+    background: transparent;
+    padding-left: 0 !important;
+    font-weight: var(--f-font-weight-normal);
+    font-family: var(--f-font-body);
+    color: var(--f-color-text);
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+}
+
+.f-todo-add-section__inner input::placeholder {
+    color: var(--f-color-text-weakest);
+}
+
+/* add task */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-add-task-background: transparent;
+    --f-todo-add-task-padding: 10px 0px 10px 30px;
+    --f-todo-add-task-spacing: 10px;
+    --f-todo-add-task-min-height: 40px;
+    --f-todo-add-task-text-size: 14px;
+    --f-todo-add-task-line-height: 20px;
+    --f-todo-add-task-border-bottom: 1px solid var(--f-color-surface-stronger);
+}
+
+.f-todo-add-task {
+    position: relative;
+    width: 100%;
+    border-bottom: var(--f-todo-add-task-border-bottom);
+    cursor: pointer;
+    background: var(--f-todo-add-task-background);
+}
+
+.f-todo-add-task__inner {
+    position: relative;
+    padding: var(--f-todo-add-task-padding);
+    min-height: var(--f-todo-add-task-min-height);
+    justify-content: flex-start !important;
+    gap: var(--f-todo-add-task-spacing);
+    color: var(--f-color-text-weakest);
+    width: 100%;
+    background: var(--f-todo-add-task-background);
+}
+
+.f-todo-add-task__inner .f-text {
+    font-size: var(--f-todo-add-task-text-size) !important;
+    line-height: var(--f-todo-add-task-line-height) !important;
+}
+
+.f-todo-add-task.is-editor .f-todo-add-task__inner {
+    min-height: var(--f-todo-task-item-height-footer);
+}
+
+.f-todo-add-task__inner > .f-icon {
+    color: var(--f-color-text-weakest);
+    margin-right: 5px;
+}
+
+/* editor */
+/* ----------------------------------- */
+
+:root {
+    --f-todo-task-editor-color: var(--f-color-text);
+}
+
+.f-todo-task-editor {
+    gap: 12px;
+    flex-shrink: 0;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+    color: var(--f-color-text-weakest);
+}
+
+.f-todo-task-editor.is-indented {
+    padding-left: var(--f-drag-indent);
+}
+
+.f-todo-task-editor__input {
+    flex: 1;
+}
+
+.f-todo-task-editor__input input {
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--f-todo-task-editor-color);
+    background: transparent;
+    padding-left: 0 !important;
+    font-weight: var(--f-font-weight-normal);
+    font-family: var(--f-font-body);
+    color: var(--f-color-text);
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+}
+
+.f-todo-task-editor__input input::placeholder {
+    color: var(--f-color-text-weakest);
+}
+
+.f-todo-task-editor__toolbar {
+    width: 100%;
+    gap: 7px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.f-todo-add-task__editor {
+    flex: 1;
+}
+
+/* add to bottom */ 
+/* ----------------------------------- */
+
+:root {
+    --f-todo-add-below-height: fit-content;
+    --f-todo-add-below-padding: 10px 0;
+    --f-todo-task-border-bottom: var(--f-todo-task-border-width) solid var(--f-color-surface-stronger);
+}
+
+.f-todo-task__add-below {
+    min-height: var(--f-todo-add-below-height);
+    border-bottom: var(--f-todo-task-border-bottom);
+    padding: var(--f-todo-add-below-padding);
+    margin-left: 7px;
+}
+
+.f-todo-task__add-below .f-todo-task-editor__input {
+    padding: 0 0 0 3px;
+}
+
+/* indentation rules */
+/* ----------------------------------- */
+
+[data-indent="0"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 2);
+}
+
+[data-indent="1"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 3);
+}
+
+[data-indent="2"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 4);
+}
+
+[data-indent="3"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 3 + var(--f-drag-indent));
+}
+
+[data-indent="4"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 4 + var(--f-drag-indent));
+}
+
+[data-indent="5"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 5 + var(--f-drag-indent));
+}
+
+[data-indent="6"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 6 + var(--f-drag-indent));
+}
+
+[data-indent="7"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 7 + var(--f-drag-indent));
+}
+
+[data-indent="8"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 8 + var(--f-drag-indent));
+}
+
+[data-indent="9"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 9 + var(--f-drag-indent));
+}
+
+[data-indent="10"] .f-todo-task__add-below.is-indent {
+    padding-left: calc(var(--f-drag-indent) * 10 + var(--f-drag-indent));
+}

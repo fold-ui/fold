@@ -1,9 +1,9 @@
-import * as Token from '@fold-dev/design/tokens'
-import { FICircle, FISun, Icon, IconLib, Stack, Text, View, defaultIcons, setFoldIcons } from '@fold-dev/core'
+import * as Token from '@fold-ui/design/tokens'
+import { FICircle, FISun, Icon, IconLib, Stack, Text, View, defaultIcons, setFoldIcons } from '@fold-ui/core'
 import React, { useLayoutEffect, useState } from 'react'
 
 export default {
-    title: 'Components/Icon',
+    title: 'Core/Icon',
     component: Icon,
     excludeStories: 'docs',
 }

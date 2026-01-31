@@ -12,11 +12,11 @@ import {
     Text,
     View,
     useVisibility,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Components/Button',
+    title: 'Core/Button',
     component: Button,
     excludeStories: 'docs',
 }

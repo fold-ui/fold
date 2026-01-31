@@ -1,8 +1,8 @@
 /* design tokens */
 
-@import '@fold-dev/design/tokens';
-@import '@fold-dev/design/tokens-light';
-@import '@fold-dev/design/tokens-dark';
+@import '@fold-ui/design/tokens';
+@import '@fold-ui/design/tokens-light';
+@import '@fold-ui/design/tokens-dark';
 
 /* utilities */
 

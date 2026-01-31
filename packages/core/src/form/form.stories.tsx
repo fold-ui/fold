@@ -12,11 +12,11 @@ import {
     InputPrefix,
     Stack,
     useCheck,
-} from '@fold-dev/core'
+} from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {
-    title: 'Components/Form',
+    title: 'Core/Form',
     component: Form,
     excludeStories: 'docs',
 }

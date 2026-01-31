@@ -200,8 +200,7 @@ li.f-select-list-option-container {
 .f-select-custom:focus-within,
 .f-select-native:focus-within {
     outline: var(--f-focus);
-    outline-offset: 1px;
-    transition: outline 100ms;
+    outline-offset: var(--f-outline-offset);
 }
 
 /* static */
