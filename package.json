@@ -1,7 +1,7 @@
 {
     "name": "fold-ui",
     "title": "Fold",
-    "version": "0.20.0",
+    "version": "0.21.0",
     "description": "The UI component library for product teams.",
     "workspaces": {
         "packages": [
@@ -70,7 +70,8 @@
         "publish:patch": "./scripts/publish.sh patch",
         "publish:minor": "./scripts/publish.sh minor",
         "publish:major": "./scripts/publish.sh major",
-        "publish": "npm --workspace @fold-ui/design run build:prod && npm --workspace @fold-ui/core run build:prod && npm --workspace @fold-ui/core publish && npm --workspace @fold-ui/pro run build:prod && npm --workspace @fold-ui/pro publish && npm --workspace @fold-ui/design publish",
+        "publish": "npm --workspace @fold-ui/design run build:prod && npm --workspace @fold-ui/core run build:prod && npm --workspace @fold-ui/pro run build:prod && npm --workspace @fold-ui/core publish --access public && npm --workspace @fold-ui/pro publish --access public && npm --workspace @fold-ui/design publish --access public",
+        "unpublish": "npm --workspace @fold-ui/core unpublish --access public && npm --workspace @fold-ui/pro unpublish --access public && npm --workspace @fold-ui/design unpublish --access public",
         "publish:dry-run": "npm --workspace @fold-ui/design run build:prod && npm --workspace @fold-ui/core run build:prod && npm --workspace @fold-ui/core publish --dry-run && npm --workspace @fold-ui/pro run build:prod && npm --workspace @fold-ui/pro publish --dry-run && npm --workspace @fold-ui/design publish --dry-run"
     },
     "repository": {
