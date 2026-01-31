@@ -13,6 +13,7 @@ import {
     View,
     generateUEID,
     useDialog,
+    useVisibility,
 } from '@fold-ui/core'
 import React, { useMemo, useState } from 'react'
 import {
@@ -46,19 +47,23 @@ export const docs = {
 }
 
 export const EventDetailView = () => {
+    const { toggle, show, hide, visible } = useVisibility(false)
     return (
         <CommonProvider
-            onUserFilter={(val) => null}
-            onLabelFilter={(val) => null}
+            onUserFilter={(val: any) => null}
+            onLabelFilter={(val: any) => null}
             availableLabels={data.availableLabels}
             availableUsers={data.availableUsers}
             colors={data.colorPalette}>
-            <CalendarEventDetail
-                event={data.events[0]}
-                onCancel={() => console.log('close event')}
-                onSave={(event) => console.log('save event', event)}
-                onDelete={(event) => console.log('delete event', event)}
-            />
+            <Button onClick={toggle}>Show</Button>
+            {visible && (
+                <CalendarEventDetail
+                    event={data.events[0]}
+                    onCancel={hide}
+                    onSave={(event) => hide()}
+                    onDelete={(event) => hide()}
+                />
+            )}
         </CommonProvider>
     )
 }
