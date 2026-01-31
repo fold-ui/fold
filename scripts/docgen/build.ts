@@ -153,7 +153,7 @@ const generateMdx = (path) => {
             // import & install
             const imports = `import { ${componentDoc
                 .map(({ displayName }) => displayName)
-                .join(', ')} } from '@fold-ui/core'`
+                .join(', ')} } from '@fold-ui/pro'`
             const installText = prettier.format(imports, { parser: 'typescript' })
 
             // CSS variables (might not always exist)
@@ -222,7 +222,7 @@ useTimeout,
 useTimer,
 useVisibility,
 useWindowResize
-} from '@fold-ui/core'
+} from '@fold-ui/pro'
 `,
                 'export const css = []',
                 storyTypeDocs

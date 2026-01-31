@@ -25,9 +25,9 @@ export default {
 
 export const docs = {
     title: 'Todo',
-    subtitle: 'A robust & flexible Data Grid component engineered to handle diverse datasets with ease.',
+    subtitle: 'The Todo component provides a list-based interface for managing and tracking tasks.',
     description:
-        'The Data Grid component enables you to customize & extend virtually every part of it, enabling you to accommodate a wide variety of data types.',
+        'Todo components are useful for creating task management interfaces where users can add, complete, and organize their work items. They are suited to personal productivity tools, project checklists, and reminder applications.',
     experimental: true,
 }
 

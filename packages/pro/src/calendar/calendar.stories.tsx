@@ -40,13 +40,13 @@ export default {
 
 export const docs = {
     title: 'Calendar',
-    subtitle: 'A robust & flexible Data Grid component engineered to handle diverse datasets with ease.',
+    subtitle: 'The Calendar component displays dates in an interactive grid format, enabling users to navigate through months and select dates.',
     description:
-        'The Data Grid component enables you to customize & extend virtually every part of it, enabling you to accommodate a wide variety of data types.',
+        'Calendar components are useful for displaying date-based information and selecting dates. They serve as the foundation for date pickers, event scheduling, and booking systems.',
     experimental: true,
 }
 
-export const EventDetailView = () => {
+export const Usage = () => {
     const { toggle, show, hide, visible } = useVisibility(false)
     return (
         <CommonProvider
@@ -68,101 +68,7 @@ export const EventDetailView = () => {
     )
 }
 
-// --
-
-const MonthView = ({ date, events }) => {
-    return (
-        <View
-            width="100%"
-            height="100%"
-            column
-            justifyContent="stretch"
-            alignContent="stretch"
-            alignItems="stretch">
-            <View
-                row
-                position="relative"
-                zIndex={2}
-                width="100%"
-                m="0 0 -1px 0"
-                style={{ borderBottom: '1px solid var(--f-color-border)' }}>
-                <Text
-                    p="1rem"
-                    fontWeight="bold"
-                    textAlign="center">
-                    {date.toLocaleString('default', { month: 'long' })}
-                </Text>
-            </View>
-            <View
-                position="relative"
-                zIndex={1}
-                flex={1}
-                className="f-scrollbar"
-                style={{ overflowY: 'auto' }}>
-                <CalendarDays
-                    date={date}
-                    events={events}
-                />
-            </View>
-        </View>
-    )
-}
-
-// --
-
-const ScheduleView = ({ days, custom, date, events }) => {
-    return (
-        <>
-            <View
-                row
-                flex={0}
-                p="0 0 0 var(--f-calendar-schedule-gutter-width)"
-                width="100%">
-                {days.map(({ date }, index) => {
-                    return (
-                        <Text
-                            flex={1}
-                            p="1rem"
-                            fontWeight="bold"
-                            textAlign="center"
-                            key={index}>
-                            {getShortDateFormat(date)}
-                        </Text>
-                    )
-                })}
-            </View>
-            <View
-                height="fit-content"
-                p="0 4px 0 var(--f-calendar-schedule-gutter-width)"
-                width="100%"
-                position="relative"
-                zIndex={1}>
-                <CalendarDays
-                    noClamp
-                    date={date}
-                    events={events.filter((e) => e.isDay)}
-                    custom={custom}
-                    height="fit-content"
-                />
-            </View>
-            <View
-                width="100%"
-                flex={1}
-                position="relative"
-                zIndex={0}
-                m="-1px 0 0 0"
-                style={{ overflowY: 'scroll' }}
-                className="f-scrollbar">
-                <CalendarSchedule
-                    days={days}
-                    events={events.filter((e) => !e.isDay)}
-                />
-            </View>
-        </>
-    )
-}
-
-// --
+// Event Preview Popup
 
 export const EventPreviewPopup = () => {
     return (
@@ -175,7 +81,7 @@ export const EventPreviewPopup = () => {
     )
 }
 
-// --
+// Calendar Views
 
 export const CalendarViews = () => {
     const [option, setOption] = useState(2)
@@ -190,6 +96,96 @@ export const CalendarViews = () => {
     const [preview, setPreview] = useState<any>({})
     const [title, setTitle] = useState('')
     const { setDialog, closeDialog } = useDialog()
+
+    const MonthView = ({ date, events }) => {
+        return (
+            <View
+                width="100%"
+                height="100%"
+                column
+                justifyContent="stretch"
+                alignContent="stretch"
+                alignItems="stretch">
+                <View
+                    row
+                    position="relative"
+                    zIndex={2}
+                    width="100%"
+                    m="0 0 -1px 0"
+                    style={{ borderBottom: '1px solid var(--f-color-border)' }}>
+                    <Text
+                        p="1rem"
+                        fontWeight="bold"
+                        textAlign="center">
+                        {date.toLocaleString('default', { month: 'long' })}
+                    </Text>
+                </View>
+                <View
+                    position="relative"
+                    zIndex={1}
+                    flex={1}
+                    className="f-scrollbar"
+                    style={{ overflowY: 'auto' }}>
+                    <CalendarDays
+                        date={date}
+                        events={events}
+                    />
+                </View>
+            </View>
+        )
+    }
+
+    const ScheduleView = ({ days, custom, date, events }) => {
+        return (
+            <>
+                <View
+                    row
+                    flex={0}
+                    p="0 0 0 var(--f-calendar-schedule-gutter-width)"
+                    width="100%">
+                    {days.map(({ date }, index) => {
+                        return (
+                            <Text
+                                flex={1}
+                                p="1rem"
+                                fontWeight="bold"
+                                textAlign="center"
+                                key={index}>
+                                {getShortDateFormat(date)}
+                            </Text>
+                        )
+                    })}
+                </View>
+                <View
+                    height="fit-content"
+                    p="0 4px 0 var(--f-calendar-schedule-gutter-width)"
+                    width="100%"
+                    position="relative"
+                    zIndex={1}>
+                    <CalendarDays
+                        noClamp
+                        date={date}
+                        events={events.filter((e) => e.isDay)}
+                        custom={custom}
+                        height="fit-content"
+                    />
+                </View>
+                <View
+                    width="100%"
+                    flex={1}
+                    position="relative"
+                    zIndex={0}
+                    m="-1px 0 0 0"
+                    style={{ overflowY: 'scroll' }}
+                    className="f-scrollbar">
+                    <CalendarSchedule
+                        days={days}
+                        events={events.filter((e) => !e.isDay)}
+                    />
+                </View>
+            </>
+        )
+    }
 
     const handleEventUpdate = (ev) => {
         setEvents(events.map((event) => (event.id == ev.id ? { ...event, ...ev } : event)))

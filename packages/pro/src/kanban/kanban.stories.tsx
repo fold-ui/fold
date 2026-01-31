@@ -29,9 +29,9 @@ export default {
 
 export const docs = {
     title: 'Kanban',
-    subtitle: 'A robust & flexible Data Grid component engineered to handle diverse datasets with ease.',
+    subtitle: 'The Kanban component displays tasks or items in columns that represent different stages of a workflow.',
     description:
-        'The Data Grid component enables you to customize & extend virtually every part of it, enabling you to accommodate a wide variety of data types.',
+        'Kanban components are useful for visualizing work progress and managing tasks through different stages. They are ideal for project management, task tracking, and workflow visualization.',
     experimental: true,
 }
 

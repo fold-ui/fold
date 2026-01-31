@@ -32,13 +32,13 @@ export default {
 
 export const docs = {
     title: 'Common',
-    subtitle: 'A robust & flexible Data Grid component engineered to handle diverse datasets with ease.',
+    subtitle: 'The Common components provide shared building blocks and utilities used across the Pro component library.',
     description:
-        'The Data Grid component enables you to customize & extend virtually every part of it, enabling you to accommodate a wide variety of data types.',
+        'Common components contain shared functionality, styles, and utilities that are leveraged by other Pro components, ensuring consistency and reducing code duplication.',
     experimental: true,
 }
 
-export const RepeatingDates = () => {
+export const Usage = () => {
     const [repeat, setRepeat] = useState<CalendarTypes.Repeat>({
         interval: 2,
         weekday: [],
@@ -64,7 +64,7 @@ export const RepeatingDates = () => {
     )
 }
 
-// --
+// Date Selector
 
 export const DateSelector = () => {
     const [dates, setDates] = useState<any>({ start: new Date(), end: new Date() })
@@ -115,7 +115,7 @@ export const DateSelector = () => {
     )
 }
 
-// --
+// User Selector
 
 export const UserSelector = () => {
     const [users, setUsers] = useState(data.users)
@@ -159,7 +159,7 @@ export const UserSelector = () => {
     )
 }
 
-// --
+// Label Selector
 
 export const LabelSelector = () => {
     const [labels, setLabels] = useState(data.labels)
@@ -215,7 +215,7 @@ export const LabelSelector = () => {
     )
 }
 
-// --
+// List Selector
 
 export const ListSelector = () => {
     const [list, setList] = useState(1)
@@ -241,7 +241,7 @@ export const ListSelector = () => {
     )
 }
 
-// --
+// Priority Selector
 
 export const PrioritySelector = () => {
     const [priority, setPriority] = useState<Priority>('medium')
@@ -264,7 +264,7 @@ export const PrioritySelector = () => {
     )
 }
 
-// --
+// Color Selector
 
 export const ColorSelector = () => {
     const [color, setColor] = useState(data.colorPalette[3])
@@ -287,7 +287,7 @@ export const ColorSelector = () => {
     )
 }
 
-// --
+// Task Detail View
 
 export const TaskDetailView = () => {
     const { checked, check } = useCheck()
@@ -490,7 +490,7 @@ export const DetailView = () => {
     )
 }
 
-// --
+// Rich Input Field
 
 export const RichInputField = () => {
     const [options, setOptions] = useState<any>([])
