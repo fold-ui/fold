@@ -4,7 +4,7 @@
     --f-tabs-panel-padding: var(--f-space-6);
     --f-tabs-tab-padding: var(--f-space-3);
     --f-tabs-tab-height: var(--f-space-11);
-    --f-tabs-tab-color: var(--f-color-text-weak);
+    --f-tabs-tab-color: var(--f-color-text);
     --f-tabs-tab-active: var(--f-color-accent);
     --f-tabs-tab-disabled-color: var(--f-color-text-weakest);
     --f-tabs-tab-background-hover: var(--f-color-surface-strong);
