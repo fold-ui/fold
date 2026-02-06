@@ -52,6 +52,7 @@ export type ButtonProps = {
     href?: string
     ellipsis?: boolean
     onClick?: any
+    round?: boolean
     type?: 'button' | 'submit'
 } & CoreViewProps
 
@@ -70,6 +71,7 @@ export const Button = forwardRef((props: ButtonProps, ref) => {
         prefix,
         suffix,
         active,
+        round,
         disabled,
         target,
         href,
@@ -84,6 +86,7 @@ export const Button = forwardRef((props: ButtonProps, ref) => {
             'is-active': active,
             'is-outline': outline,
             'is-subtle': subtle,
+            'is-round': round,
             'is-default': !subtle && !outline,
             'is-loading': loading,
             'is-flat': flat,

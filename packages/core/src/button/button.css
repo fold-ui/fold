@@ -33,6 +33,10 @@
     font-weight: var(--f-font-weight-medium);
 }
 
+.f-button.is-round {
+    --f-button-border-radius: var(--f-radius-full);
+}
+
 .f-button.is-flat {
     box-shadow: none;
 }
