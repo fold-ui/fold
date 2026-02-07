@@ -1,8 +1,8 @@
 {
     "name": "@fold-ui/design",
     "title": "Design Tokens",
-    "version": "0.21.0",
-    "description": "The UI library for product teams.",
+    "version": "0.22.0",
+    "description": "Zero gravity React components.",
     "main": "",
     "module": "",
     "typings": "",

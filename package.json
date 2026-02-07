@@ -1,8 +1,8 @@
 {
     "name": "fold-ui",
     "title": "Fold",
-    "version": "0.21.0",
-    "description": "The UI component library for product teams.",
+    "version": "0.22.0",
+    "description": "Zero gravity React components.",
     "workspaces": {
         "packages": [
             "packages/design",

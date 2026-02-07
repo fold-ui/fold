@@ -1,8 +1,8 @@
 {
     "name": "@fold-ui/core",
     "title": "Fold",
-    "version": "0.21.0",
-    "description": "The UI library for product teams.",
+    "version": "0.22.0",
+    "description": "Zero gravity React components.",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "typings": "dist/index.d.ts",
