@@ -13,6 +13,67 @@ export const Logo = (props: LogoProps) => {
     const { width, height } = useMemo(() => {
         let width,
             height = customSize
+
+        switch (size) {
+            case 'xs':
+                width = 15
+                height = 15
+                break
+            case 'sm':
+                width = 22
+                height = 22
+                break
+            case 'md':
+                width = 35
+                height = 35
+                break
+            case 'lg':
+                width = 65
+                height = 65
+                break
+            case 'xl':
+                width = 90
+                height = 90
+                break
+        }
+
+        return { width, height }
+    }, [size, customSize])
+
+    return (
+        <svg
+            width={width}
+            height={height}
+            viewBox="0 0 344 344"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            xmlSpace="preserve"
+            style={{
+                ...style,
+                fillRule: 'evenodd',
+                clipRule: 'evenodd',
+                strokeLinejoin: 'round',
+                strokeMiterlimit: 2,
+                flexShrink: 0,
+            }}>
+            <g transform="matrix(1,0,0,1,-78,-78)">
+                <g transform="matrix(1,0,0,1,46,41)">
+                    <path
+                        d="M288.633,62.397C306.149,57.306 325.047,62.156 337.945,75.055C350.844,87.953 355.694,106.851 350.603,124.367C344.619,144.95 338.666,165.429 334.115,181.086C328.815,199.318 328.815,218.682 334.115,236.914C338.666,252.571 344.619,273.05 350.603,293.633C355.694,311.149 350.844,330.047 337.945,342.945C325.047,355.844 306.149,360.694 288.633,355.603C268.05,349.619 247.571,343.666 231.914,339.115C213.682,333.815 194.318,333.815 176.086,339.115C160.429,343.666 139.95,349.619 119.367,355.603C101.851,360.694 82.953,355.844 70.055,342.945C57.156,330.047 52.306,311.149 57.397,293.633C63.381,273.05 69.334,252.571 73.885,236.914C79.185,218.682 79.185,199.318 73.885,181.086C69.334,165.429 63.381,144.95 57.397,124.367C52.306,106.851 57.156,87.953 70.055,75.055C82.953,62.156 101.851,57.306 119.367,62.397C139.95,68.381 160.429,74.334 176.086,78.885C194.318,84.185 213.682,84.185 231.914,78.885C247.571,74.334 268.05,68.381 288.633,62.397Z"
+                        style={{ fill: color }}
+                    />
+                </g>
+            </g>
+        </svg>
+    )
+}
+
+export const LogoOld = (props: LogoProps) => {
+    const { color = 'var(--f-color-accent)', size, customSize = 40, style = {} } = props
+    const { width, height } = useMemo(() => {
+        let width,
+            height = customSize
         const widthMultipler = 306 / 357
         const heightMultipler = 357 / 306
 

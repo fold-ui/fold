@@ -1,6 +1,6 @@
 import * as Token from '@fold-ui/design/tokens'
 import React from 'react'
-import { Logo, LogoSolid, View } from '@fold-ui/core'
+import { Logo, LogoOld, LogoSolid, View } from '@fold-ui/core'
 
 export default {
     title: 'Core/Logo',
@@ -15,13 +15,7 @@ export const docs = {
 }
 
 export const Usage = () => {
-    return <Logo />
-}
-
-// --
-
-export const Solid = () => {
-    return <LogoSolid />
+    return <View row><Logo /></View>
 }
 
 // --
@@ -61,35 +55,13 @@ export const Sizes = () => {
 
 // --
 
-export const SizesSolid = () => {
+export const OldLogo = () => {
     return (
         <View
             row
             gap={20}>
-            <LogoSolid
-                size="xs"
-                color={Token.ColorAccent300}
-            />
-            <LogoSolid
-                size="sm"
-                color={Token.ColorAccent400}
-            />
-            <LogoSolid
-                size="md"
-                color={Token.ColorAccent500}
-            />
-            <LogoSolid
-                size="lg"
-                color={Token.ColorAccent600}
-            />
-            <LogoSolid
-                size="xl"
-                color={Token.ColorAccent700}
-            />
-            <LogoSolid
-                customSize={120}
-                color={Token.ColorAccent800}
-            />
+            <LogoOld />
+            <LogoSolid />
         </View>
     )
 }
