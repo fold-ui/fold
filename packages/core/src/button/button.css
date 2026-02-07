@@ -33,6 +33,10 @@
     font-weight: var(--f-font-weight-medium);
 }
 
+.f-button.is-round {
+    --f-button-border-radius: var(--f-radius-full);
+}
+
 .f-button.is-flat {
     box-shadow: none;
 }
@@ -490,7 +494,7 @@
 
 .f-button.xs {  
     height: var(--f-size-8);
-    padding: 0 var(--f-space-1);
+    padding: 0 var(--f-space-2);
 }
 
 .f-button.xs .f-text {
@@ -499,7 +503,7 @@
 
 .f-button.sm { 
     height: var(--f-size-9);
-    padding: 0 var(--f-space-2);
+    padding: 0 var(--f-space-3);
 }
 
 .f-button.sm .f-text {
@@ -508,7 +512,7 @@
 
 .f-button.md { 
     height: var(--f-size-10); 
-    padding: 0 var(--f-space-3);
+    padding: 0 var(--f-space-4);
 }
 
 .f-button.md .f-text {
@@ -517,7 +521,7 @@
 
 .f-button.lg { 
     height: var(--f-size-12); 
-    padding: 0 var(--f-space-4);
+    padding: 0 var(--f-space-5);
 }
 
 .f-button.lg .f-text {
@@ -526,7 +530,7 @@
 
 .f-button.xl { 
     height: var(--f-size-14); 
-    padding: 0 var(--f-space-5);
+    padding: 0 var(--f-space-6);
 }
 
 .f-button.xl .f-text {

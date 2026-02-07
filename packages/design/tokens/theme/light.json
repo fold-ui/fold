@@ -3,7 +3,7 @@
         "radius": { "value": "{radius.default}" },
         "focus": { "value": "2px solid {color.accent.400}" },
         "color": {
-            "background": { "value": "{color.base.100}" },
+            "background": { "value": "{color.base.50}" },
             "accent": {
                 " ": { "value": "{color.accent.500}" },
                 "subtle": { "value": "{color.accent.300}" },
