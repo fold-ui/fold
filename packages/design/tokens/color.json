@@ -1,7 +1,7 @@
 {
     "color": {
         "black": { "value": "oklch(0.05 0.0012 0)" },
-        "white": { "value": "oklch(0.99 0.001 0)" },
+        "white": { "value": "oklch(0.9925 0.001 0)" },
         "overlay": { "value": "rgba(0, 0, 0, 0.4)" },
 
         "accent": {
@@ -45,40 +45,40 @@
 
         "base": {
             "50": {
-                "value": "oklch(0.975 0.001 255)"
+                "value": "oklch(0.975 0.001 270)"
             },
             "100": {
-                "value": "oklch(0.955 0.001 255)"
+                "value": "oklch(0.955 0.001 270)"
             },
             "200": {
-                "value": "oklch(0.92 0.002 255)"
+                "value": "oklch(0.92 0.002 270)"
             },
             "300": {
-                "value": "oklch(0.871 0.01 255)"
+                "value": "oklch(0.871 0.01 270)"
             },
             "400": {
-                "value": "oklch(0.705 0.02 255)"
+                "value": "oklch(0.705 0.02 270)"
             },
             "500": {
-                "value": "oklch(0.552 0.02 255)"
+                "value": "oklch(0.552 0.02 270)"
             },
             "600": {
-                "value": "oklch(0.44 0.015 255)"
+                "value": "oklch(0.44 0.015 270)"
             },
             "700": {
-                "value": "oklch(0.32 0.015 255)"
+                "value": "oklch(0.32 0.015 270)"
             },
             "800": {
-                "value": "oklch(.27 0.015 255)"
+                "value": "oklch(.27 0.015 270)"
             },
             "900": {
-                "value": "oklch(0.23 0.015 255)"
+                "value": "oklch(0.23 0.015 270)"
             },
             "950": {
-                "value": "oklch(0.21 0.015 255)"
+                "value": "oklch(0.21 0.015 270)"
             },
             "1000": { 
-                "value": "oklch(0.19 0.015 255)" 
+                "value": "oklch(0.19 0.015 270)" 
             }
         },
 

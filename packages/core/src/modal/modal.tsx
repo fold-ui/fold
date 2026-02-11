@@ -1,14 +1,16 @@
 import React, { ReactElement, forwardRef, useEffect, useRef } from 'react'
-import { ButtonProps, IconButton, PortalProps, View, useFocus, usePreventScrolling } from '../'
+import { ButtonProps, IconButton, IconButtonProps, PortalProps, View, useFocus, usePreventScrolling } from '../'
 import { classNames, getActionClass, getKey, mergeRefs } from '../helpers'
 import { CoreViewProps } from '../types'
 
-export type ModalCloseProps = ButtonProps
+export type ModalCloseProps = Omit<IconButtonProps, 'icon'>
 
 export const ModalClose = (props: ModalCloseProps) => {
     return (
         <IconButton
             subtle
+            size="xs" 
+            iconProps={{ size: 'md' }}
             {...props}
             className="f-modal__close"
             icon="x"
