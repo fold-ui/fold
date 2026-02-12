@@ -59,7 +59,7 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
         // via "targetVariant" that affects this DragArea
         // finalTargetVariant = make sure to add THIS group's variant
         const finalTargetVariant = JSON.stringify({ ...targetVariant, [group]: variant })
-        const originVariant: DragVariant = origin.targetVariant[group]
+        const originVariant: DragVariant = origin.targetVariant?.[group]
         const hasOriginVariant = !!originVariant
         const isLined = originVariant == 'lined'
         const isLinedFocus = originVariant == 'lined-focus'
@@ -162,7 +162,7 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
         bufferRef.current.style.display = 'none'
         let bufferHasBeenMadeVisible = false
         const isTargetArea = id == target.areaId
-        const originVariant: DragVariant = origin.targetVariant[group]
+        const originVariant: DragVariant = origin.targetVariant?.[group]
         const isAnimated = originVariant == 'animated'
 
         containerRef.current.childNodes.forEach((node, index) => {
@@ -217,7 +217,7 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
 
         let bufferHasBeenMadeVisible = false
         const isTargetArea = id == target.areaId
-        const originVariant: DragVariant = origin.targetVariant[group]
+        const originVariant: DragVariant = origin.targetVariant?.[group]
         const isAnimated = originVariant == 'animated'
 
         containerRef.current.childNodes.forEach((node, index) => {
