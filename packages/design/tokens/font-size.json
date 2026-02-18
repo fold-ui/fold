@@ -1,7 +1,7 @@
 {
     "font-size": {
-        "2xs": { "value": "0.55rem" },
-        "xs": { "value": "0.7rem" },
+        "2xs": { "value": "0.7rem" },
+        "xs": { "value": "0.75rem" },
         "sm": { "value": "0.85rem" },
         "md": { "value": "1rem" },
         "lg": { "value": "1.25rem" },
