@@ -6,9 +6,9 @@
     --f-icon-sizing-xl: var(--f-icon-size-xl); 
     --f-icon-stroke-width-xs: 2;
     --f-icon-stroke-width-sm: 2;
-    --f-icon-stroke-width-md: 1.8;
-    --f-icon-stroke-width-lg: 1.6;
-    --f-icon-stroke-width-xl: 1.4;
+    --f-icon-stroke-width-md: 2;
+    --f-icon-stroke-width-lg: 2;
+    --f-icon-stroke-width-xl: 2;
 }
 
 .f-icon {
