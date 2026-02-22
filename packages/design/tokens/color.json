@@ -2,7 +2,7 @@
     "color": {
         "black": { "value": "oklch(0.05 0.0012 0)" },
         "white": { "value": "oklch(0.9925 0.001 0)" },
-        "overlay": { "value": "rgba(0, 0, 0, 0.4)" },
+        "overlay": { "value": "oklch(21.907% 0.00582 285.855 / 0.251)" },
 
         "accent": {
             "50": {
