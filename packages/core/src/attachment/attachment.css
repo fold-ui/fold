@@ -70,6 +70,10 @@
     align-items: flex-start;
 }
 
+.f-attachment.sm .f-attachment__text * + * {
+    margin-top: -0.25rem;
+}
+
 .f-attachment__text-label {
     max-width: 100%;
 }
@@ -86,7 +90,7 @@
 .f-attachment__text-meta {
     max-width: 100%;
     font-weight: var(--f-font-weight-normal);
-    color: var(--f-color-text-weaker);
+    color: var(--f-color-text-weakest);
 }
 
 .f-attachment__text-meta span {
@@ -95,7 +99,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: var(--f-color-text-weak);
+    color: var(--f-color-text-weaker);
     font-weight: var(--f-font-weight-normal);
 }
 

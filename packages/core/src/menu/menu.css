@@ -62,7 +62,7 @@
 :root {
     --f-menu-item-background-color-hover: var(--f-color-surface-strong);
     --f-menu-item-background-color-active: var(--f-color-surface-strong);
-    --f-menu-item-color: var(--f-color-text);
+    --f-menu-item-color: var(--f-color-text-weak);
     --f-menu-item-color-hover: var(--f-color-text);
     --f-menu-item-color-active: var(--f-color-accent);
     --f-menu-item-color-system-active: var(--f-color-surface-stronger);
