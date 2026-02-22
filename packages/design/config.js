@@ -156,9 +156,11 @@ module.exports = {
             type: `value`,
             transitive: true,
             matcher: (token) => token.attributes.category == 'color',
-            transformer: (token) => token.value.includes('oklch') 
-                ? oklchToHex(token.value) 
-                : chroma(token.value).hex(),
+            transformer: (token) => {
+                if (token.value.includes('oklch')) return token.value
+                const [l, c, h] = chroma(token.value).oklch()
+                return `oklch(${l.toFixed(3)} ${c.toFixed(3)} ${isNaN(h) ? 0 : h.toFixed(1)})`
+            },
         },
         'color/css': Object.assign({}, StyleDictionary.transform[`color/css`], {
             transitive: true,
@@ -182,7 +184,7 @@ module.exports = {
             ],
         },
         css: {
-            transforms: [`attribute/cti`, `name/cti/kebab`, `colorTransform`, `color/css`],
+            transforms: [`attribute/cti`, `name/cti/kebab`, `colorTransform`],
             transformGroup: 'css',
             buildPath: '',
             prefix: 'f-',
