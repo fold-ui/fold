@@ -3,7 +3,7 @@
         "radius": { "value": "{radius.default}" },
         "focus": { "value": "2px solid {color.accent.500}" },
         "color": {
-            "background": { "value": "{color.base.950}" },
+            "background": { "value": "{color.base.900}" },
             "accent": {
                 " ": { "value": "{color.accent.500}" },
                 "subtle": { "value": "{color.accent.400}" },
@@ -55,7 +55,7 @@
                 "on-color": { "value": "{color.black}" }
             },
             "surface": {
-                " ": { "value": "{color.base.900}" },
+                " ": { "value": "{color.base.950}" },
                 "strong": { "value": "{color.base.800}" },
                 "stronger": { "value": "{color.base.700}" },
                 "strongest": { "value": "{color.base.600}" },
