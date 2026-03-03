@@ -47,8 +47,8 @@
                 "weak": { "value": "{color.indigo.50}" }
             },
             "text": {
-                " ": { "value": "{color.base.700}" },
-                "weak": { "value": "{color.base.600}" },
+                " ": { "value": "{color.base.900}" },
+                "weak": { "value": "{color.base.700}" },
                 "weaker": { "value": "{color.base.500}" },
                 "weakest": { "value": "{color.base.400}" },
                 "link": { "value": "{color.accent.500}" },
