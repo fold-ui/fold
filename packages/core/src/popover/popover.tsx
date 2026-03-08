@@ -125,6 +125,7 @@ export const Popover = forwardRef((props: PopoverProps, ref) => {
     const handleClick = (e) => {
         const containers: any = []
         let shouldDismiss = true
+        const target = e.target as HTMLElement | null
 
         // add dom elements to the container
         if (ignoreContainers.length) {
@@ -132,13 +133,22 @@ export const Popover = forwardRef((props: PopoverProps, ref) => {
         }
 
         containers.map((container) => {
-            if (container?.contains(e.target) && shouldDismiss) {
+            if (container?.contains(target) && shouldDismiss) {
                 shouldDismiss = false
             }
         })
 
-        if (containerRef.current) {
-            if (!containerRef.current?.contains(e.target)) {
+        if (containerRef.current && target) {
+            const nestedPopover = target.closest('.f-popover') as HTMLElement | null
+            const nestedPopoverId = nestedPopover?.getAttribute('data-popover-id')
+            const nestedPopoverTrigger = nestedPopoverId ? documentObject.getElementById(nestedPopoverId) : null
+            const isNestedPopoverClick =
+                !!nestedPopover &&
+                nestedPopover !== containerRef.current &&
+                !!nestedPopoverTrigger &&
+                containerRef.current?.contains(nestedPopoverTrigger)
+
+            if (!containerRef.current?.contains(target) && !isNestedPopoverClick) {
                 if (onDismiss && shouldDismiss) dismissPopover(e)
             }
         }
@@ -162,6 +172,7 @@ export const Popover = forwardRef((props: PopoverProps, ref) => {
                     onKeyDown={handleKeyDown}
                     aria-describedby={id}
                     className={className}
+                    data-popover-id={id}
                     ref={mergeRefs([ref, containerRef])}>
                     {content}
                 </View>
@@ -201,7 +212,7 @@ export const Popover = forwardRef((props: PopoverProps, ref) => {
         const vertical = offscreen.y
             ? 'top'
             : !!preferredVerticalAnchor && preferredVerticalAnchor != 'bottom'
-            ? preferredHorizontalAnchor
+            ? preferredVerticalAnchor
             : 'bottom'
         const autoPosition = `${vertical}-${horizontal}`
         const finalAnchor = anchor ? anchor : autoPosition
