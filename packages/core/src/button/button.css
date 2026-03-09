@@ -20,7 +20,7 @@
     border: var(--f-button-border-width) solid;
     cursor: pointer; 
     flex-shrink: 0;
-    transition-property: background-color, outline, color, filter, -webkit-filter;
+    transition-property: outline, color;
     transition-duration: var(--f-button-transition-delay);
     color: var(--f-button-color);
     border-color: var(--f-button-border-color);
