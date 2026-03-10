@@ -63,7 +63,7 @@
                 "inverse": { "value": "{color.light.700}" }
             },
             "border": {
-                " ": { "value": "{color.light.200}" },
+                " ": { "value": "{color.light.150}" },
                 "strong": { "value": "{color.light.300}" }
             }
         }
