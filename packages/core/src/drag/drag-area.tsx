@@ -186,8 +186,6 @@ export const DragArea = forwardRef((props: DragAreaProps, ref) => {
             e.stopPropagation() //e.preventDefault()
 
             timeout.current = setTimeout(() => {
-                ready.current = true
-
                 // set up the initial data
                 const customGhost = hasCustomGhostElement()
                 const { width, height, left, top } = getBoundingClientRect(el)
@@ -210,18 +208,41 @@ export const DragArea = forwardRef((props: DragAreaProps, ref) => {
                 // for indentation
                 if (!customGhost) ghost.firstChild.style.margin = '0px'
 
-                // set the intial ghost position (based on the current x/y)
-                // again - synced for performance in the UI
-                positionDOMElement(x, y, ghost, () => {
-                    cache.targetElement = el
-                    cache.mouse = { x: mouseLeft, y: mouseTop }
-                    cache.originMouse = {
-                        left: mouseLeft,
-                        top: mouseTop,
-                        offsetLeft: mouseOffsetLeft,
-                        offsetTop: mouseOffsetTop,
-                    }
-                    cache.targetCache = {
+                // set cache and init data SYNCHRONOUSLY before ready gate opens
+                // (positionDOMElement uses rAF, so putting these in its callback
+                // causes a race where handleMouseMove reads stale cache.init)
+                cache.targetElement = el
+                cache.mouse = { x: mouseLeft, y: mouseTop }
+                cache.originMouse = {
+                    left: mouseLeft,
+                    top: mouseTop,
+                    offsetLeft: mouseOffsetLeft,
+                    offsetTop: mouseOffsetTop,
+                }
+                cache.targetCache = {
+                    focus: false,
+                    moveDirection: isVertical ? 'up' : 'left',
+                    index,
+                    indent,
+                    left: el.offsetLeft,
+                    top: el.offsetTop,
+                    height,
+                    width,
+                    areaId,
+                    elementId,
+                    group,
+                }
+                cache.init = {
+                    origin: {
+                        targetVariant: finalTargetVariant,
+                        elementId,
+                        width,
+                        height,
+                        areaId,
+                        index,
+                        group,
+                    },
+                    target: {
                         focus: false,
                         moveDirection: isVertical ? 'up' : 'left',
                         index,
@@ -233,32 +254,13 @@ export const DragArea = forwardRef((props: DragAreaProps, ref) => {
                         areaId,
                         elementId,
                         group,
-                    }
-                    cache.init = {
-                        origin: {
-                            targetVariant: finalTargetVariant,
-                            elementId,
-                            width,
-                            height,
-                            areaId,
-                            index,
-                            group,
-                        },
-                        target: {
-                            focus: false,
-                            moveDirection: isVertical ? 'up' : 'left',
-                            index,
-                            indent,
-                            left: el.offsetLeft,
-                            top: el.offsetTop,
-                            height,
-                            width,
-                            areaId,
-                            elementId,
-                            group,
-                        },
-                    }
-                })
+                    },
+                }
+
+                ready.current = true
+
+                // position ghost element visually (rAF for smooth rendering)
+                positionDOMElement(x, y, ghost, () => {})
             }, startDelay)
         }
     }
