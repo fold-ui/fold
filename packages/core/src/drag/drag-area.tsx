@@ -11,6 +11,7 @@ import {
     renderChildren,
     resizeDOMElement,
     setOrigin,
+    setOriginAndTargetWithCallback,
     setTarget,
     useDrag,
     useDragEvent,
@@ -167,9 +168,14 @@ export const DragArea = forwardRef((props: DragAreaProps, ref) => {
         // startDrag() will notify "onstart" (sets CSS globals, etc)
         if (ready.current) {
             ready.current = false
-            setOrigin(cache.init.origin)
-            setTarget(cache.init.target)
-            startDrag()
+            // setOrigin(cache.init.origin)
+            // setTarget(cache.init.target)
+            // startDrag()
+            setOriginAndTargetWithCallback(
+                cache.init.origin,
+                cache.init.target,
+                () => startDrag()
+            )
         }
     }
 
