@@ -259,7 +259,7 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
 
                     setOrigin(origin)
                     setTarget(target)
-                    setTimeout(() => startDrag({ origin, target }))
+                    startDrag({ origin, target })
                 })
             }
         }
@@ -407,7 +407,7 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
 
                         setOrigin(origin)
                         setTarget(target)
-                        setTimeout(() => startDrag({ origin, target }))
+                        startDrag({ origin, target })
                     })
                 }
             }, startDelay)

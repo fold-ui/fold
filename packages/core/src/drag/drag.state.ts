@@ -3,6 +3,7 @@ import { dispatchPubsub, DragOrigin, DragTarget, FOLD_DRAG_STATE, usePubsub } fr
 import { windowObject } from '../helpers'
 
 export const setDragState = (data) => {
+    console.log(data)
     const { namespace, ...rest } = data
     windowObject[FOLD_DRAG_STATE] = { ...windowObject[FOLD_DRAG_STATE], ...rest }
     dispatchPubsub('state-' + namespace, data)
@@ -14,12 +15,6 @@ export const setTarget = (target: Partial<DragTarget>) => {
 
 export const setOrigin = (origin: Partial<DragOrigin>) => {
     setDragState({ namespace: 'origin', origin })
-}
-
-export const setOriginAndTargetWithCallback = (origin: Partial<DragOrigin>, target: Partial<DragTarget>, cb: () => void) => {
-    setDragState({ namespace: 'target', target })
-    setDragState({ namespace: 'origin', origin })
-    setTimeout(cb)
 }
 
 export const getDragState = (namespace: string): any => {
