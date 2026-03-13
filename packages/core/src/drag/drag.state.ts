@@ -3,7 +3,6 @@ import { dispatchPubsub, DragOrigin, DragTarget, FOLD_DRAG_STATE, usePubsub } fr
 import { windowObject } from '../helpers'
 
 export const setDragState = (data) => {
-    console.log(data)
     const { namespace, ...rest } = data
     windowObject[FOLD_DRAG_STATE] = { ...windowObject[FOLD_DRAG_STATE], ...rest }
     dispatchPubsub('state-' + namespace, data)
