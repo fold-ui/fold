@@ -1,12 +1,13 @@
 {
     "radius": {
-        "xs": { "value": "0.37525rem" },
-        "sm": { "value": "0.5rem" },
-        "md": { "value": "0.75rem" },
-        "lg": { "value": "1rem" },
-        "xl": { "value": "1.25rem" },
-        "2xl": { "value": "1.5rem" },
-        "3xl": { "value": "1.75rem" },
+        "2xs": { "value": "0.3rem" },
+        "xs":  { "value": "0.55rem" },
+        "sm":  { "value": "0.8rem" },
+        "md":  { "value": "1.1rem" },
+        "lg":  { "value": "1.4rem" },
+        "xl":  { "value": "1.75rem" },
+        "2xl": { "value": "2.25rem" },
+        "3xl": { "value": "3rem" },
         "full": { "value": "9999px" },
         "round": { "value": "50%" },
         "default": { "value": "{radius.md}" }

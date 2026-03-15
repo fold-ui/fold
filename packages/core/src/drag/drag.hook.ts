@@ -71,6 +71,7 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
         setTarget({})
         setOrigin({ targetVariant: {} })
         cache.mouseDown = false
+        cache.init = {}
     }
 
     const updateTargetIndent = (indentLevel) => {

@@ -72,25 +72,25 @@
 
 .f-copy.xs {
     font-size: var(--f-font-size-2xs) !important;
-    min-height: var(--f-size-8);
+    height: var(--f-size-8);
 }
 
 .f-copy.sm {
     font-size: var(--f-font-size-xs) !important;
-    min-height: var(--f-size-9);
+    height: var(--f-size-9);
 }
 
 .f-copy.md {
     font-size: var(--f-font-size-sm) !important;
-    min-height: var(--f-size-10); 
+    height: var(--f-size-10); 
 }
 
 .f-copy.lg {
     font-size: var(--f-font-size-md) !important;
-    min-height: var(--f-size-12); 
+    height: var(--f-size-12); 
 }
 
 .f-copy.xl {
     font-size: var(--f-font-size-lg) !important;
-    min-height: var(--f-size-14); 
+    height: var(--f-size-14); 
 }
