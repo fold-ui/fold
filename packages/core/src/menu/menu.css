@@ -68,7 +68,7 @@
     --f-menu-item-color-system-active: var(--f-color-surface-stronger);
     --f-menu-item-color-disabled: var(--f-color-text-weakest);
     --f-menu-item-padding: 0.4rem 0.75rem;
-    --f-menu-item-radius: var(--f-radius-sm);
+    --f-menu-item-radius: var(--f-radius);
     --f-menu-item-margin: 0 0.2rem;
     --f-menu-item-height: fit-content;
 }
