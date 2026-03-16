@@ -10,11 +10,11 @@
     --f-date-cell-disabled: var(--f-color-text-weakest);
     --f-date-cell-disabled-background: var(--f-color-surface-strong);
     --f-date-cell-pending: var(--f-color-accent);
-    --f-date-cell-pending-background: var(--f-color-accent-weak);
+    --f-date-cell-pending-background: rgba(from var(--f-color-accent) r g b / 10%);
     --f-date-cell-edge-selected: var(--f-color-accent-100);
     --f-date-cell-edge-selected-background: var(--f-color-accent);
     --f-date-cell-selected: var(--f-color-accent);
-    --f-date-cell-selected-background: var(--f-color-accent-weak);
+    --f-date-cell-selected-background: rgba(from var(--f-color-accent) r g b / 10%);
     --f-date-cell-selected-space: 2px;
     --f-date-cell-today: var(--f-color-accent);
     --f-date-cell-pending-opacity: 0.25;
@@ -36,7 +36,6 @@
 }
 
 .f-date-cell:focus {
-    background: var(--f-date-cell-weekend-background) !important;
     outline: none;
     border-radius: var(--f-radius);
 }

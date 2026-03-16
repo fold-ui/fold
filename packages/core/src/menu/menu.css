@@ -68,6 +68,7 @@
     --f-menu-item-color-system-active: var(--f-color-surface-stronger);
     --f-menu-item-color-disabled: var(--f-color-text-weakest);
     --f-menu-item-padding: 0.4rem 0.75rem;
+    --f-menu-item-radius: var(--f-radius-sm);
     --f-menu-item-margin: 0 0.2rem;
     --f-menu-item-height: fit-content;
 }
@@ -94,7 +95,7 @@
     cursor: pointer;
     padding: var(--f-menu-item-padding);
     margin: var(--f-menu-item-margin);
-    border-radius: var(--f-radius);
+    border-radius: var(--f-menu-item-radius);
     justify-content: flex-start;
     transition: background-color 0.1s;
     height: var(--f-menu-item-height);

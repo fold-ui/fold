@@ -60,7 +60,7 @@
                 "stronger": { "value": "{color.light.200}" },
                 "strongest": { "value": "{color.light.300}" },
                 "highlight": { "value": "{color.accent.50}" },
-                "inverse": { "value": "{color.light.700}" }
+                "inverse": { "value": "{color.light.800}" }
             },
             "border": {
                 " ": { "value": "{color.light.150}" },

@@ -109,6 +109,7 @@ input.f-select:disabled {
 /* list option wrapper */
 
 li.f-select-list-option-container {
+    border-radius: var(--f-radius-sm);
     width: 100%;
     display: block;
     position: relative;
@@ -119,7 +120,7 @@ li.f-select-list-option-container {
 .f-select-list-option-container:focus,
 .f-select-list-option-container.is-focused {
     background-color: var(--f-select-option-focus);
-    border-radius: var(--f-radius);
+    border-radius: var(--f-radius-sm);
     outline: none;
 }
 
@@ -139,7 +140,7 @@ li.f-select-list-option-container {
     cursor: pointer;  
     flex-grow: 1;
     transition: background-color 0.2s;
-    border-radius: var(--f-radius);
+    border-radius: var(--f-radius-sm);
 }
 
 .f-select-list-option .f-select-list-option__label {

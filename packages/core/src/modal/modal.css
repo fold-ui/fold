@@ -137,6 +137,31 @@
     z-index: 10;
 }
 
+.f-modal__close.xs {  
+    width: var(--f-size-9);
+    height: var(--f-size-9);
+}
+
+.f-modal__close.sm { 
+    width: var(--f-size-10);
+    height: var(--f-size-10);
+}
+
+.f-modal__close.md { 
+    width: var(--f-size-11); 
+    height: var(--f-size-11); 
+}
+
+.f-modal__close.lg { 
+    height: var(--f-size-13); 
+    width: var(--f-size-13); 
+}
+
+.f-modal__close.xl { 
+    height: var(--f-size-15); 
+    width: var(--f-size-15); 
+}
+
 .f-modal__header .f-modal__close {
     position: relative;
     top: 0;
