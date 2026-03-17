@@ -4,7 +4,7 @@
     --f-modal-box-shadow: var(--f-shadow-lg);
     --f-modal-border-color: var(--f-color-border);
     --f-modal-border-width: 1px;
-    --f-modal-border-radius: var(--f-radius);
+    --f-modal-border-radius: var(--f-radius-lg);
 }
 
 .f-modal {
