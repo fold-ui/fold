@@ -8,7 +8,7 @@ import React, {
     useRef,
     useState,
 } from 'react'
-import { useCustomEvent, useEvent, useTheme, useWindowEvent } from '..'
+import { useCustomEvent, useEvent, useWindowEvent } from '..'
 import { classNames, cleanObject, getAlignClass, getOffset, mergeRefs } from '../helpers'
 import { CommonProps, CoreViewProps, ShorthandProps } from '../types'
 
@@ -195,8 +195,9 @@ export type ViewProps = {
 } & ShorthandProps &
     AllHTMLAttributes<any>
 
+const getColorToken = (token: string) => `var(--f-color-${token})`
+
 export const View = forwardRef((props: ViewProps, ref) => {
-    const { getColorToken } = useTheme()
     const {
         as = 'div',
         bg,
@@ -251,45 +252,49 @@ export const View = forwardRef((props: ViewProps, ref) => {
     // Create inline style object from shorthand props
     // and from inline style props
     const style = useMemo(() => {
-        const { style = {} } = props
-
         return cleanObject({
-            background: props.bgToken ? getColorToken(props.bgToken) : props.bg,
-            color: props.colorToken ? getColorToken(props.colorToken) : props.color,
-            width: props.width,
-            height: props.height,
-            position: props.position,
-            display: props.display,
-            padding: props.p,
-            margin: props.m,
-            zIndex: props.zIndex,
-            borderRadius: props.radius,
-            blur: props.blur,
-            letterSpacing: props.letterSpacing,
-            lineHeight: props.lineHeight,
-            fontWeight: props.fontWeight,
-            fontFamily: props.font,
-            fontSize: props.fontSize,
-            textDecoration: props.textDecoration,
-            textAlign: props.textAlign,
-            boxShadow: props.shadow,
-            border: props.border,
-            transition: props.transition,
-            alignItems: props.alignItems,
-            alignContent: props.alignContent,
-            flexBasis: props.basis,
-            flexDirection: props.flexDirection,
-            flexGrow: props.grow,
-            justifyContent: props.justifyContent,
-            flexShrink: props.shrink,
-            flexWrap: props.wrap,
-            flex: props.flex,
-            flow: props.flow,
-            alignSelf: props.alignSelf,
-            gap: props.gap,
-            ...style,
+            background: bgToken ? getColorToken(bgToken) : bg,
+            color: colorToken ? getColorToken(colorToken) : color,
+            width,
+            height,
+            position,
+            display,
+            padding: p,
+            margin: m,
+            zIndex,
+            borderRadius: radius,
+            blur,
+            letterSpacing,
+            lineHeight,
+            fontWeight,
+            fontFamily: font,
+            fontSize,
+            textDecoration,
+            textAlign,
+            boxShadow: shadow,
+            border,
+            transition,
+            alignItems,
+            alignContent,
+            flexBasis: basis,
+            flexDirection,
+            flexGrow: grow,
+            justifyContent,
+            flexShrink: shrink,
+            flexWrap: wrap,
+            flex,
+            flow,
+            alignSelf,
+            gap,
+            ...(props.style || {}),
         })
-    }, [props])
+    }, [
+        bg, bgToken, color, colorToken, width, height, position, display,
+        p, m, zIndex, radius, blur, letterSpacing, lineHeight, fontWeight,
+        font, fontSize, textDecoration, textAlign, shadow, border, transition,
+        alignItems, alignContent, basis, flexDirection, grow, justifyContent,
+        shrink, wrap, flex, flow, alignSelf, gap, props.style,
+    ])
 
     return createElement(
         as,

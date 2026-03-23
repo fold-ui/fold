@@ -1,4 +1,4 @@
-import React, { ReactElement, useMemo } from 'react'
+import React, { ReactElement } from 'react'
 
 export const plural = (number, str) => (number == 1 ? str : str + 's')
 
@@ -315,17 +315,15 @@ export const classNamesOld = (object: any, classes: string[] = []): string => {
 }
 
 export const classNames = (object: any, classes: string[] = []): string => {
-    return useMemo(() => {
-        const classList = classes.filter((c) => !!c)
-        const classArray: string[] = []
+    const classList = classes.filter((c) => !!c)
+    const classArray: string[] = []
 
-        for (const property in object) {
-            if (object[property]) classArray.push(property)
-        }
+    for (const property in object) {
+        if (object[property]) classArray.push(property)
+    }
 
-        const allClasses = [...classList, ...classArray].join(' ')
-        return allClasses || ''
-    }, [object, classes])
+    const allClasses = [...classList, ...classArray].join(' ')
+    return allClasses || ''
 }
 
 export const focusElementById = (id: string) => {
@@ -516,7 +514,11 @@ export const getMimeTypeDescription = (type: string) => {
 }
 
 export const cleanObject = (obj: any) => {
-    return Object.fromEntries(Object.entries(obj).filter(([_, v]) => v != null))
+    const result: any = {}
+    for (const key in obj) {
+        if (obj[key] != null) result[key] = obj[key]
+    }
+    return result
 }
 
 export const mapBetween = (currentNum, minAllowed, maxAllowed, min, max) => {
