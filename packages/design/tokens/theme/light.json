@@ -1,7 +1,7 @@
 {
     "light": {
         "radius": { "value": "{radius.default}" },
-        "focus": { "value": "2px solid {color.accent.400}" },
+        "focus": { "value": "2px solid {color.accent.150}" },
         "color": {
             "background": { "value": "{color.light.50}" },
             "accent": {
