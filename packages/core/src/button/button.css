@@ -6,7 +6,7 @@
     --f-button-background-color: var(--f-color-surface);
     --f-button-background-color-hover: var(--f-color-surface-strong);
     --f-button-disabled-opacity: 0.5;
-    --f-button-border-radius: var(--f-radius-sm);
+    --f-button-border-radius: var(--f-radius);
     --f-button-shadow: var(--f-shadow-sm);
     --f-button-variant-opacity-hover: 0.1;
     --f-button-active-background: var(--f-color-surface-stronger);
@@ -20,7 +20,7 @@
     border: var(--f-button-border-width) solid;
     cursor: pointer; 
     flex-shrink: 0;
-    transition-property: background-color, outline, color, filter, -webkit-filter;
+    transition-property: outline, color;
     transition-duration: var(--f-button-transition-delay);
     color: var(--f-button-color);
     border-color: var(--f-button-border-color);
@@ -259,113 +259,85 @@
     border-color: transparent;
     transition-property: background-color, outline, color, filter, -webkit-filter;
     transition-duration: var(--f-button-transition-delay);
+    background: rgba(from var(--f-color-surface-strong) r g b / 50%); 
 }
 
-.f-button.is-subtle:not(:disabled,.is-loading).is-active,
 .f-button.is-subtle:not(:disabled):hover {
     background: var(--f-button-background-color-hover);
 }
 
-.f-button.is-accent.is-subtle:hover,
-.f-button.is-success.is-subtle:hover,
-.f-button.is-neutral.is-subtle:hover,
-.f-button.is-caution.is-subtle:hover,
-.f-button.is-warning.is-subtle:hover,
-.f-button.is-danger.is-subtle:hover,
-.f-button.is-highlight.is-subtle:hover {
-    background: transparent;
-    border-color: transparent;
+.f-button.is-subtle.is-active {
+    filter: var(--f-button-active-filter-variants);
 }
 
 .f-button.is-accent.is-subtle { 
     color: var(--f-color-accent); 
     outline-color: var(--f-color-accent);
+    background: var(--f-color-accent-weak); 
 }
 
-.f-button.is-accent.is-subtle.is-active,
-.f-button.is-accent.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-accent); 
-    color: var(--f-color-accent-text);
-    background: var(--f-color-accent); 
-    border-color: var(--f-color-accent); 
+.f-button.is-accent.is-subtle:not(:disabled):hover {
+    background: color-mix(in srgb, var(--f-color-accent-weak), var(--f-color-accent) 15%);
 }
 
 .f-button.is-success.is-subtle { 
     color: var(--f-color-success); 
     outline-color: var(--f-color-success);
+    background: var(--f-color-success-weak); 
 }
 
-.f-button.is-success.is-subtle.is-active,
-.f-button.is-success.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-success); 
-    color: var(--f-color-success-text);
-    background: var(--f-color-success); 
-    border-color: var(--f-color-success); 
+.f-button.is-success.is-subtle:not(:disabled):hover {
+    background: color-mix(in srgb, var(--f-color-success-weak), var(--f-color-success) 15%);
 }
 
 .f-button.is-neutral.is-subtle { 
     color: var(--f-color-neutral); 
     outline-color: var(--f-color-neutral);
+    background: var(--f-color-neutral-weak); 
 }
 
-.f-button.is-neutral.is-subtle.is-active,
-.f-button.is-neutral.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-neutral); 
-    color: var(--f-color-neutral-text);
-    background: var(--f-color-neutral); 
-    border-color: var(--f-color-neutral); 
+.f-button.is-neutral.is-subtle:not(:disabled):hover {
+    background: color-mix(in srgb, var(--f-color-neutral-weak), var(--f-color-neutral) 15%);
 }
 
 .f-button.is-caution.is-subtle { 
     color: var(--f-color-caution); 
     outline-color: var(--f-color-caution);
+    background: var(--f-color-caution-weak); 
 }
 
-.f-button.is-caution.is-subtle.is-active,
-.f-button.is-caution.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-caution); 
-    color: var(--f-color-caution-text);
-    background: var(--f-color-caution); 
-    border-color: var(--f-color-caution); 
+.f-button.is-caution.is-subtle:not(:disabled):hover {
+    background: color-mix(in srgb, var(--f-color-caution-weak), var(--f-color-caution) 15%);
 }
 
 .f-button.is-warning.is-subtle { 
     color: var(--f-color-warning); 
     outline-color: var(--f-color-warning);
+    background: var(--f-color-warning-weak); 
 }
 
-.f-button.is-warning.is-subtle.is-active,
-.f-button.is-warning.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-warning); 
-    color: var(--f-color-warning-text);
-    background: var(--f-color-warning); 
-    border-color: var(--f-color-warning); 
+.f-button.is-warning.is-subtle:not(:disabled):hover {
+    background: color-mix(in srgb, var(--f-color-warning-weak), var(--f-color-warning) 15%);
 }
 
 .f-button.is-danger.is-subtle { 
     color: var(--f-color-danger); 
     outline-color: var(--f-color-danger);
+    background: var(--f-color-danger-weak); 
 }
 
-.f-button.is-danger.is-subtle.is-active,
-.f-button.is-danger.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-danger); 
-    color: var(--f-color-danger-text);
-    background: var(--f-color-danger); 
-    border-color: var(--f-color-danger); 
+.f-button.is-danger.is-subtle:not(:disabled):hover {
+    background: color-mix(in srgb, var(--f-color-danger-weak), var(--f-color-danger) 15%);
 }
 
 .f-button.is-highlight.is-subtle { 
     color: var(--f-color-highlight); 
     outline-color: var(--f-color-highlight);
+    background: var(--f-color-highlight-weak); 
 }
 
-.f-button.is-highlight.is-subtle.is-active,
-.f-button.is-highlight.is-subtle:not(:disabled):hover { 
-    --f-button-background-color-hover: var(--f-color-highlight); 
-    color: var(--f-color-highlight-text);
-    background: var(--f-color-highlight); 
-    border-color: var(--f-color-highlight); 
+.f-button.is-highlight.is-subtle:not(:disabled):hover {
+    background: color-mix(in srgb, var(--f-color-highlight-weak), var(--f-color-highlight) 15%);
 }
 
 /* ********************************************* */
@@ -383,8 +355,13 @@
 
 .f-button.is-outline:not(:disabled):hover,
 .f-button.is-outline.is-active:not(:disabled) {
-    background: var(--f-button-color);
-    color: var(--f-color-text-on-color); 
+    background: var(--f-button-color-hover);
+    color: var(--f-color-text-on-color);
+}
+
+.f-button.is-default.is-outline:not(:disabled,.is-loading):active {
+    background: var(--f-button-color-hover);
+    color: var(--f-color-text-on-color);
 }
 
 .f-button.is-outline:disabled:hover,

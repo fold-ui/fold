@@ -109,6 +109,7 @@ input.f-select:disabled {
 /* list option wrapper */
 
 li.f-select-list-option-container {
+    border-radius: var(--f-radius);
     width: 100%;
     display: block;
     position: relative;

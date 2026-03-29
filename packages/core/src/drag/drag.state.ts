@@ -8,9 +8,13 @@ export const setDragState = (data) => {
     dispatchPubsub('state-' + namespace, data)
 }
 
-export const setTarget = (target: Partial<DragTarget>) => setDragState({ namespace: 'target', target })
+export const setTarget = (target: Partial<DragTarget>) => {
+    setDragState({ namespace: 'target', target })
+}
 
-export const setOrigin = (origin: Partial<DragOrigin>) => setDragState({ namespace: 'origin', origin })
+export const setOrigin = (origin: Partial<DragOrigin>) => {
+    setDragState({ namespace: 'origin', origin })
+}
 
 export const getDragState = (namespace: string): any => {
     const [_, render] = useState(new Date())
