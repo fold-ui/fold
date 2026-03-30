@@ -156,11 +156,13 @@ module.exports = {
             type: `value`,
             transitive: true,
             matcher: (token) => token.attributes.category == 'color',
-            transformer: (token) => {
-                if (token.value.includes('oklch')) return token.value
-                const [l, c, h] = chroma(token.value).oklch()
-                return `oklch(${l.toFixed(3)} ${c.toFixed(3)} ${isNaN(h) ? 0 : h.toFixed(1)})`
-            },
+            transformer: (token) => token.value.includes('oklch') ? oklchToHex(token.value) : chroma(token.value).hex(),
+            // this keeps the oklch value
+            // transformer: (token) => {
+            //     if (token.value.includes('oklch')) return token.value
+            //     const [l, c, h] = chroma(token.value).oklch()
+            //     return `oklch(${l.toFixed(3)} ${c.toFixed(3)} ${isNaN(h) ? 0 : h.toFixed(1)})`
+            // },
         },
         'color/css': Object.assign({}, StyleDictionary.transform[`color/css`], {
             transitive: true,

@@ -1,7 +1,7 @@
 html, body {
     background-color: transparent;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: var(--f-font-weight-normal);
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
 } 
