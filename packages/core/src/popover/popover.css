@@ -1,6 +1,6 @@
 :root {
     --f-popover-border-color: var(--f-color-border);
-    --f-popover-border-radius: var(--f-radius);
+    --f-popover-border-radius: var(--f-radius-lg);
     --f-popover-background: var(--f-color-surface);
     --f-popover-box-shadow: var(--f-shadow-popover);
 }
