@@ -1,7 +1,7 @@
 {
     "name": "@fold-ui/core",
     "title": "Fold",
-    "version": "0.22.0",
+    "version": "0.23.0",
     "description": "Zero gravity React components.",
     "main": "dist/index.js",
     "module": "dist/index.js",
