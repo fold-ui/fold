@@ -60,7 +60,7 @@ import {
     FIVideo,
     FIWarning,
     FIX,
-    setFoldIcons,
+    setAppIcons,
 } from '../icon'
 import { ToastContainer } from '../toast/toast'
 
@@ -123,14 +123,14 @@ export const defaultIcons = {
     'video': FIVideo,
 }
 
-setFoldIcons(defaultIcons)
+setAppIcons(defaultIcons)
 
-export type FoldApp = {
+export type AppContextProps = {
     theme?: string
 }
 
-export type FoldContext = {
-    fold: FoldApp
+export type AppContext = {
+    app: AppContextProps
     alert: AlertOptions
     setAlert: (alert: AlertOptions) => void
     dialog: DialogOptions
@@ -139,24 +139,24 @@ export type FoldContext = {
     setConfig: any
 }
 
-export const FoldContext = React.createContext<FoldContext>({
-    fold: {},
+export const AppContext = React.createContext<AppContext>({
+    app: {},
     alert: {},
     setAlert: () => null,
     dialog: {},
     setDialog: () => null,
     closeDialog: () => null,
-    setConfig: (fold: Partial<FoldApp>) => null,
+    setConfig: (app: Partial<AppContextProps>) => null,
 })
 
-export type FoldProviderProps = {
+export type AppProviderProps = {
     theme?: string
     dragOptions?: DragManagerProps
 }
 
-export const FoldProvider = (props: any) => {
+export const AppProvider = (props: any) => {
     const { theme, dragOptions = {} } = props
-    const [fold, setFold] = useState<FoldApp>({})
+    const [app, setApp] = useState<AppContextProps>({})
     const [alert, setAlert] = useState<AlertOptions>({})
     const [dialog, setDialog] = useState<DialogOptions>({})
     const { setTheme, getSystemTheme, getStoredTheme } = useTheme()
@@ -168,21 +168,21 @@ export const FoldProvider = (props: any) => {
         setAlert({})
     }
 
-    const setConfig = (obj: Partial<FoldApp>) => {
+    const setConfig = (obj: Partial<AppContextProps>) => {
         if (obj.theme) setTheme(obj.theme)
-        setFold({ ...fold, ...obj })
+        setApp({ ...app, ...obj })
     }
 
     useLayoutEffect(() => {
         const theme = getStoredTheme() || getSystemTheme()
         setTheme(theme)
-        setFold({ theme })
+        setApp({ theme })
     }, [theme])
 
     return (
-        <FoldContext.Provider
+        <AppContext.Provider
             value={{
-                fold,
+                app,
                 alert,
                 setAlert,
                 dialog,
@@ -212,6 +212,6 @@ export const FoldProvider = (props: any) => {
                     header={dialog.header}
                 />
             )}
-        </FoldContext.Provider>
+        </AppContext.Provider>
     )
 }

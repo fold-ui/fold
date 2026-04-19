@@ -33,18 +33,18 @@
 
 .f-color-palette__color:focus {
     outline-width: 2px;
-    outline-style: solid; 
+    outline-style: solid;
 }
 
 .f-color-palette__color.is-current::before {
-    content: " ";
+    content: ' ';
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
-    border-radius: calc(var(--f-color-palette-radius)/2);
+    border-radius: calc(var(--f-color-palette-radius) / 2);
     outline: var(--f-color-palette-selected);
 }
 
@@ -60,8 +60,8 @@
     gap: var(--f-size-1);
 }
 
-.f-color-picker__tools input[type="text"],
-.f-color-picker__tools input[type="number"] {
+.f-color-picker__tools input[type='text'],
+.f-color-picker__tools input[type='number'] {
     text-align: center;
     border: var(--f-color-picker-input-border-width) solid;
     border-color: var(--f-color-picker-input-border-color);
@@ -89,20 +89,30 @@
     width: 100%;
     height: var(--f-color-picker-height);
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%), linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%),
+        linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .f-color-picker__handle {
     border-radius: 50%;
     border: 2px solid white;
     width: 1rem;
-    height: 1rem; 
+    height: 1rem;
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
 }
 
 .f-color-picker__hue {
-    --f-range-background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);
+    --f-range-background: linear-gradient(
+        to right,
+        rgb(255, 0, 0) 0%,
+        rgb(255, 255, 0) 17%,
+        rgb(0, 255, 0) 33%,
+        rgb(0, 255, 255) 50%,
+        rgb(0, 0, 255) 67%,
+        rgb(255, 0, 255) 83%,
+        rgb(255, 0, 0) 100%
+    );
     --f-range-track-size: 1rem;
     --f-range-thumb-background-color: var(--f-color-surface);
     --f-range-thumb-hover-background-color: var(--f-color-surface);

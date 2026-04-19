@@ -18,7 +18,7 @@
 .f-button {
     width: fit-content;
     border: var(--f-button-border-width) solid;
-    cursor: pointer; 
+    cursor: pointer;
     flex-shrink: 0;
     transition-property: outline, color;
     transition-duration: var(--f-button-transition-delay);
@@ -56,18 +56,18 @@
     background-color: var(--f-button-background-color-hover);
 }
 
-.f-button.is-default:not(:disabled,.is-loading):active {
+.f-button.is-default:not(:disabled, .is-loading):active {
     background-color: var(--f-button-active-background);
 }
 
-.f-button.is-subtle:not(:disabled,.is-loading):active,
-.f-button.is-accent:not(:disabled,.is-loading):active,
-.f-button.is-success:not(:disabled,.is-loading):active,
-.f-button.is-neutral:not(:disabled,.is-loading):active,
-.f-button.is-caution:not(:disabled,.is-loading):active,
-.f-button.is-warning:not(:disabled,.is-loading):active,
-.f-button.is-danger:not(:disabled,.is-loading):active,
-.f-button.is-highlight:not(:disabled,.is-loading):active {
+.f-button.is-subtle:not(:disabled, .is-loading):active,
+.f-button.is-accent:not(:disabled, .is-loading):active,
+.f-button.is-success:not(:disabled, .is-loading):active,
+.f-button.is-neutral:not(:disabled, .is-loading):active,
+.f-button.is-caution:not(:disabled, .is-loading):active,
+.f-button.is-warning:not(:disabled, .is-loading):active,
+.f-button.is-danger:not(:disabled, .is-loading):active,
+.f-button.is-highlight:not(:disabled, .is-loading):active {
     filter: var(--f-button-active-filter-variants);
 }
 
@@ -100,15 +100,15 @@
 .f-button span,
 .f-button a {
     color: inherit;
-    text-decoration: none !important; 
+    text-decoration: none !important;
 }
 
 .f-button__suffix {
     flex-shrink: 0;
     height: fit-content;
     width: fit-content;
-    margin-left: var(--f-size-2); 
-    margin-right: calc(var(--f-size-1) * -1); 
+    margin-left: var(--f-size-2);
+    margin-right: calc(var(--f-size-1) * -1);
     pointer-events: none;
 }
 
@@ -116,16 +116,16 @@
     flex-shrink: 0;
     height: fit-content;
     width: fit-content;
-    margin-right: var(--f-size-2); 
-    margin-left: calc(var(--f-size-1) * -1); 
+    margin-right: var(--f-size-2);
+    margin-left: calc(var(--f-size-1) * -1);
     pointer-events: none;
 }
 
 .f-button__label {
     pointer-events: none;
-    position: relative;  
+    position: relative;
     flex: 1;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .f-button.has-ellipsis > .f-button__label {
@@ -216,7 +216,7 @@
 .f-button.is-default.is-warning:after,
 .f-button.is-default.is-danger:after,
 .f-button.is-default.is-highlight:after {
-    content: " ";
+    content: ' ';
     background-color: var(--f-color-black);
     opacity: 0;
     position: absolute;
@@ -259,7 +259,7 @@
     border-color: transparent;
     transition-property: background-color, outline, color, filter, -webkit-filter;
     transition-duration: var(--f-button-transition-delay);
-    background: rgba(from var(--f-color-surface-strong) r g b / 50%); 
+    background: rgba(from var(--f-color-surface-strong) r g b / 50%);
 }
 
 .f-button.is-subtle:not(:disabled):hover {
@@ -270,70 +270,70 @@
     filter: var(--f-button-active-filter-variants);
 }
 
-.f-button.is-accent.is-subtle { 
-    color: var(--f-color-accent); 
+.f-button.is-accent.is-subtle {
+    color: var(--f-color-accent);
     outline-color: var(--f-color-accent);
-    background: var(--f-color-accent-weak); 
+    background: var(--f-color-accent-weak);
 }
 
 .f-button.is-accent.is-subtle:not(:disabled):hover {
     background: color-mix(in srgb, var(--f-color-accent-weak), var(--f-color-accent) 15%);
 }
 
-.f-button.is-success.is-subtle { 
-    color: var(--f-color-success); 
+.f-button.is-success.is-subtle {
+    color: var(--f-color-success);
     outline-color: var(--f-color-success);
-    background: var(--f-color-success-weak); 
+    background: var(--f-color-success-weak);
 }
 
 .f-button.is-success.is-subtle:not(:disabled):hover {
     background: color-mix(in srgb, var(--f-color-success-weak), var(--f-color-success) 15%);
 }
 
-.f-button.is-neutral.is-subtle { 
-    color: var(--f-color-neutral); 
+.f-button.is-neutral.is-subtle {
+    color: var(--f-color-neutral);
     outline-color: var(--f-color-neutral);
-    background: var(--f-color-neutral-weak); 
+    background: var(--f-color-neutral-weak);
 }
 
 .f-button.is-neutral.is-subtle:not(:disabled):hover {
     background: color-mix(in srgb, var(--f-color-neutral-weak), var(--f-color-neutral) 15%);
 }
 
-.f-button.is-caution.is-subtle { 
-    color: var(--f-color-caution); 
+.f-button.is-caution.is-subtle {
+    color: var(--f-color-caution);
     outline-color: var(--f-color-caution);
-    background: var(--f-color-caution-weak); 
+    background: var(--f-color-caution-weak);
 }
 
 .f-button.is-caution.is-subtle:not(:disabled):hover {
     background: color-mix(in srgb, var(--f-color-caution-weak), var(--f-color-caution) 15%);
 }
 
-.f-button.is-warning.is-subtle { 
-    color: var(--f-color-warning); 
+.f-button.is-warning.is-subtle {
+    color: var(--f-color-warning);
     outline-color: var(--f-color-warning);
-    background: var(--f-color-warning-weak); 
+    background: var(--f-color-warning-weak);
 }
 
 .f-button.is-warning.is-subtle:not(:disabled):hover {
     background: color-mix(in srgb, var(--f-color-warning-weak), var(--f-color-warning) 15%);
 }
 
-.f-button.is-danger.is-subtle { 
-    color: var(--f-color-danger); 
+.f-button.is-danger.is-subtle {
+    color: var(--f-color-danger);
     outline-color: var(--f-color-danger);
-    background: var(--f-color-danger-weak); 
+    background: var(--f-color-danger-weak);
 }
 
 .f-button.is-danger.is-subtle:not(:disabled):hover {
     background: color-mix(in srgb, var(--f-color-danger-weak), var(--f-color-danger) 15%);
 }
 
-.f-button.is-highlight.is-subtle { 
-    color: var(--f-color-highlight); 
+.f-button.is-highlight.is-subtle {
+    color: var(--f-color-highlight);
     outline-color: var(--f-color-highlight);
-    background: var(--f-color-highlight-weak); 
+    background: var(--f-color-highlight-weak);
 }
 
 .f-button.is-highlight.is-subtle:not(:disabled):hover {
@@ -359,7 +359,7 @@
     color: var(--f-color-text-on-color);
 }
 
-.f-button.is-default.is-outline:not(:disabled,.is-loading):active {
+.f-button.is-default.is-outline:not(:disabled, .is-loading):active {
     background: var(--f-button-color-hover);
     color: var(--f-color-text-on-color);
 }
@@ -379,88 +379,88 @@
     opacity: 0 !important;
 }
 
-.f-button.is-accent.is-outline { 
-    color: var(--f-color-accent); 
+.f-button.is-accent.is-outline {
+    color: var(--f-color-accent);
     border-color: var(--f-color-accent);
     outline-color: var(--f-color-accent);
 }
 
 .f-button.is-accent.is-outline.is-active,
-.f-button.is-accent.is-outline:not(:disabled):hover { 
-    background-color: var(--f-color-accent); 
-    color: var(--f-color-accent-text); 
+.f-button.is-accent.is-outline:not(:disabled):hover {
+    background-color: var(--f-color-accent);
+    color: var(--f-color-accent-text);
 }
 
-.f-button.is-success.is-outline { 
-    color: var(--f-color-success); 
+.f-button.is-success.is-outline {
+    color: var(--f-color-success);
     border-color: var(--f-color-success);
     outline-color: var(--f-color-success);
 }
 
 .f-button.is-success.is-outline.is-active,
-.f-button.is-success.is-outline:not(:disabled):hover { 
-    background-color: var(--f-color-success); 
-    color: var(--f-color-success-text); 
+.f-button.is-success.is-outline:not(:disabled):hover {
+    background-color: var(--f-color-success);
+    color: var(--f-color-success-text);
 }
 
-.f-button.is-neutral.is-outline { 
-    color: var(--f-color-neutral); 
+.f-button.is-neutral.is-outline {
+    color: var(--f-color-neutral);
     border-color: var(--f-color-neutral);
     outline-color: var(--f-color-neutral);
 }
 
 .f-button.is-neutral.is-outline.is-active,
-.f-button.is-neutral.is-outline:not(:disabled):hover { 
-    background-color: var(--f-color-neutral); 
+.f-button.is-neutral.is-outline:not(:disabled):hover {
+    background-color: var(--f-color-neutral);
     color: var(--f-color-neutral-text);
 }
 
-.f-button.is-caution.is-outline { 
-    color: var(--f-color-caution); 
+.f-button.is-caution.is-outline {
+    color: var(--f-color-caution);
     border-color: var(--f-color-caution);
     outline-color: var(--f-color-caution);
 }
 
 .f-button.is-caution.is-outline.is-active,
-.f-button.is-caution.is-outline:not(:disabled):hover { 
-    background-color: var(--f-color-caution); 
-    color: var(--f-color-caution-text); 
+.f-button.is-caution.is-outline:not(:disabled):hover {
+    background-color: var(--f-color-caution);
+    color: var(--f-color-caution-text);
 }
 
-.f-button.is-warning.is-outline { 
-    color: var(--f-color-warning); 
+.f-button.is-warning.is-outline {
+    color: var(--f-color-warning);
     border-color: var(--f-color-warning);
     outline-color: var(--f-color-warning);
 }
 
 .f-button.is-warning.is-outline.is-active,
-.f-button.is-warning.is-outline:not(:disabled):hover { 
-    background-color: var(--f-color-warning); 
-    color: var(--f-color-warning-text); 
+.f-button.is-warning.is-outline:not(:disabled):hover {
+    background-color: var(--f-color-warning);
+    color: var(--f-color-warning-text);
 }
 
-.f-button.is-danger.is-outline { 
-    color: var(--f-color-danger); 
+.f-button.is-danger.is-outline {
+    color: var(--f-color-danger);
     border-color: var(--f-color-danger);
     outline-color: var(--f-color-danger);
 }
 
 .f-button.is-danger.is-outline.is-active,
-.f-button.is-danger.is-outline:not(:disabled):hover { 
-    background-color: var(--f-color-danger); 
-    color: var(--f-color-danger-text); 
+.f-button.is-danger.is-outline:not(:disabled):hover {
+    background-color: var(--f-color-danger);
+    color: var(--f-color-danger-text);
 }
 
-.f-button.is-highlight.is-outline { 
-    color: var(--f-color-highlight); 
+.f-button.is-highlight.is-outline {
+    color: var(--f-color-highlight);
     border-color: var(--f-color-highlight);
     outline-color: var(--f-color-highlight);
 }
 
 .f-button.is-highlight.is-outline.is-active,
-.f-button.is-highlight.is-outline:not(:disabled):hover { 
-    background-color: var(--f-color-highlight); 
-    color: var(--f-color-highlight-text); 
+.f-button.is-highlight.is-outline:not(:disabled):hover {
+    background-color: var(--f-color-highlight);
+    color: var(--f-color-highlight-text);
 }
 
 /* ********************************************* */
@@ -469,7 +469,7 @@
 
 /* sizes */
 
-.f-button.xs {  
+.f-button.xs {
     height: var(--f-size-8);
     padding: 0 var(--f-space-2);
 }
@@ -478,7 +478,7 @@
     font-size: 0.75rem;
 }
 
-.f-button.sm { 
+.f-button.sm {
     height: var(--f-size-9);
     padding: 0 var(--f-space-3);
 }
@@ -487,8 +487,8 @@
     font-size: 0.85rem;
 }
 
-.f-button.md { 
-    height: var(--f-size-10); 
+.f-button.md {
+    height: var(--f-size-10);
     padding: 0 var(--f-space-4);
 }
 
@@ -496,8 +496,8 @@
     font-size: 0.95rem;
 }
 
-.f-button.lg { 
-    height: var(--f-size-12); 
+.f-button.lg {
+    height: var(--f-size-12);
     padding: 0 var(--f-space-5);
 }
 
@@ -505,8 +505,8 @@
     font-size: 1.1rem;
 }
 
-.f-button.xl { 
-    height: var(--f-size-14); 
+.f-button.xl {
+    height: var(--f-size-14);
     padding: 0 var(--f-space-6);
 }
 
@@ -595,7 +595,7 @@
     border-left-color: var(--f-color-accent);
 }
 
-.f-button-group.is-horizontal  .f-button.is-success:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-horizontal .f-button.is-success:not(.is-subtle):not(.is-outline) {
     border-left-color: var(--f-color-success-subtle);
 }
 
@@ -603,7 +603,7 @@
     border-left-color: var(--f-color-success);
 }
 
-.f-button-group.is-horizontal  .f-button.is-neutral:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-horizontal .f-button.is-neutral:not(.is-subtle):not(.is-outline) {
     border-left-color: var(--f-color-neutral-subtle);
 }
 
@@ -611,7 +611,7 @@
     border-left-color: var(--f-color-neutral);
 }
 
-.f-button-group.is-horizontal  .f-button.is-caution:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-horizontal .f-button.is-caution:not(.is-subtle):not(.is-outline) {
     border-left-color: var(--f-color-caution-subtle);
 }
 
@@ -619,7 +619,7 @@
     border-left-color: var(--f-color-caution);
 }
 
-.f-button-group.is-horizontal  .f-button.is-warning:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-horizontal .f-button.is-warning:not(.is-subtle):not(.is-outline) {
     border-left-color: var(--f-color-warning-subtle);
 }
 
@@ -627,7 +627,7 @@
     border-left-color: var(--f-color-warning);
 }
 
-.f-button-group.is-horizontal  .f-button.is-danger:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-horizontal .f-button.is-danger:not(.is-subtle):not(.is-outline) {
     border-left-color: var(--f-color-danger-subtle);
 }
 
@@ -635,7 +635,7 @@
     border-left-color: var(--f-color-danger);
 }
 
-.f-button-group.is-horizontal  .f-button.is-highlight:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-horizontal .f-button.is-highlight:not(.is-subtle):not(.is-outline) {
     border-left-color: var(--f-color-highlight-subtle);
 }
 
@@ -653,7 +653,7 @@
     border-top-color: var(--f-color-accent);
 }
 
-.f-button-group.is-vertical  .f-button.is-success:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-vertical .f-button.is-success:not(.is-subtle):not(.is-outline) {
     border-top-color: var(--f-color-success-subtle);
 }
 
@@ -661,7 +661,7 @@
     border-top-color: var(--f-color-success);
 }
 
-.f-button-group.is-vertical  .f-button.is-neutral:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-vertical .f-button.is-neutral:not(.is-subtle):not(.is-outline) {
     border-top-color: var(--f-color-neutral-subtle);
 }
 
@@ -669,7 +669,7 @@
     border-top-color: var(--f-color-neutral);
 }
 
-.f-button-group.is-vertical  .f-button.is-caution:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-vertical .f-button.is-caution:not(.is-subtle):not(.is-outline) {
     border-top-color: var(--f-color-caution-subtle);
 }
 
@@ -677,7 +677,7 @@
     border-top-color: var(--f-color-caution);
 }
 
-.f-button-group.is-vertical  .f-button.is-warning:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-vertical .f-button.is-warning:not(.is-subtle):not(.is-outline) {
     border-top-color: var(--f-color-warning-subtle);
 }
 
@@ -685,7 +685,7 @@
     border-top-color: var(--f-color-warning);
 }
 
-.f-button-group.is-vertical  .f-button.is-danger:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-vertical .f-button.is-danger:not(.is-subtle):not(.is-outline) {
     border-top-color: var(--f-color-danger-subtle);
 }
 
@@ -693,7 +693,7 @@
     border-top-color: var(--f-color-danger);
 }
 
-.f-button-group.is-vertical  .f-button.is-highlight:not(.is-subtle):not(.is-outline) {
+.f-button-group.is-vertical .f-button.is-highlight:not(.is-subtle):not(.is-outline) {
     border-top-color: var(--f-color-highlight-subtle);
 }
 

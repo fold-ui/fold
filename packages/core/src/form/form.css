@@ -88,7 +88,7 @@
 
 .f-form-helper-text.is-success,
 .f-form-helper-text.is-success span {
-    color: var(--f-form-control-color-success);   
+    color: var(--f-form-control-color-success);
 }
 
 /* error states with borders & text colors */
@@ -114,5 +114,5 @@
 }
 
 .f-form-control.is-success * {
-    border-color: var(--f-form-control-color-success) !important;  
+    border-color: var(--f-form-control-color-success) !important;
 }

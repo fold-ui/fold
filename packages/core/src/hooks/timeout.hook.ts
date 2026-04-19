@@ -8,7 +8,7 @@ export const useTimeout = (callback, delay) => {
     }, [callback])
 
     useEffect(() => {
-        if (delay === null) return null
+        if (delay === null) return
         const id = setTimeout(() => {
             if (savedCallback.current) savedCallback.current()
         }, delay)

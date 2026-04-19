@@ -98,9 +98,9 @@ export const shortenNames = (names: string[]) => names.map((name) => name.split(
 export let windowObject: Window | any =
     typeof window === 'undefined'
         ? {
-              FOLD_ICONS: {},
-              FOLD_DRAG_CACHE: {},
-              FOLD_DRAG_STATE: {},
+              F_ICONS: {},
+              F_DRAG_CACHE: {},
+              F_DRAG_STATE: {},
               AudioContext: null,
               webkitAudioContext: null,
               devicePixelRatio: null,

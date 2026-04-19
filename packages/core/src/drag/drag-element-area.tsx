@@ -186,11 +186,12 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
                 //         ? `0 ${origin.height}px`
                 //         : `${origin.width}px 0`
                 //     : null
-                node.style.transform = isAnimated && isTargetArea && index >= target.index
-                    ? direction == 'vertical'
-                        ? `translateY(${origin.height}px)`
-                        : `translateX(${origin.width}px)`
-                    : null
+                node.style.transform =
+                    isAnimated && isTargetArea && index >= target.index
+                        ? direction == 'vertical'
+                            ? `translateY(${origin.height}px)`
+                            : `translateX(${origin.width}px)`
+                        : null
 
                 if (isAnimated && isTargetArea) {
                     bufferRef.current.style.display = 'block'

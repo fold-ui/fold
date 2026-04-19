@@ -1,4 +1,4 @@
-import { FoldContext } from '../contexts'
+import { AppContext } from '../contexts'
 import React, { cloneElement, forwardRef, ReactElement, useContext } from 'react'
 import { View, Icon, IconProps, FIMoon, FISun, IconLib } from '..'
 import { SpinnerOverlay } from '../spinner/spinner'
@@ -174,9 +174,9 @@ export const DarkModeButton = forwardRef((props: DarkModeButtonProps, ref) => {
         ...rest
     } = props
     const {
-        fold: { theme },
+        app: { theme },
         setConfig,
-    } = useContext(FoldContext)
+    } = useContext(AppContext)
     const isLight = theme == 'light'
 
     return (

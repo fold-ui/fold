@@ -70,7 +70,7 @@
 }
 
 .f-textarea::placeholder {
-    color: var(--f-textarea-color-placeholder); 
+    color: var(--f-textarea-color-placeholder);
 }
 
 .f-textarea:focus {
@@ -99,4 +99,3 @@
     transition: none;
     outline: none !important;
 }
-

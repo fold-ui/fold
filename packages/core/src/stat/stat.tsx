@@ -44,7 +44,13 @@ export const Stat = (props: StatProps) => {
                 <div className="f-row f-stat-footer">
                     {icon && <IconLib icon={icon} />}
                     {descriptionTool}
-                    {description && <Text size="sm" as="span">{description}</Text>}
+                    {description && (
+                        <Text
+                            size="sm"
+                            as="span">
+                            {description}
+                        </Text>
+                    )}
                 </div>
             )}
             {footer}

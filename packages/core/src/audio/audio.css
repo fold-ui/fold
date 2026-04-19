@@ -68,14 +68,14 @@
     position: relative;
 }
 
-.f-audio-waveform input[type="range"].f-audio-waveform__range {
+.f-audio-waveform input[type='range'].f-audio-waveform__range {
     padding: 0;
     margin: 0;
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100%;   
+    height: 100%;
     z-index: 5;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -83,7 +83,7 @@
     background: transparent;
 }
 
-.f-audio-waveform input[type="range"].f-audio-waveform__range::-webkit-slider-thumb {
+.f-audio-waveform input[type='range'].f-audio-waveform__range::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: var(--f-audio-waveform-pin-height);
     width: var(--f-audio-waveform-pin-width);
@@ -93,24 +93,24 @@
     box-shadow: none;
 }
 
-.f-audio-waveform input[type="range"].f-audio-waveform__range:focus::-webkit-slider-thumb {
+.f-audio-waveform input[type='range'].f-audio-waveform__range:focus::-webkit-slider-thumb {
     outline: none;
 }
 
-.f-audio-waveform input[type="range"].f-audio-waveform__range:hover::-webkit-slider-thumb {
+.f-audio-waveform input[type='range'].f-audio-waveform__range:hover::-webkit-slider-thumb {
     cursor: pointer;
     background-color: var(--f-audio-waveform-active);
     border: none;
 }
 
-.f-audio-waveform input[type="range"].f-audio-waveform__range::-webkit-slider-runnable-track  {
+.f-audio-waveform input[type='range'].f-audio-waveform__range::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     box-shadow: none;
     border: none;
     background: transparent;
 }
 
-.f-audio-waveform input[type="range"].f-audio-waveform__range::-moz-range-thumb {
+.f-audio-waveform input[type='range'].f-audio-waveform__range::-moz-range-thumb {
     height: var(--f-audio-waveform-pin-height);
     width: var(--f-audio-waveform-pin-width);
     border: none;
@@ -120,7 +120,7 @@
     cursor: pointer;
 }
 
-.f-audio-waveform input[type="range"].f-audio-waveform__range::-moz-range-track {
+.f-audio-waveform input[type='range'].f-audio-waveform__range::-moz-range-track {
     background: transparent;
     border: none;
     height: 100%;

@@ -1,6 +1,6 @@
 :root {
     --f-drag-speed: 0s;
-    --f-drag-transition: cubic-bezier(.17,.67,.54,1.06);
+    --f-drag-transition: cubic-bezier(0.17, 0.67, 0.54, 1.06);
     --f-drag-indent: 0px;
     --f-drag-is-dragged-opacity: 1;
     --f-drag-is-dragged-pointer-events: none;
@@ -25,20 +25,20 @@
 }
 
 .f-drag-area.is-dragging {
-    pointer-events: all !important; 
-    user-select: all !important; 
+    pointer-events: all !important;
+    user-select: all !important;
 }
 
 .f-drag-area.is-dragging .f-drag-element > *.drag-pe-all,
 .f-drag-area.is-dragging .f-drag-area__element > *.drag-pe-all {
-    pointer-events: all !important; 
-    user-select: all !important; 
+    pointer-events: all !important;
+    user-select: all !important;
 }
 
 /* target groups */
 
 .f-drag-area.is-dragging.no-origin-variant .f-drag-area.is-dragging:not(.no-origin-variant) {
-    pointer-events: all;    
+    pointer-events: all;
     user-select: all;
 }
 
@@ -57,14 +57,14 @@
 .f-drag-element,
 .f-drag-area__element {
     position: relative;
-    user-select: none;  
+    user-select: none;
     flex-shrink: 0;
     transition: none;
     z-index: 2;
 }
 
-[data-dragginganimation = "yes"] .f-drag-area .f-drag-element,
-[data-dragginganimation = "yes"] .f-drag-area .f-drag-area__element {
+[data-dragginganimation='yes'] .f-drag-area .f-drag-element,
+[data-dragginganimation='yes'] .f-drag-area .f-drag-area__element {
     transition: transform var(--f-drag-speed) var(--f-drag-transition);
 }
 
@@ -119,8 +119,12 @@
 }
 
 @keyframes f-drag-fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .f-drag-area__placeholder-lined::after,
@@ -144,22 +148,22 @@
 }
 
 .f-drag-area__element__line.is-vertical.is-last {
-    bottom: 0; 
-    left: 0; 
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: var(--f-drag-lined-size);
 }
 
 .f-drag-area__element__line.is-horizontal.is-first {
-    left: 0; 
+    left: 0;
     top: 0;
     height: 100%;
     width: var(--f-drag-lined-size);
 }
 
 .f-drag-area__element__line.is-horizontal.is-last {
-    right: 0; 
-    top: 0; 
+    right: 0;
+    top: 0;
     height: 100%;
     width: var(--f-drag-lined-size);
 }
@@ -190,8 +194,12 @@
 }
 
 @keyframes f-drag-focus {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* 
@@ -200,8 +208,8 @@
     is different - see right above
 */
 
-.f-drag-element[data-focus="yes"]:before {
-    content:" ";
+.f-drag-element[data-focus='yes']:before {
+    content: ' ';
     position: absolute;
     pointer-events: none;
     z-index: 100;
@@ -213,7 +221,7 @@
     outline: 2px solid var(--f-color-accent);
     outline-offset: -2px;
     border-radius: var(--f-radius);
-    animation: f-drag-focus 1s ease-out; 
+    animation: f-drag-focus 1s ease-out;
 }
 
 /* buffer, ghost & placeholder */

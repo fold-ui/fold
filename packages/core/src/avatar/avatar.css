@@ -12,7 +12,7 @@
     background-color: var(--f-avatar-background-color);
     color: var(--f-avatar-color);
     border-radius: var(--f-avatar-border-radius);
-    transition: opacity .2s, border .1s;
+    transition: opacity 0.2s, border 0.1s;
     user-select: none;
     background-size: cover;
     position: relative;
@@ -74,11 +74,11 @@
 
 .f-avatar-group.is-animated:hover > .f-avatar + .f-avatar {
     margin-left: var(--f-avatar-group-spacing);
-    transition: margin-left .1s;
+    transition: margin-left 0.1s;
 }
 
 .f-avatar-group.is-inverted {
-     flex-direction: row-reverse; 
+    flex-direction: row-reverse;
 }
 
 .f-avatar-group.is-inverted > .f-avatar + .f-avatar {
@@ -89,5 +89,5 @@
 .f-avatar-group.is-inverted.is-animated:hover > .f-avatar + .f-avatar {
     margin-right: 0 !important;
     margin-left: var(--f-avatar-group-spacing);
-    transition: margin-right .1s;
+    transition: margin-right 0.1s;
 }

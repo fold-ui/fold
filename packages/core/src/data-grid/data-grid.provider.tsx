@@ -10,7 +10,7 @@ import React, {
     useState,
 } from 'react'
 import { dispatchDataGridEvent, useDataGridEvent } from './data-grid.util'
-import { FOLD_DATA_GRID_ROW_HEIGHT } from './data-grid'
+import { F_DATA_GRID_ROW_HEIGHT } from './data-grid'
 
 export type DataGridProviderProps = {
     id?: string
@@ -103,7 +103,7 @@ export const DataGridProvider = (props: DataGridProviderProps) => {
     }
 
     const scrollIntoView = (row, col) => {
-        const rowHeight = windowObject[FOLD_DATA_GRID_ROW_HEIGHT]
+        const rowHeight = windowObject[F_DATA_GRID_ROW_HEIGHT]
         const id = instanceId + '-scrollview'
 
         // only virtual lists will have row height

@@ -1,4 +1,5 @@
-.f-stack {}
+.f-stack {
+}
 
 .f-stack:not(.is-nostretch) {
     justify-content: stretch;
@@ -14,5 +15,5 @@ defined in code:
 
 .f-stack > * + * {
     margin-top: var(--f-stack-spacing-top) !important;
-    margin-left: var(--f-stack-spacing-left) !important; 
+    margin-left: var(--f-stack-spacing-left) !important;
 }

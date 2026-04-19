@@ -1,15 +1,15 @@
 :root {
-  --f-range-border-radius: var(--f-radius-full);
-  --f-range-background: var(--f-color-surface-stronger);
-  --f-range-thumb-shadow: var(--f-shadow-base);
-  --f-range-thumb-border-radius: var(--f-radius-full);
-  --f-range-thumb-background-color: var(--f-color-accent);
-  --f-range-thumb-border-color: var(--f-color-accent);
-  --f-range-thumb-hover-background-color: var(--f-color-accent);
-  --f-range-thumb-hover-border-color: var(--f-color-accent);
-  --f-range-thumb-size: var(--f-size-5);
-  --f-range-thumb-border-size: 0.2;
-  --f-range-track-size: var(--f-size-2);
+    --f-range-border-radius: var(--f-radius-full);
+    --f-range-background: var(--f-color-surface-stronger);
+    --f-range-thumb-shadow: var(--f-shadow-base);
+    --f-range-thumb-border-radius: var(--f-radius-full);
+    --f-range-thumb-background-color: var(--f-color-accent);
+    --f-range-thumb-border-color: var(--f-color-accent);
+    --f-range-thumb-hover-background-color: var(--f-color-accent);
+    --f-range-thumb-hover-border-color: var(--f-color-accent);
+    --f-range-thumb-size: var(--f-size-5);
+    --f-range-thumb-border-size: 0.2;
+    --f-range-track-size: var(--f-size-2);
 }
 
 .f-range {
@@ -20,7 +20,7 @@
     margin: 0px;
 }
 
-.f-range input[type="range"] {
+.f-range input[type='range'] {
     padding: 0px;
     margin: 0px;
     position: absolute;
@@ -33,7 +33,7 @@
 
 /* general */
 
-.f-range input[type="range"]::-webkit-slider-thumb {
+.f-range input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: var(--f-range-thumb-size);
     width: var(--f-range-thumb-size);
@@ -42,10 +42,10 @@
     border-radius: var(--f-range-thumb-border-radius);
     background-color: var(--f-range-thumb-background-color);
     box-shadow: var(--f-range-thumb-shadow);
-    transition: width .1s, height .1s;
+    transition: width 0.1s, height 0.1s;
 }
 
-.f-range input[type="range"]::-moz-range-thumb {
+.f-range input[type='range']::-moz-range-thumb {
     -webkit-appearance: none;
     height: var(--f-range-thumb-size);
     width: var(--f-range-thumb-size);
@@ -54,19 +54,19 @@
     border-radius: var(--f-range-thumb-border-radius);
     background-color: var(--f-range-thumb-background-color);
     box-shadow: var(--f-range-thumb-shadow);
-    transition: width .1s, height .1s;
+    transition: width 0.1s, height 0.1s;
 }
 
 /* track */
 
-.f-range input[type="range"]::-webkit-slider-runnable-track {
+.f-range input[type='range']::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     box-shadow: none;
     border: none;
     background: transparent;
 }
 
-.f-range input[type="range"]::-moz-range-runnable-track {
+.f-range input[type='range']::-moz-range-runnable-track {
     -webkit-appearance: none;
     box-shadow: none;
     border: none;
@@ -75,28 +75,28 @@
 
 /* disabled */
 
-.f-range input[type="range"]:disabled,
-.f-range input[type="range"]:disabled::-webkit-slider-thumb {
+.f-range input[type='range']:disabled,
+.f-range input[type='range']:disabled::-webkit-slider-thumb {
     cursor: not-allowed !important;
 }
 
-.f-range input[type="range"]:disabled::-moz-range-thumb {
+.f-range input[type='range']:disabled::-moz-range-thumb {
     cursor: not-allowed !important;
 }
 
 /* focus */
 
-.f-range input[type="range"]:focus {
+.f-range input[type='range']:focus {
     outline: none;
 }
 
-.f-range input[type="range"]:focus::-webkit-slider-thumb {
+.f-range input[type='range']:focus::-webkit-slider-thumb {
     cursor: pointer;
     outline: var(--f-focus);
     outline-offset: var(--f-outline-offset);
 }
 
-.f-range input[type="range"]:focus::-moz-range-thumb {
+.f-range input[type='range']:focus::-moz-range-thumb {
     cursor: pointer;
     outline: var(--f-focus);
     outline-offset: var(--f-outline-offset);
@@ -104,13 +104,13 @@
 
 /* hover */
 
-.f-range input[type="range"]:hover::-webkit-slider-thumb {
+.f-range input[type='range']:hover::-webkit-slider-thumb {
     cursor: pointer;
     background-color: var(--f-range-thumb-hover-background-color);
     border-color: var(--f-range-thumb-hover-border-color);
 }
 
-.f-range input[type="range"]:hover::-moz-range-thumb {
+.f-range input[type='range']:hover::-moz-range-thumb {
     cursor: pointer;
     background-color: var(--f-range-thumb-hover-background-color);
     border-color: var(--f-range-thumb-hover-border-color);

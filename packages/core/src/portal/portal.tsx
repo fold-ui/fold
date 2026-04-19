@@ -10,7 +10,7 @@ export type PortalProps = {
 export const Portal = (props: PortalProps) => {
     const el = useMemo(() => {
         if (props.portalRef) return props.portalRef
-        const portalId: string = 'fold-portal'
+        const portalId: string = 'f-portal'
         const el: HTMLElement = documentObject.getElementById(portalId)
         if (el) return el
         const newEl = documentObject.createElement('div')

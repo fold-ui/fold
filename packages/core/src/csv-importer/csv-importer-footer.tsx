@@ -1,6 +1,6 @@
 import React, { ReactNode, useContext, useMemo } from 'react'
 import { Button, Flexer, View } from '../'
-import { FOLD_CSV_MAPPER_CACHE } from './csv-importer'
+import { F_CSV_MAPPER_CACHE } from './csv-importer'
 import { CsvImporterContext } from './csv-importer.provider'
 
 export type CsvImporterFooterProps = {
@@ -70,7 +70,7 @@ export const CsvImporterFooter = (props: CsvImporterFooterProps) => {
             case 3:
                 return onStepChange(4)
             case 4:
-                return onComplete(window[FOLD_CSV_MAPPER_CACHE].map((record) => record.map((r) => r.value)))
+                return onComplete(window[F_CSV_MAPPER_CACHE].map((record) => record.map((r) => r.value)))
         }
     }
 

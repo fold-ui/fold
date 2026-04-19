@@ -28,7 +28,7 @@
 .f-spinner {
     animation: rotate 2s linear infinite;
     position: relative;
-    color: var(--f-spinner-color); 
+    color: var(--f-spinner-color);
 }
 
 .f-spinner.xs {

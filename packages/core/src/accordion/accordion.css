@@ -23,9 +23,9 @@
 /* heading */
 
 .f-accordion__item {
-    border: var(--f-accordion-border-width) solid; 
+    border: var(--f-accordion-border-width) solid;
     border-color: var(--f-accordion-border-color);
-    background: var(--f-accordion-background);   
+    background: var(--f-accordion-background);
     border-radius: var(--f-accordion-border-radius);
 }
 
@@ -73,7 +73,7 @@
 }
 
 .f-accordion__item .f-accordion-heading__heading .f-accordion-heading__heading-icon {
-    transition: transform .2s;
+    transition: transform 0.2s;
 }
 
 .f-accordion__item .f-accordion-heading__heading:hover {
@@ -111,7 +111,7 @@
 
 .f-accordion__item.is-active .f-accordion-heading__heading {
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; 
+    border-bottom-right-radius: 0;
 }
 
 .f-accordion__item.is-active .f-accordion-heading__heading > *,
@@ -141,7 +141,7 @@
     border: none;
 }
 
- .f-accordion__item .f-accordion__content-inner {
+.f-accordion__item .f-accordion__content-inner {
     color: var(--f-accordion-color);
     border: none;
     padding: var(--f-accordion-spacing);

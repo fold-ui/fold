@@ -154,7 +154,7 @@
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
-    height: var(--f-size-4); 
+    height: var(--f-size-4);
 }
 
 .f-slider__footer-marker {

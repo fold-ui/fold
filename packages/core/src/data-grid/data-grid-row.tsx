@@ -4,7 +4,7 @@ import { DataGridContext } from './data-grid.provider'
 import { dispatchDataGridEvent } from './data-grid.util'
 import { DataGridCell } from './data-grid-cell'
 import { DataGridDefaultCellComponent } from './data-grid-default-cell-component'
-import { DataGridTypes, FOLD_DATA_GRID_DRAG, FOLD_DATA_GRID_GHOST } from '../'
+import { DataGridTypes, F_DATA_GRID_DRAG, F_DATA_GRID_GHOST } from '../'
 
 export type DataGridRowProps = {
     sticky?: boolean
@@ -81,7 +81,7 @@ export const DataGridRow = (props: any) => {
 
         timeoutRef.current = setTimeout(() => {
             if (draggableRows) {
-                windowObject[FOLD_DATA_GRID_DRAG] = index
+                windowObject[F_DATA_GRID_DRAG] = index
                 setDragRow(index)
                 setCustomGhostElementRotation('0deg')
                 setGhostElement(`

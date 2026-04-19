@@ -1,12 +1,12 @@
 import React from 'react';
 import { Preview } from '@storybook/react';
-import { FoldProvider, DarkModeToggle, Icon } from '../packages/core'
+import { AppProvider, DarkModeToggle, Icon } from '../packages/core'
 import '../packages/core/dist/styles.css'
 import '../packages/pro/dist/styles.css'
 
 export const decorators = [
     (Story) => (
-        <FoldProvider>
+        <AppProvider>
             <div
                 id="mockup-dark-mode-container"
                 style={{
@@ -25,7 +25,7 @@ export const decorators = [
                 </div>
                 <Story />
             </div>
-        </FoldProvider>
+        </AppProvider>
     ),
 ]
 

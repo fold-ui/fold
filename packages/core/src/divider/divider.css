@@ -40,7 +40,7 @@
     width: 1px;
     height: 100%;
     border: none;
-    border-left: 1px var(--f-divider-type) var(--f-divider-color);    
+    border-left: 1px var(--f-divider-type) var(--f-divider-color);
 }
 
 /* content */

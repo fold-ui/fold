@@ -50,7 +50,7 @@
 
 .f-footer {
     border-top: 1px solid var(--f-footer-border-color);
-    background-color: var(--f-footer-background-color); 
+    background-color: var(--f-footer-background-color);
     justify-content: left;
     width: 100%;
 }

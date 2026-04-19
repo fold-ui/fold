@@ -16,8 +16,12 @@
 }
 
 @keyframes f-modal-slidein-top {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0%); }
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 /* bottom */
@@ -27,8 +31,12 @@
 }
 
 @keyframes f-modal-slidein-bottom {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0%); }
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 /* left */
@@ -38,8 +46,12 @@
 }
 
 @keyframes f-modal-slidein-left {
-    from { transform: translateX(-100%); }
-    to { transform: translateY(0%); }
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 /* right */
@@ -49,7 +61,10 @@
 }
 
 @keyframes f-modal-slidein-right {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0%); }
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
-

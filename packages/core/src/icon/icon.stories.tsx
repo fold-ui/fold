@@ -1,5 +1,5 @@
 import * as Token from '@fold-ui/design/tokens'
-import { FICircle, FISun, Icon, IconLib, Stack, Text, View, defaultIcons, setFoldIcons } from '@fold-ui/core'
+import { FICircle, FISun, Icon, IconLib, Stack, Text, View, defaultIcons, setAppIcons } from '@fold-ui/core'
 import React, { useLayoutEffect, useState } from 'react'
 
 export default {
@@ -56,14 +56,14 @@ export const Sizes = () => {
 
 /**
  * The IconLib component allows you to include a pre-defined collection of icons, eliminating the need to import the SVG icon on each occasion.
- * In addition, a set of icons have already been added by default when using FoldContext. These include:
+ * In addition, a set of icons have already been added by default when using AppContext. These include:
  *
  */
 export const IconLibrary = () => {
     const [render, setRender] = useState(false)
 
     useLayoutEffect(() => {
-        setFoldIcons({ sun: FISun })
+        setAppIcons({ sun: FISun })
         setRender(true)
     }, [])
 

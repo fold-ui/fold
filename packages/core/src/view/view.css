@@ -3,7 +3,8 @@
     --f-blur-overlay-z-index: var(--f-index-overlay);
 }
 
-.view {}
+.view {
+}
 
 .f-blur {
     filter: blur(var(--f-blur-overlay-radius));

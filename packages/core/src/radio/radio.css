@@ -1,5 +1,5 @@
 :root {
-    --f-radio-border-radius: var(--f-radius-full); 
+    --f-radio-border-radius: var(--f-radius-full);
     --f-radio-border-color: var(--f-color-border);
     --f-radio-border-color-hover: var(--f-color-border-strong);
     --f-radio-background-color: var(--f-color-surface);
@@ -11,13 +11,13 @@
     --f-radio-disabled-color: var(--f-color-border);
 }
 
-input.f-radio[type="radio"] {
+input.f-radio[type='radio'] {
     -webkit-appearance: none;
     cursor: pointer;
     appearance: none;
     height: var(--f-size-5);
     width: var(--f-size-5);
-    border-radius: var(--f-radio-border-radius); 
+    border-radius: var(--f-radio-border-radius);
     border: 1px solid;
     border-color: var(--f-radio-border-color);
     background-color: var(--f-radio-background-color);
@@ -29,34 +29,34 @@ input.f-radio[type="radio"] {
     margin: 0;
 }
 
-input.f-radio[type="radio"]:after {
-    content: " ";
+input.f-radio[type='radio']:after {
+    content: ' ';
     position: absolute;
     left: 50%;
     top: 50%;
     width: 50%;
     height: 50%;
     transform: translate(-50%, -50%);
-    border-radius: calc(var(--f-radio-border-radius)/2); /* keep it propportional */
+    border-radius: calc(var(--f-radio-border-radius) / 2); /* keep it propportional */
     background-color: var(--f-color-surface);
 }
 
-input.f-radio[type="radio"]:hover {
+input.f-radio[type='radio']:hover {
     border-color: var(--f-radio-border-color-hover);
 }
 
-input.f-radio[type="radio"]:focus {
+input.f-radio[type='radio']:focus {
     outline: var(--f-focus);
     outline-offset: var(--f-outline-offset);
 }
 
-input.f-radio[type="radio"]:checked {
+input.f-radio[type='radio']:checked {
     border-color: var(--f-radio-active-border-color);
     background-color: var(--f-radio-active-background-color);
     color: var(--f-radio-active-color);
 }
 
-input.f-radio[type="radio"]:disabled {
+input.f-radio[type='radio']:disabled {
     border-color: var(--f-radio-disabled-border-color);
     background-color: var(--f-radio-disabled-background-color);
     color: var(--f-radio-disabled-color);
@@ -65,27 +65,27 @@ input.f-radio[type="radio"]:disabled {
 
 /* sizes */
 
-input.f-radio[type="radio"].xs { 
-    height: var(--f-size-3); 
-    width: var(--f-size-3); 
+input.f-radio[type='radio'].xs {
+    height: var(--f-size-3);
+    width: var(--f-size-3);
 }
 
-input.f-radio[type="radio"].sm {
+input.f-radio[type='radio'].sm {
     height: var(--f-size-4);
     width: var(--f-size-4);
 }
 
-input.f-radio[type="radio"].md {
+input.f-radio[type='radio'].md {
     height: var(--f-size-5);
     width: var(--f-size-5);
 }
 
-input.f-radio[type="radio"].lg {
+input.f-radio[type='radio'].lg {
     height: var(--f-size-6);
     width: var(--f-size-6);
 }
 
-input.f-radio[type="radio"].xl {
+input.f-radio[type='radio'].xl {
     height: var(--f-size-7);
     width: var(--f-size-7);
 }

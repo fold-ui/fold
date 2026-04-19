@@ -58,7 +58,7 @@
 }
 
 .f-step__content > * {
-    word-break: keep-all;    
+    word-break: keep-all;
 }
 
 .f-step__seperator {
@@ -66,7 +66,7 @@
     background: var(--f-step-seperator-color);
     height: var(--f-step-seperator-size) !important;
     flex-shrink: 0;
-    flex: 1;    
+    flex: 1;
 }
 
 .f-step.is-completed .f-step__seperator {

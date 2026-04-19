@@ -21,22 +21,24 @@
     border-radius: var(--f-skeleton-border-radius);
 }
 
-.f-skeleton .f-avatar img { 
+.f-skeleton .f-avatar img {
     display: none;
 }
 
-.f-skeleton-circle { border-radius: 50%; }
+.f-skeleton-circle {
+    border-radius: 50%;
+}
 
 @keyframes f-skeleton-color {
     0% {
-      background-color: var(--f-skeleton-color-dark);
+        background-color: var(--f-skeleton-color-dark);
     }
 
     50% {
-      background-color: var(--f-skeleton-color-light);
+        background-color: var(--f-skeleton-color-light);
     }
 
     100% {
-      background-color: var(--f-skeleton-color-dark);
+        background-color: var(--f-skeleton-color-dark);
     }
 }

@@ -17,14 +17,14 @@
 }
 
 .f-resizable.is-dragging *:not(.f-resizable-rail) {
-    user-select: none;    
+    user-select: none;
     pointer-events: none;
 }
 
 .f-resizable-rail {
     background-color: var(--f-resizable-color);
     position: absolute;
-    transition: opacity, background-color .2s;
+    transition: opacity, background-color 0.2s;
     z-index: var(--f-index-resizable);
 }
 

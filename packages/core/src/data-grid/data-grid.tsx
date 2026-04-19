@@ -15,7 +15,7 @@ export type DataGridProps = {
         paddingBottom: number
     }
     hideCheckbox?: boolean
-    useFoldScroll?: boolean
+    useAppScroll?: boolean
     rows: DataGridTypes.Cell[][]
     footer?: ReactNode
     header?: ReactNode
@@ -33,13 +33,13 @@ let xCache = 0
 let yCache = 0
 let moveThreshold = 2
 
-export const FOLD_DATA_GRID_GHOST = 'FOLD_DATA_GRID_GHOST'
-export const FOLD_DATA_GRID_DRAG = 'FOLD_DATA_GRID_DRAG'
-export const FOLD_DATA_GRID_ROW_HEIGHT = 'FOLD_DATA_GRID_ROW_HEIGHT'
+export const F_DATA_GRID_GHOST = 'F_DATA_GRID_GHOST'
+export const F_DATA_GRID_DRAG = 'F_DATA_GRID_DRAG'
+export const F_DATA_GRID_ROW_HEIGHT = 'F_DATA_GRID_ROW_HEIGHT'
 
-windowObject[FOLD_DATA_GRID_GHOST] = null
-windowObject[FOLD_DATA_GRID_DRAG] = null
-windowObject[FOLD_DATA_GRID_ROW_HEIGHT] = null
+windowObject[F_DATA_GRID_GHOST] = null
+windowObject[F_DATA_GRID_DRAG] = null
+windowObject[F_DATA_GRID_ROW_HEIGHT] = null
 
 export const DataGrid = (props: DataGridProps) => {
     const {
@@ -51,7 +51,7 @@ export const DataGrid = (props: DataGridProps) => {
             paddingBottom: 0,
         },
         hideCheckbox,
-        useFoldScroll = true,
+        useAppScroll = true,
         rows = [],
         header,
         footer,
@@ -88,7 +88,7 @@ export const DataGrid = (props: DataGridProps) => {
     const className = classNames(
         {
             'f-data-grid': true,
-            'f-scrollbar': useFoldScroll,
+            'f-scrollbar': useAppScroll,
             'is-default': isDefault,
             'is-dragging': isDragging,
             'pin-first': pinFirst,
@@ -103,7 +103,7 @@ export const DataGrid = (props: DataGridProps) => {
     }
 
     const handleMouseUp = (e) => {
-        const origin = windowObject[FOLD_DATA_GRID_DRAG]
+        const origin = windowObject[F_DATA_GRID_DRAG]
 
         if (dragCol != -1) {
             onColumnMove({
@@ -199,7 +199,7 @@ export const DataGrid = (props: DataGridProps) => {
     useDataGridEvent('update-cell', handleCellUpdate)
 
     useEffect(() => {
-        if (variant == 'virtual') windowObject[FOLD_DATA_GRID_ROW_HEIGHT] = virtual.rowHeight
+        if (variant == 'virtual') windowObject[F_DATA_GRID_ROW_HEIGHT] = virtual.rowHeight
     }, [variant])
 
     useEffect(() => {
@@ -217,7 +217,7 @@ export const DataGrid = (props: DataGridProps) => {
                         id={instanceId + '-scrollview'}
                         style={{ height, '--f-data-grid-cell-height': virtual.rowHeight + 'px' } as any}
                         onScroll={handleVirtualScroll}
-                        className={useFoldScroll ? 'f-data-grid__list f-scrollbar' : 'f-data-grid__list'}>
+                        className={useAppScroll ? 'f-data-grid__list f-scrollbar' : 'f-data-grid__list'}>
                         <div
                             style={{ height: innerHeight }}
                             className="f-data-grid__scroll-spacer">

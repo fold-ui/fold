@@ -1,6 +1,6 @@
 :root {
     --f-notification-border-radius: 0;
-    --f-notification-accent-size: var(--f-size-2);
+    --f-notification-accent-size: 1px;
     --f-notification-color: var(--f-color-text-weaker);
     --f-notification-background-color: var(--f-color-surface-strong);
     --f-notification-spacing: var(--f-space-4);
@@ -10,9 +10,8 @@
 .f-notification {
     color: var(--f-notification-color);
     background-color: var(--f-notification-background-color);
-    border-radius: var(--f-notification-border-radius); 
+    border-radius: var(--f-notification-border-radius);
     padding: var(--f-notification-padding);
-    border: 0;
     gap: var(--f-notification-spacing);
 }
 
@@ -55,42 +54,35 @@
 
 .f-notification.is-accent {
     color: var(--f-color-accent);
-    border-color: var(--f-color-accent);
-    background-color: var(--f-color-accent-weak);
+    background-color: rgba(from var(--f-color-accent) r g b / 10%);
 }
 
 .f-notification.is-success {
     color: var(--f-color-success);
-    border-color: var(--f-color-success);
-    background-color: var(--f-color-success-weak);
+    background-color: rgba(from var(--f-color-success) r g b / 10%);
 }
 
 .f-notification.is-neutral {
     color: var(--f-color-neutral);
-    border-color: var(--f-color-neutral);
-    background-color: var(--f-color-neutral-weak);
+    background-color: rgba(from var(--f-color-neutral) r g b / 10%);
 }
 
 .f-notification.is-caution {
     color: var(--f-color-caution);
-    border-color: var(--f-color-caution);
-    background-color: var(--f-color-caution-weak);
+    background-color: rgba(from var(--f-color-caution) r g b / 10%);
 }
 
 .f-notification.is-warning {
     color: var(--f-color-warning);
-    border-color: var(--f-color-warning);
-    background-color: var(--f-color-warning-weak);
+    background-color: rgba(from var(--f-color-warning) r g b / 10%);
 }
 
 .f-notification.is-danger {
     color: var(--f-color-danger);
-    border-color: var(--f-color-danger);
-    background-color: var(--f-color-danger-weak);
+    background-color: rgba(from var(--f-color-danger) r g b / 10%);
 }
 
 .f-notification.is-highlight {
     color: var(--f-color-highlight);
-    border-color: var(--f-color-highlight);
-    background-color: var(--f-color-highlight-weak);
+    background-color: rgba(from var(--f-color-highlight) r g b / 10%);
 }

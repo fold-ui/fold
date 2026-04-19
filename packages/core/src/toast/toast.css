@@ -1,51 +1,85 @@
 :root {
     --f-toast-border-radius: var(--f-radius);
-    --f-toast-color: var(--f-color-text-on-color);
-    --f-toast-background-color: var(--f-color-surface-inverse);
+    --f-toast-color: var(--f-color-text);
+    --f-toast-border: 1px solid var(--f-color-border);
+    --f-toast-background-color: var(--f-color-surface);
     --f-toast-max-width: 100%;
     --f-toast-padding: var(--f-space-3);
+    --f-toast-width: min(22rem, calc(100vw - 2rem));
+    --f-toast-stack-gap: 0.35rem;
+    --f-toast-stack-overlap: 1.75rem;
 }
 
 .f-toast-container {
-    position: fixed;  
-    width: fit-content;
+    position: fixed;
+    width: var(--f-toast-width);
     z-index: var(--f-index-toast);
+    justify-content: flex-start;
+    gap: 0;
 }
 
 .f-toast-progress {
     height: var(--f-size-1);
     border-radius: var(--f-toast-border-radius);
     margin-top: var(--f-size-3);
-    width: 0%;
+    width: 100%;
     background: currentColor;
-    transition-property: width;
-    transition-timing-function: linear;
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation-name: f-toast-progress;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 .f-toast {
-    width: fit-content;
-    max-width: var(--f-toast-max-width);
-    margin-top: 0.5rem;
+    width: 100%;
+    max-width: min(var(--f-toast-max-width), var(--f-toast-width));
+    margin-top: 0;
     border-radius: var(--f-toast-border-radius);
+    border: var(--f-toast-border);
     box-shadow: var(--f-shadow-lg);
     padding: var(--f-toast-padding);
     z-index: var(--f-index-toast);
-    animation: f-toast-fadein var(--f-transition-duration-slow);
+    animation: f-toast-fadein var(--f-transition-duration-ultra-slow);
+    transition-timing-function: var(--f-transition-easing-easi-in);
+    transition-property: transform, opacity, box-shadow;
+    transition-duration: var(--f-transition-duration-normal);
     background-color: var(--f-toast-background-color);
     color: var(--f-toast-color);
     user-select: none;
     gap: var(--f-size-3);
+    position: relative;
+    opacity: var(--f-toast-stack-opacity, 1);
+    transform: scale(var(--f-toast-stack-scale, 1));
+    z-index: var(--f-toast-stack-z-index, var(--f-index-toast));
+    will-change: transform, opacity, margin-top;
 }
 
 @keyframes f-toast-fadein {
-    from { 
-        opacity: 0; 
-        transform: scale(0.95); 
+    from {
+        opacity: 0;
+        transform: scale(0.95);
     }
-    to { 
-        opacity: 1; 
-        transform: scale(1); 
+    to {
+        opacity: 1;
+        transform: scale(var(--f-toast-stack-scale, 1));
     }
+}
+
+@keyframes f-toast-progress {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.f-toast-container:hover .f-toast,
+.f-toast-container:focus-within .f-toast {
+    opacity: 1;
+    transform: scale(1);
+    transition-property: transform, opacity, margin-top, margin-bottom, box-shadow;
 }
 
 .f-toast > * {
@@ -54,6 +88,11 @@
 
 .f-toast__message {
     color: inherit;
+}
+
+.f-toast__suffix {
+    flex-shrink: 0;
+    width: fit-content;
 }
 
 .f-toast__prefix {
@@ -76,44 +115,51 @@
 }
 
 .f-toast__close:hover {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(from var(--f-color-black) r g b / 5%);
 }
 
 /* ********************************************* */
 
-.f-toast.is-accent { 
-    color: var(--f-color-accent-text); 
-    background-color: var(--f-color-accent); 
+.f-toast.is-accent {
+    color: var(--f-color-accent);
+    background-color: var(--f-color-accent-weak);
+    border: 1px solid rgba(from var(--f-color-accent) r g b / 25%);
 }
 
-.f-toast.is-success { 
-    color: var(--f-color-success-text); 
-    background-color: var(--f-color-success); 
+.f-toast.is-success {
+    color: var(--f-color-success);
+    background-color: var(--f-color-success-weak);
+    border: 1px solid rgba(from var(--f-color-success) r g b / 25%);
 }
 
-.f-toast.is-neutral { 
-    color: var(--f-color-neutral-text); 
-    background-color: var(--f-color-neutral); 
+.f-toast.is-neutral {
+    color: var(--f-color-neutral);
+    background-color: var(--f-color-neutral-weak);
+    border: 1px solid rgba(from var(--f-color-neutral) r g b / 25%);
 }
 
-.f-toast.is-caution { 
-    color: var(--f-color-caution-text); 
-    background-color: var(--f-color-caution); 
+.f-toast.is-caution {
+    color: var(--f-color-caution);
+    background-color: var(--f-color-caution-weak);
+    border: 1px solid rgba(from var(--f-color-caution) r g b / 25%);
 }
 
-.f-toast.is-warning { 
-    color: var(--f-color-warning-text); 
-    background-color: var(--f-color-warning); 
+.f-toast.is-warning {
+    color: var(--f-color-warning);
+    background-color: var(--f-color-warning-weak);
+    border: 1px solid rgba(from var(--f-color-warning) r g b / 25%);
 }
 
-.f-toast.is-danger { 
-    color: var(--f-color-danger-text); 
-    background-color: var(--f-color-danger); 
+.f-toast.is-danger {
+    color: var(--f-color-danger);
+    background-color: var(--f-color-danger-weak);
+    border: 1px solid rgba(from var(--f-color-danger) r g b / 25%);
 }
 
-.f-toast.is-highlight { 
-    color: var(--f-color-highlight-text); 
-    background-color: var(--f-color-highlight); 
+.f-toast.is-highlight {
+    color: var(--f-color-highlight);
+    background-color: var(--f-color-highlight-weak);
+    border: 1px solid rgba(from var(--f-color-highlight) r g b / 25%);
 }
 
 /* ********************************************* */
@@ -124,48 +170,102 @@
     right: 50%;
     bottom: 1rem;
     transform: translateX(50%);
+    flex-direction: column-reverse;
 }
 
 .f-toast-container.is-bottom-right {
     right: 1rem;
     bottom: 1rem;
     align-items: flex-end;
+    flex-direction: column-reverse;
 }
 
 .f-toast-container.is-bottom-left {
     left: 1rem;
     bottom: 1rem;
     align-items: flex-start;
+    flex-direction: column-reverse;
 }
 
 .f-toast-container.is-top-center {
     right: 50%;
     top: 1rem;
     transform: translateX(50%);
+    flex-direction: column;
 }
 
 .f-toast-container.is-top-right {
     right: 1rem;
     top: 1rem;
     align-items: flex-end;
+    flex-direction: column;
 }
 
 .f-toast-container.is-top-left {
     left: 1rem;
     top: 1rem;
     align-items: flex-start;
+    flex-direction: column;
+}
+
+.f-toast-container.is-top-center .f-toast + .f-toast,
+.f-toast-container.is-top-right .f-toast + .f-toast,
+.f-toast-container.is-top-left .f-toast + .f-toast {
+    margin-top: calc(var(--f-toast-stack-overlap) * -1);
+}
+
+.f-toast-container.is-bottom-center .f-toast + .f-toast,
+.f-toast-container.is-bottom-right .f-toast + .f-toast,
+.f-toast-container.is-bottom-left .f-toast + .f-toast {
+    margin-bottom: calc(var(--f-toast-stack-overlap) * -1);
+}
+
+.f-toast-container.is-top-center:hover .f-toast + .f-toast,
+.f-toast-container.is-top-right:hover .f-toast + .f-toast,
+.f-toast-container.is-top-left:hover .f-toast + .f-toast,
+.f-toast-container.is-top-center:focus-within .f-toast + .f-toast,
+.f-toast-container.is-top-right:focus-within .f-toast + .f-toast,
+.f-toast-container.is-top-left:focus-within .f-toast + .f-toast {
+    margin-top: var(--f-toast-stack-gap);
+}
+
+.f-toast-container.is-bottom-center:hover .f-toast + .f-toast,
+.f-toast-container.is-bottom-right:hover .f-toast + .f-toast,
+.f-toast-container.is-bottom-left:hover .f-toast + .f-toast,
+.f-toast-container.is-bottom-center:focus-within .f-toast + .f-toast,
+.f-toast-container.is-bottom-right:focus-within .f-toast + .f-toast,
+.f-toast-container.is-bottom-left:focus-within .f-toast + .f-toast {
+    margin-bottom: var(--f-toast-stack-gap);
+}
+
+.f-toast-container.is-bottom-center .f-toast,
+.f-toast-container.is-bottom-right .f-toast,
+.f-toast-container.is-bottom-left .f-toast {
+    transform-origin: center bottom;
+}
+
+.f-toast-container.is-top-center .f-toast,
+.f-toast-container.is-top-right .f-toast,
+.f-toast-container.is-top-left .f-toast {
+    transform-origin: center top;
 }
 
 /* messages position */
 
-.f-toast.is-bottom-center {}
+.f-toast.is-bottom-center {
+}
 
-.f-toast.is-bottom-right {}
+.f-toast.is-bottom-right {
+}
 
-.f-toast.is-bottom-left {}
+.f-toast.is-bottom-left {
+}
 
-.f-toast.is-top-center {}
+.f-toast.is-top-center {
+}
 
-.f-toast.is-top-right {}
+.f-toast.is-top-right {
+}
 
-.f-toast.is-top-left {}
+.f-toast.is-top-left {
+}

@@ -5,9 +5,9 @@ import { Text } from '../text/text'
 import { CoreViewProps } from '../types'
 import { IconLib } from '../icon'
 
-export const FOLD_ATTACHMENT_MIME_TYPES = 'FOLD_ATTACHMENT_MIME_TYPES'
+export const F_ATTACHMENT_MIME_TYPES = 'F_ATTACHMENT_MIME_TYPES'
 
-windowObject[FOLD_ATTACHMENT_MIME_TYPES] = {
+windowObject[F_ATTACHMENT_MIME_TYPES] = {
     DESCRIPTION: {
         'audio/aac': 'AAC audio',
         'application/x-abiword': 'AbiWorddocument',
@@ -200,7 +200,7 @@ export const Attachment = (props: AttachmentProps) => {
         [props.className, size]
     )
 
-    const icon: string = mime ? windowObject[FOLD_ATTACHMENT_MIME_TYPES].ICON[mime] : error ? 'warning' : 'paperclip'
+    const icon: string = mime ? windowObject[F_ATTACHMENT_MIME_TYPES].ICON[mime] : error ? 'warning' : 'paperclip'
 
     return (
         <View
@@ -267,10 +267,10 @@ export const Attachment = (props: AttachmentProps) => {
                                     size="sm"
                                     as="span"
                                     className="f-attachment__text-meta">
-                                    <span>{windowObject[FOLD_ATTACHMENT_MIME_TYPES].DESCRIPTION[mime]}</span>
+                                    <span>{windowObject[F_ATTACHMENT_MIME_TYPES].DESCRIPTION[mime]}</span>
                                 </Text>
                             )}
-                            {filesize && (
+                            {!!filesize && (
                                 <Text
                                     size="sm"
                                     as="span"
@@ -311,7 +311,7 @@ export const AttachmentThumb = (props: AttachmentThumbProps) => {
         },
         [props.className]
     )
-    const icon: string = mime ? windowObject[FOLD_ATTACHMENT_MIME_TYPES].ICON[mime] : error ? 'warning' : 'paperclip'
+    const icon: string = mime ? windowObject[F_ATTACHMENT_MIME_TYPES].ICON[mime] : error ? 'warning' : 'paperclip'
 
     return (
         <View

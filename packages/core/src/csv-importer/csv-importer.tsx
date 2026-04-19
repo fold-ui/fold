@@ -10,7 +10,7 @@ import { CsvImporterUpload } from './csv-importer-upload'
 import { CsvImporterProvider } from './csv-importer.provider'
 import { CsvImporterHeaderCell, CsvImporterMapping, CsvImporterSchema } from './csv-importer.types'
 
-export let FOLD_CSV_MAPPER_CACHE = 'FOLD_CSV_MAPPER_CACHE'
+export let F_CSV_MAPPER_CACHE = 'F_CSV_MAPPER_CACHE'
 
 export type CsvImporterProps = {
     toolbar?: ReactNode
