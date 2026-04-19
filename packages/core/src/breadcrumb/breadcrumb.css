@@ -1,17 +1,17 @@
 :root {
-  --f-breadcrumb-background-color: transparent;
-  --f-breadcrumb-border-radius: 0;
-  --f-breadcrumb-color: var(--f-color-text-weak);
-  --f-breadcrumb-color-hover: var(--f-color-accent);
-  --f-breadcrumb-color-active: var(--f-color-accent);
-  --f-breadcrumb-spacing: var(--f-space-2);
-  --f-breadcrumb-separator-spacing: calc(var(--f-space-2)*2);
-  --f-breadcrumb-separator-color: var(--f-color-text-weakest);
-  --f-breadcrumb-padding: 0;
+    --f-breadcrumb-background-color: transparent;
+    --f-breadcrumb-border-radius: 0;
+    --f-breadcrumb-color: var(--f-color-text-weak);
+    --f-breadcrumb-color-hover: var(--f-color-accent);
+    --f-breadcrumb-color-active: var(--f-color-accent);
+    --f-breadcrumb-spacing: var(--f-space-2);
+    --f-breadcrumb-separator-spacing: calc(var(--f-space-2) * 2);
+    --f-breadcrumb-separator-color: var(--f-color-text-weakest);
+    --f-breadcrumb-padding: 0;
 }
 
 .f-breadcrumb {
-    background-color: var(--f-breadcrumb-background-color); 
+    background-color: var(--f-breadcrumb-background-color);
     border-radius: var(--f-breadcrumb-border-radius);
     padding: var(--f-breadcrumb-padding);
     width: fit-content;
@@ -31,7 +31,7 @@
     padding-left: var(--f-breadcrumb-spacing);
 }
 
-.f-breadcrumb  .f-breadcrumb-item:last-of-type {
+.f-breadcrumb .f-breadcrumb-item:last-of-type {
     padding-right: 0;
 }
 
@@ -44,7 +44,7 @@
     color: var(--f-breadcrumb-color-hover);
 }
 
-.f-breadcrumb [aria-current="page"] .f-breadcrumb-item__text,
+.f-breadcrumb [aria-current='page'] .f-breadcrumb-item__text,
 .f-breadcrumb-item.is-active .f-breadcrumb-item__text {
     color: var(--f-breadcrumb-color-active);
     font-weight: var(--f-font-weight-bold);

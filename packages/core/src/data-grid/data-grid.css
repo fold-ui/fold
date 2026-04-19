@@ -6,7 +6,8 @@
     --f-data-grid-selected-width: 0.2rem;
     --f-data-grid-border: none;
     --f-data-grid-background: var(--f-color-surface);
-    --f-data-grid-columns: var(--f-data-grid-gutter-width) 300px 200px 200px 200px 200px 200px 200px 150px 150px 150px 150px 150px;
+    --f-data-grid-columns: var(--f-data-grid-gutter-width) 300px 200px 200px 200px 200px 200px 200px 150px 150px 150px
+        150px 150px;
     --f-data-grid-cell-height: 40px;
     --f-data-grid-border-bottom: 1px solid var(--f-color-surface-stronger);
     --f-data-grid-border-right: 1px solid var(--f-color-surface-stronger);
@@ -108,7 +109,7 @@
     position: relative;
     user-select: none;
     cursor: pointer;
-    border-right: var(--f-data-grid-border-right);   
+    border-right: var(--f-data-grid-border-right);
 }
 
 .f-data-grid-row .f-data-grid-header-cell:last-child,
@@ -154,7 +155,7 @@
     z-index: 10;
 }
 
-.f-data-grid.pin-first .f-data-grid-row .f-data-grid-cell.is-selected:nth-child(2)  {
+.f-data-grid.pin-first .f-data-grid-row .f-data-grid-cell.is-selected:nth-child(2) {
     z-index: 11;
 }
 
@@ -182,7 +183,7 @@
     right: 0px;
     background: var(--f-data-grid-background);
     z-index: 10;
-    border-left: var(--f-data-grid-border-right);  
+    border-left: var(--f-data-grid-border-right);
     margin-left: -1px;
 }
 
@@ -234,10 +235,10 @@
 /* header cell */
 /* ----------------------------------------------- */
 
-.f-data-grid-header-cell { 
+.f-data-grid-header-cell {
     position: relative;
     user-select: none;
-    border-right: var(--f-data-grid-border-right);  
+    border-right: var(--f-data-grid-border-right);
     background: var(--f-data-grid-background-header);
 }
 
@@ -323,7 +324,7 @@
 
 .f-data-grid-row .f-data-grid-cell.is-col-dragged::before,
 .f-data-grid-row .f-data-grid-header-cell.is-col-dragged::before {
-    content: " ";
+    content: ' ';
     position: absolute;
     pointer-events: none;
     background: var(--f-color-accent);
@@ -335,7 +336,7 @@
 }
 
 .f-data-grid-row.is-row-dragged::before {
-    content: " ";
+    content: ' ';
     position: absolute;
     pointer-events: none;
     background: var(--f-color-accent);

@@ -1,5 +1,5 @@
 :root {
-    --f-toggle-border-radius: var(--f-radius-full); 
+    --f-toggle-border-radius: var(--f-radius-full);
     --f-toggle-background-color: var(--f-color-surface-stronger);
     --f-toggle-inner-color: var(--f-color-text-weaker);
     --f-toggle-thumb-background-color: var(--f-color-surface);
@@ -36,10 +36,11 @@
 
 .f-toggle:disabled {
     opacity: 0.5;
-    cursor: not-allowed;    
+    cursor: not-allowed;
 }
 
-.f-toggle.is-active .f-toggle__circle {}
+.f-toggle.is-active .f-toggle__circle {
+}
 
 .f-toggle.is-active {
     color: var(--f-toggle-thumb-background-color); /* icons & text */
@@ -59,7 +60,6 @@
     opacity: 0;
 }
 
-
 .f-toggle .f-toggle__suffix {
     position: absolute;
     width: 50%;
@@ -76,25 +76,74 @@
     transition: opacity 0.1s;
 }
 
-.f-toggle.is-active .f-toggle__prefix { opacity: 1; }
-.f-toggle.is-active .f-toggle__suffix { opacity: 0; }
+.f-toggle.is-active .f-toggle__prefix {
+    opacity: 1;
+}
+.f-toggle.is-active .f-toggle__suffix {
+    opacity: 0;
+}
 
 /* sizes */
 
-.f-toggle.xs { height: var(--f-size-3); width: var(--f-size-7); }
-.f-toggle.sm { height: var(--f-size-4); width: var(--f-size-8); }
-.f-toggle.md { height: var(--f-size-5); width: var(--f-size-10); }
-.f-toggle.lg { height: var(--f-size-6); width: var(--f-size-12); }
-.f-toggle.xl { height: var(--f-size-7); width: var(--f-size-14); }
+.f-toggle.xs {
+    height: var(--f-size-3);
+    width: var(--f-size-7);
+}
+.f-toggle.sm {
+    height: var(--f-size-4);
+    width: var(--f-size-8);
+}
+.f-toggle.md {
+    height: var(--f-size-5);
+    width: var(--f-size-10);
+}
+.f-toggle.lg {
+    height: var(--f-size-6);
+    width: var(--f-size-12);
+}
+.f-toggle.xl {
+    height: var(--f-size-7);
+    width: var(--f-size-14);
+}
 
-.f-toggle.xs .f-toggle__circle { height: var(--f-size-1); width: var(--f-size-1); left: calc((var(--f-size-3) - var(--f-size-1)) / 2); }
-.f-toggle.sm .f-toggle__circle { height: var(--f-size-2); width: var(--f-size-2); left: calc((var(--f-size-4) - var(--f-size-2)) / 2); }
-.f-toggle.md .f-toggle__circle { height: var(--f-size-3); width: var(--f-size-3); left: calc((var(--f-size-5) - var(--f-size-3)) / 2); }
-.f-toggle.lg .f-toggle__circle { height: var(--f-size-4); width: var(--f-size-4); left: calc((var(--f-size-6) - var(--f-size-4)) / 2); }
-.f-toggle.xl .f-toggle__circle { height: var(--f-size-5); width: var(--f-size-5); left: calc((var(--f-size-7) - var(--f-size-5)) / 2); }
+.f-toggle.xs .f-toggle__circle {
+    height: var(--f-size-1);
+    width: var(--f-size-1);
+    left: calc((var(--f-size-3) - var(--f-size-1)) / 2);
+}
+.f-toggle.sm .f-toggle__circle {
+    height: var(--f-size-2);
+    width: var(--f-size-2);
+    left: calc((var(--f-size-4) - var(--f-size-2)) / 2);
+}
+.f-toggle.md .f-toggle__circle {
+    height: var(--f-size-3);
+    width: var(--f-size-3);
+    left: calc((var(--f-size-5) - var(--f-size-3)) / 2);
+}
+.f-toggle.lg .f-toggle__circle {
+    height: var(--f-size-4);
+    width: var(--f-size-4);
+    left: calc((var(--f-size-6) - var(--f-size-4)) / 2);
+}
+.f-toggle.xl .f-toggle__circle {
+    height: var(--f-size-5);
+    width: var(--f-size-5);
+    left: calc((var(--f-size-7) - var(--f-size-5)) / 2);
+}
 
-.f-toggle.xs.is-active .f-toggle__circle { left: calc(100% - var(--f-size-1) - calc((var(--f-size-3) - var(--f-size-1)) / 2)); }
-.f-toggle.sm.is-active .f-toggle__circle { left: calc(100% - var(--f-size-2) - calc((var(--f-size-4) - var(--f-size-2)) / 2)); }
-.f-toggle.md.is-active .f-toggle__circle { left: calc(100% - var(--f-size-3) - calc((var(--f-size-5) - var(--f-size-3)) / 2)); }
-.f-toggle.lg.is-active .f-toggle__circle { left: calc(100% - var(--f-size-4) - calc((var(--f-size-6) - var(--f-size-4)) / 2)); }
-.f-toggle.xl.is-active .f-toggle__circle { left: calc(100% - var(--f-size-5) - calc((var(--f-size-7) - var(--f-size-5)) / 2)); }
+.f-toggle.xs.is-active .f-toggle__circle {
+    left: calc(100% - var(--f-size-1) - calc((var(--f-size-3) - var(--f-size-1)) / 2));
+}
+.f-toggle.sm.is-active .f-toggle__circle {
+    left: calc(100% - var(--f-size-2) - calc((var(--f-size-4) - var(--f-size-2)) / 2));
+}
+.f-toggle.md.is-active .f-toggle__circle {
+    left: calc(100% - var(--f-size-3) - calc((var(--f-size-5) - var(--f-size-3)) / 2));
+}
+.f-toggle.lg.is-active .f-toggle__circle {
+    left: calc(100% - var(--f-size-4) - calc((var(--f-size-6) - var(--f-size-4)) / 2));
+}
+.f-toggle.xl.is-active .f-toggle__circle {
+    left: calc(100% - var(--f-size-5) - calc((var(--f-size-7) - var(--f-size-5)) / 2));
+}

@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode, useContext } from 'react'
 import { FIMoon, FISun, Icon, IconLib, View } from '..'
-import { FoldContext } from '../contexts'
+import { AppContext } from '../contexts'
 import { classNames } from '../helpers'
 import { CoreViewProps, Size } from '../types'
 
@@ -62,9 +62,9 @@ export const DarkModeToggle = (props: DarkModeToggleProps) => {
         ...rest
     } = props
     const {
-        fold: { theme },
+        app: { theme },
         setConfig,
-    } = useContext(FoldContext)
+    } = useContext(AppContext)
     const isLight = theme == 'light'
 
     return (

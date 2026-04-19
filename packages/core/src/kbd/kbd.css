@@ -14,7 +14,7 @@
     background-color: var(--f-kbd-background-color);
     color: var(--f-kbd-color);
     font-family: var(--f-font-mono);
-    font-size: var(--f-font-size-kbd); 
+    font-size: var(--f-font-size-kbd);
     font-weight: var(--f-font-weight-semibold);
     width: fit-content;
     position: relative;

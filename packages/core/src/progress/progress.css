@@ -1,6 +1,6 @@
 :root {
-    --f-progress-background: var(--f-color-surface-stronger);
-    --f-progress-active: var(--f-color-surface-strongest);
+    --f-progress-background: var(--f-color-surface-strong);
+    --f-progress-active: var(--f-color-surface-stronger);
     --f-progress-radius: var(--f-radius);
     --f-progress-subtle-padding: var(--f-space-1);
     --f-progress-subtle-opacity: 0.2;
@@ -68,7 +68,7 @@
 }
 
 .f-progress.is-animated > div:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -167,7 +167,7 @@
 }
 
 .f-progress.is-animated > div:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

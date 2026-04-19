@@ -4,7 +4,7 @@ import { useObserver } from './observer.hook'
 import { useStorage } from './storage.hook'
 
 export const __F_THEME_STORAGE = '__F_THEME_STORAGE'
-export type FoldSystemMode = 'light' | 'dark'
+export type AppSystemMode = 'light' | 'dark'
 
 export function useTheme() {
     const getRootElement = () => {

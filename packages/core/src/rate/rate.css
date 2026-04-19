@@ -19,14 +19,14 @@
 
 .f-rate-icon {
     cursor: pointer;
-    transition: transform .2s;
+    transition: transform 0.2s;
     color: var(--f-rate-color);
     display: inline-block;
     padding: 0;
     margin: 0;
     border: 0;
     background: transparent;
-    transition: color, transform .2s;
+    transition: color, transform 0.2s;
     position: relative;
 }
 
@@ -39,7 +39,7 @@
     z-index: 2;
     overflow: hidden;
     width: fit-content;
-    height:fit-content;
+    height: fit-content;
     color: var(--f-rate-color-active);
 }
 
@@ -48,6 +48,6 @@
     z-index: 1;
     overflow: hidden;
     width: fit-content;
-    height:fit-content;
+    height: fit-content;
     color: var(--f-rate-color);
 }

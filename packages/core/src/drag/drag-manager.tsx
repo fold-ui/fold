@@ -17,12 +17,12 @@ import {
 } from '..'
 import { globalCursor, windowObject } from '../helpers'
 
-export const FOLD_DRAG_CACHE = 'FOLD_DRAG_CACHE'
-export const FOLD_DRAG_STATE = 'FOLD_DRAG_STATE'
-export const FOLD_DRAG_LOCK = 'FOLD_DRAG_LOCK'
-export const FOLD_RESTRICT_DUAL_MOVEMENT = 'FOLD_RESTRICT_DUAL_MOVEMENT'
+export const F_DRAG_CACHE = 'F_DRAG_CACHE'
+export const F_DRAG_STATE = 'F_DRAG_STATE'
+export const F_DRAG_LOCK = 'F_DRAG_LOCK'
+export const F_RESTRICT_DUAL_MOVEMENT = 'F_RESTRICT_DUAL_MOVEMENT'
 
-windowObject[FOLD_DRAG_CACHE] = {
+windowObject[F_DRAG_CACHE] = {
     locked: false,
     mouseDown: false,
     init: {},
@@ -36,7 +36,7 @@ windowObject[FOLD_DRAG_CACHE] = {
     targetCache: {},
 }
 
-windowObject[FOLD_DRAG_STATE] = {
+windowObject[F_DRAG_STATE] = {
     target: {},
     origin: { targetVariant: {} },
 }
@@ -79,7 +79,7 @@ export const DragManager = (props: DragManagerProps) => {
     }
 
     const handleMouseMove = (e) => {
-        if (!window[FOLD_DRAG_LOCK] && isDragging && !cache.locked) {
+        if (!window[F_DRAG_LOCK] && isDragging && !cache.locked) {
             const mouseY = e.clientY
             const mouseX = e.clientX
             const { offsetLeft, offsetTop } = cache.originMouse
@@ -95,7 +95,7 @@ export const DragManager = (props: DragManagerProps) => {
                 if (mouseX > cache.mouse.x + moveThreshold) moveDirection = 'right'
 
                 // if there is dual movement - restrict the direction
-                if (window[FOLD_RESTRICT_DUAL_MOVEMENT]) {
+                if (window[F_RESTRICT_DUAL_MOVEMENT]) {
                     if (moveDirection != 'left' && moveDirection != 'right') {
                         if (mouseY < cache.mouse.y - moveThreshold) moveDirection = 'up'
                         if (mouseY > cache.mouse.y + moveThreshold) moveDirection = 'down'

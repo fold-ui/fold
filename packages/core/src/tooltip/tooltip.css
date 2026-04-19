@@ -15,8 +15,12 @@
 }
 
 @keyframes f-tooltip-fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .f-tooltip-content {

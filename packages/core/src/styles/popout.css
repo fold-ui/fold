@@ -7,12 +7,16 @@
 
 .f-popout-content {
     display: none;
-    animation: f-popout-content-fadein var(--f-transition-duration-fast); 
+    animation: f-popout-content-fadein var(--f-transition-duration-fast);
 }
 
 @keyframes f-popout-content-fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .f-popout-trigger:hover .f-popout-content {
@@ -77,9 +81,9 @@
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
-} 
+}
 
-/* positioning - arrows */ 
+/* positioning - arrows */
 
 :root {
     --f-arrow-size: var(--f-size-3);

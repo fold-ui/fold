@@ -1,6 +1,6 @@
 import { classNames } from '../helpers'
 import React, { useContext } from 'react'
-import { FoldContext, Heading, Modal, ModalClose, Text, useId } from '../'
+import { AppContext, Heading, Modal, ModalClose, Text, useId } from '../'
 import { CommonProps } from '../types'
 
 export type DialogOptions = {
@@ -14,7 +14,7 @@ export type DialogOptions = {
 }
 
 export const useDialog = () => {
-    const { setDialog, closeDialog } = useContext(FoldContext)
+    const { setDialog, closeDialog } = useContext(AppContext)
     return { setDialog, closeDialog }
 }
 

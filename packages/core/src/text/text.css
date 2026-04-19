@@ -46,13 +46,13 @@ blockquote,
     color: var(--f-text-color);
 }
 
-label, 
+label,
 .f-text.is-label {
     color: var(--f-label-color);
     user-select: none;
 }
 
-a, 
+a,
 .f-text.is-link {
     color: var(--f-link-color);
     padding: 0;
@@ -76,12 +76,12 @@ a:hover,
     font-weight: var(--f-font-weight-medium);
 }
 
-p, 
+p,
 p.f-text {
     padding: 0px;
 }
 
-blockquote, 
+blockquote,
 blockquote.f-text {
     border-left: var(--f-blockquote-width) solid var(--f-color-accent);
     padding: var(--f-space-inset-x-2);
@@ -90,29 +90,29 @@ blockquote.f-text {
     color: var(--f-blockquote-color);
 }
 
-small, 
+small,
 small.f-text {
     font-size: var(--f-font-size-sm) !important; /* always */
 }
 
-strong, 
+strong,
 strong.f-text {
     font-weight: var(--f-font-weight-bold);
 }
 
-mark, 
+mark,
 mark.f-text {
     background-color: var(--f-color-surface-highlight);
 }
 
-code, 
-pre, 
-code.f-text, 
+code,
+pre,
+code.f-text,
 pre.f-text {
     font-family: var(--f-font-mono);
 }
 
-legend, 
+legend,
 legend.f-text {
     font-weight: var(--f-font-weight-semibold);
     user-select: none;

@@ -8,7 +8,7 @@
 }
 
 .f-list {
-    color: var( --f-list-color);
+    color: var(--f-list-color);
     font-family: var(--f-font-body);
     padding: 0;
     margin: 0;
@@ -57,5 +57,3 @@
 .f-li > .f-icon:first-child {
     margin-right: var(--f-li-icon-margin);
 }
-
-

@@ -1,7 +1,7 @@
 :root {
     --f-card-color-background: var(--f-color-surface);
     --f-card-color-solid-background: var(--f-color-surface-inverse);
-    --f-card-border-radius: var(--f-radius);
+    --f-card-border-radius: var(--f-radius-lg);
     --f-card-border-color: var(--f-color-border);
     --f-card-shadow: var(--f-shadow-card);
 }

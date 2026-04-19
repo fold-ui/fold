@@ -1,6 +1,6 @@
 import React, { ReactPortal, useContext } from 'react'
 import { Button, Heading, IconLib, Modal, ModalClose, Portal, Text, useId } from '../'
-import { FoldContext } from '../contexts'
+import { AppContext } from '../contexts'
 
 export type AlertOptions = {
     icon?: string
@@ -14,7 +14,7 @@ export type AlertOptions = {
 }
 
 export const useAlert = () => {
-    const { setAlert } = useContext(FoldContext)
+    const { setAlert } = useContext(AppContext)
     return { alert: setAlert }
 }
 

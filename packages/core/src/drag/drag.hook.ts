@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react'
 import {
     dispatchDragEvent,
     documentObject,
-    FOLD_DRAG_CACHE,
-    FOLD_DRAG_LOCK,
-    FOLD_DRAG_STATE,
-    FOLD_RESTRICT_DUAL_MOVEMENT,
+    F_DRAG_CACHE,
+    F_DRAG_LOCK,
+    F_DRAG_STATE,
+    F_RESTRICT_DUAL_MOVEMENT,
     getBoundingClientRect,
     getPreviousNextElements,
     globalCursor,
@@ -16,20 +16,20 @@ import {
 } from '../'
 import { getButton, waitForRender, windowObject } from '../helpers'
 
-export const FOLD_CUSTOM_GHOST_ELEMENT = 'FOLD_CUSTOM_GHOST_ELEMENT'
-export const FOLD_GHOST_ELEMENT_ROTATION = 'FOLD_GHOST_ELEMENT_ROTATION'
+export const F_CUSTOM_GHOST_ELEMENT = 'F_CUSTOM_GHOST_ELEMENT'
+export const F_GHOST_ELEMENT_ROTATION = 'F_GHOST_ELEMENT_ROTATION'
 
 export const useDrag = (args: any = { indentDelay: 100 }) => {
     const ghostRef = useRef(null)
     const { indentDelay } = args
 
-    const restrictDualMovement = (val = true) => window[FOLD_RESTRICT_DUAL_MOVEMENT] = val
+    const restrictDualMovement = (val = true) => (window[F_RESTRICT_DUAL_MOVEMENT] = val)
 
-    const forceLockDragMovement = (val = true) => window[FOLD_DRAG_LOCK] = val
+    const forceLockDragMovement = (val = true) => (window[F_DRAG_LOCK] = val)
 
-    const getStaticState = (): any => windowObject[FOLD_DRAG_STATE]
+    const getStaticState = (): any => windowObject[F_DRAG_STATE]
 
-    const getCache = (): any => windowObject[FOLD_DRAG_CACHE]
+    const getCache = (): any => windowObject[F_DRAG_CACHE]
 
     const getGhostElement = () => ghostRef.current
 
@@ -38,22 +38,22 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
     }
 
     const setCustomGhostElement = (html: string = null) => {
-        windowObject[FOLD_CUSTOM_GHOST_ELEMENT] = true
+        windowObject[F_CUSTOM_GHOST_ELEMENT] = true
         setGhostElement(html)
     }
 
     const setCustomGhostElementRotation = (rotation: string = '0deg') => {
-        windowObject[FOLD_GHOST_ELEMENT_ROTATION] = rotation
+        windowObject[F_GHOST_ELEMENT_ROTATION] = rotation
     }
 
     const clearGhostElement = () => {
-        windowObject[FOLD_GHOST_ELEMENT_ROTATION] = null
-        windowObject[FOLD_CUSTOM_GHOST_ELEMENT] = undefined
+        windowObject[F_GHOST_ELEMENT_ROTATION] = null
+        windowObject[F_CUSTOM_GHOST_ELEMENT] = undefined
         setGhostElement('')
     }
 
     const hasCustomGhostElement = () => {
-        return !!windowObject[FOLD_CUSTOM_GHOST_ELEMENT]
+        return !!windowObject[F_CUSTOM_GHOST_ELEMENT]
     }
 
     const startDrag = (data = null) => {
@@ -126,7 +126,7 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
     // instead of using the event
     // TODO: maybe name it differently
     const onMouseDownExplicit = ({ isLeftButton, clientX, clientY, currentTarget }) => {
-        if (window[FOLD_DRAG_LOCK]) return
+        if (window[F_DRAG_LOCK]) return
 
         const cache = getCache()
         const mouseLeft = clientX
@@ -267,7 +267,7 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
     }
 
     const onMouseDown = (e: any, startDelay = 150) => {
-        if (window[FOLD_DRAG_LOCK]) return
+        if (window[F_DRAG_LOCK]) return
 
         const cache = getCache()
         const { isLeftButton } = getButton(e)

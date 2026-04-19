@@ -8,7 +8,7 @@ import {
     useDrag,
     windowObject,
 } from '../'
-import { FOLD_DATA_GRID_DRAG } from './data-grid'
+import { F_DATA_GRID_DRAG } from './data-grid'
 import { DataGridHeaderCellComponent } from './data-grid-header-cell-component'
 import { DataGridContext } from './data-grid.provider'
 
@@ -79,7 +79,7 @@ export const DataGridHeaderCell = (props: DataGridHeaderCellProps) => {
     const handleMouseDown = (e) => {
         timeoutRef.current = setTimeout(() => {
             if (draggableColumns && !disableDrag) {
-                windowObject[FOLD_DATA_GRID_DRAG] = index - 1
+                windowObject[F_DATA_GRID_DRAG] = index - 1
                 setDragCol(index)
                 setCustomGhostElementRotation('0deg')
                 setGhostElement(`

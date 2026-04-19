@@ -1,8 +1,8 @@
 :root {
     --f-buttonize-opacity: 0.8;
     --f-buttonize-opacity-active: 0.6;
-    --f-buttonize-outline-size: 0.2rem;
-    --f-buttonize-outline-size-active: 0.25rem;
+    --f-buttonize-outline-size: 2px;
+    --f-buttonize-outline-size-active: 2px;
     --f-buttonize-outline-color: var(--f-color-accent);
 }
 
@@ -23,7 +23,7 @@
 }
 
 .f-buttonize-outline {
-    transition: opacity 0.25s;
+    transition: outline 0.25s;
 }
 
 .f-buttonize-outline:hover {
@@ -33,7 +33,6 @@
 
 .f-buttonize-outline:active {
     outline: var(--f-buttonize-outline-size-active) solid var(--f-buttonize-outline-color);
-    /* filter: brightness(90%) contrast(110%); */
 }
 
 /* text */
@@ -52,7 +51,7 @@
     width: 0%;
     height: var(--f-underline-size);
     transition: height, width var(--f-transition-duration-ultra-fast) var(--f-transition-easing-ease-in);
-    content: "";
+    content: '';
     position: absolute;
     top: var(--f-underline-position);
     left: 0px;
@@ -64,7 +63,7 @@
     width: 100%;
 }
 
-/* text */ 
+/* text */
 
 .f-ellipsis {
     overflow: hidden;
@@ -84,10 +83,10 @@
 
 .f-scrollbar {
     --f-scrollbar-size: 0.3rem;
-    --f-scrollbar-foreground: var(--f-color-surface-stronger);
+    --f-scrollbar-foreground: var(--f-color-surface-strongest);
     --f-scrollbar-background: transparent;
 
-    scrollbar-width: thin; 
+    scrollbar-width: thin;
     scrollbar-color: var(--f-scrollbar-foreground) var(--f-scrollbar-background);
 }
 
@@ -129,7 +128,7 @@
     overflow: auto;
 }
 
-/* flex */ 
+/* flex */
 
 .f-flexer {
     flex: 1;
@@ -148,7 +147,7 @@
     flex-direction: row;
     align-items: center;
     align-content: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 /* basic fade in */
@@ -158,8 +157,12 @@
 }
 
 @keyframes f-fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* other */

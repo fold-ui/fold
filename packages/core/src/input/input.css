@@ -15,7 +15,7 @@
     --f-tag-input-min-width: 50px;
     --f-tag-input-spacing: var(--f-space-1);
     --f-input-prefix-padding: 0 0 0 var(--f-input-base-padding);
-    --f-input-suffix-padding: 0  var(--f-input-base-padding) 0 0;
+    --f-input-suffix-padding: 0 var(--f-input-base-padding) 0 0;
 }
 
 /* control */
@@ -53,8 +53,8 @@
 
 .f-input-control.is-disabled > * {
     cursor: not-allowed !important;
-    user-select: none;    
-    caret-color: transparent; 
+    user-select: none;
+    caret-color: transparent;
 }
 
 .f-input-control.is-disabled input::placeholder {
@@ -132,51 +132,51 @@ input.f-input:focus {
 
 /* sizes */
 
-input.f-input:not([type="color"]).xs {
+input.f-input:not([type='color']).xs {
     font-size: var(--f-font-size-xs);
     height: var(--f-size-8);
 }
 
-input.f-input:not([type="color"]).sm {
+input.f-input:not([type='color']).sm {
     font-size: var(--f-font-size-sm);
     height: var(--f-size-9);
 }
 
-input.f-input:not([type="color"]).md {
+input.f-input:not([type='color']).md {
     font-size: var(--f-font-size-md);
-    height: var(--f-size-10); 
+    height: var(--f-size-10);
 }
 
-input.f-input:not([type="color"]).lg {
+input.f-input:not([type='color']).lg {
     font-size: var(--f-font-size-lg);
-    height: var(--f-size-12); 
+    height: var(--f-size-12);
 }
 
-input.f-input:not([type="color"]).xl {
+input.f-input:not([type='color']).xl {
     font-size: var(--f-font-size-xl);
-    height: var(--f-size-14); 
+    height: var(--f-size-14);
 }
 
 /* special input control settings */
 /* 🔴 TODO: simplify! */
 
-.f-input-control input.f-input:not([type="color"]).xs {
+.f-input-control input.f-input:not([type='color']).xs {
     height: calc(var(--f-size-8) - var(--f-input-border-width));
 }
 
-.f-input-control input.f-input:not([type="color"]).sm {
+.f-input-control input.f-input:not([type='color']).sm {
     height: calc(var(--f-size-9) - var(--f-input-border-width));
 }
 
-.f-input-control input.f-input:not([type="color"]).md {
+.f-input-control input.f-input:not([type='color']).md {
     height: calc(var(--f-size-10) - var(--f-input-border-width));
 }
 
-.f-input-control input.f-input:not([type="color"]).lg {
+.f-input-control input.f-input:not([type='color']).lg {
     height: calc(var(--f-size-12) - var(--f-input-border-width));
 }
 
-.f-input-control input.f-input:not([type="color"]).xl {
+.f-input-control input.f-input:not([type='color']).xl {
     height: calc(var(--f-size-14) - var(--f-input-border-width));
 }
 
@@ -184,66 +184,76 @@ input.f-input:not([type="color"]).xl {
 
 input.f-input:not(.show-indicator)::-webkit-calendar-picker-indicator {
     display: none;
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
 }
 
-input.f-input[type=number]:not(.show-indicator)::-webkit-inner-spin-button {
-    -webkit-appearance: none; 
+input.f-input[type='number']:not(.show-indicator)::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
-input.f-input[type=search]:not(.show-indicator)::-ms-clear { display: none; width : 0; height: 0; }
-input.f-input[type=search]:not(.show-indicator)::-ms-reveal { display: none; width : 0; height: 0; }
-input.f-input[type="search"]:not(.show-indicator)::-webkit-search-decoration,
-input.f-input[type="search"]:not(.show-indicator)::-webkit-search-cancel-button,
-input.f-input[type="search"]:not(.show-indicator)::-webkit-search-results-button,
-input.f-input[type="search"]:not(.show-indicator)::-webkit-search-results-decoration { display: none; }
+input.f-input[type='search']:not(.show-indicator)::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+input.f-input[type='search']:not(.show-indicator)::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+input.f-input[type='search']:not(.show-indicator)::-webkit-search-decoration,
+input.f-input[type='search']:not(.show-indicator)::-webkit-search-cancel-button,
+input.f-input[type='search']:not(.show-indicator)::-webkit-search-results-button,
+input.f-input[type='search']:not(.show-indicator)::-webkit-search-results-decoration {
+    display: none;
+}
 
 /* **************************** */
 
 /* color */
 
-input.f-input[type=color] {
+input.f-input[type='color'] {
     border-radius: var(--f-input-border-radius);
     cursor: pointer;
     padding: 0;
     border-color: var(--f-input-border-color);
 }
 
-input.f-input[type=color]::-webkit-color-swatch {
+input.f-input[type='color']::-webkit-color-swatch {
     border-radius: var(--f-input-border-radius);
     cursor: pointer;
     padding: 0;
     border-color: var(--f-input-border-color);
 }
 
-input.f-input[type=color]::-webkit-color-swatch-wrapper {
+input.f-input[type='color']::-webkit-color-swatch-wrapper {
     border-radius: var(--f-input-border-radius);
     cursor: pointer;
     padding: 0;
     border-color: var(--f-input-border-color);
 }
 
-input.f-input[type=color].xs {
+input.f-input[type='color'].xs {
     width: var(--f-size-4);
     height: var(--f-size-4);
 }
 
-input.f-input[type=color].sm {
+input.f-input[type='color'].sm {
     width: var(--f-size-5);
     height: var(--f-size-5);
 }
 
-input.f-input[type=color].md {
+input.f-input[type='color'].md {
     width: var(--f-size-6);
     height: var(--f-size-6);
 }
 
-input.f-input[type=color].lg {
+input.f-input[type='color'].lg {
     width: var(--f-size-8);
     height: var(--f-size-8);
 }
 
-input.f-input[type=color].xl {
+input.f-input[type='color'].xl {
     width: var(--f-size-10);
     height: var(--f-size-10);
 }
@@ -263,11 +273,11 @@ input.f-input[type=color].xl {
 }
 
 .f-input-prefix {
-    padding: var(--f-input-prefix-padding);   
+    padding: var(--f-input-prefix-padding);
 }
 
 .f-input-suffix {
-    padding: var(--f-input-suffix-padding);       
+    padding: var(--f-input-suffix-padding);
 }
 
 .f-input-suffix {
@@ -363,25 +373,35 @@ input.f-input[type=color].xl {
 
 .f-tag-input.md {
     font-size: var(--f-font-size-md);
-    min-height: var(--f-size-10); 
+    min-height: var(--f-size-10);
 }
 
 .f-tag-input.lg {
     font-size: var(--f-font-size-lg);
-    min-height: var(--f-size-12); 
+    min-height: var(--f-size-12);
 }
 
 .f-tag-input.xl {
     font-size: var(--f-font-size-xl);
-    min-height: var(--f-size-14); 
+    min-height: var(--f-size-14);
 }
 
-.f-tag-input input[type=search]:not(.show-indicator)::-ms-clear { display: none; width : 0; height: 0; }
-.f-tag-input input[type=search]:not(.show-indicator)::-ms-reveal { display: none; width : 0; height: 0; }
-.f-tag-input input[type="search"]:not(.show-indicator)::-webkit-search-decoration,
-.f-tag-input input[type="search"]:not(.show-indicator)::-webkit-search-cancel-button,
-.f-tag-input input[type="search"]:not(.show-indicator)::-webkit-search-results-button,
-.f-tag-input input[type="search"]:not(.show-indicator)::-webkit-search-results-decoration { display: none; }
+.f-tag-input input[type='search']:not(.show-indicator)::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.f-tag-input input[type='search']:not(.show-indicator)::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.f-tag-input input[type='search']:not(.show-indicator)::-webkit-search-decoration,
+.f-tag-input input[type='search']:not(.show-indicator)::-webkit-search-cancel-button,
+.f-tag-input input[type='search']:not(.show-indicator)::-webkit-search-results-button,
+.f-tag-input input[type='search']:not(.show-indicator)::-webkit-search-results-decoration {
+    display: none;
+}
 
 /* **************************** */
 
@@ -415,7 +435,7 @@ input.f-input[type=color].xl {
 .f-input-number-control.xl {
     height: calc(var(--f-size-13) - var(--f-input-border-width));
 }
- 
+
 .f-input-prefix .f-input-number-control,
 .f-input-suffix .f-input-number-control {
     border: none;
@@ -423,13 +443,13 @@ input.f-input[type=color].xl {
 }
 
 .f-input-prefix .f-input-number-control {
-    border-right: var(--f-input-border-width) solid var(--f-input-border-color);    
-    margin-left: calc(var(--f-input-base-padding) * -1); 
+    border-right: var(--f-input-border-width) solid var(--f-input-border-color);
+    margin-left: calc(var(--f-input-base-padding) * -1);
 }
 
 .f-input-suffix .f-input-number-control {
     border-left: var(--f-input-border-width) solid var(--f-input-border-color);
-    margin-right: calc(var(--f-input-base-padding) * -1);   
+    margin-right: calc(var(--f-input-base-padding) * -1);
 }
 
 /* they always need to be the first or last element */
@@ -460,8 +480,18 @@ input.f-input[type=color].xl {
     color: var(--f-input-color-disabled);
 }
 
-.f-input-number-control.xs button { width: var(--f-size-6); }
-.f-input-number-control.sm button { width: var(--f-size-7); }
-.f-input-number-control.md button { width: var(--f-size-8); }
-.f-input-number-control.lg button { width: var(--f-size-9); }
-.f-input-number-control.xl button { width: var(--f-size-10); }
+.f-input-number-control.xs button {
+    width: var(--f-size-6);
+}
+.f-input-number-control.sm button {
+    width: var(--f-size-7);
+}
+.f-input-number-control.md button {
+    width: var(--f-size-8);
+}
+.f-input-number-control.lg button {
+    width: var(--f-size-9);
+}
+.f-input-number-control.xl button {
+    width: var(--f-size-10);
+}

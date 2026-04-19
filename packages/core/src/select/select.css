@@ -5,10 +5,10 @@
     --f-select-color-disabled: var(--f-color-text-weakest);
     --f-select-color-selected: var(--f-color-accent);
     --f-select-background-selected: var(--f-color-surface-strong);
-    --f-select-option-focus: var(--f-color-surface-stronger); 
+    --f-select-option-focus: var(--f-color-surface-stronger);
     --f-select-option-hover: var(--f-color-surface-strong);
     --f-select-option-active: var(--f-color-surface-stronger);
-    --f-select-options-height: 200px; 
+    --f-select-options-height: 200px;
     --f-select-option-padding: var(--f-space-2);
     --f-select-options-padding: 4px;
     --f-select-popover-border-color: var(--f-color-border);
@@ -78,8 +78,12 @@ input.f-select:disabled {
 }
 
 @keyframes f-popover-fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* list */
@@ -124,7 +128,7 @@ li.f-select-list-option-container {
     outline: none;
 }
 
-/* list option */  
+/* list option */
 
 .f-select-list-option {
     text-align: left;
@@ -137,7 +141,7 @@ li.f-select-list-option-container {
     font-weight: var(--f-font-weight-normal);
     padding: var(--f-select-option-padding);
     margin: 0;
-    cursor: pointer;  
+    cursor: pointer;
     flex-grow: 1;
     transition: background-color 0.2s;
     border-radius: var(--f-radius);
@@ -166,7 +170,7 @@ li.f-select-list-option-container {
 }
 
 .f-select-list-option:not(.is-disabled):hover {
-    background-color: var(--f-select-option-hover); 
+    background-color: var(--f-select-option-hover);
 }
 
 .f-select-list-option:not(.is-disabled):active {

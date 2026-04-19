@@ -7,10 +7,10 @@
     --f-attachment-icon-background: var(--f-color-surface-strong);
     --f-attachment-icon-color: var(--f-color-accent);
     --f-attachment-thumb-background: var(--f-color-surface);
-    --f-attachment-thumb-size: var(--f-size-28); 
+    --f-attachment-thumb-size: var(--f-size-28);
     --f-attachment-thumb-overlay: var(--f-color-overlay);
-    --f-attachment-padding: var(--f-size-2); 
-    --f-attachment-spacing: var(--f-size-2); 
+    --f-attachment-padding: var(--f-size-2);
+    --f-attachment-spacing: var(--f-size-2);
 }
 
 .f-attachment {
@@ -106,33 +106,33 @@
 /* error */
 
 .f-attachment.is-error {
-    color: var(--f-color-danger) !important;   
+    color: var(--f-color-danger) !important;
     border-color: var(--f-color-danger);
 }
 
 .f-attachment.is-error .f-attachment__icon {
-    color: var(--f-color-danger) !important;   
+    color: var(--f-color-danger) !important;
 }
 
 /* sizes */
 /* xs & xl not supported yet */
 
-.f-attachment.sm .f-attachment__icon { 
-    width: var(--f-size-12); 
-    height: var(--f-size-12); 
+.f-attachment.sm .f-attachment__icon {
+    width: var(--f-size-12);
+    height: var(--f-size-12);
 }
 
-.f-attachment.md .f-attachment__icon { 
-    width: var(--f-size-14); 
-    height: var(--f-size-14); 
+.f-attachment.md .f-attachment__icon {
+    width: var(--f-size-14);
+    height: var(--f-size-14);
 }
 
-.f-attachment.lg .f-attachment__icon { 
-    width: var(--f-size-16); 
-    height: var(--f-size-16); 
+.f-attachment.lg .f-attachment__icon {
+    width: var(--f-size-16);
+    height: var(--f-size-16);
 }
 
-/* thumb */ 
+/* thumb */
 
 .f-attachment-thumb {
     background: var(--f-attachment-thumb-background);
@@ -144,8 +144,8 @@
     border: 1px solid;
     border-color: var(--f-attachment-border-color);
     border-radius: var(--f-attachment-border-radius);
-    width: var(--f-attachment-thumb-size); 
-    height: var(--f-attachment-thumb-size); 
+    width: var(--f-attachment-thumb-size);
+    height: var(--f-attachment-thumb-size);
 }
 
 .f-attachment-thumb .f-progress {
@@ -176,8 +176,8 @@
     top: 0px;
     left: 0px;
     border-radius: var(--f-attachment-border-radius);
-    width: var(--f-attachment-thumb-size); 
-    height: var(--f-attachment-thumb-size); 
+    width: var(--f-attachment-thumb-size);
+    height: var(--f-attachment-thumb-size);
 }
 
 .f-attachment-thumb__details {
@@ -185,8 +185,8 @@
     top: 0px;
     left: 0px;
     border-radius: var(--f-attachment-border-radius);
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     border: 1px solid transparent;
     gap: var(--f-space-1);
 }
@@ -199,12 +199,12 @@
 /* error */
 
 .f-attachment-thumb.is-error {
-    color: var(--f-color-danger) !important;   
+    color: var(--f-color-danger) !important;
     border-color: var(--f-color-danger);
 }
 
 .f-attachment-thumb.is-error > * {
-    color: var(--f-color-danger) !important;   
+    color: var(--f-color-danger) !important;
 }
 
 .f-attachment-thumb__tools {
@@ -214,21 +214,21 @@
     top: 0px;
     left: 0px;
     border-radius: var(--f-attachment-border-radius);
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     visibility: hidden;
 }
 
 .f-attachment-thumb__tools:after {
-    content: " ";
+    content: ' ';
     position: absolute;
     top: 0px;
     left: 0px;
     border-radius: var(--f-attachment-border-radius);
     background-color: var(--f-attachment-thumb-overlay);
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    z-index: 0; 
+    z-index: 0;
 }
 
 .f-attachment-thumb:hover .f-attachment-thumb__tools {
@@ -237,7 +237,7 @@
 }
 
 .f-attachment-thumb__tool {
-    padding: var(--f-space-1); 
-    z-index: 1; 
+    padding: var(--f-space-1);
+    z-index: 1;
     position: relative;
 }

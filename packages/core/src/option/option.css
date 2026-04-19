@@ -42,7 +42,7 @@
     flex-shrink: 0;
     white-space: nowrap;
     position: relative;
-    transition: color .2s;
+    transition: color 0.2s;
 }
 
 .f-option:focus {
@@ -50,7 +50,7 @@
 }
 
 .f-option:not(:disabled):active .f-option__suffix__label {
-    opacity: var(--f-option-active-opacity);    
+    opacity: var(--f-option-active-opacity);
 }
 
 .f-option:disabled {
@@ -69,7 +69,7 @@
 .f-option:not(:disabled):not(.is-animated).is-selected {
     background-color: var(--f-options-active-background-color);
     transition-property: var(--f-transition-property-colors);
-    transition-duration: var(--f-transition-duration-faster); 
+    transition-duration: var(--f-transition-duration-faster);
     transition-timing-function: var(--f-transition-easing-ease-out);
 }
 
@@ -83,7 +83,7 @@
     height: 100%;
     z-index: 0;
     transition-property: var(--f-transition-property-dimensions), var(--f-transition-property-position);
-    transition-duration: var(--f-transition-duration-faster); 
+    transition-duration: var(--f-transition-duration-faster);
     transition-timing-function: var(--f-transition-easing-ease-out);
 }
 
@@ -121,35 +121,35 @@
 }
 
 .f-options.md {
-    height: var(--f-size-10); 
+    height: var(--f-size-10);
 }
 
 .f-options.lg {
-    height: var(--f-size-12); 
+    height: var(--f-size-12);
 }
 
 .f-options.xl {
-    height: var(--f-size-14); 
+    height: var(--f-size-14);
 }
 
 /* sizes - option */
 
-.f-option.xs {  
+.f-option.xs {
     padding: 0 var(--f-space-2);
 }
 
-.f-option.sm { 
+.f-option.sm {
     padding: 0 var(--f-space-3);
 }
 
-.f-option.md { 
+.f-option.md {
     padding: 0 var(--f-space-4);
 }
 
-.f-option.lg { 
+.f-option.lg {
     padding: 0 var(--f-space-5);
 }
 
-.f-option.xl { 
+.f-option.xl {
     padding: 0 var(--f-space-6);
 }

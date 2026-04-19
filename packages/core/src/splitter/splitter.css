@@ -5,7 +5,7 @@
     align-items: stretch;
     align-content: stretch;
     display: flex;
-}   
+}
 
 .f-splitter__resizable {
     width: 100%;

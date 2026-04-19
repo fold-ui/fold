@@ -6,12 +6,12 @@
     --f-date-cell-font-weight: var(--f-font-weight-medium);
     --f-date-cell-weekend: var(--f-color-text);
     --f-date-cell-weekend-background: var(--f-color-surface-strong);
-    --f-date-cell-unavailable: var(--f-color-text-weakest);
-    --f-date-cell-disabled: var(--f-color-text-weakest);
+    --f-date-cell-unavailable: var(--f-color-text-weaker);
+    --f-date-cell-disabled: var(--f-color-text-weaker);
     --f-date-cell-disabled-background: var(--f-color-surface-strong);
     --f-date-cell-pending: var(--f-color-accent);
     --f-date-cell-pending-background: rgba(from var(--f-color-accent) r g b / 10%);
-    --f-date-cell-edge-selected: var(--f-color-accent-100);
+    --f-date-cell-edge-selected: var(--f-color-text-on-color);
     --f-date-cell-edge-selected-background: var(--f-color-accent);
     --f-date-cell-selected: var(--f-color-accent);
     --f-date-cell-selected-background: rgba(from var(--f-color-accent) r g b / 10%);
@@ -58,7 +58,7 @@
     cursor: not-allowed;
 }
 
-.f-date-cell:not(.is-disabled,.is-unavailable).is-today {
+.f-date-cell:not(.is-disabled, .is-unavailable).is-today {
     color: var(--f-date-cell-today);
     font-weight: var(--f-font-weight-bold);
 }
@@ -103,8 +103,8 @@
     color: var(--f-date-cell-selected);
 }
 
-.f-date-cell.is-selected.is-start,
-.f-date-cell.is-selected.is-end {
+.f-date-cell.is-selected.is-start:not(.is-unavailable),
+.f-date-cell.is-selected.is-end:not(.is-unavailable) {
     color: var(--f-date-cell-edge-selected) !important;
 }
 
@@ -123,7 +123,7 @@
     animation-duration: 0.05s;
     animation-timing-function: ease-in;
 }
- 
+
 .f-date-cell:not(.is-unavailable).is-start::after,
 .f-date-cell:not(.is-unavailable).is-end::after {
     border-radius: var(--f-radius);
@@ -141,7 +141,7 @@
     animation-duration: 0.05s;
     animation-timing-function: ease-in;
 }
- 
+
 .f-date-cell.is-start::before {
     border-top-left-radius: var(--f-radius);
     border-bottom-left-radius: var(--f-radius);
@@ -150,7 +150,7 @@
 .f-date-cell.is-end::before {
     border-top-right-radius: var(--f-radius);
     border-bottom-right-radius: var(--f-radius);
-} 
+}
 
 @keyframes f-date-cell-selected-fadein {
     0% {
@@ -186,7 +186,7 @@
 /* month */
 
 :root {
-    --f-month-day-width: calc(100%/7);
+    --f-month-day-width: calc(100% / 7);
 }
 
 .f-month {
@@ -206,7 +206,7 @@
 /* months */
 
 :root {
-    --f-months-month-width: calc(100%/12*3);
+    --f-months-month-width: calc(100% / 12 * 3);
 }
 
 .f-months {
@@ -227,7 +227,7 @@
 /* years */
 
 :root {
-    --f-years-year-width: calc(100%/12*3);
+    --f-years-year-width: calc(100% / 12 * 3);
 }
 
 .f-years {
@@ -325,7 +325,7 @@
     --f-time-picker-ampm-padding: 0 var(--f-space-5);
 }
 
-.f-time-picker { 
+.f-time-picker {
     position: relative;
 }
 
@@ -340,7 +340,7 @@
     outline-offset: 1px;
 }
 
-.f-time-picker-time { 
+.f-time-picker-time {
     padding: var(--f-time-picker-padding);
     color: var(--f-time-picker-color);
 }

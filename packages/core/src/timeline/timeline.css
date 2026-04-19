@@ -11,7 +11,8 @@
     --f-timeline-item-marker-top: 1px;
 }
 
-.f-timeline {}
+.f-timeline {
+}
 
 .f-timeline > .f-timeline-item + .f-timeline-item {
     margin-top: var(--f-timeline-item-margin);
@@ -46,23 +47,23 @@
 }
 
 .f-timeline-item__marker::after {
-    content: "";
+    content: '';
     flex-shrink: 0;
     background-color: var(--f-timeline-item-marker-line-color);
     width: var(--f-timeline-item-marker-line-size);
     height: 100%;
     left: 50%;
-    margin-top: var(--f-timeline-item-marker-line-spacing);    
+    margin-top: var(--f-timeline-item-marker-line-spacing);
     position: absolute;
     display: block;
     transform: translateX(-50%);
     z-index: 0;
     color: inherit;
- }
+}
 
- .f-timeline > div:not(.f-hidden):last-child > .f-timeline-item__marker::after {
+.f-timeline > div:not(.f-hidden):last-child > .f-timeline-item__marker::after {
     content: none;
- }
+}
 
 .f-timeline-item__content {
     flex: 1;

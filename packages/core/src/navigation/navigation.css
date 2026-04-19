@@ -26,7 +26,7 @@
 
 .f-navigation {
     font-family: var(--f-font-body);
-    width: fit-content; 
+    width: fit-content;
     height: fit-content;
     background-color: var(--f-navigation-background-color);
     list-style-type: none;
@@ -45,7 +45,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%; 
+    width: 100%;
     height: fit-content;
     display: block;
     position: relative;
@@ -59,7 +59,7 @@
     margin: 0;
     justify-content: flex-start;
     transition: background-color 0.1s;
-    width: 100%; 
+    width: 100%;
     height: var(--f-navigation-item-height);
     color: var(--f-navigation-item-color);
     position: relative;
@@ -71,7 +71,7 @@
 
 .f-navigation-item__label {
     justify-content: flex-start;
-    font-size: var(--f-font-size-md); 
+    font-size: var(--f-font-size-md);
     font-weight: var(--f-navigation-item-font-weight);
     color: inherit;
     text-align: left;
@@ -99,8 +99,8 @@
 /* states */
 
 .f-navigation-item__container:not(.is-disabled).is-active {
-    color: var(--f-navigation-item-color-active);    
-    background-color: var(--f-navigation-item-background-color-active);    
+    color: var(--f-navigation-item-color-active);
+    background-color: var(--f-navigation-item-background-color-active);
 }
 
 /* .f-navigation-item.is-open > .f-navigation-item__container:not(.is-disabled), */
@@ -125,7 +125,7 @@
 /* ************************************************************** */
 /* ************************************************************** */
 
-/* divider */ 
+/* divider */
 
 .f-navigation-divider {
     display: block;
@@ -222,7 +222,7 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-} 
+}
 
 .f-navigation.is-navbar > * + * {
     margin-left: 0.1rem;
@@ -236,7 +236,7 @@
     width: 1px;
     border: none;
     position: static;
-} 
+}
 
 .f-navigation.is-navbar > .f-navigation-divider > hr {
     display: block;
@@ -295,4 +295,5 @@
     background-color: transparent;
 }
 
-.f-navigation-item__container.has-sub-navigation.is-open {}
+.f-navigation-item__container.has-sub-navigation.is-open {
+}

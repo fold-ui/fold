@@ -34,7 +34,7 @@
 
 .f-badge .f-badge__text {
     margin: 0;
-    padding: 0 var(--f-space-2); 
+    padding: 0 var(--f-space-2);
     color: currentColor;
     display: inline-block;
 }
@@ -173,17 +173,17 @@
 
 .f-badge.md {
     padding: 0 0.15rem;
-    height: var(--f-size-6); 
+    height: var(--f-size-6);
 }
 
 .f-badge.lg {
     padding: 0 0.2rem;
-    height: var(--f-size-7); 
+    height: var(--f-size-7);
 }
 
 .f-badge.xl {
     padding: 0 0.2rem;
-    height: var(--f-size-9); 
+    height: var(--f-size-9);
 }
 
 /* size */
@@ -202,21 +202,21 @@
 }
 
 .f-badge.sm:empty {
-    height: 0.4rem; 
+    height: 0.4rem;
     width: 0.4rem;
 }
 
 .f-badge.md:empty {
-    height: var(--f-size-2); 
+    height: var(--f-size-2);
     width: var(--f-size-2);
 }
 
 .f-badge.lg:empty {
-    height: var(--f-size-3); 
+    height: var(--f-size-3);
     width: var(--f-size-3);
 }
 
 .f-badge.xl:empty {
-    height: var(--f-size-4); 
+    height: var(--f-size-4);
     width: var(--f-size-4);
 }

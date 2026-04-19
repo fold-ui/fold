@@ -105,11 +105,11 @@ export const Anchors = () => {
     const handleClick = () => {
         const anchors: ToastAnchor[] = [
             'bottom-right',
-            'bottom-center',
-            'bottom-left',
-            'top-left',
-            'top-right',
-            'top-center',
+            // 'bottom-center',
+            // 'bottom-left',
+            // 'top-left',
+            // 'top-right',
+            // 'top-center',
         ]
 
         showToast({

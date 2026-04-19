@@ -3,7 +3,7 @@
     --f-sparkline-inactive: var(--f-color-surface);
 }
 
-.f-sparkline {   
+.f-sparkline {
 }
 
 .f-sparkline.is-line {
@@ -18,5 +18,5 @@
 
 .f-sparkline.is-square {
     stroke: var(--f-sparkline-inactive);
-    fill: var(--f-sparkline-active);    
+    fill: var(--f-sparkline-active);
 }

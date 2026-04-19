@@ -8,7 +8,7 @@
     gap: var(--f-dialog-spacing);
 }
 
-.f-dialog.has-children { 
+.f-dialog.has-children {
     padding: 0;
 }
 

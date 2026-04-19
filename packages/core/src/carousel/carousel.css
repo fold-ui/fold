@@ -72,7 +72,7 @@
 }
 
 .f-carousel-pill.is-active {
-    background: var(--f-carousel-pill-color-active);    
+    background: var(--f-carousel-pill-color-active);
     width: var(--f-carousel-pill-width-active);
     height: var(--f-carousel-pill-height-active);
 }

@@ -10,7 +10,7 @@
 .f-align-h-middle-right,
 .f-align-h-middle-stretch,
 .f-align-h-middle-between,
-.f-align-h-bottom-left, 
+.f-align-h-bottom-left,
 .f-align-h-bottom-center,
 .f-align-h-bottom-right,
 .f-align-h-bottom-stretch,
@@ -21,82 +21,82 @@
 
 /* top */
 
-.f-align-h-top-left { 
-    justify-content: flex-start !important;  
+.f-align-h-top-left {
+    justify-content: flex-start !important;
     align-items: flex-start !important;
 }
 
-.f-align-h-top-center { 
-    justify-content: center !important; 
+.f-align-h-top-center {
+    justify-content: center !important;
     align-items: flex-start !important;
 }
 
-.f-align-h-top-right { 
-    justify-content: flex-end !important; 
+.f-align-h-top-right {
+    justify-content: flex-end !important;
     align-items: flex-start !important;
 }
 
-.f-align-h-top-stretch { 
-    justify-content: stretch !important; 
+.f-align-h-top-stretch {
+    justify-content: stretch !important;
     align-items: flex-start !important;
 }
 
-.f-align-h-top-between { 
-    justify-content: space-between !important; 
+.f-align-h-top-between {
+    justify-content: space-between !important;
     align-items: flex-start !important;
 }
 
 /* middle */
 
-.f-align-h-middle-left { 
-    justify-content: flex-start !important; 
+.f-align-h-middle-left {
+    justify-content: flex-start !important;
     align-items: center !important;
 }
 
-.f-align-h-middle-center { 
-    justify-content: center !important; 
+.f-align-h-middle-center {
+    justify-content: center !important;
     align-items: center !important;
 }
 
-.f-align-h-middle-right { 
-    justify-content: flex-end !important; 
+.f-align-h-middle-right {
+    justify-content: flex-end !important;
     align-items: center !important;
 }
 
-.f-align-h-middle-stretch { 
-    justify-content: stretch !important; 
+.f-align-h-middle-stretch {
+    justify-content: stretch !important;
     align-items: center !important;
 }
 
-.f-align-h-middle-between { 
-    justify-content: space-between !important; 
+.f-align-h-middle-between {
+    justify-content: space-between !important;
     align-items: center !important;
 }
 
 /* bottom */
 
-.f-align-h-bottom-left { 
-    justify-content: flex-start !important; 
+.f-align-h-bottom-left {
+    justify-content: flex-start !important;
     align-items: flex-end !important;
 }
 
-.f-align-h-bottom-center { 
-    justify-content: center !important; 
+.f-align-h-bottom-center {
+    justify-content: center !important;
     align-items: flex-end !important;
 }
 
-.f-align-h-bottom-right { 
-    justify-content: flex-end !important; 
+.f-align-h-bottom-right {
+    justify-content: flex-end !important;
     align-items: flex-end !important;
 }
 
-.f-align-h-bottom-stretch { 
-    justify-content: stretch !important; 
+.f-align-h-bottom-stretch {
+    justify-content: stretch !important;
     align-items: flex-end !important;
 }
 
-.f-align-h-bottom-between { 
-    justify-content: space-between !important; 
+.f-align-h-bottom-between {
+    justify-content: space-between !important;
     align-items: flex-end !important;
 }
 
@@ -112,7 +112,7 @@
 .f-align-v-middle-right,
 .f-align-v-center-stretch,
 .f-align-v-center-between,
-.f-align-v-bottom-left, 
+.f-align-v-bottom-left,
 .f-align-v-bottom-center,
 .f-align-v-bottom-right,
 .f-align-v-right-stretch,
@@ -123,80 +123,80 @@
 
 /* top */
 
-.f-align-v-top-left { 
-    justify-content: flex-start !important; 
+.f-align-v-top-left {
+    justify-content: flex-start !important;
     align-items: flex-start !important;
 }
 
-.f-align-v-top-center { 
-    justify-content: flex-start !important; 
+.f-align-v-top-center {
+    justify-content: flex-start !important;
     align-items: center !important;
 }
 
-.f-align-v-top-right { 
-    justify-content: flex-start !important; 
+.f-align-v-top-right {
+    justify-content: flex-start !important;
     align-items: flex-end !important;
 }
 
-.f-align-v-left-stretch { 
+.f-align-v-left-stretch {
     align-items: stretch !important;
 }
 
-.f-align-v-left-between { 
+.f-align-v-left-between {
     justify-content: space-between !important;
 }
 
 /* middle */
 
-.f-align-v-middle-left { 
+.f-align-v-middle-left {
     justify-content: center !important;
-    align-items: flex-start !important; 
+    align-items: flex-start !important;
 }
 
-.f-align-v-middle-center { 
-    justify-content: center !important; 
+.f-align-v-middle-center {
+    justify-content: center !important;
     align-items: center !important;
 }
 
-.f-align-v-middle-right { 
+.f-align-v-middle-right {
     justify-content: center !important;
-    align-items: flex-end !important; 
+    align-items: flex-end !important;
 }
 
-.f-align-v-center-stretch { 
-    justify-content: stretch !important; 
+.f-align-v-center-stretch {
+    justify-content: stretch !important;
     align-items: center !important;
 }
 
-.f-align-v-center-between { 
-    justify-content: space-between !important; 
+.f-align-v-center-between {
+    justify-content: space-between !important;
     align-items: center !important;
 }
 
 /* bottom */
 
-.f-align-v-bottom-left { 
+.f-align-v-bottom-left {
     justify-content: flex-end !important;
-    align-items: flex-start !important; 
+    align-items: flex-start !important;
 }
 
-.f-align-v-bottom-center { 
+.f-align-v-bottom-center {
     justify-content: flex-end !important;
-    align-items: center !important; 
+    align-items: center !important;
 }
 
-.f-align-v-bottom-right { 
-    justify-content: flex-end !important; 
+.f-align-v-bottom-right {
+    justify-content: flex-end !important;
     align-items: flex-end !important;
 }
 
-.f-align-v-right-stretch { 
-    justify-content: stretch !important; 
+.f-align-v-right-stretch {
+    justify-content: stretch !important;
     align-items: flex-end !important;
 }
 
-.f-align-v-right-between { 
-    justify-content: space-between !important; 
+.f-align-v-right-between {
+    justify-content: space-between !important;
     align-items: flex-end !important;
 }
 
@@ -211,6 +211,6 @@
 .f-align-v-right-stretch > *,
 .f-align-h-top-stretch > *,
 .f-align-h-middle-stretch > *,
-.f-align-h-bottom-stretch > * { 
-    flex-grow: 1; 
+.f-align-h-bottom-stretch > * {
+    flex-grow: 1;
 }

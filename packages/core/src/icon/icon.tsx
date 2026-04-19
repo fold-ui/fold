@@ -25,23 +25,24 @@ export const Icon = forwardRef((props: IconProps, ref) => {
             color={color}
             className={className}
             ref={ref}
+            strokeWidth=""
         />
     )
 })
 
-export type FoldIcon = {
+export type AppIcon = {
     [key: string]: any
 }
 
-const FOLD_ICONS = 'FOLD_ICONS'
+const F_ICONS = 'F_ICONS'
 
-export const getFoldIcons = () => windowObject[FOLD_ICONS] || {}
+export const getAppIcons = () => windowObject[F_ICONS] || {}
 
-export const setFoldIcons = (foldIcons: FoldIcon) => {
-    if (!windowObject[FOLD_ICONS]) windowObject[FOLD_ICONS] = {}
-    windowObject[FOLD_ICONS] = {
-        ...windowObject[FOLD_ICONS],
-        ...foldIcons,
+export const setAppIcons = (appIcons: AppIcon) => {
+    if (!windowObject[F_ICONS]) windowObject[F_ICONS] = {}
+    windowObject[F_ICONS] = {
+        ...windowObject[F_ICONS],
+        ...appIcons,
     }
 }
 
@@ -54,7 +55,7 @@ export const IconLib = forwardRef((props: any, ref) => {
     return (
         <Icon
             {...rest}
-            icon={windowObject[FOLD_ICONS][icon] || FIWarning}
+            icon={windowObject[F_ICONS][icon] || FIWarning}
             ref={ref}
         />
     )

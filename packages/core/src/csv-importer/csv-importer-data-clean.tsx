@@ -8,7 +8,7 @@ import {
     DataGridProvider,
     Dialog,
     FIBin,
-    FOLD_CSV_MAPPER_CACHE,
+    F_CSV_MAPPER_CACHE,
     Flexer,
     Icon,
     Portal,
@@ -302,7 +302,7 @@ export const CsvImporterDataClean = (props: CsvImporterDataCleanProps) => {
         setValidationMessages(validationMessages)
         setValidationIndex(-1)
 
-        window[FOLD_CSV_MAPPER_CACHE] = rows
+        window[F_CSV_MAPPER_CACHE] = rows
     }, [schema, mapping, records])
 
     // columns
@@ -321,7 +321,7 @@ export const CsvImporterDataClean = (props: CsvImporterDataCleanProps) => {
 
     // cache saving
     useEffect(() => {
-        window[FOLD_CSV_MAPPER_CACHE] = rows
+        window[F_CSV_MAPPER_CACHE] = rows
     }, [rows])
 
     return (

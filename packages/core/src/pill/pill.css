@@ -16,7 +16,7 @@
 .f-pill {
     width: fit-content;
     border-radius: var(--f-pill-border-radius);
-    border: var(--f-pill-border-width) solid;  
+    border: var(--f-pill-border-width) solid;
     border-color: var(--f-pill-border-color);
     background-color: var(--f-pill-background-color);
     color: var(--f-pill-color);
@@ -25,7 +25,7 @@
 }
 
 .f-pill.is-subtle {
-    border: none;  
+    border: none;
     color: var(--f-pill-color-subtle);
     background-color: var(--f-pill-background-color-subtle);
 }
@@ -36,7 +36,7 @@
 }
 
 .f-pill.is-solid {
-    border: none;  
+    border: none;
     background-color: var(--f-pill-background-color-solid);
     color: var(--f-pill-color-color);
 }
@@ -47,8 +47,8 @@
 }
 
 .f-pill__label {
-    flex-shrink: 0; 
-    position: relative;  
+    flex-shrink: 0;
+    position: relative;
     pointer-events: none;
     white-space: nowrap;
     color: currentColor;
@@ -94,15 +94,15 @@
 
 .f-pill.md {
     padding: 0 var(--f-space-1);
-    height: var(--f-size-9); 
+    height: var(--f-size-9);
 }
 
 .f-pill.lg {
     padding: 0 var(--f-space-2);
-    height: var(--f-size-10); 
+    height: var(--f-size-10);
 }
 
 .f-pill.xl {
     padding: 0 var(--f-space-2);
-    height: var(--f-size-12); 
+    height: var(--f-size-12);
 }

@@ -1,5 +1,5 @@
 :root {
-    --f-table-border-radius: var(--f-radius); 
+    --f-table-border-radius: var(--f-radius);
     --f-table-border-color: var(--f-color-border);
     --f-table-caption-color: var(--f-color-text-weaker);
     --f-table-caption-size: var(--f-font-size-sm);
@@ -69,10 +69,9 @@ table.f-table.is-striped tr:nth-child(even) td {
 }
 
 table.f-table.is-lined tr td {
-    border-top: 1px solid;    
+    border-top: 1px solid;
     border-color: var(--f-table-border-color);
 }
-
 
 /* caption */
 
@@ -98,13 +97,13 @@ table.f-table.has-caption-bottom {
 
 table.f-table.has-sticky-column tr td:first-child {
     position: sticky;
-    left: 0; 
+    left: 0;
     z-index: 1;
 }
 
 table.f-table.has-sticky-header tr th:first-child {
     position: sticky;
-    left: 0; 
+    left: 0;
     z-index: 2;
 }
 
@@ -113,5 +112,5 @@ table.f-table.has-sticky-column th,
 table.f-table.has-sticky-header th:first-child,
 table.f-table.has-sticky-column th:first-child {
     position: sticky;
-    top: 0; 
+    top: 0;
 }
