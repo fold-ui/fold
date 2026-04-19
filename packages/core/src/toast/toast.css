@@ -7,7 +7,7 @@
     --f-toast-padding: var(--f-space-3);
     --f-toast-width: min(22rem, calc(100vw - 2rem));
     --f-toast-stack-gap: 0.35rem;
-    --f-toast-stack-overlap: 1.75rem;
+    --f-toast-stack-overlap: 3.5rem;
 }
 
 .f-toast-container {
