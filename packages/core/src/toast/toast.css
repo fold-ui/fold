@@ -115,7 +115,7 @@
 }
 
 .f-toast__close:hover {
-    background-color: rgba(from var(--f-color-black) r g b / 5%);
+    background-color: var(--f-color-surface-strong);
 }
 
 /* ********************************************* */
@@ -126,10 +126,18 @@
     border: 1px solid rgba(from var(--f-color-accent) r g b / 25%);
 }
 
+.f-toast.is-accent .f-toast__close:hover {
+    background-color: rgba(from var(--f-color-accent) r g b / 15%);
+}
+
 .f-toast.is-success {
     color: var(--f-color-success);
     background-color: var(--f-color-success-weak);
     border: 1px solid rgba(from var(--f-color-success) r g b / 25%);
+}
+
+.f-toast.is-success .f-toast__close:hover {
+    background-color: rgba(from var(--f-color-success) r g b / 15%);
 }
 
 .f-toast.is-neutral {
@@ -138,10 +146,18 @@
     border: 1px solid rgba(from var(--f-color-neutral) r g b / 25%);
 }
 
+.f-toast.is-neutral .f-toast__close:hover {
+    background-color: rgba(from var(--f-color-neutral) r g b / 15%);
+}
+
 .f-toast.is-caution {
     color: var(--f-color-caution);
     background-color: var(--f-color-caution-weak);
     border: 1px solid rgba(from var(--f-color-caution) r g b / 25%);
+}
+
+.f-toast.is-caution .f-toast__close:hover {
+    background-color: rgba(from var(--f-color-caution) r g b / 15%);
 }
 
 .f-toast.is-warning {
@@ -150,16 +166,28 @@
     border: 1px solid rgba(from var(--f-color-warning) r g b / 25%);
 }
 
+.f-toast.is-warning .f-toast__close:hover {
+    background-color: rgba(from var(--f-color-warning) r g b / 15%);
+}
+
 .f-toast.is-danger {
     color: var(--f-color-danger);
     background-color: var(--f-color-danger-weak);
     border: 1px solid rgba(from var(--f-color-danger) r g b / 25%);
 }
 
+.f-toast.is-danger .f-toast__close:hover {
+    background-color: rgba(from var(--f-color-danger) r g b / 15%);
+}
+
 .f-toast.is-highlight {
     color: var(--f-color-highlight);
     background-color: var(--f-color-highlight-weak);
     border: 1px solid rgba(from var(--f-color-highlight) r g b / 25%);
+}
+
+.f-toast.is-highlight .f-toast__close:hover {
+    background-color: rgba(from var(--f-color-highlight) r g b / 15%);
 }
 
 /* ********************************************* */
