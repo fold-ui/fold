@@ -234,7 +234,7 @@ Generated via Style Dictionary from JSON tokens at `packages/design/tokens/theme
 - `tokens-light.css` / `tokens-dark.css` - Theme-specific
 - Token prefix: `--f-` (e.g., `--f-color-accent`, `--f-radius`, `--f-font-size-md`)
 
-## FoldProvider
+## AppProvider
 
 Root context provider required at app root:
 - Theme management with localStorage persistence

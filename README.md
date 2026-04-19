@@ -33,18 +33,18 @@ yarn add @fold-ui/core
 
 ```jsx
 import React from 'react';
-import { FoldProvider, Heading, Button, Card, Input } from '@fold-ui/core';
+import { AppProvider, Heading, Button, Card, Input } from '@fold-ui/core';
 import '@fold-ui/core/dist/styles.css';
 
 const App = () => {
     return (
-        <FoldProvider>
+        <AppProvider>
             <Card>
                 <Heading>My Component</Heading>
                 <Input placeholder="Enter your text" />
                 <Button>Submit</Button>
             </Card>
-        </FoldProvider>
+        </AppProvider>
     );
 };
 
