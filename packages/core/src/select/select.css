@@ -68,7 +68,7 @@ input.f-select:disabled {
     box-shadow: var(--f-select-popover-box-shadow);
     z-index: var(--f-index-popover);
     height: fit-content;
-    animation: f-popover-fadein var(--f-transition-duration-fast);
+    animation: f-select-popover-fadein var(--f-transition-duration-fast);
     pointer-events: all;
 }
 
@@ -77,7 +77,7 @@ input.f-select:disabled {
     transform: translateY(-100%);
 }
 
-@keyframes f-popover-fadein {
+@keyframes f-select-popover-fadein {
     from {
         opacity: 0;
     }

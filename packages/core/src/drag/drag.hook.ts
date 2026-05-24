@@ -6,6 +6,7 @@ import {
     F_DRAG_LOCK,
     F_DRAG_STATE,
     F_RESTRICT_DUAL_MOVEMENT,
+    getAreaTargetVariant,
     getBoundingClientRect,
     getPreviousNextElements,
     globalCursor,
@@ -15,6 +16,7 @@ import {
     setTarget,
 } from '../'
 import { getButton, waitForRender, windowObject } from '../helpers'
+import { EMPTY_ORIGIN, EMPTY_TARGET } from './drag.types'
 
 export const F_CUSTOM_GHOST_ELEMENT = 'F_CUSTOM_GHOST_ELEMENT'
 export const F_GHOST_ELEMENT_ROTATION = 'F_GHOST_ELEMENT_ROTATION'
@@ -68,8 +70,8 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
         clearGhostElement()
         globalCursor.remove('grabbing')
         dispatchDragEvent('onend', null)
-        setTarget({})
-        setOrigin({ targetVariant: {} })
+        setTarget(EMPTY_TARGET)
+        setOrigin(EMPTY_ORIGIN)
         cache.mouseDown = false
         cache.init = {}
     }
@@ -136,7 +138,7 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
         const areaId = parent.getAttribute('id')
         const group = parent.dataset.group
         const direction = parent.dataset.direction
-        const finalTargetVariant = parent.dataset.targetvariant ? JSON.parse(parent.dataset.targetvariant) : {}
+        const finalTargetVariant = getAreaTargetVariant(parent)
         const isHorizontal = direction == 'horizontal'
         const isVertical = direction == 'vertical'
         const moveDirection = isVertical ? 'up' : 'left'
@@ -278,7 +280,7 @@ export const useDrag = (args: any = { indentDelay: 100 }) => {
         const areaId = parent.getAttribute('id')
         const group = parent.dataset.group
         const direction = parent.dataset.direction
-        const finalTargetVariant = parent.dataset.targetvariant ? JSON.parse(parent.dataset.targetvariant) : {}
+        const finalTargetVariant = getAreaTargetVariant(parent)
         const isHorizontal = direction == 'horizontal'
         const isVertical = direction == 'vertical'
         const moveDirection = isVertical ? 'up' : 'left'

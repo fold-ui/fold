@@ -15,7 +15,11 @@ export const docs = {
 }
 
 export const Usage = () => {
-    return <View row><Logo /></View>
+    return (
+        <View row>
+            <Logo />
+        </View>
+    )
 }
 
 // --

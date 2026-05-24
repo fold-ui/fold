@@ -5,6 +5,7 @@
     --f-modal-border-color: var(--f-color-border);
     --f-modal-border-width: 1px;
     --f-modal-border-radius: var(--f-radius-lg);
+    --f-modal-background-blur: 2px;
 }
 
 .f-modal {
@@ -14,6 +15,7 @@
     height: 100%;
     top: 0px;
     left: 0px;
+    backdrop-filter: blur(var(--f-modal-background-blur));
     z-index: var(--f-index-modal);
 }
 

@@ -11,7 +11,7 @@
     --f-input-base-padding: var(--f-space-3);
     --f-input-padding: 0 var(--f-input-base-padding);
     --f-input-padding-tag: 0.2rem var(--f-space-2);
-    --f-input-shadow: none;
+    --f-input-shadow: var(--f-shadow-sm);
     --f-tag-input-min-width: 50px;
     --f-tag-input-spacing: var(--f-space-1);
     --f-input-prefix-padding: 0 0 0 var(--f-input-base-padding);

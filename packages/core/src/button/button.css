@@ -31,6 +31,7 @@
     text-decoration: none;
     border-radius: var(--f-button-border-radius);
     font-weight: var(--f-font-weight-medium);
+    --f-focus: none;
 }
 
 .f-button.is-round {
@@ -475,7 +476,7 @@
 }
 
 .f-button.xs .f-text {
-    font-size: 0.75rem;
+    font-size: var(--f-font-size-xs);
 }
 
 .f-button.sm {
@@ -484,7 +485,7 @@
 }
 
 .f-button.sm .f-text {
-    font-size: 0.85rem;
+    font-size: var(--f-font-size-sm);
 }
 
 .f-button.md {
@@ -493,7 +494,7 @@
 }
 
 .f-button.md .f-text {
-    font-size: 0.95rem;
+    font-size: var(--f-font-size-md);
 }
 
 .f-button.lg {
@@ -502,7 +503,7 @@
 }
 
 .f-button.lg .f-text {
-    font-size: 1.1rem;
+    font-size: var(--f-font-size-lg);
 }
 
 .f-button.xl {
@@ -511,7 +512,7 @@
 }
 
 .f-button.xl .f-text {
-    font-size: 1.3rem;
+    font-size: var(--f-font-size-xl);
 }
 
 /* ********************************************* */

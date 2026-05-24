@@ -11,6 +11,7 @@
     --f-attachment-thumb-overlay: var(--f-color-overlay);
     --f-attachment-padding: var(--f-size-2);
     --f-attachment-spacing: var(--f-size-2);
+    --f-attachment-shadow: var(--f-shadow-sm);
 }
 
 .f-attachment {
@@ -25,6 +26,7 @@
     border-radius: var(--f-attachment-border-radius);
     padding: var(--f-attachment-padding);
     background: var(--f-attachment-background);
+    box-shadow: var(--f-attachment-shadow);
 }
 
 .f-attachment__content {
@@ -93,6 +95,7 @@
     color: var(--f-color-text-weakest);
 }
 
+.f-attachment__text-meta.f-text,
 .f-attachment__text-meta span {
     display: inline-block;
     width: 100%;
@@ -101,6 +104,7 @@
     white-space: nowrap;
     color: var(--f-color-text-weaker);
     font-weight: var(--f-font-weight-normal);
+    font-size: var(--f-font-size-sm);
 }
 
 /* error */

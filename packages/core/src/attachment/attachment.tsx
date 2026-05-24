@@ -264,7 +264,6 @@ export const Attachment = (props: AttachmentProps) => {
                             </Text>
                             {mime && (
                                 <Text
-                                    size="sm"
                                     as="span"
                                     className="f-attachment__text-meta">
                                     <span>{windowObject[F_ATTACHMENT_MIME_TYPES].DESCRIPTION[mime]}</span>
@@ -272,7 +271,6 @@ export const Attachment = (props: AttachmentProps) => {
                             )}
                             {!!filesize && (
                                 <Text
-                                    size="sm"
                                     as="span"
                                     className="f-attachment__text-meta">
                                     {bytesToSize(filesize)}

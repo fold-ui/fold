@@ -5,7 +5,6 @@ import {
     documentObject,
     DragVariant,
     getBoundingClientRect,
-    getDragState,
     mergeRefs,
     positionDOMElement,
     renderChildren,
@@ -14,6 +13,7 @@ import {
     setTarget,
     useDrag,
     useDragEvent,
+    useDragState,
     useId,
     useWindowEvent,
     View,
@@ -43,8 +43,8 @@ export const DragArea = forwardRef((props: DragAreaProps, ref) => {
         footer,
         ...rest
     } = props
-    const { origin } = getDragState('origin')
-    const { target } = getDragState('target')
+    const { origin } = useDragState('origin')
+    const { target } = useDragState('target')
     const { getGhostElement, setGhostElement, startDrag, getCache, hasCustomGhostElement } = useDrag()
     const cache = getCache()
     const containerRef = useRef(null)

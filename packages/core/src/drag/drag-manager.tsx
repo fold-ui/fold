@@ -5,7 +5,6 @@ import {
     dispatchDragEvent,
     documentObject,
     executeLast,
-    getDragState,
     getKey,
     getPreviousNextElements,
     positionDOMElement,
@@ -13,9 +12,13 @@ import {
     setTarget,
     useDrag,
     useDragEvent,
+    useDragState,
     useWindowEvent,
 } from '..'
 import { globalCursor, windowObject } from '../helpers'
+// Direct import (not via barrel) — top-level init below reads EMPTY_TARGET/EMPTY_ORIGIN
+// at module load, and the barrel order would put us in the TDZ.
+import { EMPTY_ORIGIN, EMPTY_TARGET } from './drag.types'
 
 export const F_DRAG_CACHE = 'F_DRAG_CACHE'
 export const F_DRAG_STATE = 'F_DRAG_STATE'
@@ -37,8 +40,8 @@ windowObject[F_DRAG_CACHE] = {
 }
 
 windowObject[F_DRAG_STATE] = {
-    target: {},
-    origin: { targetVariant: {} },
+    target: EMPTY_TARGET,
+    origin: EMPTY_ORIGIN,
 }
 
 export type DragManagerProps = {
@@ -51,8 +54,8 @@ export type DragManagerProps = {
 export const DragManager = (props: DragManagerProps) => {
     const { animation = 200, moveThreshold = 0, indentThreshold = 5, linedRegionThreshold = 3 } = props
     const ghostRef = useRef<any>(null)
-    const { origin } = getDragState('origin')
-    const { target } = getDragState('target')
+    const { origin } = useDragState('origin')
+    const { target } = useDragState('target')
     const isDragging = !!origin.areaId
     const { endDrag, getCache, indent, outdent, clearGhostElement } = useDrag()
     const cache = getCache()

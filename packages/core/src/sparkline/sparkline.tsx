@@ -43,6 +43,8 @@ export const Sparkline = (props: SparklineProps) => {
 
         return (
             <path
+                strokeLinejoin="round"
+                stroke="10"
                 d={`M${data
                     .map((d, i) => {
                         const x = (box.width / (data.length - 1)) * i

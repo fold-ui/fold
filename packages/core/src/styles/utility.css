@@ -195,3 +195,17 @@
 .f-cursor-grabbing {
     cursor: grabbing !important;
 }
+
+/* alignment  */
+
+.f-text-left {
+    text-align: left;
+}
+
+.f-text-right {
+    text-align: right;
+}
+
+.f-text-center {
+    text-align: center;
+}

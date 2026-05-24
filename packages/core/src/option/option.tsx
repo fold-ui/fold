@@ -42,7 +42,7 @@ export const Option = (props: OptionProps) => {
     useLayoutEffect(() => {
         if (selected) {
             const box: any = getOffset(containerRef.current)
-            setBox({ ...box, height: box.height - 1 })
+            setBox(box)
         }
     }, [selected, dimensions])
 

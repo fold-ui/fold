@@ -1,17 +1,4 @@
-import {
-    Badge,
-    Card,
-    Heading,
-    IconLib,
-    Pill,
-    Stack,
-    Tab,
-    TabList,
-    TabPanel,
-    TabPanels,
-    Tabs,
-    View,
-} from '@fold-ui/core'
+import { Badge, Card, Heading, IconLib, Pill, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, View } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {
