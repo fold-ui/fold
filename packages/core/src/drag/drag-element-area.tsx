@@ -5,9 +5,10 @@ import {
     View,
     classNames,
     documentObject,
-    getDragState,
     mergeRefs,
+    setAreaTargetVariant,
     useDragEvent,
+    useDragState,
     useId,
     useWindowEvent,
 } from '../'
@@ -37,8 +38,8 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
         footer,
         ...rest
     } = props
-    const { origin } = getDragState('origin')
-    const { target } = getDragState('target')
+    const { origin } = useDragState('origin')
+    const { target } = useDragState('target')
     const containerRef = useRef(null)
     const bufferRef = useRef(null)
     const id = useId(areaId)
@@ -48,7 +49,6 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
         isVertical,
         isDragging,
         hasOriginVariant,
-        finalTargetVariant,
         placeholder,
         isLinedFocus,
         isLined,
@@ -57,8 +57,6 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
     } = useMemo(() => {
         // variant is when the origin's DragArea specifies a variant
         // via "targetVariant" that affects this DragArea
-        // finalTargetVariant = make sure to add THIS group's variant
-        const finalTargetVariant = JSON.stringify({ ...targetVariant, [group]: variant })
         const originVariant: DragVariant = origin.targetVariant?.[group]
         const hasOriginVariant = !!originVariant
         const isLined = originVariant == 'lined'
@@ -115,7 +113,6 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
             isVertical,
             isDragging,
             hasOriginVariant,
-            finalTargetVariant,
             placeholder,
             isLinedFocus,
             isLined,
@@ -123,6 +120,14 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
             isAnimated,
         }
     }, [id, origin, target, direction, targetVariant, variant, disabled])
+
+    // Register this area's variant cascade in the WeakMap so DragElement
+    // children can look it up cheaply on drag start (no stringify/parse).
+    useLayoutEffect(() => {
+        if (containerRef.current) {
+            setAreaTargetVariant(containerRef.current, { ...targetVariant, [group]: variant })
+        }
+    }, [targetVariant, group, variant])
     const className = classNames(
         {
             'f-drag-area': true,
@@ -317,8 +322,7 @@ export const DragElementArea = forwardRef((props: DragElementAreaProps, ref) => 
             data-areaid={id}
             data-dragarea={true}
             data-group={group}
-            data-direction={direction}
-            data-targetvariant={finalTargetVariant}>
+            data-direction={direction}>
             {props.children}
 
             {!disabled && placeholder.visible && (

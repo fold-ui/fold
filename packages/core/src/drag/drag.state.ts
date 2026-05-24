@@ -16,33 +16,11 @@ export const setOrigin = (origin: Partial<DragOrigin>) => {
     setDragState({ namespace: 'origin', origin })
 }
 
-export const getDragState = (namespace: string): any => {
+// React hook — subscribes the caller to drag-state changes for the given
+// namespace ('origin' | 'target') and re-renders on every dispatch.
+// No slice-level filtering; not profiled as an issue in practice.
+export const useDragState = (namespace: string): any => {
     const [_, render] = useState(new Date())
     usePubsub('state-' + namespace, (data: any) => render(new Date()))
     return windowObject[F_DRAG_STATE]
 }
-
-/* 
-
-export const setDragState = (data) => {
-    const { namespace, ...rest } = data
-    windowObject[F_DRAG_STATE] = { ...windowObject[F_DRAG_STATE], ...rest }
-    windowObject.dispatchEvent(new CustomEvent(namespace, { detail: data }))
-}
-
-export const setTarget = (target: Partial<DragTarget>) => {
-    setDragState({ namespace: 'target', target })
-}
-
-export const setOrigin = (origin: Partial<DragOrigin>) => {
-    setDragState({ namespace: 'origin', origin })
-}
-
-export const getDragState = (namespace: string): any => {
-    const [_, render] = useState(new Date())
-    const handler = (data) => render(new Date())
-    useWindowEvent(namespace, handler)
-    return { ...windowObject[F_DRAG_STATE], _ }
-}
-
-*/

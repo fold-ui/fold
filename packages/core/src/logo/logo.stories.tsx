@@ -1,6 +1,6 @@
-import * as Token from '@fold-ui/design/tokens'
+import * as Token from '@design/tokens'
 import React from 'react'
-import { Logo, LogoOld, LogoSolid, View } from '@fold-ui/core'
+import { Logo, LogoOld, LogoSolid, View } from '@core'
 
 export default {
     title: 'Core/Logo',
@@ -15,7 +15,11 @@ export const docs = {
 }
 
 export const Usage = () => {
-    return <View row><Logo /></View>
+    return (
+        <View row>
+            <Logo />
+        </View>
+    )
 }
 
 // --

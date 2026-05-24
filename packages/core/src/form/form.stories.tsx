@@ -12,7 +12,7 @@ import {
     InputPrefix,
     Stack,
     useCheck,
-} from '@fold-ui/core'
+} from '@core'
 import React, { useState } from 'react'
 
 export default {

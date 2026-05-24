@@ -1,6 +1,6 @@
 import React from 'react'
-import * as Token from '@fold-ui/design/tokens'
-import { Grid, GridItem } from '@fold-ui/core'
+import * as Token from '@design/tokens'
+import { Grid, GridItem } from '@core'
 
 export default {
     title: 'Core/Grid',

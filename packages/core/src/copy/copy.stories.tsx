@@ -1,4 +1,4 @@
-import { Button, Copy, IconLib, Pill, useCopy } from '@fold-ui/core'
+import { Button, Copy, IconLib, Pill, useCopy } from '@core'
 import React from 'react'
 
 export default {

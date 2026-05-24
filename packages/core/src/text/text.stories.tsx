@@ -1,4 +1,4 @@
-import { HighlightText, IconLib, Label, LimitedText, Link, Stack, Text } from '@fold-ui/core'
+import { HighlightText, IconLib, Label, LimitedText, Link, Stack, Text } from '@core'
 import React from 'react'
 
 export default {

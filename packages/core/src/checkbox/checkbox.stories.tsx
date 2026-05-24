@@ -1,5 +1,5 @@
-import { Checkbox, CheckboxAlt, FormLabel, Stack, useCheck } from '@fold-ui/core'
-import * as Token from '@fold-ui/design/tokens'
+import { Checkbox, CheckboxAlt, FormLabel, Stack, useCheck } from '@core'
+import * as Token from '@design/tokens'
 import React from 'react'
 
 export default {

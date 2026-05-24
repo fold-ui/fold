@@ -9,7 +9,7 @@
 }
 
 .f-avatar {
-    background-color: var(--f-avatar-background-color);
+    background: var(--f-avatar-background-color);
     color: var(--f-avatar-color);
     border-radius: var(--f-avatar-border-radius);
     transition: opacity 0.2s, border 0.1s;

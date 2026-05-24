@@ -23,7 +23,7 @@ import {
     useVisibility,
     View,
     YearPicker,
-} from '@fold-ui/core'
+} from '@core'
 import React, { useMemo, useRef, useState } from 'react'
 
 export default {

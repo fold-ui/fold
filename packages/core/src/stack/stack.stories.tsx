@@ -1,4 +1,4 @@
-import { Avatar, Stack, View } from '@fold-ui/core'
+import { Avatar, Stack, View } from '@core'
 import React from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Slider, Text, useSlider } from '@fold-ui/core'
+import { Slider, Text, useSlider } from '@core'
 import React, { useState } from 'react'
 
 export default {

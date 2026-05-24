@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, AccordionHeading, AccordionItem, AccordionPanel } from '@fold-ui/core'
+import { Accordion, AccordionHeading, AccordionItem, AccordionPanel } from '@core'
 
 export default {
     title: 'Core/Accordion',

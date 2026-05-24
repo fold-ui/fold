@@ -3,14 +3,20 @@
     --f-stat-color-number: var(--f-color-text);
     --f-stat-color-description: var(--f-color-text-weaker);
     --f-stat-color-icon: var(--f-color-text-weaker);
+    --f-stat-shadow: var(--f-shadow-sm);
 }
 
 .f-stat {
+    box-shadow: var(--f-stat-shadow);
     width: fit-content;
     height: fit-content;
     gap: var(--f-space-2);
+    border: 1px solid var(--f-color-border);
+    border-radius: var(--f-radius);
     flex-grow: 1;
     position: relative;
+    background: var(--f-color-surface);
+    padding: 1rem;
 }
 
 .f-stat .f-text {

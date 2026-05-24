@@ -80,7 +80,7 @@
     left: var(--f-date-cell-selected-space);
     z-index: -2;
     background: var(--f-date-cell-pending-background);
-    border-radius: var(--f-radius);
+    border-radius: var(--f-radius-full);
     animation-name: f-date-cell-selection-fadein;
     animation-duration: 0.2s;
     animation-timing-function: ease-in;
@@ -126,7 +126,7 @@
 
 .f-date-cell:not(.is-unavailable).is-start::after,
 .f-date-cell:not(.is-unavailable).is-end::after {
-    border-radius: var(--f-radius);
+    border-radius: var(--f-radius-full);
     content: ' ';
     display: block;
     pointer-events: none;
@@ -143,13 +143,13 @@
 }
 
 .f-date-cell.is-start::before {
-    border-top-left-radius: var(--f-radius);
-    border-bottom-left-radius: var(--f-radius);
+    border-top-left-radius: var(--f-radius-full);
+    border-bottom-left-radius: var(--f-radius-full);
 }
 
 .f-date-cell.is-end::before {
-    border-top-right-radius: var(--f-radius);
-    border-bottom-right-radius: var(--f-radius);
+    border-top-right-radius: var(--f-radius-full);
+    border-bottom-right-radius: var(--f-radius-full);
 }
 
 @keyframes f-date-cell-selected-fadein {

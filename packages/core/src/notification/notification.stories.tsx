@@ -1,4 +1,4 @@
-import { Heading, IconLib, Notification, NotificationContent, NotificationIcon, Stack, Text } from '@fold-ui/core'
+import { Heading, IconLib, Notification, NotificationContent, NotificationIcon, Stack, Text } from '@core'
 import React from 'react'
 
 export default {

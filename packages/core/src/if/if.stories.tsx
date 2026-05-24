@@ -1,5 +1,5 @@
 import React from 'react'
-import { If, View } from '@fold-ui/core'
+import { If, View } from '@core'
 
 export default {
     title: 'Core/If',

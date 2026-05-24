@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Cropper, Range, View } from '@fold-ui/core'
+import { Cropper, Range, View } from '@core'
 
 export default {
     title: 'Core/Cropper',

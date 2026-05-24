@@ -1,4 +1,4 @@
-import { CsvImporter, Link, View } from '@fold-ui/core'
+import { CsvImporter, Link, View } from '@core'
 import React from 'react'
 
 export default {

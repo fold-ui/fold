@@ -10,7 +10,7 @@ import {
     moveElementInArray,
     useDrag,
     useDragEvent,
-} from '@fold-ui/core'
+} from '@core'
 import React, { useState } from 'react'
 import { renderToString } from 'react-dom/server'
 

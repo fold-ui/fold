@@ -14,8 +14,8 @@ import {
     Text,
     timezones,
     View,
-} from '@fold-ui/core'
-import * as Token from '@fold-ui/design/tokens'
+} from '@core'
+import * as Token from '@design/tokens'
 import React, { useMemo, useRef, useState } from 'react'
 
 export default {

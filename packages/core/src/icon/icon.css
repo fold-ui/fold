@@ -4,11 +4,11 @@
     --f-icon-sizing-md: var(--f-icon-size-md);
     --f-icon-sizing-lg: var(--f-icon-size-lg);
     --f-icon-sizing-xl: var(--f-icon-size-xl);
-    --f-icon-stroke-width-xs: 2.4;
-    --f-icon-stroke-width-sm: 2.2;
-    --f-icon-stroke-width-md: 1.9;
-    --f-icon-stroke-width-lg: 1.7;
-    --f-icon-stroke-width-xl: 1.5;
+    --f-icon-stroke-width-xs: 2.1;
+    --f-icon-stroke-width-sm: 1.85;
+    --f-icon-stroke-width-md: 1.65;
+    --f-icon-stroke-width-lg: 1.5;
+    --f-icon-stroke-width-xl: 1.25;
 }
 
 .f-icon {

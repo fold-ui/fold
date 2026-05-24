@@ -1,4 +1,4 @@
-import { Button, Stack, Text, Upload, UploadArea, UploadCustom, View } from '@fold-ui/core'
+import { Button, Stack, Text, Upload, UploadArea, UploadCustom, View } from '@core'
 import React from 'react'
 
 export default {

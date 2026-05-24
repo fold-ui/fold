@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Button, Portal, Text, View, documentObject } from '@fold-ui/core'
+import { Button, Portal, Text, View, documentObject } from '@core'
 
 export default {
     title: 'Core/Portal',

@@ -1,5 +1,5 @@
-import * as Token from '@fold-ui/design/tokens'
-import { Avatar, AvatarGroup, Badge, Heading, Text, View } from '@fold-ui/core'
+import * as Token from '@design/tokens'
+import { Avatar, AvatarGroup, Badge, Heading, Text, View } from '@core'
 import React from 'react'
 
 export default {

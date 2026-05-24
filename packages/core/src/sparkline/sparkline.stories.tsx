@@ -1,4 +1,4 @@
-import { Sparkline, View } from '@fold-ui/core'
+import { Sparkline, View } from '@core'
 import React, { useMemo } from 'react'
 
 export default {

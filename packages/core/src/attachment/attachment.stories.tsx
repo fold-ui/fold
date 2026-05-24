@@ -1,4 +1,4 @@
-import { Attachment, AttachmentThumb, IconLib, Text, View } from '@fold-ui/core'
+import { Attachment, AttachmentThumb, IconLib, Text, View } from '@core'
 import React from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Rate } from '@fold-ui/core'
+import { Rate } from '@core'
 import React, { useState } from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Pagination, View } from '@fold-ui/core'
+import { Pagination, View } from '@core'
 import React, { useState } from 'react'
 
 export default {

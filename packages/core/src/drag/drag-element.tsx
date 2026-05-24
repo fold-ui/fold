@@ -26,7 +26,7 @@ export const DragElement = forwardRef((props: DragElementProps, ref) => {
         ...rest
     } = props
     const fallbackDisplay = useMemo(() => style.display, [style])
-    const { onMouseDown, onMouseUp, onMouseDownExplicit, getCache } = useDrag()
+    const { onMouseUp, onMouseDownExplicit, getCache } = useDrag()
     const elementRef = useRef(null)
     const styles = useMemo(
         () => ({
@@ -35,7 +35,7 @@ export const DragElement = forwardRef((props: DragElementProps, ref) => {
             marginLeft:
                 indent && !noIndent && !onlyIndentDataAttr ? `calc(var(--f-drag-indent) * ${indent})` : undefined,
         }),
-        [style, indent]
+        [style, indent, noIndent, onlyIndentDataAttr]
     )
     const className = classNames(
         {
@@ -57,10 +57,9 @@ export const DragElement = forwardRef((props: DragElementProps, ref) => {
 
         const { isLeftButton } = getButton(e)
         const { clientX, clientY, currentTarget } = e
+        const canDrag = !noDrag && isLeftButton && !cache.locked
 
-        if (!noDrag && isLeftButton && !cache.locked) {
-            e.stopPropagation()
-        }
+        if (canDrag) e.stopPropagation()
 
         const handleMouseMove = (moveEvent: MouseEvent) => {
             const dx = moveEvent.clientX - startPos.current.x
@@ -91,7 +90,9 @@ export const DragElement = forwardRef((props: DragElementProps, ref) => {
             }
         }
 
-        document.addEventListener('mousemove', handleMouseMove)
+        // mouseup is always needed (it routes the click); mousemove only matters
+        // when a drag is actually possible — skip the listener otherwise.
+        if (canDrag) document.addEventListener('mousemove', handleMouseMove)
         document.addEventListener('mouseup', handleMouseUp)
     }
 
@@ -110,11 +111,11 @@ export const DragElement = forwardRef((props: DragElementProps, ref) => {
         <div
             {...rest}
             id={id}
-            data-id={id}
+            data-id={id ?? rest['data-id']}
             data-indent={indent}
-            data-nodrop={noDrop}
-            data-nodrag={noDrag}
-            data-nofocus={noFocus}
+            data-nodrop={noDrop || undefined}
+            data-nodrag={noDrag || undefined}
+            data-nofocus={noFocus || undefined}
             data-fallbackdisplay={fallbackDisplay} // see DragElementArea
             data-dragelement={true}
             onMouseDown={handleMouseDown}

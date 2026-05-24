@@ -1,4 +1,4 @@
-import { ProgressCircle, Heading, Progress, Stack, ProgressSubtle, Text, ProgressPie } from '@fold-ui/core'
+import { ProgressCircle, Heading, Progress, Stack, ProgressSubtle, Text, ProgressPie } from '@core'
 import React from 'react'
 
 export default {
