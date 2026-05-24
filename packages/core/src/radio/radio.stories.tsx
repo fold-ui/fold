@@ -1,4 +1,4 @@
-import { FormLabel, Radio, RadioGroup, Stack, useRadio } from '@core'
+import { FormLabel, Radio, RadioGroup, Stack, useRadio } from '@fold-ui/core'
 import React from 'react'
 
 export default {

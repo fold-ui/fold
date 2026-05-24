@@ -15,7 +15,7 @@ import {
     Text,
     useVisibility,
     View,
-} from '@core'
+} from '@fold-ui/core'
 import React, { useRef, useState } from 'react'
 
 export default {

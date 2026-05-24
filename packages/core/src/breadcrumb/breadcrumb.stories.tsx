@@ -1,4 +1,4 @@
-import { Breadcrumb, BreadcrumbItem, IconLib } from '@core'
+import { Breadcrumb, BreadcrumbItem, IconLib } from '@fold-ui/core'
 import React from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Button, Flexer, Heading, Modal, ModalClose, Portal, Text, View, useVisibility } from '@core'
+import { Button, Flexer, Heading, Modal, ModalClose, Portal, Text, View, useVisibility } from '@fold-ui/core'
 import React from 'react'
 
 export default {

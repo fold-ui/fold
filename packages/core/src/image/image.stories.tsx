@@ -1,4 +1,4 @@
-import { Image, Progress, Text, View } from '@core'
+import { Image, Progress, Text, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {

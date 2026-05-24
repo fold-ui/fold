@@ -1,4 +1,4 @@
-import { Button, Divider, Pill, View } from '@core'
+import { Button, Divider, Pill, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Range } from '@core'
+import { Range } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {

@@ -1,4 +1,4 @@
-import { Table, TBody, Td, Th, THead, Tr } from '@core'
+import { Table, TBody, Td, Th, THead, Tr } from '@fold-ui/core'
 import React from 'react'
 
 export default {

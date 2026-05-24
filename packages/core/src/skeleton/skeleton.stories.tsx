@@ -1,4 +1,4 @@
-import { Avatar, Badge, Button, Heading, Skeleton, SkeletonBlock, SkeletonCircle, Text } from '@core'
+import { Avatar, Badge, Button, Heading, Skeleton, SkeletonBlock, SkeletonCircle, Text } from '@fold-ui/core'
 import React from 'react'
 
 export default {

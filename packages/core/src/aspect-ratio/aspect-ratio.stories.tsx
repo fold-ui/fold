@@ -1,5 +1,5 @@
 import React from 'react'
-import { AspectRatio } from '@core'
+import { AspectRatio } from '@fold-ui/core'
 
 export default {
     title: 'Core/AspectRatio',

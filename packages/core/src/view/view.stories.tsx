@@ -1,4 +1,4 @@
-import { Blur, Button, Flexer, Heading, ScrollView, SpinnerOverlay, Text, View } from '@core'
+import { Blur, Button, Flexer, Heading, ScrollView, SpinnerOverlay, Text, View } from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {

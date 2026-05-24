@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Cookie, Text, useVisibility, View } from '@core'
+import { Button, Cookie, Text, useVisibility, View } from '@fold-ui/core'
 
 export default {
     title: 'Core/Cookie',

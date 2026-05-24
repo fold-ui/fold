@@ -1,4 +1,4 @@
-import { Carousel, CarouselItem, CarouselPills, Image, Stack, useCarousel, View } from '@core'
+import { Carousel, CarouselItem, CarouselPills, Image, Stack, useCarousel, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {

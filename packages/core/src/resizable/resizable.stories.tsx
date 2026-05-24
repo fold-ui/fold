@@ -1,4 +1,4 @@
-import { Resizable, ResizableRail, Text, View } from '@core'
+import { Resizable, ResizableRail, Text, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {

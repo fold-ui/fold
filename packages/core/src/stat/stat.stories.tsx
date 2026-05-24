@@ -1,4 +1,4 @@
-import { IconLib, Stat, View } from '@core'
+import { IconLib, Stat, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {

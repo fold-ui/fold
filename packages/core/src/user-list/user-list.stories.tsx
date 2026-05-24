@@ -1,4 +1,4 @@
-import { Button, UserList } from '@core'
+import { Button, UserList } from '@fold-ui/core'
 import React from 'react'
 
 export default {

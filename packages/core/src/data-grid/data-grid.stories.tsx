@@ -15,7 +15,7 @@ import {
     dataGridState,
     dispatchDataGridEvent,
     useDialog,
-} from '@core'
+} from '@fold-ui/core'
 import React, { useState } from 'react'
 import * as data from '../../../../dummy-data'
 

@@ -1,4 +1,4 @@
-import * as Token from '@design/tokens'
+import * as Token from '@fold-ui/design/tokens'
 import {
     Badge,
     IconLib,
@@ -9,7 +9,7 @@ import {
     Pill,
     useTheme,
     View,
-} from '@core'
+} from '@fold-ui/core'
 import React, { useState } from 'react'
 
 export default {

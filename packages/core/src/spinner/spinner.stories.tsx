@@ -1,4 +1,4 @@
-import { Spinner, SpinnerOverlay, Text, View } from '@core'
+import { Spinner, SpinnerOverlay, Text, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {
