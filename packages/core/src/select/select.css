@@ -68,22 +68,13 @@ input.f-select:disabled {
     box-shadow: var(--f-select-popover-box-shadow);
     z-index: var(--f-index-popover);
     height: fit-content;
-    animation: f-select-popover-fadein var(--f-transition-duration-fast);
+    animation: var(--f-popout-animation);
     pointer-events: all;
 }
 
 .f-select-popover.is-offscreen {
     top: 0px;
     transform: translateY(-100%);
-}
-
-@keyframes f-select-popover-fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* list */

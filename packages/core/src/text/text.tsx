@@ -26,6 +26,7 @@ export type TextProps = {
         | 'u'
         | 'abbr'
         | 'cite'
+        | 'pre'
         | 'kbd'
         | 's'
         | 'samp'
@@ -33,6 +34,7 @@ export type TextProps = {
     size?: Size
     htmlFor?: string
     href?: string
+    rel?: string
     title?: string
     target?: string
 } & CoreViewProps

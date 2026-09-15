@@ -176,7 +176,7 @@ export const Popover = forwardRef((props: PopoverProps, ref) => {
                     className={className}
                     data-popover-id={id}
                     ref={mergeRefs([ref, containerRef])}>
-                    {content}
+                    <div className="f-popover__inner">{content}</div>
                 </View>
             </div>
         )

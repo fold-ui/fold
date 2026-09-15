@@ -109,7 +109,7 @@
     height: fit-content;
     width: fit-content;
     margin-left: var(--f-size-2);
-    margin-right: calc(var(--f-size-1) * -1);
+    margin-right: calc(var(--f-size-0) * -1);
     pointer-events: none;
 }
 
@@ -118,7 +118,7 @@
     height: fit-content;
     width: fit-content;
     margin-right: var(--f-size-2);
-    margin-left: calc(var(--f-size-1) * -1);
+    margin-left: calc(var(--f-size-0) * -1);
     pointer-events: none;
 }
 
@@ -472,7 +472,7 @@
 
 .f-button.xs {
     height: var(--f-size-8);
-    padding: 0 var(--f-space-1);
+    padding: 0 var(--f-space-2);
 }
 
 .f-button.xs.is-square {

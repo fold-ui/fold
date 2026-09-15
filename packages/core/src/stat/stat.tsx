@@ -39,7 +39,7 @@ export const Stat = (props: StatProps) => {
                     {labelTool}
                 </View>
             )}
-            {number != null && <Heading>{number}</Heading>}
+            {number != null && <Heading fontWeight="var(--f-font-weight-normal)">{number}</Heading>}
             {(icon || descriptionTool || description) && (
                 <div className="f-row f-stat-footer">
                     {icon && (
