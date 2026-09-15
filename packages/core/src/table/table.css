@@ -14,6 +14,7 @@
 table.f-table {
     width: 100%;
     border-radius: var(--f-table-border-radius);
+    table-layout: fixed;
 }
 
 table.f-table th,
@@ -26,6 +27,10 @@ table.f-table th {
     color: var(--f-table-th-color);
     margin: 0;
     font-weight: var(--f-font-weight-normal);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
 }
 
 table.f-table td {
@@ -36,6 +41,10 @@ table.f-table td {
     border-left: 0rem solid;
     border-color: var(--f-table-border-color);
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
 }
 
 table.f-table tr td:first-child {

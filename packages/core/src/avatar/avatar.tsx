@@ -32,11 +32,11 @@ export const Avatar = forwardRef((props: AvatarProps, ref) => {
     } = props
     const initials = useMemo(() => {
         return name
-            .split(' ')
-            .splice(0, 2)
-            .map((str: string) => str.charAt(0))
+            .trim()
+            .split(/\s+/, 2)
+            .map((word) => word[0] ?? '')
             .join('')
-            .toUpperCase()
+            .replace(/[^\p{L}\p{N}\s]/gu, '')
     }, [name])
     const presenceVariant = useMemo(() => {
         switch (presence) {

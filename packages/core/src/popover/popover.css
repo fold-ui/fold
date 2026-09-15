@@ -15,8 +15,17 @@
     z-index: var(--f-index-popover);
     height: fit-content;
     width: 100%;
-    animation: f-popover-fadein var(--f-transition-duration-fast);
+    animation: f-popover-fadein var(--f-transition-duration-normal) var(--f-transition-easing-ease-out);
     pointer-events: all;
+}
+
+@keyframes f-popover-fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .f-popover:focus {
@@ -31,17 +40,19 @@
     position: fixed;
 }
 
-@keyframes f-popover-fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.f-popover__inner {
+    animation: f-popover-scalein var(--f-transition-duration-normal) var(--f-transition-easing-ease-out);
+    position: relative;
+    z-index: 1;
 }
 
-.f-popover > * {
-    z-index: 1;
+@keyframes f-popover-scalein {
+    from {
+        scale: 0.95;
+    }
+    to {
+        scale: 1;
+    }
 }
 
 /* for the arrows & positioning classes */

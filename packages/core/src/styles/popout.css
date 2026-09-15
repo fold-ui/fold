@@ -3,19 +3,24 @@
 :root {
     --f-popout-buffer: 0px;
     --f-popout-spacing: 0px;
+
+    --f-popout-animation: f-popout-content-fadein var(--f-transition-duration-normal)
+        var(--f-transition-easing-ease-out);
 }
 
 .f-popout-content {
     display: none;
-    animation: f-popout-content-fadein var(--f-transition-duration-fast);
+    animation: var(--f-popout-animation);
 }
 
 @keyframes f-popout-content-fadein {
     from {
         opacity: 0;
+        scale: 0.95;
     }
     to {
         opacity: 1;
+        scale: 1;
     }
 }
 

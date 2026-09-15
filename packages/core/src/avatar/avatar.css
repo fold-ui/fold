@@ -27,6 +27,7 @@
 .f-avatar .f-text {
     color: currentColor;
     padding: 0;
+    text-transform: uppercase;
     white-space: nowrap;
 }
 

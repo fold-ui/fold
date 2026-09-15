@@ -16,6 +16,7 @@
     --f-tag-input-spacing: var(--f-space-1);
     --f-input-prefix-padding: 0 0 0 var(--f-input-base-padding);
     --f-input-suffix-padding: 0 var(--f-input-base-padding) 0 0;
+    --f-input-transition-delay: 0.2s;
 }
 
 /* control */
@@ -34,9 +35,13 @@
     font-weight: var(--f-font-weight-normal);
     font-family: var(--f-font-body);
     box-shadow: var(--f-input-shadow);
-    transition: border 0.25s;
+    transition: border var(--f-input-transition-delay), outline var(--f-input-transition-delay);
     cursor: text;
     align-items: stretch;
+}
+
+.f-input-control:not(:disabled):hover {
+    border-color: var(--f-input-border-color-active);
 }
 
 .f-input-control:not(.is-disabled):focus-within {
@@ -75,7 +80,11 @@
     font-weight: var(--f-font-weight-normal);
     font-family: var(--f-font-body);
     box-shadow: var(--f-input-shadow);
-    transition: border 0.25s;
+    transition: border var(--f-input-transition-delay), outline var(--f-input-transition-delay);
+}
+
+.f-input-common:not(:disabled):hover {
+    border-color: var(--f-input-border-color-active);
 }
 
 .f-input-control .f-input-common {
@@ -102,6 +111,7 @@ input.f-input {
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: var(--f-input-padding);
+    transition: border var(--f-input-transition-delay), outline var(--f-input-transition-delay);
     z-index: 0;
 }
 
