@@ -36,10 +36,10 @@ export const Usage = () => (
             gap={10}>
             <Heading
                 as="h2"
-                color="#30294f">
+                colorToken="base-900">
                 Ambient by design
             </Heading>
-            <Text color="#534c70">One base color generates the complete aurora palette.</Text>
+            <Text colorToken="base-700">One base color generates the complete aurora palette.</Text>
         </View>
     </View>
 )

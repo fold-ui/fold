@@ -1,0 +1,48 @@
+:root {
+    --f-ripple-color: rgb(255 255 255 / 15%);
+    --f-ripple-background: rgb(238 242 255 / 1%);
+    --f-ripple-border-width: 1px;
+    --f-ripple-duration: 5s;
+}
+
+.f-ripple {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+.f-ripple__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--f-ripple-size);
+    height: var(--f-ripple-size);
+    border: var(--f-ripple-border-width) solid var(--f-ripple-color);
+    border-radius: 50%;
+    background: var(--f-ripple-background);
+    opacity: var(--f-ripple-opacity);
+    transform: translate(-50%, -50%) scale(1);
+    animation: f-ripple var(--f-ripple-duration) ease var(--f-ripple-delay) infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes f-ripple {
+    0%,
+    100% {
+        opacity: var(--f-ripple-opacity);
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: var(--f-ripple-muted-opacity);
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .f-ripple__circle {
+        animation: none;
+    }
+}

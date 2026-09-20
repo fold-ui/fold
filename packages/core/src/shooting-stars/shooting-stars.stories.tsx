@@ -32,10 +32,10 @@ export const Usage = () => (
             gap={10}>
             <Heading
                 as="h2"
-                color="#fff">
+                colorToken="base-100">
                 Make a wish
             </Heading>
-            <Text color="#c9c7d1">A CSS-only animated background.</Text>
+            <Text colorToken="base-300">A CSS-only animated background.</Text>
         </View>
     </View>
 )

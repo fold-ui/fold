@@ -1,17 +1,17 @@
-import { Heading, StarryBackground, Text, View } from '@fold-ui/core'
+import { Heading, Ripple, Text, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {
-    title: 'Core/StarryBackground',
-    component: StarryBackground,
+    title: 'Core/Ripple',
+    component: Ripple,
     excludeStories: 'docs',
 }
 
 export const docs = {
-    title: 'Starry Background',
-    subtitle: 'The StarryBackground component renders gently drifting, twinkling stars with a subtle mouse influence.',
+    title: 'Ripple',
+    subtitle: 'The Ripple component creates a layered field of softly pulsing circles.',
     description:
-        'It uses the browser canvas directly, pauses outside the viewport, and respects reduced-motion preferences.',
+        'Use Ripple as a decorative background for hero content, calls to action, and other prominent surfaces.',
 }
 
 export const Usage = () => (
@@ -20,11 +20,12 @@ export const Usage = () => (
         width="100%"
         height={360}
         radius="var(--f-radius-xl)"
-        bg="#05040d"
+        bgToken="base-900"
         style={{ overflow: 'hidden' }}>
-        <StarryBackground
-            color="#aaa4d6"
-            count={100}
+        <Ripple
+            mainCircleSize={120}
+            numCircles={10}
+            color="#ffffffaf"
         />
         <View
             column
@@ -37,9 +38,9 @@ export const Usage = () => (
             <Heading
                 as="h2"
                 colorToken="base-100">
-                A quiet orbit
+                Focus outward
             </Heading>
-            <Text colorToken="base-300">A lightweight star field without a rendering dependency.</Text>
+            <Text colorToken="base-100">Concentric motion adds depth without distracting from content.</Text>
         </View>
     </View>
 )

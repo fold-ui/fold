@@ -73,6 +73,7 @@ we don't want to use !important
 @import '../radio/radio.css';
 @import '../rate/rate.css';
 @import '../resizable/resizable.css';
+@import '../ripple/ripple.css';
 @import '../select/select.css';
 @import '../shooting-stars/shooting-stars.css';
 @import '../skeleton/skeleton.css';
