@@ -48,8 +48,9 @@ export const CustomToolbar = () => {
                             max={10}
                             value={value}
                             onChange={(e) => {
-                                setValue(e.target.value)
-                                zoom(e.target.value)
+                                const nextValue = Number(e.target.value)
+                                setValue(nextValue)
+                                zoom(nextValue)
                             }}
                         />
                     </View>

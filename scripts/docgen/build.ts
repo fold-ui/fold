@@ -9,6 +9,57 @@ const addSpaces = (s: string) => s.replace(/([A-Z])/g, ' $1').trim()
 
 const stripComments = (str) => str.replace(/\/\*[\s\S]*?\*\/|(?<=[^:])\/\/.*|^\/\/.*/g, '')
 
+const reservedIdentifiers = new Set([
+    'await',
+    'break',
+    'case',
+    'catch',
+    'class',
+    'const',
+    'continue',
+    'debugger',
+    'default',
+    'delete',
+    'do',
+    'else',
+    'enum',
+    'export',
+    'extends',
+    'false',
+    'finally',
+    'for',
+    'function',
+    'if',
+    'implements',
+    'import',
+    'in',
+    'instanceof',
+    'interface',
+    'let',
+    'new',
+    'null',
+    'package',
+    'private',
+    'protected',
+    'public',
+    'return',
+    'static',
+    'super',
+    'switch',
+    'this',
+    'throw',
+    'true',
+    'try',
+    'typeof',
+    'var',
+    'void',
+    'while',
+    'with',
+    'yield',
+])
+
+const formatImportSpecifier = (name: string) => (reservedIdentifiers.has(name) ? `${name} as ${name}Export` : name)
+
 const parserOptions: ParserOptions = {
     savePropValueAsString: true,
     shouldIncludePropTagMap: true,
@@ -134,7 +185,7 @@ const createMdxFile = (slug, stories, dependenciesText, docsText, propsText, ins
 }
 
 const generateMdx = (path) => {
-    fs.readdirSync(path, { withFileTypes: true }).map(async (d) => {
+    fs.readdirSync(path, { withFileTypes: true }).forEach((d) => {
         if (d.isFile()) return
 
         const dirName: any = d.name
@@ -153,6 +204,7 @@ const generateMdx = (path) => {
             // import & install
             const imports = `import { ${componentDoc
                 .map(({ displayName }) => displayName)
+                .map(formatImportSpecifier)
                 .join(', ')} } from '@fold-ui/pro'`
             const installText = prettier.format(imports, { parser: 'typescript' })
 
