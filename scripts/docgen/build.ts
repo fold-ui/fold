@@ -4,6 +4,7 @@ import * as docgen from 'react-docgen-typescript'
 import { ComponentDoc, PropItem } from 'react-docgen-typescript'
 import { ParserOptions } from 'react-docgen-typescript/lib/parser'
 import * as ts from 'typescript'
+import { getStoryComponentName, transpileDependenciesForMdx, transpileStoryForMdx } from './transform'
 
 const addSpaces = (s: string) => s.replace(/([A-Z])/g, ' $1').trim()
 
@@ -82,13 +83,34 @@ const parserOptions: ParserOptions = {
 
 const navigation = []
 
+const mdxCompilerOptions: ts.CompilerOptions = {
+    jsx: ts.JsxEmit.Preserve,
+    allowJs: true,
+    alwaysStrict: false,
+    module: ts.ModuleKind.ESNext,
+    target: ts.ScriptTarget.ESNext,
+    sourceMap: false,
+    declaration: true,
+    forceConsistentCasingInFileNames: false,
+    noImplicitReturns: false,
+    noImplicitThis: false,
+    noImplicitAny: false,
+    strictNullChecks: false,
+    noUnusedLocals: false,
+    allowSyntheticDefaultImports: true,
+    experimentalDecorators: true,
+    emitDecoratorMetadata: true,
+    skipLibCheck: true,
+    esModuleInterop: true,
+}
+
 const createMdxFile = (slug, stories, dependenciesText, docsText, propsText, installText, cssText, storyTypeDocs) => {
     let fileExport = ''
     fileExport += "import { CodeComponent } from '@/components/code.component'\n"
     fileExport += "import DocsLayout from '@/layouts/docs.layout'\n"
     fileExport += "import ComponentLayout from '@/layouts/component.layout'\n"
 
-    fileExport += dependenciesText + '\n\n'
+    fileExport += transpileDependenciesForMdx(dependenciesText, mdxCompilerOptions) + '\n\n'
     fileExport += docsText + '\n\n'
     fileExport += propsText + '\n\n'
     fileExport += cssText + '\n\n'
@@ -107,36 +129,11 @@ const createMdxFile = (slug, stories, dependenciesText, docsText, propsText, ins
         .filter((s) => !!s)
         .map((story) => {
             const tsComponent = stripComments(story)
-            const tsComponentName = tsComponent
-                .split('\n')
-                .filter((l) => !!l)[0]
-                .split(' ')[2]
+            const tsComponentName = getStoryComponentName(tsComponent)
 
             // compile the component to be ES6 compliant
             // this will be displayed in the codeblocks in the MDX files
-            const jsComponent = ts.transpileModule(tsComponent, {
-                compilerOptions: {
-                    jsx: 1,
-                    allowJs: true,
-                    alwaysStrict: false,
-                    module: 99,
-                    target: 99,
-                    sourceMap: false,
-                    declaration: true,
-                    forceConsistentCasingInFileNames: false,
-                    noImplicitReturns: false,
-                    noImplicitThis: false,
-                    noImplicitAny: false,
-                    strictNullChecks: false,
-                    suppressImplicitAnyIndexErrors: true,
-                    noUnusedLocals: false,
-                    allowSyntheticDefaultImports: true,
-                    experimentalDecorators: true,
-                    emitDecoratorMetadata: true,
-                    skipLibCheck: true,
-                    esModuleInterop: true,
-                },
-            }).outputText
+            const jsComponent = transpileStoryForMdx(tsComponent, mdxCompilerOptions)
 
             const name = tsComponentName == 'Usage' ? 'BasicUsage' : tsComponentName
             const doc: any = storyTypeDocs.find((doc) => doc.displayName == tsComponentName)

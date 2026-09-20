@@ -1,5 +1,5 @@
 import * as Token from '@fold-ui/design/tokens'
-import { PieChart, PieChartSlice, View } from '@fold-ui/core'
+import { PieChart, type PieChartSlice, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {
