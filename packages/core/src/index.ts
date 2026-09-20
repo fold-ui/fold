@@ -1,6 +1,7 @@
 export * from './accordion'
 export * from './affix'
 export * from './alert'
+export * from './animated-grid-pattern'
 export * from './aspect-ratio'
 export * from './attachment'
 export * from './audio'

@@ -27,6 +27,7 @@ we don't want to use !important
 @import '../accordion/accordion.css';
 @import '../affix/affix.css';
 @import '../alert/alert.css';
+@import '../animated-grid-pattern/animated-grid-pattern.css';
 @import '../aspect-ratio/aspect-ratio.css';
 @import '../attachment/attachment.css';
 @import '../audio/audio.css';
