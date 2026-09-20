@@ -1,0 +1,17 @@
+:root {
+    --f-dot-pattern-color: rgb(161 161 170 / 80%);
+}
+
+.f-dot-pattern {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .f-dot-pattern animate {
+        display: none;
+    }
+}

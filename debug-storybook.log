@@ -1,0 +1,26 @@
+[15:13:51.104] [INFO] storybook v10.4.6
+[15:13:52.856] [DEBUG] Getting package.json info for /Users/joduplessis/work/fold/fold/package.json...
+[15:13:53.290] [DEBUG] Serving static files from public at /
+[15:13:53.295] [INFO] Starting...
+[15:13:53.321] [WARN] No story files found for the specified pattern: packages/pro/src/**/*.mdx
+[15:13:53.331] [WARN] No story files found for the specified pattern: packages/core/src/**/*.mdx
+[15:13:53.798] [DEBUG] Starting preview..
+[15:13:53.802] [INFO] Using implicit CSS loaders
+[15:13:53.804] [INFO] Using default Webpack5 setup
+[15:13:54.079] [DEBUG] Using tsconfig paths for react-docgen
+[15:13:57.716] [ERROR] Failed to build the preview
+[15:13:57.721] [WARN] Force closed preview build
+[15:13:57.722] [ERROR] [38;2;241;97;97mSB_BUILDER-WEBPACK5_0003 (WebpackCompilationError): There were problems when compiling your code with Webpack.
+Run Storybook with --debug-webpack for more information.[39m
+    at starter (file://./node_modules/@storybook/builder-webpack5/dist/index.js:857:11)
+    at starter.next (<anonymous>)
+    at Module.start (file://./node_modules/@storybook/builder-webpack5/dist/index.js:915:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async storybookDevServer (file://./node_modules/storybook/dist/core-server/index.js:11496:158)
+    at async buildOrThrow (file://./node_modules/storybook/dist/core-server/index.js:8205:12)
+    at async buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:12057:41)
+    at async withTelemetry (file://./node_modules/storybook/dist/_node-chunks/chunk-G7NXW2C2.js:650:12)
+    at async dev (file://./node_modules/storybook/dist/bin/core.js:2735:3)
+    at async _Command.<anonymous> (file://./node_modules/storybook/dist/bin/core.js:2805:92)
+[15:13:57.723] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.

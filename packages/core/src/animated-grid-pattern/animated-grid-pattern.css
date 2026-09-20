@@ -1,0 +1,46 @@
+:root {
+    --f-animated-grid-pattern-grid-color: rgb(129 140 248 / 30%);
+    --f-animated-grid-pattern-square-color: rgb(199 210 254 / 70%);
+    --f-animated-grid-pattern-square-max-opacity: 0.5;
+    --f-animated-grid-pattern-animation-duration: 8.5s;
+    --f-animated-grid-pattern-perspective: 900px;
+    --f-animated-grid-pattern-transform: rotateY(25deg) skewX(10deg) skewY(10deg);
+}
+
+.f-animated-grid-pattern {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    perspective: var(--f-animated-grid-pattern-perspective);
+    transform: var(--f-animated-grid-pattern-transform);
+}
+
+.f-animated-grid-pattern__squares {
+    overflow: visible;
+}
+
+.f-animated-grid-pattern__square {
+    opacity: 0;
+    animation: f-animated-grid-pattern-square-fade var(--f-animated-grid-pattern-animation-duration) ease
+        var(--f-animated-grid-pattern-square-delay) forwards;
+}
+
+@keyframes f-animated-grid-pattern-square-fade {
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: var(--f-animated-grid-pattern-square-max-opacity);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .f-animated-grid-pattern__square {
+        opacity: 0.16;
+        animation: none;
+    }
+}

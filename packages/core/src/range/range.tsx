@@ -1,4 +1,4 @@
-import React, { ReactChild, useRef, useState, useEffect, useLayoutEffect } from 'react'
+import React, { ChangeEventHandler, ReactChild, useRef, useState, useEffect, useLayoutEffect } from 'react'
 import { classNames, getBoundingClientRect, mapBetween } from '../helpers'
 import { CommonProps, CoreViewProps, PopoutPosition } from '../types'
 import { TooltipContent } from '../tooltip/tooltip'
@@ -15,9 +15,9 @@ export type RangeProps = {
     step: number
     value: number
     textValue?: any
-    onChange: any
+    onChange: ChangeEventHandler<HTMLInputElement>
     inputProps?: any
-} & CoreViewProps
+} & Omit<CoreViewProps, 'onChange'>
 
 export const Range = (props: RangeProps) => {
     const {

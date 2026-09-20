@@ -1,0 +1,14 @@
+:root {
+    --f-flickering-grid-width: 110%;
+    --f-flickering-grid-height: 110%;
+}
+
+.f-flickering-grid {
+    width: var(--f-flickering-grid-width);
+    height: var(--f-flickering-grid-height);
+    pointer-events: none;
+}
+
+.f-flickering-grid canvas {
+    display: block;
+}

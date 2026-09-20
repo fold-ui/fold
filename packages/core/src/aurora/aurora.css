@@ -1,0 +1,231 @@
+:root {
+    --f-aurora-height: 300%;
+}
+
+.f-aurora {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    isolation: isolate;
+    pointer-events: none;
+    height: var(--f-aurora-height);
+    background: var(--f-aurora-base);
+}
+
+.f-aurora__stage {
+    position: absolute;
+    inset: -32%;
+    animation: f-aurora-stage 24s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+.f-aurora__ribbon {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(32px) saturate(115%);
+    will-change: transform, opacity;
+}
+
+.f-aurora__ribbon--primary {
+    top: var(--f-aurora-primary-top);
+    left: var(--f-aurora-primary-left);
+    width: var(--f-aurora-primary-width);
+    height: var(--f-aurora-primary-height);
+    background: linear-gradient(
+        to bottom,
+        transparent 2%,
+        var(--f-aurora-primary) 28%,
+        var(--f-aurora-highlight) 62%,
+        transparent 98%
+    );
+    animation: f-aurora-primary 15s ease-in-out infinite alternate;
+}
+
+.f-aurora__ribbon--secondary {
+    top: var(--f-aurora-secondary-top);
+    left: var(--f-aurora-secondary-left);
+    width: var(--f-aurora-secondary-width);
+    height: var(--f-aurora-secondary-height);
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--f-aurora-secondary) 38%,
+        var(--f-aurora-highlight) 70%,
+        transparent 100%
+    );
+    animation: f-aurora-secondary 19s ease-in-out infinite alternate;
+}
+
+.f-aurora__ribbon--complement {
+    top: var(--f-aurora-complement-top);
+    left: var(--f-aurora-complement-left);
+    width: var(--f-aurora-complement-width);
+    height: var(--f-aurora-complement-height);
+    background: radial-gradient(ellipse at center, var(--f-aurora-complement) 0%, transparent 72%);
+    animation: f-aurora-complement 13s ease-in-out infinite alternate;
+}
+
+.f-aurora__bloom {
+    position: absolute;
+    top: var(--f-aurora-bloom-top);
+    left: var(--f-aurora-bloom-left);
+    width: var(--f-aurora-bloom-size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: -50% -50%;
+    background: radial-gradient(circle, var(--f-aurora-highlight) 0%, var(--f-aurora-primary) 30%, transparent 70%);
+    filter: blur(24px);
+    animation: f-aurora-bloom 8s ease-in-out infinite alternate;
+    will-change: transform, opacity;
+}
+
+.f-aurora[data-variant='sweep'] {
+    --f-aurora-primary-top: -34%;
+    --f-aurora-primary-left: 12%;
+    --f-aurora-primary-width: 28%;
+    --f-aurora-primary-height: 130%;
+    --f-aurora-secondary-top: -18%;
+    --f-aurora-secondary-left: 48%;
+    --f-aurora-secondary-width: 20%;
+    --f-aurora-secondary-height: 105%;
+    --f-aurora-complement-top: 3%;
+    --f-aurora-complement-left: 54%;
+    --f-aurora-complement-width: 55%;
+    --f-aurora-complement-height: 64%;
+    --f-aurora-bloom-top: 62%;
+    --f-aurora-bloom-left: 28%;
+    --f-aurora-bloom-size: 58%;
+}
+
+.f-aurora[data-variant='orbit'] {
+    --f-aurora-primary-top: 10%;
+    --f-aurora-primary-left: 12%;
+    --f-aurora-primary-width: 62%;
+    --f-aurora-primary-height: 54%;
+    --f-aurora-secondary-top: -16%;
+    --f-aurora-secondary-left: 42%;
+    --f-aurora-secondary-width: 25%;
+    --f-aurora-secondary-height: 105%;
+    --f-aurora-complement-top: 48%;
+    --f-aurora-complement-left: 8%;
+    --f-aurora-complement-width: 52%;
+    --f-aurora-complement-height: 42%;
+    --f-aurora-bloom-top: 42%;
+    --f-aurora-bloom-left: 68%;
+    --f-aurora-bloom-size: 72%;
+}
+
+.f-aurora[data-variant='wave'] {
+    --f-aurora-primary-top: 20%;
+    --f-aurora-primary-left: -8%;
+    --f-aurora-primary-width: 78%;
+    --f-aurora-primary-height: 34%;
+    --f-aurora-secondary-top: 2%;
+    --f-aurora-secondary-left: 35%;
+    --f-aurora-secondary-width: 62%;
+    --f-aurora-secondary-height: 28%;
+    --f-aurora-complement-top: -2%;
+    --f-aurora-complement-left: -6%;
+    --f-aurora-complement-width: 48%;
+    --f-aurora-complement-height: 62%;
+    --f-aurora-bloom-top: 74%;
+    --f-aurora-bloom-left: 72%;
+    --f-aurora-bloom-size: 66%;
+}
+
+.f-aurora[data-variant='sweep'] .f-aurora__ribbon--primary,
+.f-aurora[data-variant='sweep'] .f-aurora__ribbon--secondary {
+    rotate: 32deg;
+}
+
+.f-aurora[data-variant='orbit'] .f-aurora__ribbon--primary {
+    rotate: -12deg;
+}
+
+.f-aurora[data-variant='orbit'] .f-aurora__ribbon--secondary {
+    rotate: 34deg;
+}
+
+.f-aurora[data-variant='wave'] .f-aurora__ribbon--primary,
+.f-aurora[data-variant='wave'] .f-aurora__ribbon--secondary {
+    rotate: 8deg;
+}
+
+.f-aurora[data-variant='orbit'] .f-aurora__stage,
+.f-aurora[data-variant='wave'] .f-aurora__ribbon--secondary {
+    animation-direction: alternate-reverse;
+}
+
+.f-aurora[data-variant='wave'] .f-aurora__stage {
+    animation-duration: 30s;
+}
+
+@keyframes f-aurora-stage {
+    from {
+        transform: rotate(-3deg) scale(1) translate3d(-2%, 1%, 0);
+    }
+    to {
+        transform: rotate(4deg) scale(1.07) translate3d(3%, -2%, 0);
+    }
+}
+
+@keyframes f-aurora-primary {
+    0% {
+        transform: translate3d(-14%, -8%, 0) scaleX(0.78);
+        opacity: 0.72;
+    }
+    45% {
+        transform: translate3d(8%, 7%, 0) scaleX(1.25);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(18%, -5%, 0) scaleX(0.92);
+        opacity: 0.82;
+    }
+}
+
+@keyframes f-aurora-secondary {
+    0% {
+        transform: translate3d(10%, -10%, 0) scaleX(0.85);
+        opacity: 0.55;
+    }
+    50% {
+        transform: translate3d(-12%, 8%, 0) scaleX(1.32);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate3d(4%, 14%, 0) scaleX(1);
+        opacity: 0.68;
+    }
+}
+
+@keyframes f-aurora-complement {
+    from {
+        transform: translate3d(-8%, 10%, 0) scale(0.82);
+        opacity: 0.45;
+    }
+    to {
+        transform: translate3d(12%, -8%, 0) scale(1.18);
+        opacity: 0.8;
+    }
+}
+
+@keyframes f-aurora-bloom {
+    from {
+        transform: scale(0.8) translate3d(-6%, 4%, 0);
+        opacity: 0.55;
+    }
+    to {
+        transform: scale(1.2) translate3d(6%, -4%, 0);
+        opacity: 0.92;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .f-aurora__stage,
+    .f-aurora__ribbon,
+    .f-aurora__bloom {
+        animation: none !important;
+    }
+}

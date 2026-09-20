@@ -189,7 +189,7 @@ export const Usage = () => {
                         }}
                         rows={rows}
                         hideCheckbox={false}
-                        useFoldScroll
+                        useAppScroll
                         header={
                             <DataGridHeader
                                 resizableColumns

@@ -24,10 +24,10 @@ export const CarouselItem = (props: CarouselItemProps) => {
 export type CarouselPillsProps = {
     current: number
     pills: number
-    onChange: any
+    onChange: (index: number) => void
     direction?: 'horizontal' | 'vertical'
     carouselPillProps?: CarouselPillProps
-} & CoreViewProps
+} & Omit<CoreViewProps, 'onChange'>
 
 export const CarouselPills = (props: CarouselPillsProps) => {
     const { carouselPillProps = {}, current, pills, onChange, direction = 'horizontal', ...rest } = props

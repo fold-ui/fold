@@ -1,0 +1,16 @@
+:root {
+    --f-starry-background-color: #34303d;
+}
+
+.f-starry-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.f-starry-background canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

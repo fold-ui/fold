@@ -1,0 +1,115 @@
+:root {
+    --f-shooting-stars-color: rgb(189 169 246);
+    --f-shooting-stars-streak-color: rgb(140 111 221 / 75%);
+    --f-shooting-stars-angle: 330deg;
+    --f-shooting-stars-distance: -1500px;
+}
+
+.f-shooting-stars {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.f-shooting-stars__star {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--f-shooting-stars-color);
+    animation: f-shooting-star 12s linear infinite;
+    animation-delay: -4s;
+    opacity: 0;
+}
+
+.f-shooting-stars__star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 220px;
+    height: 1px;
+    z-index: 0;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, var(--f-shooting-stars-streak-color), transparent);
+}
+
+.f-shooting-stars__star:nth-child(2) {
+    top: 15%;
+    right: -5%;
+    animation-delay: -8s;
+    animation-duration: 15s;
+}
+.f-shooting-stars__star:nth-child(3) {
+    top: 0;
+    right: 20%;
+    animation-delay: -2s;
+    animation-duration: 11s;
+}
+.f-shooting-stars__star:nth-child(4) {
+    top: 30%;
+    right: -10%;
+    animation-delay: -12s;
+    animation-duration: 17s;
+}
+.f-shooting-stars__star:nth-child(5) {
+    top: 5%;
+    right: 35%;
+    animation-delay: -6s;
+    animation-duration: 14s;
+}
+.f-shooting-stars__star:nth-child(6) {
+    top: 45%;
+    right: 0;
+    animation-delay: -10s;
+    animation-duration: 16s;
+}
+.f-shooting-stars__star:nth-child(7) {
+    top: 0;
+    right: 50%;
+    animation-delay: -3s;
+    animation-duration: 13s;
+}
+.f-shooting-stars__star:nth-child(8) {
+    top: 20%;
+    right: 10%;
+    animation-delay: -14s;
+    animation-duration: 19s;
+}
+.f-shooting-stars__star:nth-child(9) {
+    top: 10%;
+    right: 5%;
+    animation-delay: -7s;
+    animation-duration: 18s;
+}
+.f-shooting-stars__star:nth-child(10) {
+    top: 35%;
+    right: -5%;
+    animation-delay: -16s;
+    animation-duration: 21s;
+}
+
+@keyframes f-shooting-star {
+    0% {
+        transform: rotate(var(--f-shooting-stars-angle)) translateX(0);
+        opacity: 0;
+    }
+    15%,
+    65% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: rotate(var(--f-shooting-stars-angle)) translateX(var(--f-shooting-stars-distance));
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .f-shooting-stars__star {
+        display: none;
+    }
+}

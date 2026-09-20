@@ -24,7 +24,7 @@ export const Usage = () => {
             max={50}
             step={1}
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => setValue(Number(e.target.value))}
         />
     )
 }
@@ -42,7 +42,7 @@ export const WithTooltip = () => {
             value={value}
             showTooltip
             textValue={(val) => Math.round(val) + ' %'}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => setValue(Number(e.target.value))}
         />
     )
 }
@@ -61,7 +61,7 @@ export const WithTooltipAlwaysOn = () => {
             showTooltipAlways
             tooltipPosition="bottom-center"
             textValue={(val) => Math.round(val) + ' %'}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => setValue(Number(e.target.value))}
         />
     )
 }
