@@ -1,5 +1,5 @@
 import * as Token from '@fold-ui/design/tokens'
-import { Button, ButtonGroup, LineChart, LineChartSeries, View } from '@fold-ui/core'
+import { Button, ButtonGroup, LineChart, type LineChartSeries, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {

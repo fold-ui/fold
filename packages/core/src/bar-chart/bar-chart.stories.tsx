@@ -1,5 +1,5 @@
 import * as Token from '@fold-ui/design/tokens'
-import { BarChart, BarChartGroup, View } from '@fold-ui/core'
+import { BarChart, type BarChartGroup, View } from '@fold-ui/core'
 import React from 'react'
 
 export default {
