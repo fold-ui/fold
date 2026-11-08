@@ -34,6 +34,10 @@ export type LineChartProps = {
      */
     area?: boolean
     /**
+     * Connect points with smooth curves instead of straight segments.
+     */
+    smooth?: boolean
+    /**
      * Render background gridlines.
      */
     grid?: boolean
@@ -60,6 +64,7 @@ export const LineChart = (props: LineChartProps) => {
         header,
         height = 250,
         area = false,
+        smooth = false,
         grid = true,
         toggleable = true,
         ticks = 5,
@@ -238,12 +243,25 @@ export const LineChart = (props: LineChartProps) => {
                     {/* series */}
                     {width > 0 &&
                         data.map((series, index) => {
-                            if (hidden.includes(index)) return null
-                            const line = series.points.map((p, i) => `${xFor(i)} ${yFor(p[1])}`).join(' L ')
+                            if (hidden.includes(index) || !series.points.length) return null
+
+                            const line = series.points
+                                .map((point, i) => {
+                                    const x = xFor(i)
+                                    const y = yFor(point[1])
+
+                                    if (!i) return `M ${x} ${y}`
+                                    if (!smooth) return `L ${x} ${y}`
+
+                                    const midpoint = (xFor(i - 1) + x) / 2
+                                    const previousY = yFor(series.points[i - 1][1])
+
+                                    return `C ${midpoint} ${previousY}, ${midpoint} ${y}, ${x} ${y}`
+                                })
+                                .join(' ')
                             const areaPath =
-                                `M ${xFor(0)} ${MARGIN.top + innerHeight} ` +
-                                `L ${line} ` +
-                                `L ${xFor(series.points.length - 1)} ${MARGIN.top + innerHeight} Z`
+                                `${line} L ${xFor(series.points.length - 1)} ${MARGIN.top + innerHeight} ` +
+                                `L ${xFor(0)} ${MARGIN.top + innerHeight} Z`
 
                             return (
                                 <g
@@ -258,7 +276,7 @@ export const LineChart = (props: LineChartProps) => {
                                     )}
                                     <path
                                         className="f-line-chart__line"
-                                        d={`M ${line}`}
+                                        d={line}
                                         fill="none"
                                         stroke={series.color}
                                     />

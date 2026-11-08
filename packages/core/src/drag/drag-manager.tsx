@@ -52,7 +52,7 @@ export type DragManagerProps = {
 }
 
 export const DragManager = (props: DragManagerProps) => {
-    const { animation = 200, moveThreshold = 0, indentThreshold = 5, linedRegionThreshold = 3 } = props
+    const { animation = 500, moveThreshold = 0, indentThreshold = 5, linedRegionThreshold = 3 } = props
     const ghostRef = useRef<any>(null)
     const { origin } = useDragState('origin')
     const { target } = useDragState('target')

@@ -353,8 +353,8 @@ export const CsvImporterDataClean = (props: CsvImporterDataCleanProps) => {
                         <Flexer />
                         <Button
                             onClick={handleRowsDelete}
-                            variant="danger"
-                            outline>
+                            subtle
+                            variant="danger">
                             {dialog.confirm}
                         </Button>
                     </View>

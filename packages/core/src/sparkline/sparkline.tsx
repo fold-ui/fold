@@ -7,6 +7,10 @@ export type SparklineProps = {
     squareHeight?: number
     squareRadius?: number
     strokeWidth?: number
+    /**
+     * Connect line points with smooth curves instead of straight segments.
+     */
+    smooth?: boolean
     data: number[]
     variant?: 'line' | 'bar' | 'square'
 } & CoreViewProps
@@ -18,6 +22,7 @@ export const Sparkline = (props: SparklineProps) => {
         squareHeight = 8,
         squareRadius = 4,
         strokeWidth = 2,
+        smooth = false,
         data = [],
         variant = 'line',
         ...rest
@@ -50,9 +55,16 @@ export const Sparkline = (props: SparklineProps) => {
                         const x = (box.width / (data.length - 1)) * i
                         const y = Math.floor((1 - d) * box.height)
 
-                        return `${x} ${y}`
+                        if (!i) return `${x} ${y}`
+                        if (!smooth) return `L ${x} ${y}`
+
+                        const previousX = (box.width / (data.length - 1)) * (i - 1)
+                        const previousY = Math.floor((1 - data[i - 1]) * box.height)
+                        const midpoint = (previousX + x) / 2
+
+                        return `C ${midpoint} ${previousY}, ${midpoint} ${y}, ${x} ${y}`
                     })
-                    .join(' L ')}`}
+                    .join(' ')}`}
             />
         )
     }

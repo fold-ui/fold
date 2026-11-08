@@ -43,3 +43,25 @@
 .f-stat-footer > * {
     margin-right: var(--f-space-1);
 }
+
+.f-stat-row {
+    width: fit-content;
+    border-radius: var(--f-radius);
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.f-stat-row > .f-stat {
+    height: auto;
+}
+
+.f-stat-row > .f-stat:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.f-stat-row > .f-stat:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}

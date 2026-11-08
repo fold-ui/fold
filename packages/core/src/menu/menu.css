@@ -66,6 +66,18 @@
     min-width: 3rem;
 }
 
+.f-menu__scroll-button.is-start .f-button {
+    border-top-left-radius: var(--f-radius-xs);
+    border-top-right-radius: var(--f-radius-xs);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.075);
+}
+
+.f-menu__scroll-button.is-end .f-button {
+    border-bottom-left-radius: var(--f-radius-xs);
+    border-bottom-right-radius: var(--f-radius-xs);
+    box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.075);
+}
+
 .f-menu:not(.is-menubar) {
     box-shadow: var(--f-menu-shadow);
 }
