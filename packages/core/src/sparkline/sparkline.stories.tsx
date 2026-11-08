@@ -55,3 +55,16 @@ export const Usage = () => {
         </View>
     )
 }
+
+// --
+
+export const Smooth = () => (
+    <View
+        width={200}
+        height={50}>
+        <Sparkline
+            smooth
+            data={[0.2, 0.65, 0.4, 0.8, 0.55, 0.9]}
+        />
+    </View>
+)

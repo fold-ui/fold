@@ -227,3 +227,10 @@
 .h-full {
     height: 100%;
 }
+
+/* no outline */
+
+.no-focus:focus-within,
+.no-focus:focus {
+    outline: none !important;
+}

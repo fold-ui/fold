@@ -66,6 +66,19 @@ export const SingleSeriesWithArea = () => (
 
 // --
 
+export const Smooth = () => (
+    <View width="100%">
+        <LineChart
+            title="Smooth curves"
+            smooth
+            area
+            data={[revenue, spend]}
+        />
+    </View>
+)
+
+// --
+
 /**
  * Any node can be rendered between the title and the legends via the `header` prop.
  */

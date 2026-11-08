@@ -232,7 +232,7 @@
 }
 
 .f-tab:disabled,
-.f-tab:disabled * {
+.f-tab:disabled .f-tab__label {
     color: var(--f-tabs-tab-disabled-color);
     cursor: not-allowed;
 }

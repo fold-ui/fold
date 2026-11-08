@@ -8,9 +8,13 @@ import React, {
     useRef,
     useState,
 } from 'react'
-import { useCustomEvent, useEvent, useWindowEvent } from '..'
+import { useCustomEvent, useEvent } from '..'
 import { classNames, cleanObject, getAlignClass, getOffset, mergeRefs } from '../helpers'
 import { CommonProps, CoreViewProps, ShorthandProps } from '../types'
+
+export enum CustomEvent {
+    scrollviewScrollDown = 'scrollviewScrollDown'
+}
 
 export type ScrollViewProps = {
     freeze?: boolean
@@ -21,7 +25,6 @@ export type ScrollViewProps = {
     onScrollToBottom?: any
     onScrollToTop?: any
     instanceId?: string
-    scrollSensitivityDelay?: number
 } & CoreViewProps
 
 export const ScrollView = forwardRef((props: ScrollViewProps, ref) => {
@@ -35,7 +38,6 @@ export const ScrollView = forwardRef((props: ScrollViewProps, ref) => {
         onScrollToTop,
         style = {},
         instanceId,
-        scrollSensitivityDelay = 50,
         ...rest
     } = props
     const scrollRef = useRef(null)
@@ -74,30 +76,11 @@ export const ScrollView = forwardRef((props: ScrollViewProps, ref) => {
         const isBottom = scrollRef.current.offsetHeight >= offsetHeight
         const isTop = scrollRef.current.scrollTop == 0
 
+        if (stickToBottom) userIsScrolling.current = !isBottom
+        if (stickToTop) userIsScrolling.current = !isTop
+
         if (isBottom && onScrollToBottom) onScrollToBottom()
         if (isTop && onScrollToTop) onScrollToTop()
-    }
-
-    const handleWheelEvent = (e) => {
-        if (freeze) return
-
-        // give the browser time to repaint the scroll
-        setTimeout(() => {
-            // maybe unmounted now
-            if (!scrollRef.current) return
-
-            const offsetHeight = scrollRef.current.scrollHeight - scrollRef.current.scrollTop
-            const isBottom = scrollRef.current.offsetHeight >= offsetHeight
-            const isTop = scrollRef.current.scrollTop == 0
-
-            if (isTop && stickToTop) {
-                userIsScrolling.current = false
-            } else if (isBottom && stickToBottom) {
-                userIsScrolling.current = false
-            } else {
-                userIsScrolling.current = true
-            }
-        }, scrollSensitivityDelay)
     }
 
     const handleCustomEvent = ({ detail }) => {
@@ -107,9 +90,7 @@ export const ScrollView = forwardRef((props: ScrollViewProps, ref) => {
         }
     }
 
-    useWindowEvent('wheel', handleWheelEvent)
-
-    useCustomEvent('scrollview:scroll-down', handleCustomEvent)
+    useCustomEvent(CustomEvent.scrollviewScrollDown, handleCustomEvent)
 
     useEffect(() => {
         let interval = setInterval(() => {

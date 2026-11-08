@@ -1,7 +1,9 @@
 {
     "transition": {
         "property": {
-            "common": { "value": "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform" },
+            "common": {
+                "value": "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform"
+            },
             "colors": { "value": "background-color, border-color, color, fill, stroke" },
             "dimensions": { "value": "width, height" },
             "position": { "value": "left, right, top, bottom" },

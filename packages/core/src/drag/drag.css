@@ -239,7 +239,7 @@
 
 :root {
     --f-drag-placeholder-background: var(--f-color-surface-stronger);
-    --f-drag-placeholder-radius: 0;
+    --f-drag-placeholder-radius: var(--f-radius);
     --f-drag-placeholder-border: none;
     --f-drag-placeholder-outline: none;
     --f-drag-placeholder-margin: 0;
@@ -279,7 +279,6 @@
     z-index: 10000;
     will-change: transform;
     opacity: var(--f-drag-ghost-opacity);
-    /* transition: transform 1s linear;  */
 }
 
 .f-drag-ghost * {

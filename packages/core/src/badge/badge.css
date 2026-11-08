@@ -162,28 +162,28 @@
 .f-badge.xs {
     padding: 0;
     font-weight: var(--f-font-weight-semibold);
-    height: calc(var(--f-size-4) + 0.125rem);
+    height: var(--f-size-5);
 }
 
 .f-badge.sm {
     padding: 0 0.1rem;
     font-weight: var(--f-font-weight-medium);
-    height: var(--f-size-5);
+    height: var(--f-size-6);
 }
 
 .f-badge.md {
     padding: 0 0.15rem;
-    height: var(--f-size-6);
+    height: var(--f-size-7);
 }
 
 .f-badge.lg {
     padding: 0 0.2rem;
-    height: var(--f-size-7);
+    height: var(--f-size-8);
 }
 
 .f-badge.xl {
     padding: 0 0.2rem;
-    height: var(--f-size-9);
+    height: var(--f-size-10);
 }
 
 /* size */

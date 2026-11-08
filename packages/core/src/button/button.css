@@ -10,9 +10,13 @@
     --f-button-shadow: var(--f-shadow-sm);
     --f-button-variant-opacity-hover: 0.1;
     --f-button-active-background: var(--f-color-surface-stronger);
-    --f-button-active-filter-variants: brightness(90%) contrast(110%);
+    --f-button-active-filter-variants: brightness(93%) contrast(110%);
     --f-button-transition-delay: 0.1s;
     --f-button-transition-delay-focus: 0.1s;
+}
+
+[data-theme='dark'] {
+    --f-button-active-filter-variants: brightness(120%) contrast(110%);
 }
 
 .f-button {
@@ -263,12 +267,9 @@
     background: rgba(from var(--f-color-surface-strong) r g b / 50%);
 }
 
+.f-button.is-subtle.is-active,
 .f-button.is-subtle:not(:disabled):hover {
     background: var(--f-button-background-color-hover);
-}
-
-.f-button.is-subtle.is-active {
-    filter: var(--f-button-active-filter-variants);
 }
 
 .f-button.is-accent.is-subtle {
@@ -277,8 +278,9 @@
     background: var(--f-color-accent-weak);
 }
 
+.f-button.is-accent.is-subtle.is-active,
 .f-button.is-accent.is-subtle:not(:disabled):hover {
-    background: color-mix(in srgb, var(--f-color-accent-weak), var(--f-color-accent) 15%);
+    background: color-mix(in srgb, var(--f-color-accent-weak), var(--f-color-accent) 10%);
 }
 
 .f-button.is-success.is-subtle {
@@ -287,8 +289,9 @@
     background: var(--f-color-success-weak);
 }
 
+.f-button.is-success.is-subtle.is-active,
 .f-button.is-success.is-subtle:not(:disabled):hover {
-    background: color-mix(in srgb, var(--f-color-success-weak), var(--f-color-success) 15%);
+    background: color-mix(in srgb, var(--f-color-success-weak), var(--f-color-success) 10%);
 }
 
 .f-button.is-neutral.is-subtle {
@@ -297,8 +300,9 @@
     background: var(--f-color-neutral-weak);
 }
 
+.f-button.is-neutral.is-subtle.is-active,
 .f-button.is-neutral.is-subtle:not(:disabled):hover {
-    background: color-mix(in srgb, var(--f-color-neutral-weak), var(--f-color-neutral) 15%);
+    background: color-mix(in srgb, var(--f-color-neutral-weak), var(--f-color-neutral) 10%);
 }
 
 .f-button.is-caution.is-subtle {
@@ -307,8 +311,9 @@
     background: var(--f-color-caution-weak);
 }
 
+.f-button.is-caution.is-subtle.is-active,
 .f-button.is-caution.is-subtle:not(:disabled):hover {
-    background: color-mix(in srgb, var(--f-color-caution-weak), var(--f-color-caution) 15%);
+    background: color-mix(in srgb, var(--f-color-caution-weak), var(--f-color-caution) 10%);
 }
 
 .f-button.is-warning.is-subtle {
@@ -317,8 +322,9 @@
     background: var(--f-color-warning-weak);
 }
 
+.f-button.is-warning.is-subtle.is-active,
 .f-button.is-warning.is-subtle:not(:disabled):hover {
-    background: color-mix(in srgb, var(--f-color-warning-weak), var(--f-color-warning) 15%);
+    background: color-mix(in srgb, var(--f-color-warning-weak), var(--f-color-warning) 10%);
 }
 
 .f-button.is-danger.is-subtle {
@@ -327,8 +333,9 @@
     background: var(--f-color-danger-weak);
 }
 
+.f-button.is-danger.is-subtle.is-active,
 .f-button.is-danger.is-subtle:not(:disabled):hover {
-    background: color-mix(in srgb, var(--f-color-danger-weak), var(--f-color-danger) 15%);
+    background: color-mix(in srgb, var(--f-color-danger-weak), var(--f-color-danger) 10%);
 }
 
 .f-button.is-highlight.is-subtle {
@@ -337,8 +344,9 @@
     background: var(--f-color-highlight-weak);
 }
 
+.f-button.is-highlight.is-subtle.is-active,
 .f-button.is-highlight.is-subtle:not(:disabled):hover {
-    background: color-mix(in srgb, var(--f-color-highlight-weak), var(--f-color-highlight) 15%);
+    background: color-mix(in srgb, var(--f-color-highlight-weak), var(--f-color-highlight) 10%);
 }
 
 /* ********************************************* */

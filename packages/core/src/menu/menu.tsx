@@ -327,7 +327,6 @@ export const Menu = (props: MenuProps) => {
                                 size="xs"
                                 border="none"
                                 aria-label="Scroll menu up"
-                                shadow="var(--f-shadow-lg)"
                                 onClick={handleScrollLess}>
                                 <IconLib
                                     icon="chevron-up"
@@ -350,7 +349,6 @@ export const Menu = (props: MenuProps) => {
                                 size="xs"
                                 border="none"
                                 aria-label="Scroll menu down"
-                                shadow="var(--f-shadow-lg)"
                                 onClick={handleScrollMore}>
                                 <IconLib
                                     icon="chevron-down"

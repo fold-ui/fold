@@ -1,7 +1,28 @@
-import React, { ReactElement, ReactNode } from 'react'
+import React, { forwardRef, ReactElement, ReactNode } from 'react'
 import { Heading, IconLib, Text, View } from '..'
 import { classNames } from '../helpers'
 import { CoreViewProps } from '../types'
+
+export type StatRowProps = CoreViewProps
+
+export const StatRow = forwardRef((props: StatRowProps, ref) => {
+    const className = classNames(
+        {
+            'f-stat-row': true,
+            'f-row': true,
+        },
+        [props.className]
+    )
+
+    return (
+        <View
+            {...props}
+            as="div"
+            className={className}
+            ref={ref}
+        />
+    )
+})
 
 export type StatProps = {
     label?: string
