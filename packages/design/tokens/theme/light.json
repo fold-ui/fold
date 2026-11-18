@@ -4,7 +4,7 @@
         "focus": { "value": "2px solid {color.accent.550}" },
         "color": {
             "overlay": { "value": "oklch(30% 0.0175 300 / 0.5)" },
-            "background": { "value": "{color.base.100}" },
+            "background": { "value": "{color.base.50}" },
             "accent": {
                 " ": { "value": "{color.accent.850}" },
                 "subtle": { "value": "{color.accent.750}" },
