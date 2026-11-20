@@ -64,7 +64,7 @@
                 "inverse": { "value": "{color.base.150}" }
             },
             "border": {
-                " ": { "value": "{color.base.800}" },
+                " ": { "value": "{color.base.850}" },
                 "strong": { "value": "{color.base.750}" }
             }
         }
